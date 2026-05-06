@@ -1,7 +1,7 @@
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about-us' },
-  { label: 'Articles', href: '#articles' },
+  { label: 'Articles', href: '/articles' },
   { label: "Caregiver's Corner", href: '/caregivers-corner' },
   { label: 'Tools', href: '#tools' },
   { label: 'Contact Us', href: '/contact' },

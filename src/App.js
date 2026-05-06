@@ -1,5 +1,6 @@
 import './App.css';
 import AboutUs from './pages/AboutUs';
+import Articles from './pages/Articles';
 import CaregiversCorner from './pages/CaregiversCorner';
 import Contact from './pages/Contact';
 import BestTools from './components/BestTools';
@@ -23,6 +24,7 @@ function Home() {
 const routes = {
   '/': Home,
   '/about-us': AboutUs,
+  '/articles': Articles,
   '/caregivers-corner': CaregiversCorner,
   '/contact': Contact,
 };
