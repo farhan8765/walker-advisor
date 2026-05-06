@@ -81,7 +81,7 @@ function BlogArticles() {
     >
       <div className="mx-auto max-w-[1280px]">
         <div className="mx-auto max-w-[840px] text-center">
-          <p className="text-base font-bold leading-none text-[#1f2c34]">
+          <p className="font-raleway text-base font-semibold leading-6 tracking-[0.005em] text-[#182126]">
             Blog
           </p>
           <h2 className="mt-6 text-[34px] font-black leading-[0.96] text-[#a87900] md:text-[46px] lg:text-[56px]">
@@ -95,7 +95,7 @@ function BlogArticles() {
         <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
             <article
-              className="rounded-[10px] border border-[#d8dde2] bg-white p-6 "
+              className="flex h-full flex-col rounded-[10px] border border-[#d8dde2] bg-white p-6 font-raleway"
               key={article.id}
             >
               <img
@@ -112,11 +112,16 @@ function BlogArticles() {
               </p>
 
               <a
-                className="mt-7 flex h-10 w-full items-center justify-center gap-3 rounded-full bg-[#ffc400] px-5 text-base font-medium text-black no-underline transition-colors duration-150 hover:bg-[#f0b800] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"
+                className="mt-auto flex h-10 w-full items-center justify-center gap-3 rounded-full bg-[#ffc400] px-5 font-manrope text-base font-medium text-black no-underline transition-colors duration-150 hover:bg-[#f0b800] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"
                 href={`#article-${article.id}`}
               >
                 <span>Learn More</span>
-                <span aria-hidden="true">-&gt;</span>
+                <img
+                  className="h-3 w-3"
+                  src={`${process.env.PUBLIC_URL}/images/Vector.svg`}
+                  alt=""
+                  aria-hidden="true"
+                />
               </a>
             </article>
           ))}
