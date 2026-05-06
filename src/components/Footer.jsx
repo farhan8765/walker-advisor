@@ -24,7 +24,7 @@ const footerLinks = [
 function SocialIcon({ label, children }) {
   return (
     <a
-      className="flex h-5 w-5 items-center justify-center text-[#17232b] transition-colors duration-150 hover:text-[#002f49] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#002f49]"
+      className="flex h-5 w-5 items-center justify-center text-white transition-colors duration-150 hover:text-[#ffc400] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"
       href={`#${label.toLowerCase()}`}
       aria-label={label}
     >
@@ -35,25 +35,34 @@ function SocialIcon({ label, children }) {
 
 function Footer() {
   return (
-    <footer className="w-full  px-6 py-20 md:px-20">
-      <div className="mx-auto flex min-h-[504px] max-w-[1280px] flex-col rounded-xl bg-[#fff4bd] px-8 py-16 md:px-16">
-        <div className="grid gap-12 md:grid-cols-[1.25fr_1fr_1.15fr_1fr]">
-          <a href="/" aria-label="The Walker Advisor home">
-            <img
-              className="h-auto w-[184px] object-contain"
-              src={`${process.env.PUBLIC_URL}/images/TWA-logo.webp`}
-              alt="The Walker Advisor"
-            />
-          </a>
+    <footer className="w-full px-4 py-20 md:px-8 lg:px-20">
+      <div className="mx-auto flex min-h-[504px] max-w-[1280px] flex-col rounded-lg bg-[#111111] px-8 py-14 md:px-16">
+        <div className="grid gap-12 md:grid-cols-[1.3fr_0.8fr_1fr_0.8fr]">
+          <div>
+            <a className="inline-flex" href="/" aria-label="The Walker Advisor home">
+              <img
+                className="h-auto w-[184px] object-contain brightness-0 invert"
+                src={`${process.env.PUBLIC_URL}/images/TWA-logo.webp`}
+                alt="The Walker Advisor"
+              />
+            </a>
+            <p className="mt-8 max-w-[360px] font-manrope text-base font-normal leading-6 text-white">
+              The Walker Advisor is committed to helping seniors and their
+              families find the best mobility aids for safe and independent
+              living.
+            </p>
+          </div>
 
           {footerColumns.map((column) => (
             <div key={column.title}>
-              <h3 className="text-xs font-normal text-black">{column.title}</h3>
+              <h3 className="text-base font-normal leading-5 text-white">
+                {column.title}
+              </h3>
               <ul className="mt-8 space-y-5">
                 {column.links.map((link) => (
                   <li key={link}>
                     <a
-                      className="text-base font-normal text-black no-underline hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#002f49]"
+                      className="font-manrope text-base font-normal text-white no-underline transition-colors hover:text-[#ffc400] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"
                       href={`#${link.toLowerCase().replaceAll(' ', '-')}`}
                     >
                       {link}
@@ -65,11 +74,11 @@ function Footer() {
           ))}
         </div>
 
-        <div className="mt-auto flex flex-col items-start justify-between gap-8 pt-16 md:flex-row md:items-center">
+        <div className="mt-auto flex flex-col items-start justify-between gap-8 pt-20 md:flex-row md:items-center">
           <div className="flex items-center gap-4">
             <SocialIcon label="Facebook">
               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-current text-[14px] font-black leading-none">
-                <span className="text-[#fff4bd]">f</span>
+                <span className="text-[#111111]">f</span>
               </span>
             </SocialIcon>
             <SocialIcon label="Instagram">
@@ -93,12 +102,12 @@ function Footer() {
             </SocialIcon>
             <SocialIcon label="LinkedIn">
               <span className="flex h-4 w-4 items-center justify-center rounded-sm bg-current text-[11px] font-black leading-none">
-                <span className="text-[#fff4bd]">in</span>
+                <span className="text-[#111111]">in</span>
               </span>
             </SocialIcon>
             <SocialIcon label="YouTube">
               <span className="flex h-[14px] w-5 items-center justify-center rounded-[3px] bg-current text-[9px] font-black leading-none">
-                <span className="text-[#fff4bd]">▶</span>
+                <span className="text-[#111111]">▶</span>
               </span>
             </SocialIcon>
           </div>
@@ -106,7 +115,7 @@ function Footer() {
           <nav className="flex flex-wrap gap-x-8 gap-y-4" aria-label="Footer links">
             {footerLinks.map((link) => (
               <a
-                className="text-base font-normal text-black no-underline hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#002f49]"
+                className="font-manrope text-base font-normal text-white no-underline transition-colors hover:text-[#ffc400] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"
                 href={`#${link.toLowerCase().replaceAll(' ', '-')}`}
                 key={link}
               >
