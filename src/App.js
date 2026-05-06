@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import AboutUs from './pages/AboutUs';
+import CaregiversCorner from './pages/CaregiversCorner';
+import Contact from './pages/Contact';
+import BestTools from './components/BestTools';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import Newsletter from './components/Newsletter';
+import ToolsCards from './components/ToolsCards';
+
+function Home() {
+  return (
+    <>
+      <Navbar />
+      <BestTools />
+      <ToolsCards />
+      <Newsletter />
+      <Footer />
+    </>
+  );
+}
+
+const routes = {
+  '/': Home,
+  '/about-us': AboutUs,
+  '/caregivers-corner': CaregiversCorner,
+  '/contact': Contact,
+};
 
 function App() {
+  const Page = routes[window.location.pathname] || Home;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Page />
   );
 }
 
