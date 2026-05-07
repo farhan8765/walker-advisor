@@ -1,6 +1,6 @@
 function OurMission() {
   const bodyClass =
-    "space-y-3 font-['Helvetica_Neue',Helvetica,Arial,sans-serif] text-[15px] font-normal leading-[150%] tracking-normal text-[#242424] sm:space-y-4 sm:text-base";
+    "space-y-3 font-['Manrope',sans-serif] text-base font-medium leading-6 tracking-[0.5%] text-[#5A666E] sm:space-y-4";
 
   return (
     <section className="w-full bg-white py-10 md:py-24">

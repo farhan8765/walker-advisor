@@ -10,10 +10,10 @@ function Newsletter() {
           />
 
           <div className="relative z-10 mx-auto max-w-[820px] lg:mx-0">
-            <h2 className="text-[38px] font-black uppercase leading-[0.95] text-black md:text-[56px] lg:text-[58px]">
+            <h2 className="font-heading text-[60px] font-normal uppercase leading-[100%] tracking-normal text-black">
               Welcome to The Walker Advisor Newsletter!
             </h2>
-            <p className="mt-6 max-w-[820px] font-manrope text-base font-medium leading-7 text-[#66737c] md:text-lg">
+            <p className="mt-4 max-w-[720px] font-['Manrope',sans-serif] text-[18px] font-medium leading-7 tracking-[0.5%] text-[#5A666E] md:mt-6">
               Stay informed with our monthly updates on the best mobility aids,
               safety tips, and exclusive deals designed to support senior
               independence.

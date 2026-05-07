@@ -10,7 +10,7 @@ function AboutUsContent() {
           <h1 className="text-4xl uppercase leading-none text-black sm:text-5xl md:text-[92px]">
             About Us
           </h1>
-          <p className="mt-4 text-lg font-normal leading-tight text-black md:mt-6 md:text-[26px]">
+          <p className="mt-4 font-['Manrope',sans-serif] text-base font-medium leading-6 tracking-[0.5%] text-[#5A666E] md:mt-6">
             tagline comes here
           </p>
         </section>
@@ -25,7 +25,7 @@ function AboutUsContent() {
           </div>
 
           <div
-            className="w-full space-y-3 font-['Helvetica_Neue',Helvetica,Arial,sans-serif] text-[15px] font-normal leading-[150%] tracking-normal text-[#242424] sm:text-base md:space-y-2"
+            className="w-full space-y-3 font-['Manrope',sans-serif] text-base font-medium leading-6 tracking-[0.5%] text-[#5A666E] md:space-y-2"
           >
             <p>
               Welcome to The Walker Advisor, your trusted guide for expert reviews
