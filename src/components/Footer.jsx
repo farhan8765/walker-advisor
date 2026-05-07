@@ -35,9 +35,9 @@ function SocialIcon({ label, children }) {
 
 function Footer() {
   return (
-    <footer className="w-full px-4 py-20 md:px-8 lg:px-20">
-      <div className="mx-auto flex min-h-[504px] max-w-[1280px] flex-col rounded-lg bg-[#111111] px-8 py-14 md:px-16">
-        <div className="grid gap-12 md:grid-cols-[1.3fr_0.8fr_1fr_0.8fr]">
+    <footer className="w-full px-4 py-12 md:px-8 lg:px-20">
+      <div className="mx-auto flex min-h-[430px] max-w-[1280px] flex-col rounded-lg bg-[#111111] px-7 py-10 md:px-12">
+        <div className="grid gap-8 md:grid-cols-[1.15fr_0.8fr_1fr_0.8fr]">
           <div>
             <a className="inline-flex" href="/" aria-label="The Walker Advisor home">
               <img
@@ -46,7 +46,7 @@ function Footer() {
                 alt="The Walker Advisor"
               />
             </a>
-            <p className="mt-8 max-w-[360px] font-manrope text-base font-normal leading-6 text-white">
+            <p className="mt-6 max-w-[360px] font-manrope text-base font-normal leading-6 text-white">
               The Walker Advisor is committed to helping seniors and their
               families find the best mobility aids for safe and independent
               living.
@@ -58,7 +58,7 @@ function Footer() {
               <h3 className="text-base font-normal leading-5 text-white">
                 {column.title}
               </h3>
-              <ul className="mt-8 space-y-5">
+              <ul className="mt-6 space-y-4">
                 {column.links.map((link) => (
                   <li key={link}>
                     <a
@@ -74,8 +74,8 @@ function Footer() {
           ))}
         </div>
 
-        <div className="mt-auto flex flex-col items-start justify-between gap-8 pt-20 md:flex-row md:items-center">
-          <div className="flex items-center gap-4">
+        <div className="mt-auto flex flex-col items-start justify-between gap-6 pt-12 md:flex-row md:items-center">
+          <div className="flex items-center gap-3">
             <SocialIcon label="Facebook">
               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-current text-[14px] font-black leading-none">
                 <span className="text-[#111111]">f</span>
@@ -112,7 +112,7 @@ function Footer() {
             </SocialIcon>
           </div>
 
-          <nav className="flex flex-wrap gap-x-8 gap-y-4" aria-label="Footer links">
+          <nav className="flex flex-wrap gap-x-6 gap-y-3" aria-label="Footer links">
             {footerLinks.map((link) => (
               <a
                 className="font-manrope text-base font-normal text-white no-underline transition-colors hover:text-[#ffc400] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"

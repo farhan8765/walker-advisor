@@ -1,0 +1,472 @@
+import { useEffect } from 'react';
+
+const navItems = [
+  ['Home', '/'],
+  ['Best Tools', '/tools'],
+  ['Articles', '/articles'],
+  ['About Us', '/about-us'],
+  ['Contact Us', '/contact'],
+  ["Caregiver's Corner", '/caregivers-corner'],
+];
+
+const tableOfContents = [
+  'How the Heart and Fall Risk Are Connected',
+  'Heart Conditions That Increase Fall Risk in Seniors',
+  'The Role of Diet in Heart Health and Fall Risk',
+  'How to Reduce Fall Risk if You Have Heart Issues',
+  'Warning Signs to Watch For',
+  'Tips for Caregivers Supporting Seniors with Heart Conditions',
+  'Frequently Asked Questions',
+  'Final Thoughts',
+  'References',
+];
+
+const riskReducers = [
+  ['Use a walker or mobility aid', 'Provides stability during dizzy spells'],
+  ['Wear proper footwear', 'Reduces slipping and improves grip'],
+  ['Use an upright walker', 'Supports posture and reduces spinal strain'],
+  ['Have emergency devices ready', 'Enables fast help after a fall'],
+  ['Monitor blood pressure', 'Catches dangerous drops early'],
+];
+
+const relatedArticles = [
+  {
+    image: 'image-9-1.webp',
+    title: 'Exercise Programs for Elderly Adults',
+    description:
+      "Most seniors don't realize they're missing these 4 essential exercises until mobility starts to decline. Discover the simple routine that keeps you active, balanced, and",
+  },
+  {
+    image: 'blog.webp',
+    title: 'Social Activities for Older Adults: The Best Ways to Stay Connected, Active, and Happy',
+    description:
+      'Loneliness in seniors is not just sad, it is as dangerous to health as smoking 15 cigarettes a day. Here are the best ways older',
+  },
+  {
+    image: 'blog2.webp',
+    title: '3 Foods for Seniors to Avoid',
+    description:
+      'Your body after 70 is a different machine entirely. Metabolism slows. The immune system becomes more reactive. Kidneys filter less efficiently, and',
+  },
+];
+
+function DetailHeader() {
+  return (
+    <header className="w-full bg-white px-4 py-4">
+      <div className="mx-auto flex max-w-[720px] items-center justify-between gap-4">
+        <a href="/" aria-label="The Walker Advisor home">
+          <img
+            className="h-auto w-[76px] object-contain"
+            src={`${process.env.PUBLIC_URL}/images/TWA-logo.webp`}
+            alt="The Walker Advisor"
+          />
+        </a>
+        <nav className="hidden items-center gap-5 md:flex" aria-label="Blog detail navigation">
+          {navItems.map(([label, href]) => (
+            <a
+              className="font-manrope text-[11px] font-bold text-[#08131b] no-underline transition-colors hover:text-[#b88b00]"
+              href={href}
+              key={label}
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+function SectionHeading({ children, id }) {
+  return (
+    <h2 className="mt-9 text-[18px] font-black leading-tight text-black" id={id}>
+      {children}
+    </h2>
+  );
+}
+
+function Paragraph({ children }) {
+  return (
+    <p className="mt-3 font-manrope text-[12px] font-medium leading-[1.85] text-[#1f2930]">
+      {children}
+    </p>
+  );
+}
+
+function SocialDots() {
+  return (
+    <div className="mt-9 flex items-center justify-center gap-2" aria-label="Share article">
+      {['f', 'in', 'x'].map((item) => (
+        <a
+          className="flex h-6 w-6 items-center justify-center rounded-full bg-black font-manrope text-[10px] font-black text-white no-underline"
+          href={`#share-${item}`}
+          key={item}
+        >
+          {item}
+        </a>
+      ))}
+    </div>
+  );
+}
+
+function DetailNewsletter() {
+  return (
+    <section className="mt-20 w-full bg-[#ffe8b6] px-4">
+      <div className="mx-auto grid max-w-[1020px] items-end gap-8 py-8 md:grid-cols-[360px_1fr] md:py-0">
+        <img
+          className="mx-auto hidden h-[260px] w-auto object-contain md:block"
+          src={`${process.env.PUBLIC_URL}/images/newsletter-pic-1024x1024.webp`}
+          alt="Senior man walking with a wheeled walker"
+        />
+        <div className="py-8 md:py-12">
+          <h2 className="text-[24px] font-black leading-tight text-black">
+            Welcome to The Walker Advisor Newsletter!
+          </h2>
+          <p className="mt-3 max-w-[620px] font-manrope text-[12px] font-medium leading-6 text-[#303a42]">
+            Stay informed with our monthly updates on the best mobility aids,
+            safety tips, and exclusive deals designed to support senior independence.
+          </p>
+          <form className="mt-6 flex max-w-[560px] rounded-full bg-white p-1" action="#">
+            <input
+              className="min-w-0 flex-1 rounded-full px-5 font-manrope text-[12px] outline-none"
+              placeholder="Email"
+              type="email"
+            />
+            <button
+              className="rounded-full bg-[#07364f] px-8 py-3 font-manrope text-[12px] font-black text-white"
+              type="submit"
+            >
+              Subscribe Now
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function DetailFooter() {
+  return (
+    <footer className="w-full bg-black px-4 py-12 text-white">
+      <div className="mx-auto grid max-w-[900px] gap-10 md:grid-cols-[1.3fr_0.8fr_0.9fr_0.8fr]">
+        <div>
+          <img
+            className="h-auto w-[112px] object-contain brightness-0 invert"
+            src={`${process.env.PUBLIC_URL}/images/TWA-logo.webp`}
+            alt="The Walker Advisor"
+          />
+          <p className="mt-4 max-w-[250px] font-manrope text-[12px] font-medium leading-6">
+            The Walker Advisor is committed to helping seniors and their families find
+            the best mobility aids for safe and independent living.
+          </p>
+          <div className="mt-5 flex gap-3 font-manrope text-[12px]">○ ○ ○ ○ ○</div>
+        </div>
+        {[
+          ['About Authors', ['Meet Amir Abbasi', 'Meet Robin Dolan', 'Meet Syed Ali']],
+          ['Walkers by categories', ['Without Wheels', 'Two Wheels', 'Rollator']],
+          ['Walkers by brands', ['Winlove', 'Helavo', 'Elenker', 'Carex', 'Nova']],
+        ].map(([title, links]) => (
+          <div key={title}>
+            <h3 className="font-manrope text-[12px] font-black">{title}</h3>
+            <ul className="mt-4 space-y-3">
+              {links.map((link) => (
+                <li className="font-manrope text-[12px] font-medium" key={link}>
+                  {link}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <div className="mx-auto mt-10 flex max-w-[900px] flex-col justify-between gap-4 border-t border-white/20 pt-5 font-manrope text-[11px] md:flex-row">
+        <p>©2026 All Right Reserved By The Walker Advisor</p>
+        <p className="text-[#ffc400]">Disclaimer &nbsp; Terms & Conditions &nbsp; Privacy Policy &nbsp; Contact Us &nbsp; Cookies</p>
+      </div>
+    </footer>
+  );
+}
+
+function BlogDetail() {
+  useEffect(() => {
+    const previousTitle = document.title;
+    document.title = 'Can Heart Issues Increase Fall Risk in Seniors? - The Walker Advisor';
+
+    return () => {
+      document.title = previousTitle;
+    };
+  }, []);
+
+  return (
+    <>
+      <DetailHeader />
+
+      <main className="bg-white px-4 pb-12">
+        <article className="mx-auto max-w-[620px]">
+          <header className="pt-9">
+            <h1 className="text-[25px] font-black leading-tight text-black md:text-[28px]">
+              Can Heart Issues Increase Fall Risk in Seniors?
+            </h1>
+            <p className="mt-3 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">
+              You might think falls are just about balance, but what if your heart is the real culprit? Discover the hidden connection between heart issues and sudden falls in seniors before it is too late.
+            </p>
+
+            <img
+              className="mt-5 h-auto w-full rounded-[8px] object-cover"
+              src={`${process.env.PUBLIC_URL}/images/image-2-1.webp`}
+              alt="Senior man with chest discomfort being supported by a caregiver"
+            />
+
+            <div className="mt-6 flex items-center gap-3">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">
+                AA
+              </div>
+              <p className="font-manrope text-[12px] font-black text-black">Amir Abbasi</p>
+            </div>
+          </header>
+
+          <div className="mt-5">
+            <Paragraph>
+              Falls are one of the leading causes of injury among older adults, but many people do not realize that the heart plays a major role in fall risk. When the heart is not functioning at its best, it affects blood flow, blood pressure, energy levels, and balance.
+            </Paragraph>
+            <Paragraph>
+              For seniors already managing heart conditions, understanding this connection can be life-changing and potentially life-saving.
+            </Paragraph>
+            <Paragraph>
+              Having the right mobility support in place is one of the most practical steps a senior with heart issues can take. Our guide on Best Walkers for Seniors with Balance Problems is a great place to start when looking for the right stability aid.
+            </Paragraph>
+            <Paragraph>
+              Whether you walk daily for fitness, spend long hours standing at work, or simply want safer movement, understanding shoe structure will help you make an informed choice.
+            </Paragraph>
+          </div>
+
+          <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
+            <h2 className="bg-[#ffc400] px-5 py-3 text-[17px] font-black leading-none text-black">
+              Table of Contents
+            </h2>
+            <ol className="space-y-3 px-6 py-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
+              {tableOfContents.map((item, index) => (
+                <li key={item}>
+                  <a className="text-[#1f2930] no-underline hover:text-black" href={`#section-${index + 1}`}>
+                    {index + 1}. {item}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+
+          <SectionHeading id="section-1">How the Heart and Fall Risk Are Connected</SectionHeading>
+          <Paragraph>
+            The heart is responsible for pumping oxygen-rich blood to the brain, muscles, and every organ in the body. When that process is disrupted, even briefly, it can cause dizziness, weakness, confusion, or sudden drops in blood pressure.
+          </Paragraph>
+          <Paragraph>
+            Any one of these symptoms can cause a senior to lose their footing and fall. The relationship between heart health and fall risk is not always obvious because the symptoms can be subtle. A senior might simply feel "a little off" or suddenly lightheaded before a fall occurs, without ever connecting it to their heart.
+          </Paragraph>
+
+          <SectionHeading id="section-2">Heart Conditions That Increase Fall Risk in Seniors</SectionHeading>
+          <h3 className="mt-5 text-[14px] font-black text-black">1. Orthostatic Hypotension (Low Blood Pressure on Standing)</h3>
+          <Paragraph>
+            Orthostatic hypotension is one of the most common causes of falls in older adults. It occurs when blood pressure drops suddenly after standing up from a seated or lying position. The brain temporarily receives less blood, causing dizziness or lightheadedness that can result in a fall within seconds.
+          </Paragraph>
+          <Paragraph>
+            This condition is frequently linked to heart disease, dehydration, and certain medications.
+          </Paragraph>
+
+          <div className="mx-auto mt-7 max-w-[500px] rounded-[10px] bg-[#f3f3f3] p-4">
+            <h3 className="text-center text-[13px] font-black uppercase text-[#1f2930]">
+              The Heart-Balance Connection: A Simple Overview
+            </h3>
+            <div className="mt-4 grid gap-3 md:grid-cols-2">
+              {[
+                ['1. Heart', 'Heart rate and cardiac output'],
+                ['2. Brain', 'Needs steady blood flow'],
+                ['3. Blood Pressure', 'Ensures cerebral perfusion'],
+                ['4. Balance System', 'Effect on posture'],
+              ].map(([title, text]) => (
+                <div className="rounded-[8px] bg-white p-3" key={title}>
+                  <p className="font-manrope text-[11px] font-black uppercase text-[#07364f]">{title}</p>
+                  <p className="mt-1 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <h3 className="mt-7 text-[14px] font-black text-black">2. Arrhythmia (Irregular Heartbeat)</h3>
+          <Paragraph>
+            An irregular heartbeat means the heart is not pumping blood consistently. This can cause sudden feelings of weakness, palpitations, fainting, or brief blackouts, all of which dramatically increase fall risk.
+          </Paragraph>
+          <Paragraph>
+            Atrial fibrillation (AFib) is one of the most common arrhythmias in seniors and is strongly associated with falls and related injuries.
+          </Paragraph>
+
+          <h3 className="mt-7 text-[14px] font-black text-black">3. Heart Failure</h3>
+          <Paragraph>
+            Heart failure does not mean the heart has stopped. It means the heart is not pumping as efficiently as it should. This leads to fatigue, fluid buildup in the legs, and reduced oxygen delivery to muscles and the brain.
+          </Paragraph>
+          <Paragraph>
+            Seniors with heart failure often experience leg weakness and breathlessness, making it much harder to stay steady on their feet. A sturdy walker can provide critical support in these moments. See our Safest Walkers for Seniors: Top 5 Secure and Sturdy Choices for reliable options.
+          </Paragraph>
+
+          <h3 className="mt-7 text-[14px] font-black text-black">4. Coronary Artery Disease (CAD)</h3>
+          <Paragraph>
+            Coronary artery disease restricts blood flow to the heart, often causing fatigue and reduced physical capacity. As seniors with CAD tire more easily, their muscle coordination and reaction time decrease, both of which are critical for preventing falls.
+          </Paragraph>
+
+          <h3 className="mt-7 text-[14px] font-black text-black">5. Cardiac Medications and Their Side Effects</h3>
+          <Paragraph>
+            Many medications used to manage heart conditions, including beta-blockers, diuretics, and blood pressure drugs, can cause side effects that increase fall risk.
+          </Paragraph>
+          <Paragraph>
+            These include dizziness, fatigue, dehydration, and low blood pressure. Seniors managing multiple prescriptions should review their medications regularly with their doctor.
+          </Paragraph>
+
+          <SectionHeading id="section-3">The Role of Diet in Heart Health and Fall Risk</SectionHeading>
+          <Paragraph>
+            What seniors eat directly affects their heart health, and by extension, their fall risk. A diet high in sodium, saturated fats, and processed foods can worsen cardiovascular conditions and contribute to instability.
+          </Paragraph>
+          <Paragraph>
+            Proper footwear also plays a role in reducing fall risk. Read our guide on Why Seniors Need Proper Walking Shoes for practical recommendations.
+          </Paragraph>
+
+          <SectionHeading id="section-4">How to Reduce Fall Risk if You Have Heart Issues</SectionHeading>
+          <div className="mt-5 grid grid-cols-2 border-y border-[#d8dde2] font-manrope text-[11px] text-[#1f2930]">
+            <div className="px-8 py-4 font-black">Strategy</div>
+            <div className="border-l border-[#d8dde2] px-8 py-4 font-black">How It Helps</div>
+            {riskReducers.map(([strategy, benefit]) => (
+              <div className="contents" key={strategy}>
+                <div className="px-8 py-5 font-medium">{strategy}</div>
+                <div className="border-l border-[#d8dde2] px-8 py-5 font-medium">{benefit}</div>
+              </div>
+            ))}
+          </div>
+
+          <SectionHeading id="section-5">Warning Signs to Watch For</SectionHeading>
+          <div className="mt-4 rounded-[6px] border border-[#cfd6dc] bg-[#f7f7f7] p-4">
+            <p className="font-manrope text-[11px] font-semibold leading-6 text-[#1f2930]">
+              If you or a loved one has a heart condition, be alert to these signs that could indicate an increased fall risk:
+            </p>
+            <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[11px] font-semibold leading-6 text-[#1f2930]">
+              <li>Sudden dizziness or lightheadedness, especially when standing up</li>
+              <li>Unexplained fatigue or weakness in the legs</li>
+              <li>Heart palpitations or racing heartbeat before or during activity</li>
+              <li>Shortness of breath during light activity or walking</li>
+              <li>Brief episodes of confusion or disorientation</li>
+            </ul>
+            <p className="mt-3 font-manrope text-[11px] font-semibold leading-6 text-[#1f2930]">
+              These symptoms should always be reported to a doctor immediately. In the meantime, having a reliable mobility aid on hand can provide critical support. Our guide on Best Mobility Devices for Seniors covers a wide range of options to suit different needs.
+            </p>
+          </div>
+
+          <img
+            className="mx-auto mt-8 h-auto w-full max-w-[520px] rounded-[10px] bg-[#f3f3f3] p-3"
+            src={`${process.env.PUBLIC_URL}/images/blogg.webp`}
+            alt="Senior woman near a walker monitoring her health"
+          />
+
+          <SectionHeading id="section-6">Tips for Caregivers Supporting Seniors with Heart Conditions</SectionHeading>
+          <Paragraph>
+            Caring for a senior with heart issues requires extra awareness around fall prevention. Here are some practical steps:
+          </Paragraph>
+          <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">
+            <li>Ensure the home is fall-proof: Remove loose rugs, improve lighting, and install grab bars in bathrooms.</li>
+            <li>Encourage slow position changes: Help seniors stand up gradually to prevent orthostatic hypotension.</li>
+            <li>Review medications regularly: Work with the senior's doctor to identify any drugs that may increase fall risk.</li>
+            <li>Choose the right mobility aid: A rollator or upright walker can provide stability during dizzy spells.</li>
+            <li>Have an emergency plan: Learn what to do in a fall situation.</li>
+          </ul>
+
+          <SectionHeading id="section-7">Frequently Asked Questions</SectionHeading>
+          <div className="mt-4 space-y-2">
+            {[
+              'Can a heart condition directly cause a fall?',
+              'What heart medication is most associated with falls in seniors?',
+              'Should seniors with heart conditions use a walker?',
+              'Can exercise help reduce fall risk for seniors with heart disease?',
+            ].map((question) => (
+              <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
+                <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">
+                  {question}
+                </summary>
+                <p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">
+                  Dizziness, blood pressure changes, fatigue, and medication side effects can all make falls more likely.
+                </p>
+              </details>
+            ))}
+          </div>
+
+          <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
+            <div className="flex items-center gap-3">
+              <span className="text-[24px] text-[#ffc400]">◇</span>
+              <h2 className="text-[18px] font-black text-black">Final Thoughts</h2>
+            </div>
+            <Paragraph>
+              Heart health and fall prevention are more closely connected than most people realize. By understanding how heart conditions affect balance, blood pressure, and energy levels, seniors and their caregivers can take proactive steps to reduce risk.
+            </Paragraph>
+            <Paragraph>
+              The right combination of medical care, proper nutrition, appropriate mobility aids, and home safety measures can make a significant difference in quality of life.
+            </Paragraph>
+          </section>
+
+          <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-9">
+            <div className="flex items-center gap-3">
+              <span className="text-[22px] text-[#ffc400]">◔</span>
+              <h2 className="text-[18px] font-black text-black">References</h2>
+            </div>
+            <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
+              <li>Centers for Disease Control and Prevention (CDC). Older Adult Falls. https://www.cdc.gov/falls/about/index.html</li>
+              <li>American Heart Association. Heart Failure and Fall Risk in Older Adults. https://www.heart.org/en/health-topics/heart-failure</li>
+              <li>National Institute on Aging. Falls and Older Adults. https://www.nia.nih.gov/health/falls-and-older-adults</li>
+              <li>Mayo Clinic. Orthostatic Hypotension: Symptoms and Causes. https://www.mayoclinic.org/diseases-conditions/orthostatic-hypotension</li>
+              <li>Journal of the American Geriatrics Society. Cardiovascular Conditions and Fall Risk. https://agsjournals.onlinelibrary.wiley.com</li>
+            </ol>
+          </section>
+
+          <SocialDots />
+
+          <section className="mt-8 rounded-[10px] bg-white p-8 shadow-[0_14px_40px_rgba(0,0,0,0.05)]">
+            <h2 className="text-center text-[14px] font-black text-black">What do you think?</h2>
+            <form className="mt-6 space-y-4" action="#">
+              <label className="block">
+                <span className="font-manrope text-[11px] font-black text-black">Comment *</span>
+                <textarea className="mt-2 min-h-[100px] w-full rounded-[4px] border border-black px-3 py-2 font-manrope text-[12px] outline-none" />
+              </label>
+              <label className="block">
+                <span className="font-manrope text-[11px] font-black text-black">Name *</span>
+                <input className="mt-2 h-8 w-full rounded-[4px] border border-black px-3 font-manrope text-[12px] outline-none" />
+              </label>
+              <label className="block">
+                <span className="font-manrope text-[11px] font-black text-black">Email *</span>
+                <input className="mt-2 h-8 w-full rounded-[4px] border border-black px-3 font-manrope text-[12px] outline-none" type="email" />
+              </label>
+              <label className="flex items-center gap-2 font-manrope text-[10px] font-medium text-[#1f2930]">
+                <input type="checkbox" /> Save my name, email, and website in this browser for the next time I comment.
+              </label>
+              <button className="rounded-full bg-[#07364f] px-7 py-3 font-manrope text-[11px] font-black text-white" type="submit">
+                Post Comment
+              </button>
+            </form>
+          </section>
+        </article>
+
+        <section className="mx-auto mt-16 max-w-[900px]">
+          <h2 className="font-manrope text-[13px] font-black text-black">Related Articles</h2>
+          <div className="mt-5 grid gap-6 md:grid-cols-3">
+            {relatedArticles.map((article) => (
+              <article className="overflow-hidden rounded-[8px] border border-[#d8dde2] bg-white" key={article.title}>
+                <img className="h-40 w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <div className="p-5">
+                  <h3 className="text-[17px] font-black leading-tight text-[#172129]">{article.title}</h3>
+                  <p className="mt-3 font-manrope text-[12px] font-medium leading-6 text-[#303a42]">{article.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </main>
+
+      <DetailNewsletter />
+      <DetailFooter />
+    </>
+  );
+}
+
+export default BlogDetail;

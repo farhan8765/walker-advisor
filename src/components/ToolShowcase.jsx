@@ -1,20 +1,39 @@
+import { useState } from 'react';
+
 const toolTabs = ['All', 'Winlove', 'Helavo', 'Elenker', 'Carex', 'Nova'];
 
 const toolCards = [
   {
     id: 1,
+    brand: 'Winlove',
     title: 'Track',
     description:
       'Stay in control of your ride with real-time cycling data. Monitor, measure, and move smarter.',
   },
   {
     id: 2,
+    brand: 'Helavo',
     title: 'Track',
     description:
       'Stay in control of your ride with real-time cycling data. Monitor, measure, and move smarter.',
   },
   {
     id: 3,
+    brand: 'Elenker',
+    title: 'Track',
+    description:
+      'Stay in control of your ride with real-time cycling data. Monitor, measure, and move smarter.',
+  },
+  {
+    id: 4,
+    brand: 'Carex',
+    title: 'Track',
+    description:
+      'Stay in control of your ride with real-time cycling data. Monitor, measure, and move smarter.',
+  },
+  {
+    id: 5,
+    brand: 'Nova',
     title: 'Track',
     description:
       'Stay in control of your ride with real-time cycling data. Monitor, measure, and move smarter.',
@@ -22,6 +41,12 @@ const toolCards = [
 ];
 
 function ToolShowcase() {
+  const [activeTab, setActiveTab] = useState('All');
+  const visibleCards =
+    activeTab === 'All'
+      ? toolCards.slice(0, 3)
+      : toolCards.filter((card) => card.brand === activeTab);
+
   return (
     <section className="w-full bg-[#fbf6e6] px-4 py-16 md:px-8 lg:px-14 lg:py-24">
       <div className="mx-auto max-w-[1280px]">
@@ -34,16 +59,17 @@ function ToolShowcase() {
           </p>
         </div>
 
-        <div className="mx-auto mt-12 flex max-w-[760px] flex-wrap items-center justify-center gap-4 md:mt-16 md:gap-10">
+        <div className="mx-auto mt-12 flex w-full max-w-[1180px] flex-nowrap items-center justify-between gap-6 overflow-x-auto pb-2 md:mt-16 md:gap-10">
           {toolTabs.map((tab) => (
             <button
               className={`h-12 rounded-full px-6 font-manrope text-base font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] md:text-lg ${
-                tab === 'All'
+                activeTab === tab
                   ? 'border border-[#172129] bg-transparent text-[#172129]'
                   : 'border border-transparent bg-transparent text-black hover:text-[#a87900]'
               }`}
               key={tab}
               type="button"
+              onClick={() => setActiveTab(tab)}
             >
               {tab}
             </button>
@@ -51,7 +77,7 @@ function ToolShowcase() {
         </div>
 
         <div className="mt-24 grid gap-6 md:grid-cols-3">
-          {toolCards.map((card) => (
+          {visibleCards.map((card) => (
             <article
               className="rounded-lg bg-[#ffc400] px-7 pb-7 pt-8 md:px-8 md:pb-9 md:pt-9 lg:px-9 lg:pb-10"
               key={card.id}

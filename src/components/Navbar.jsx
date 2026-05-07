@@ -107,7 +107,7 @@ function Navbar() {
   );
 
   return (
-    <header className="relative z-50 w-full bg-[#fbf6e6] px-4 pt-4 pb-3 md:px-[114px] lg:min-h-[126px] lg:pt-5 lg:pb-5">
+    <header className="sticky top-0 z-50 w-full bg-[#fbf6e6] px-4 pt-4 pb-3 shadow-[0_8px_28px_rgba(95,104,112,0.08)] md:px-[114px] lg:min-h-[126px] lg:pt-5 lg:pb-5">
       {/* Mobile: logo + menu */}
       <div className="grid w-full grid-cols-[1fr_auto] items-center gap-3 lg:hidden">
         <a
