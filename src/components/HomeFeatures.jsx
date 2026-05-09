@@ -54,26 +54,37 @@ function HomeFeatures() {
   return (
     <section className="w-full bg-white px-4 py-16 md:px-8 lg:px-14 lg:py-24">
       <div className="mx-auto max-w-[1280px]">
-        <div className="mx-auto max-w-[640px] text-center">
-          <h2 className="text-[38px] font-black uppercase leading-[0.95] text-black md:text-[56px] lg:text-[64px]">
-            Stay on top of your mobility progress
+        <div className="mx-auto max-w-[840px] text-center">
+          <h2
+            className="mx-auto h-[120px] w-[840px] text-center text-[60px] font-normal uppercase leading-[100%] tracking-[0%] text-black"
+            style={{ fontFamily: 'Anton, sans-serif' }}
+          >
+          Stay on top of your
+          <br />
+          cycling progress
           </h2>
-          <p className="mt-6 text-base font-medium leading-7 text-[#66737c] md:text-[20px]">
-            Track your growth with smart insights from every walk.
+          <p
+            className="mx-auto mt-6 flex h-[28px] w-[840px] items-center justify-center text-center text-[18px] font-normal leading-[28px] tracking-[0.5%] text-[#5A666E]"
+            style={{ fontFamily: 'Manrope, sans-serif' }}
+          >
+          Track your growth with smart insights from every ride.
           </p>
         </div>
 
         <div className="mt-14 flex flex-col gap-8 lg:mt-16">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-            <h3 className="text-[32px] font-black uppercase leading-none text-[#172129] md:text-[40px]">
+          <div className="flex flex-col gap-6 lg:flex-row lg:flex-nowrap lg:items-center lg:justify-between">
+            <h3
+              className="h-[40px] w-[683px] shrink-0 text-[40px] font-normal uppercase leading-[100%] tracking-[0%] text-[#172129]"
+              style={{ fontFamily: 'Anton, sans-serif' }}
+            >
               Top Categories
             </h3>
 
-            <div className="flex flex-wrap items-center gap-4 md:gap-10">
+            <div className="flex flex-nowrap items-center gap-2 md:gap-4">
               {['All', "Caregiver's Corner", 'Informational', 'Comparison'].map(
                 (category) => (
                   <button
-                    className={`h-12 rounded-full px-6 font-manrope text-base font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] md:text-lg ${
+                    className={`h-12 whitespace-nowrap rounded-full px-4 font-manrope text-base font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] md:text-[17px] ${
                       category === 'All'
                         ? 'border border-[#172129] bg-white text-[#172129]'
                         : 'border border-transparent bg-white text-black hover:text-[#a87900]'
@@ -117,7 +128,10 @@ function HomeFeatures() {
               <article className="grid overflow-hidden rounded-lg bg-[#fff1b3] lg:grid-cols-2">
                 <ImagePlaceholder className="min-h-[260px] lg:min-h-[342px]" />
                 <div className="px-7 py-8 md:px-12 md:py-10 lg:px-14">
-                  <h3 className="max-w-[430px] text-[36px] font-black leading-[1.08] text-[#172129] md:text-[48px] lg:text-[52px]">
+                  <h3
+                    className="h-[144px] w-[400px] text-[48px] font-bold leading-[100%] tracking-[0.5%] text-[#172129]"
+                    style={{ fontFamily: 'Manrope, sans-serif' }}
+                  >
                     Blog title heading will go here
                   </h3>
                   <p className="mt-5 max-w-[440px] font-manrope text-base font-medium leading-7 text-[#66737c] md:text-lg">
@@ -138,7 +152,10 @@ function HomeFeatures() {
                 {featureCards.map((card) => (
                   <article className="font-manrope" key={card.id}>
                     <ImagePlaceholder className="min-h-[210px] rounded-lg md:min-h-[218px]" />
-                    <h3 className="mt-7 text-[24px] font-black leading-tight text-[#172129] md:text-[28px]">
+                    <h3
+                      className="mt-7 h-[64px] w-[329.33px] text-[24px] font-bold leading-[32px] tracking-[0.5%] text-[#172129]"
+                      style={{ fontFamily: 'Manrope, sans-serif' }}
+                    >
                       {card.title}
                     </h3>
                     <p className="mt-4 text-base font-medium leading-7 text-[#66737c]">

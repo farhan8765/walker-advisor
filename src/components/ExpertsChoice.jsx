@@ -46,7 +46,10 @@ function ExpertsChoice() {
       className="w-full bg-[#fbf6e6] px-4 py-16 md:px-8 lg:px-14 lg:py-24"
     >
       <div className="mx-auto max-w-[1280px]">
-        <h2 className="text-[34px] font-black uppercase leading-none text-[#172129] md:text-[44px] lg:text-[48px]">
+        <h2
+          className="h-[40px] w-[1280px] text-[40px] font-normal uppercase leading-[100%] tracking-[0%] text-[#172129]"
+          style={{ fontFamily: 'Anton, sans-serif' }}
+        >
           Experts Choice
         </h2>
 
@@ -55,7 +58,10 @@ function ExpertsChoice() {
             <article className="font-manrope" key={article.id}>
               <ExpertImagePlaceholder />
 
-              <h3 className="mt-8 text-[24px] font-black leading-tight text-[#172129] md:text-[28px] lg:text-[32px]">
+              <h3
+                className="mt-8 h-[32px] w-[420px] text-[24px] font-bold leading-[32px] tracking-[0.5%] text-[#172129]"
+                style={{ fontFamily: 'Manrope, sans-serif' }}
+              >
                 {article.title}
               </h3>
               <p className="mt-4 text-base font-medium leading-7 text-[#66737c] md:text-lg">

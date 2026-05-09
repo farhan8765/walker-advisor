@@ -50,8 +50,11 @@ function ToolShowcase() {
   return (
     <section className="w-full bg-[#fbf6e6] px-4 py-16 md:px-8 lg:px-14 lg:py-24">
       <div className="mx-auto max-w-[1280px]">
-        <div className="mx-auto max-w-[720px] text-center">
-          <h2 className="text-[42px] font-black uppercase leading-none text-black md:text-[58px] lg:text-[64px]">
+        <div className="mx-auto max-w-[840px] text-center">
+          <h2
+            className="mx-auto h-[60px] w-[840px] text-center text-[60px] font-normal uppercase leading-[100%] tracking-[0%] text-black"
+            style={{ fontFamily: 'Anton, sans-serif' }}
+          >
             Test it, choose it
           </h2>
           <p className="mt-6 text-base font-medium leading-7 text-[#66737c] md:text-[20px]">
@@ -59,7 +62,7 @@ function ToolShowcase() {
           </p>
         </div>
 
-        <div className="mx-auto mt-12 flex w-full max-w-[1180px] flex-nowrap items-center justify-between gap-6 overflow-x-auto pb-2 md:mt-16 md:gap-10">
+        <div className="mx-auto mt-12 flex w-full max-w-[1180px] flex-nowrap items-center justify-between gap-3 overflow-x-auto pb-2 md:mt-16 md:gap-6">
           {toolTabs.map((tab) => (
             <button
               className={`h-12 rounded-full px-6 font-manrope text-base font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] md:text-lg ${

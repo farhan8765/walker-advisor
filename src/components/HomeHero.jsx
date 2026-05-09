@@ -1,6 +1,6 @@
 function HomeHero() {
   return (
-    <section className="w-full overflow-hidden bg-[#fbf6e6] px-0 pb-8 pt-0 md:pb-12 lg:pb-16">
+    <section className="w-full overflow-hidden bg-[#FFFAE7] px-0 pb-8 pt-0 md:pb-12 lg:pb-16">
       <div className="mx-auto max-w-[1443px]">
         <img
           className="block h-auto w-full"

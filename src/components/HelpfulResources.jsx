@@ -43,7 +43,10 @@ function HelpfulResources() {
     <section className="w-full bg-[#fbf6e6] px-4 py-16 md:px-8 lg:px-14 lg:py-20">
       <div className="mx-auto max-w-[1280px]">
         <div className="mx-auto max-w-[850px] text-center">
-          <h2 className="text-[36px] font-black uppercase leading-none text-black md:text-[50px] lg:text-[56px]">
+          <h2
+            className="mx-auto h-[60px] w-[840px] text-center text-[60px] font-normal uppercase leading-[100%] tracking-[0%] text-black"
+            style={{ fontFamily: 'Anton, sans-serif' }}
+          >
             Helpful Resources To Guide You
           </h2>
           <p className="mt-5 font-manrope text-base font-medium leading-7 text-[#66737c] md:text-lg">

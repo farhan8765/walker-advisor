@@ -10,7 +10,14 @@ function MobilityGuide() {
           alt="Senior woman walking outdoors with a rollator walker"
         />
 
-        <div className="flex flex-col items-start lg:pt-40">
+        <div className="flex flex-col items-start lg:pt-20">
+          <h2
+            className="h-[120px] w-[618px] text-[60px] font-normal uppercase leading-[100%] tracking-[0%] text-black"
+            style={{ fontFamily: 'Anton, sans-serif' }}
+          >
+            Struggling with walker choices?
+          </h2>
+
           <div className="grid w-full max-w-[430px] grid-cols-2 gap-4 md:gap-5">
             <img
               className="aspect-square w-full rounded-lg object-cover"
@@ -24,7 +31,14 @@ function MobilityGuide() {
             />
           </div>
 
-          <p className="mt-20 max-w-[580px] font-manrope text-base font-black leading-6 text-[#132027] md:text-lg">
+          <h3
+            className="mt-8 h-[38px] w-[618px] text-[32px] font-medium leading-[120%] tracking-[0%] text-[#171717]"
+            style={{ fontFamily: 'Helvetica Neue, Arial, sans-serif' }}
+          >
+            We&apos;re Here to Make it Easy!
+          </h3>
+
+          <p className="mt-3 max-w-[580px] font-manrope text-base font-medium leading-6 text-[#132027] md:text-lg">
             Walkers help you stay mobile, and independent. Choosing the right
             one and using the right way makes all the difference
           </p>

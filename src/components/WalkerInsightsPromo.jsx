@@ -3,7 +3,10 @@ function WalkerInsightsPromo() {
     <section className="w-full  px-4 py-16 md:px-8 lg:px-14">
       <div className="mx-auto grid max-w-[1280px] overflow-hidden rounded-lg lg:grid-cols-2">
         <div className="flex min-h-[360px] flex-col justify-between bg-[#fff0ad] px-7 py-9 md:px-10 lg:min-h-[468px] lg:px-10">
-          <h2 className="max-w-[560px] text-[40px] font-black uppercase leading-[0.96] text-black md:text-[56px] lg:text-[58px]">
+          <h2
+            className="h-[120px] w-[560px] text-[60px] font-normal uppercase leading-[100%] tracking-[0%] text-black"
+            style={{ fontFamily: 'Anton, sans-serif' }}
+          >
             Walker Reviews & Mobility Insights
           </h2>
 

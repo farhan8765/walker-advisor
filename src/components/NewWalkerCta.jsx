@@ -3,8 +3,11 @@ function NewWalkerCta() {
     <section className="w-full overflow-hidden  px-4 py-16 md:px-8 lg:px-14 lg:py-24">
       <div className="relative mx-auto max-w-[1280px] pt-44 md:pt-56 lg:pt-44">
         <div className="rounded-lg bg-[#132027] px-7 py-10 md:px-14 lg:px-28 lg:py-9">
-          <div className="max-w-[520px]">
-            <h2 className="text-[36px] font-black leading-none text-[#ffc400] md:text-[52px]">
+          <div className="max-w-[654.75px]">
+            <h2
+              className="h-[48px] w-[654.75px] text-[48px] font-normal leading-[100%] tracking-[0.5%] text-[#ffc400]"
+              style={{ fontFamily: 'Anton, sans-serif' }}
+            >
               Looking For New Walker?
             </h2>
             <p className="mt-5 font-manrope text-base font-medium leading-7 text-[#ffc400] md:text-lg">

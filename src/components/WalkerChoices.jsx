@@ -50,7 +50,10 @@ function WalkerChoices() {
     <section className="w-full bg-[#fbf6e6] px-4 py-16 md:px-8 lg:px-14 lg:py-24">
       <div className="mx-auto grid max-w-[1280px] items-center gap-12 lg:grid-cols-[minmax(0,_590px)_minmax(0,_608px)] lg:gap-16">
         <div>
-          <h2 className="max-w-[590px] text-[42px] font-black uppercase leading-[0.95] text-black md:text-[56px] lg:text-[60px]">
+          <h2
+            className="h-[120px] w-[592px] text-[60px] font-normal uppercase leading-[100%] tracking-[0%] text-black"
+            style={{ fontFamily: 'Anton, sans-serif' }}
+          >
             Struggling with walker choices?
           </h2>
           <p className="mt-10 max-w-[590px] font-manrope text-base font-medium leading-7 text-[#172129] md:text-lg">
@@ -75,7 +78,10 @@ function WalkerChoices() {
                 key={card.title}
               >
                 <CardIcon highlighted={card.highlighted} />
-                <h3 className="mt-6 text-[24px] font-black leading-tight md:text-[26px]">
+                <h3
+                  className="mt-6 h-[58px] w-[248px] text-[24px] font-bold leading-[120%] tracking-[0.5%]"
+                  style={{ fontFamily: 'Mulish, sans-serif' }}
+                >
                   {card.title}
                 </h3>
                 <p className="mt-5 font-manrope text-base font-medium leading-6">
@@ -92,7 +98,10 @@ function WalkerChoices() {
                 key={card.title}
               >
                 <CardIcon />
-                <h3 className="mt-6 text-[24px] font-black leading-tight md:text-[26px]">
+                <h3
+                  className="mt-6 h-[58px] w-[248px] text-[24px] font-bold leading-[120%] tracking-[0.5%]"
+                  style={{ fontFamily: 'Mulish, sans-serif' }}
+                >
                   {card.title}
                 </h3>
                 <p className="mt-5 font-manrope text-base font-medium leading-6">
