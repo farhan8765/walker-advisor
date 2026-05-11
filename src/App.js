@@ -1,19 +1,33 @@
 import "./App.css";
 import AboutUs from "./pages/AboutUs";
+import AmazonReturnsDetail from "./pages/AmazonReturnsDetail";
+import AmazonShoppingHackDetail from "./pages/AmazonShoppingHackDetail";
 import Articles from "./pages/Articles";
 import BlogDetail from "./pages/BlogDetail";
 import CaregiversCorner from "./pages/CaregiversCorner";
 import Contact from "./pages/Contact";
 import ProperWalkingShoesDetail from "./pages/ProperWalkingShoesDetail";
+import ReplacementWalkerHandGripsDetail from "./pages/ReplacementWalkerHandGripsDetail";
+import AdjustWalkerHeightDetail from "./pages/AdjustWalkerHeightDetail";
+import CaregiversGuideWalkerDetail from "./pages/CaregiversGuideWalkerDetail";
+import EmergencyPreparednessDetail from "./pages/EmergencyPreparednessDetail";
+import FittingWalkerDetail from "./pages/FittingWalkerDetail";
+import MustHaveWalkerAccessoriesDetail from "./pages/MustHaveWalkerAccessoriesDetail";
+import SupportiveGripsDetail from "./pages/SupportiveGripsDetail";
+import TransitionWalkerIndependentDetail from "./pages/TransitionWalkerIndependentDetail";
+import WalmartWalkerGripsDetail from "./pages/WalmartWalkerGripsDetail";
 import Tools from "./pages/Tools";
+import TravelWithWalkerDetail from "./pages/TravelWithWalkerDetail";
 import UprightWalkersDetail from "./pages/UprightWalkersDetail";
 import ValentinesDetail from "./pages/ValentinesDetail";
+import WalkerStairsSafetyDetail from "./pages/WalkerStairsSafetyDetail";
 import WalkerWithWheelsDetail from "./pages/WalkerWithWheelsDetail";
 import WalkingShoesDetail from "./pages/WalkingShoesDetail";
 import ExpertsChoice from "./components/ExpertsChoice";
 import Footer from "./components/Footer";
 import HelpfulResources from "./components/HelpfulResources";
 import HolidaySafetySeniorsDetail from "./pages/HolidaySafetySeniorsDetail";
+import HolidayWalkerSafetyDetail from "./pages/HolidayWalkerSafetyDetail";
 import HomeFeatures from "./components/HomeFeatures";
 import HomeHero from "./components/HomeHero";
 import MentalHealthDetail from "./pages/MentalHealthDetail";
@@ -52,6 +66,9 @@ function Home() {
 const routes = {
   "/": Home,
   "/about-us": AboutUs,
+  "/every-way-to-return-amazon-orders-for-free": AmazonReturnsDetail,
+  "/the-secret-amazon-shopping-hack-to-get-a-deal-on-just-about-anything": AmazonShoppingHackDetail,
+  "/how-to-travel-with-a-walker-tips-for-seniors": TravelWithWalkerDetail,
   "/articles": Articles,
   "/can-heart-issues-increase-fall-risk-in-seniors": BlogDetail,
   "/how-to-choose-walking-shoes-for-balance-and-stability": WalkingShoesDetail,
@@ -60,9 +77,21 @@ const routes = {
   "/best-mobility-devices-for-seniors": MobilityDevicesDetail,
   "/can-osteoarthritis-lead-to-more-falls-in-seniors": OsteoarthritisFallsDetail,
   "/holiday-safety-tips-for-seniors-prevent-falls-fires-seasonal-risks": HolidaySafetySeniorsDetail,
+  "/holiday-safety-tips-for-seniors-using-walkers": HolidayWalkerSafetyDetail,
+  "/the-side-effects-of-using-a-cane": HolidayWalkerSafetyDetail,
+  "/senior-safety-how-to-use-a-walker-on-stairs": WalkerStairsSafetyDetail,
   "/understanding-upright-walkers-how-they-improve-senior-posture": UprightWalkersDetail,
   "/valentines-day-ideas-what-seniors-can-give-each-other": ValentinesDetail,
   "/why-seniors-need-proper-walking-shoes": ProperWalkingShoesDetail,
+  "/replacement-walker-hand-grips-for-all-kinds-of-walkers": ReplacementWalkerHandGripsDetail,
+  "/replacement-walker-hand-grips-for-all-sizes-at-walmart": WalmartWalkerGripsDetail,
+  "/stop-the-struggle-the-ultimate-easy-guide-to-fitting-a-walker-for-seniors": FittingWalkerDetail,
+  "/must-have-walker-accessories-to-make-life-easier-and-safer": MustHaveWalkerAccessoriesDetail,
+  "/emergency-preparedness-for-walker-users-top-medical-alert-devices-smart-tech": EmergencyPreparednessDetail,
+  "/how-to-adjust-a-walker-to-the-correct-height-a-safety-checklist": AdjustWalkerHeightDetail,
+  "/how-to-transition-from-a-walker-to-walking-independently": TransitionWalkerIndependentDetail,
+  "/caregivers-guide-to-helping-seniors-pick-and-use-the-perfect-walker": CaregiversGuideWalkerDetail,
+  "/how-do-supportive-grips-on-walkers-help-seniors-with-mobility": SupportiveGripsDetail,
   "/caregivers-corner": CaregiversCorner,
   "/contact": Contact,
   "/tools": Tools,

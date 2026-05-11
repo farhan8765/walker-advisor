@@ -97,7 +97,7 @@ const articles = [
   {
     id: 10,
     category: "Caregiver's Corner",
-    image: 'extra-blog-1.png',
+    image: 'twa33-1.webp',
     href: '/holiday-safety-tips-for-seniors-prevent-falls-fires-seasonal-risks',
     alt: 'Holiday safety tips for seniors',
     title: 'Holiday Safety Tips for Seniors: Prevent Falls, Fires & Seasonal Risks',
@@ -107,7 +107,8 @@ const articles = [
   {
     id: 11,
     category: 'Informational',
-    image: 'extra-blog-2.png',
+    image: 'twa33.webp',
+    href: '/holiday-safety-tips-for-seniors-using-walkers',
     alt: 'Senior woman holding holiday walker decorations',
     title: 'Holiday Safety Tips for Seniors Using Walkers: Stay Confident & Independent This Season',
     description:
@@ -116,7 +117,8 @@ const articles = [
   {
     id: 12,
     category: 'Informational',
-    image: 'extra-blog-3.png',
+    image: 'Using-a-walker-on-stairs-or-steps-1536x864.webp',
+    href: '/senior-safety-how-to-use-a-walker-on-stairs',
     alt: 'Using a walker on stairs or steps',
     title: 'Senior Safety: How to Use a Walker on Stairs (And Why You Usually Shouldn’t)',
     description:
@@ -125,7 +127,8 @@ const articles = [
   {
     id: 13,
     category: 'Comparison',
-    image: 'extra-blog-4.png',
+    image: 'twainfo-1.webp',
+    href: '/every-way-to-return-amazon-orders-for-free',
     alt: 'Amazon packages stacked near a front door',
     title: 'Every Way to Return Amazon Orders for Free: Your Complete Guide to Hassle-Free Returns',
     description:
@@ -134,7 +137,8 @@ const articles = [
   {
     id: 14,
     category: 'Comparison',
-    image: 'extra-blog-5.png',
+    image: 'twa-1-1.webp',
+    href: '/the-secret-amazon-shopping-hack-to-get-a-deal-on-just-about-anything',
     alt: 'Hands holding Amazon delivery boxes',
     title: 'The Secret Amazon Shopping Hack to Get a Deal on Just About Anything',
     description:
@@ -143,7 +147,8 @@ const articles = [
   {
     id: 15,
     category: 'Informational',
-    image: 'extra-blog-6.png',
+    image: 'twa-1-1-e1761912917887.webp',
+    href: '/how-to-travel-with-a-walker-tips-for-seniors',
     alt: 'Person traveling with a walker',
     title: 'How to Travel with a Walker – Tips for Seniors',
     description:
@@ -152,7 +157,8 @@ const articles = [
   {
     id: 16,
     category: 'Informational',
-    image: 'extra-blog-7.png',
+    image: 'twa28-1.webp',
+    href: '/the-side-effects-of-using-a-cane',
     alt: 'Senior holding a cane',
     title: 'The Side Effects Of Using A Cane',
     description:
@@ -161,7 +167,8 @@ const articles = [
   {
     id: 17,
     category: 'Informational',
-    image: 'extra-blog-8.png',
+    image: 'twa-fi.webp',
+    href: '/replacement-walker-hand-grips-for-all-kinds-of-walkers',
     alt: 'Group of people holding canes and walkers outdoors',
     title: 'Replacement Walker Hand Grips for All Kinds of Walkers',
     description:
@@ -170,11 +177,82 @@ const articles = [
   {
     id: 18,
     category: 'Informational',
-    image: 'extra-blog-9.png',
+    image: 'twa-blog26-1-1.webp',
+    href: '/stop-the-struggle-the-ultimate-easy-guide-to-fitting-a-walker-for-seniors',
     alt: 'Seniors fitting upright walkers',
     title: 'Stop the Struggle: The Ultimate Easy Guide to Fitting a Walker for Seniors Safely',
     description:
       'Struggling to find the right walker fit? Discover this easy step-by-step guide for seniors on choosing, adjusting, and maintaining walkers for maximum comfort, safety, and',
+  },
+  {
+    id: 19,
+    category: 'Comparison',
+    image: 'twa-fi.webp',
+    href: '/replacement-walker-hand-grips-for-all-sizes-at-walmart',
+    alt: 'Group of seniors outdoors with walkers and canes',
+    title: 'Replacement Walker Hand Grips for All Sizes at Walmart',
+    description:
+      'Find the right replacement walker hand grips at Walmart. Whether you need extra cushioning, a firmer grip, or a simple padded cover, Walmart carries options for every walker size.',
+  },
+  {
+    id: 20,
+    category: 'Informational',
+    image: 'blog-27-1.webp',
+    href: '/must-have-walker-accessories-to-make-life-easier-and-safer',
+    alt: 'Senior woman in pink walking on a path with a rollator giving a thumbs up',
+    title: 'Must-Have Walker Accessories to Make Life Easier and Safer',
+    description:
+      'Upgrade your walker into a safety powerhouse with smart, stylish accessories that boost comfort, independence, and everyday ease.',
+  },
+  {
+    id: 21,
+    category: 'Informational',
+    image: 'TWA-26-1.webp',
+    href: '/emergency-preparedness-for-walker-users-top-medical-alert-devices-smart-tech',
+    alt: 'Person pressing a medical alert smartwatch with heart rate indicator',
+    title: 'Emergency Preparedness for Walker Users: Top Medical Alert Devices & Smart Tech',
+    description:
+      'Stay safe and independent with cutting-edge alert systems, GPS trackers, and wearable tech designed specifically for walker users.',
+  },
+  {
+    id: 22,
+    category: 'Informational',
+    image: 'twa-featured-image.webp',
+    href: '/how-to-adjust-a-walker-to-the-correct-height-a-safety-checklist',
+    alt: 'Caregiver helping elderly man use a walker in a care facility',
+    title: 'How to Adjust a Walker to the Correct Height: A Safety Checklist',
+    description:
+      "The right walker height isn't just comfort; it's your first step toward safer, steadier movement.",
+  },
+  {
+    id: 23,
+    category: 'Informational',
+    image: 'walker-6491828_1280-e1762320268423.webp',
+    href: '/how-to-transition-from-a-walker-to-walking-independently',
+    alt: 'Senior person resting near steps with a rollator parked beside them',
+    title: 'How to Transition From a Walker to Walking Independently: A Step-by-Step Guide',
+    description:
+      'Regain your freedom with expert-backed tips, gentle exercises, and proven steps to confidently move from walker use to walking on your own.',
+  },
+  {
+    id: 24,
+    category: "Caregiver's Corner",
+    image: 'twa-blog11-1024x683.webp',
+    href: '/caregivers-guide-to-helping-seniors-pick-and-use-the-perfect-walker',
+    alt: 'Caregiver assisting senior woman with walking support in a home environment',
+    title: "Caregivers' Guide to Helping Seniors Pick and Use the Perfect Walker",
+    description:
+      "The right guidance can make all the difference, here's how caregivers can ensure seniors get the best walker for their needs.",
+  },
+  {
+    id: 25,
+    category: 'Informational',
+    image: 'twa-blog6-640x427.webp',
+    href: '/how-do-supportive-grips-on-walkers-help-seniors-with-mobility',
+    alt: 'Elderly hands gripping a walking stick handle with both hands',
+    title: 'How do supportive grips on walkers help seniors with mobility?',
+    description:
+      'Supportive grips boost comfort, improve balance, and make every step safer — here is why they matter and how to choose the right ones.',
   },
 ];
 
