@@ -10,93 +10,41 @@ const navItems = [
 ];
 
 const toc = [
-  "Understanding the Senior's Mobility Needs",
-  'Types of Walkers and Who They Suit',
-  'How to Assess the Right Walker Together',
-  'Fitting the Walker with the Senior',
-  'Teaching Safe Walker Technique',
-  'Common Caregiver Mistakes to Avoid',
+  'Recognizing When a Senior Requires a Walker',
+  'Walker Varieties and How Caregivers Can Assist in Selection',
+  'A Step-by-Step Guide to Ensuring a Proper Walker Fit',
+  "Educating Seniors on Safe Walker Usage: A Caregiver's Duty",
+  'Maintaining and Adjusting Walkers: Tips for Caregivers',
   'Frequently Asked Questions',
   'Final Thoughts',
   'References',
 ];
 
-const walkerTypes = [
-  {
-    title: 'Standard Walker (No Wheels)',
-    image: 'waaaaa-683x1024.webp',
-    alt: 'Standard folding walker without wheels on a neutral background',
-    text: 'Best for seniors with significant balance issues or those recovering from surgery. Requires lifting with each step, which makes it slower but maximally stable. Suitable for indoor use on flat surfaces.',
-  },
-  {
-    title: 'Two-Wheel Walker',
-    image: 'twablog26-4-683x1024.webp',
-    alt: 'Two-wheel walker with front wheels and rear rubber tips',
-    text: 'A good middle-ground option. Front wheels allow the walker to glide forward while the rear rubber tips provide braking resistance. Suitable for seniors who find lifting a standard walker exhausting.',
-  },
-  {
-    title: 'Rollator (Four Wheels with Seat)',
-    image: 'twablog26-5-683x1024.webp',
-    alt: 'Blue rollator walker with seat and storage bag',
-    text: 'Best for seniors who can walk but need regular rest breaks. The built-in seat, hand brakes, and smooth rolling make rollators ideal for outdoor use and longer distances. Requires some coordination to use brakes correctly.',
-  },
-  {
-    title: 'Upright Walker',
-    image: 'twa-blog26-1-1.webp',
-    alt: 'Seniors using upright walkers with forearm support pads',
-    text: 'Supports the forearms rather than the hands. Encourages an upright posture, which reduces back pain. Best for seniors with stooped posture, back pain, or wrist weakness. Usually heavier and more expensive.',
-  },
-];
-
-const assessmentSteps = [
-  {
-    step: '1',
-    title: 'Observe how the senior currently walks',
-    text: "Watch for leaning, shuffling, hesitation, or uneven weight bearing. These observations help identify whether the senior needs maximum stability, smooth gliding, or rest capability.",
-  },
-  {
-    step: '2',
-    title: "Discuss the senior's daily routine",
-    text: 'Ask where they walk most — indoors on carpet, outdoors on pavement, or in community spaces. The walking environment determines which walker type will be most practical.',
-  },
-  {
-    step: '3',
-    title: 'Try different walker types with supervision',
-    text: 'If possible, allow the senior to briefly try two or three walker types in a safe setting. Comfort and confidence with a specific type matter as much as clinical suitability.',
-  },
-  {
-    step: '4',
-    title: 'Consult a physiotherapist or occupational therapist',
-    text: 'For seniors with complex needs, a formal assessment by a mobility professional provides the most accurate recommendation and ensures the chosen walker is funded or reimbursed if applicable.',
-  },
-];
-
-const techniques = [
-  ['Stand upright — do not lean forward', 'Leaning increases fall risk and causes back strain over time.'],
-  ['Keep the walker close to the body', "A walker pushed too far forward creates overreaching and instability."],
-  ['Step into the walker — not alongside it', 'The feet should move into the frame, not beside it, on each step.'],
-  ['Never drag the walker', 'For standard walkers, lift and place — do not drag. For rollators, roll smoothly without jerking.'],
-  ['Brake before sitting (rollator)', 'Always lock the brakes before lowering to the rollator seat to prevent rolling.'],
+const walkerRows = [
+  ['Standard Walker', 'High stability, slower pace', 'Seniors who need maximum support'],
+  ['Two-Wheel Walker', 'Front wheels with rear tips', 'Seniors who need support but can step forward'],
+  ['Rollator', 'Seat, brakes, basket, four wheels', 'Active seniors who need rest breaks'],
+  ['Upright Walker', 'Forearm support and tall posture', 'Seniors with posture or wrist strain'],
 ];
 
 const relatedArticles = [
   {
-    image: 'twa-featured-image.webp',
-    href: '/how-to-adjust-a-walker-to-the-correct-height-a-safety-checklist',
-    title: 'How to Adjust a Walker to Correct Height',
-    description: "The right walker height isn't just comfort — it's your first step toward safer movement.",
+    image: 'blog.webp',
+    href: '/articles',
+    title: 'Social Activities for Older Adults: The Best Ways to Stay Connected, Active, and Happy',
+    description: 'Loneliness in seniors is not just sad, it can affect health and confidence. Here are practical ways to stay connected.',
   },
   {
-    image: 'twa-blog26-1-1.webp',
-    href: '/stop-the-struggle-the-ultimate-easy-guide-to-fitting-a-walker-for-seniors',
-    title: 'Guide to Fitting a Walker for Seniors',
-    description: 'A step-by-step guide for seniors on choosing, adjusting, and maintaining walkers safely.',
+    image: 'image-2-1.webp',
+    href: '/can-heart-issues-increase-fall-risk-in-seniors',
+    title: 'Can Heart Issues Increase Fall Risk in Seniors?',
+    description: 'You might think falls are just about balance, but heart health can play a major role in sudden falls.',
   },
   {
-    image: 'blog-27-1.webp',
-    href: '/must-have-walker-accessories-to-make-life-easier-and-safer',
-    title: 'Must-Have Walker Accessories',
-    description: 'Smart accessories that boost comfort, independence, and everyday ease for walker users.',
+    image: 'blog2.webp',
+    href: '/articles',
+    title: '3 Foods for Seniors to Avoid',
+    description: 'Your body after 70 changes in important ways. These common foods can make daily health harder to manage.',
   },
 ];
 
@@ -217,18 +165,18 @@ function CaregiversGuideWalkerDetail() {
 
           {/* Author */}
           <div className="mt-6 flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">AA</div>
-            <p className="font-manrope text-[12px] font-black text-black">Amir Abbasi</p>
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">SA</div>
+            <p className="font-manrope text-[12px] font-black text-black">Syed Ali</p>
           </div>
 
           {/* Key Summary */}
           <section className="mt-5 rounded-[8px] bg-[#f3f3f3] p-5">
             <h2 className="text-[14px] font-black text-black">Key Summary</h2>
-            <Paragraph>Caregivers play a critical role in helping seniors select the right walker and develop safe habits with it. Choosing the wrong type, skipping the fitting process, or allowing poor technique to develop can significantly increase fall risk. This guide gives caregivers the tools and knowledge to support safe, confident walker use from day one.</Paragraph>
+            <Paragraph>For caregivers, helping seniors choose and properly use a walker is more than simply buying a mobility device. The right walker can reduce fall risk, improve confidence, and support daily independence. The wrong walker, or poor walker habits, can create new safety problems.</Paragraph>
           </section>
 
-          <Paragraph>When a senior is prescribed or recommended a walker, the caregiver is often the one who researches options, sets up the equipment, and provides day-to-day guidance. This is a significant responsibility — and one that requires the right information.</Paragraph>
-          <Paragraph>This guide is designed specifically for caregivers and family members who want to ensure their loved one's walker experience is as safe and effective as possible.</Paragraph>
+          <Paragraph>As a caregiver, your presence is central in helping seniors preserve their dignity and independence. Many older adults resist walkers because they fear looking weak or losing freedom. Your role is to guide the conversation with patience, practical information, and respect for their preferences.</Paragraph>
+          <Paragraph>This guide explains how to recognize when a walker may be needed, compare walker styles, help with proper fitting, teach safe habits, and keep the device working correctly over time.</Paragraph>
 
           {/* TOC */}
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
@@ -242,103 +190,75 @@ function CaregiversGuideWalkerDetail() {
             </ol>
           </nav>
 
-          {/* Section 1 */}
-          <SectionHeading id="section-1">{"Understanding the Senior's Mobility Needs"}</SectionHeading>
-          <Paragraph>Before selecting a walker, caregivers should have a clear understanding of the senior's current mobility level, living environment, and medical conditions. This assessment forms the foundation of a good walker choice.</Paragraph>
+          <SectionHeading id="section-1">Recognizing When a Senior Requires a Walker</SectionHeading>
+          <Paragraph>As a caregiver, you are often the first person to notice small changes in mobility. A senior may not ask for help directly, but repeated stumbles, furniture walking, fatigue, or fear of movement can be signs that extra support is needed.</Paragraph>
+          <Paragraph>Watch for patterns over several days rather than judging from one difficult moment. The goal is to identify when a walker could make daily movement safer, not to take away independence.</Paragraph>
           <BlogList>
-            <li>What surfaces does the senior walk on most — carpet, tile, outdoor pavement, or mixed?</li>
-            <li>Does the senior have significant balance issues, or do they mainly need support for endurance?</li>
-            <li>Are there wrist, hand, or shoulder conditions that limit grip strength?</li>
-            <li>Does the senior need to carry items like medications, phones, or water bottles during walks?</li>
-            <li>Has a physiotherapist or doctor already made a specific recommendation?</li>
+            <li>Holding walls, furniture, or countertops while walking.</li>
+            <li>Taking shorter, slower, or more hesitant steps.</li>
+            <li>Avoiding walks they used to complete comfortably.</li>
+            <li>Standing up with more effort or needing nearby support.</li>
+            <li>Recent falls, near-falls, dizziness, or fear of falling.</li>
           </BlogList>
 
-          {/* Section 2 */}
-          <SectionHeading id="section-2">Types of Walkers and Who They Suit</SectionHeading>
-          <Paragraph>Each walker type has distinct strengths. Matching the walker to the individual's specific needs and environment is more important than price or brand.</Paragraph>
-          {walkerTypes.map((item) => (
-            <section className="mt-5" key={item.title}>
-              <h3 className="text-[13px] font-black text-black">{item.title}</h3>
-              <div className="mt-3 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
-                <img
-                  className="mx-auto h-[200px] w-full object-contain p-3"
-                  src={`${process.env.PUBLIC_URL}/images/${item.image}`}
-                  alt={item.alt}
-                />
-              </div>
-              <Paragraph>{item.text}</Paragraph>
-            </section>
-          ))}
-
-          {/* Section 3 */}
-          <SectionHeading id="section-3">How to Assess the Right Walker Together</SectionHeading>
-          <Paragraph>The selection process should involve the senior as an active participant. A walker chosen together is more likely to be used consistently than one chosen without their input.</Paragraph>
-          <div className="mt-4 space-y-3">
-            {assessmentSteps.map((item) => (
-              <div className="rounded-[8px] border border-[#d8dde2] p-4" key={item.step}>
-                <div className="flex items-start gap-3">
-                  <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">{item.step}</span>
-                  <div>
-                    <h3 className="text-[11px] font-black text-black">{item.title}</h3>
-                    <p className="mt-1 font-manrope text-[10px] font-medium leading-[1.85] text-[#1f2930]">{item.text}</p>
-                  </div>
-                </div>
+          <SectionHeading id="section-2">Walker Varieties and How Caregivers Can Assist in Selection</SectionHeading>
+          <div className="mt-4 overflow-hidden rounded-[6px] border border-[#d8dde2]">
+            <div className="grid grid-cols-[1fr_1.15fr_1.2fr] bg-[#ffc400] font-manrope text-[8.5px] font-black text-black">
+              {['Walker Type', 'Best For', 'Caregiver Role in Selection'].map((heading) => (
+                <div className="border-r border-black/10 px-2 py-2 last:border-r-0" key={heading}>{heading}</div>
+              ))}
+            </div>
+            {walkerRows.map((row) => (
+              <div className="grid grid-cols-[1fr_1.15fr_1.2fr] border-t border-[#d8dde2] font-manrope text-[8.5px] font-medium leading-4 text-[#1f2930]" key={row[0]}>
+                {row.map((cell) => (
+                  <div className="border-r border-[#d8dde2] px-2 py-2 last:border-r-0" key={cell}>{cell}</div>
+                ))}
               </div>
             ))}
           </div>
+          <Paragraph>A caregiver can help by matching the walker to the senior's home, strength, balance, and daily routine. If the senior walks mostly indoors, a different walker may be appropriate than one used for errands, appointments, and outdoor paths.</Paragraph>
+          <Paragraph>When possible, let the senior test the walker before buying. Comfort, grip height, brake control, and confidence matter as much as product features.</Paragraph>
 
-          {/* Section 4 */}
-          <SectionHeading id="section-4">Fitting the Walker with the Senior</SectionHeading>
-          <div className="mt-3 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
-            <img
-              className="mx-auto h-[220px] w-full object-contain p-3"
-              src={`${process.env.PUBLIC_URL}/images/image-10-768x419.webp`}
-              alt="Diagram of proper walker height and posture alignment"
-            />
-          </div>
-          <Paragraph>Once a walker is selected, the caregiver should help set the correct height before the senior takes their first step with it. This takes only a few minutes but is one of the most important things a caregiver can do.</Paragraph>
+          <SectionHeading id="section-3">A Step-by-Step Guide to Ensuring a Proper Walker Fit</SectionHeading>
+          <Paragraph>A walker that is too high or too low can cause shoulder strain, poor posture, and unsafe movement. Caregivers should help with fitting before the senior uses the walker regularly.</Paragraph>
           <BlogList>
-            <li>Have the senior stand upright with shoes on while the caregiver adjusts the height.</li>
-            <li>Set the handle top to align with the crease of the wrist when the arms hang relaxed.</li>
-            <li>Confirm a 15 to 20 degree elbow bend when gripping the handles.</li>
-            <li>Check that all four legs are at the same height to prevent wobbling.</li>
-            <li>Verify rubber tips are in good condition before the first use.</li>
+            <li>Have the senior wear their regular walking shoes.</li>
+            <li>Ask them to stand upright with arms relaxed at their sides.</li>
+            <li>Adjust handles to the crease of the wrist.</li>
+            <li>Confirm the elbows bend slightly when gripping the handles.</li>
+            <li>Check that every leg is locked at the same height.</li>
+            <li>Watch the first few steps and correct leaning or overreaching.</li>
           </BlogList>
 
-          {/* Section 5 */}
-          <SectionHeading id="section-5">Teaching Safe Walker Technique</SectionHeading>
-          <Paragraph>Caregivers should walk through the correct technique with the senior during the first few uses and monitor for bad habits that can develop over time.</Paragraph>
-          <div className="mt-5 grid grid-cols-2 border-y border-[#d8dde2] font-manrope text-[9px] text-[#1f2930]">
-            <div className="px-3 py-3 font-black">Correct Technique</div>
-            <div className="border-l border-[#d8dde2] px-3 py-3 font-black">Why It Matters</div>
-            {techniques.map(([tech, reason]) => (
-              <div className="contents" key={tech}>
-                <div className="px-3 py-3 font-medium">{tech}</div>
-                <div className="border-l border-[#d8dde2] px-3 py-3 font-medium">{reason}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* Section 6 */}
-          <SectionHeading id="section-6">Common Caregiver Mistakes to Avoid</SectionHeading>
+          <SectionHeading id="section-4">Educating Seniors on Safe Walker Usage: A Caregiver's Duty</SectionHeading>
+          <Paragraph>Buying the walker is only the first step. Seniors often need repeated reminders and patient coaching before walker use becomes natural.</Paragraph>
           <BlogList>
-            <li><strong>Selecting a walker without the senior present</strong> — Fit and comfort require the senior to be physically present during selection and setup.</li>
-            <li><strong>Skipping the height adjustment</strong> — Many caregivers simply hand over the walker at the factory-set height, which is almost never correct for the individual.</li>
-            <li><strong>Allowing the senior to grip the front bar instead of the handles</strong> — This is a sign the walker is too high or the senior is leaning too far forward.</li>
-            <li><strong>Not checking the rubber tips regularly</strong> — Worn tips significantly increase the risk of slipping on smooth floors.</li>
-            <li><strong>Rushing the walker technique learning phase</strong> — Allow the senior to move at their own pace. Rushing leads to anxiety and sloppy technique.</li>
-            <li><strong>Using the walker as the only fall prevention measure</strong> — Combine walker use with home safety modifications, footwear checks, and regular exercise for maximum protection.</li>
+            <li>Keep the walker close to the body instead of pushing it too far ahead.</li>
+            <li>Step into the walker frame, not around it.</li>
+            <li>Move slowly when turning, especially in tight spaces.</li>
+            <li>Lock rollator brakes before sitting or standing.</li>
+            <li>Avoid carrying heavy items while using the walker.</li>
+          </BlogList>
+          <Paragraph>Encouragement matters. Frame the walker as a tool that protects independence rather than a symbol of weakness.</Paragraph>
+
+          <SectionHeading id="section-5">Maintaining and Adjusting Walkers: Tips for Caregivers</SectionHeading>
+          <Paragraph>Walkers need routine inspection just like any other safety device. A caregiver should check for worn parts, loose fittings, and changes in the senior's posture or walking pattern.</Paragraph>
+          <BlogList>
+            <li>Inspect rubber tips or wheels weekly.</li>
+            <li>Make sure push buttons and height locks click fully into place.</li>
+            <li>Test rollator brakes before outings.</li>
+            <li>Clean grips and handles regularly.</li>
+            <li>Recheck height when shoes, posture, or strength changes.</li>
           </BlogList>
 
-          {/* Section 7 - FAQ */}
-          <SectionHeading id="section-7">Frequently Asked Questions</SectionHeading>
+          <SectionHeading id="section-6">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
             {[
-              ['How do I know if the walker I chose is the right one?', "Watch the senior use it for a full week. If they are using correct technique without discomfort and moving with confidence, the choice is likely correct. If they consistently lean, complain of pain, or avoid using it, reassess."],
-              ['Should I walk alongside the senior when they first use the walker?', 'Yes. Walk on their weaker or less stable side for the first several sessions. Stay close enough to steady them without holding them. Gradually reduce your presence as confidence grows.'],
-              ['What if the senior refuses to use the walker?', "Resistance often comes from feelings of loss of independence or embarrassment. Acknowledge these feelings, involve them in selecting a model they find appealing, and frame the walker as a tool for independence rather than a sign of weakness."],
-              ['How often should I inspect the walker?', 'Conduct a brief visual check weekly — look at rubber tips, push-button pins, and wheel condition. Do a more thorough inspection monthly including testing brakes on rollators and checking for frame cracks.'],
-              ['When should I contact a physiotherapist about the walker?', 'Contact a physiotherapist if the senior shows signs of pain during use, falls while using the walker, has significant difficulty learning technique, or if their mobility needs change due to a new medical diagnosis.'],
+              ['How can I convince a reluctant senior to use a walker?', 'Focus on independence and safety rather than weakness. Let the senior help choose the walker and explain how it can support the activities they care about.'],
+              ['Can walkers be used on stairs?', 'Walkers are generally not safe on stairs unless a therapist has specifically trained the senior in a safe method. Use railings and assistance instead.'],
+              ['How often should walkers be inspected?', 'Do a quick visual check weekly and a more careful inspection every month. Check tips, wheels, brakes, height pins, and frame stability.'],
+              ['How can I know if the walker is the right fit for my loved one?', 'The senior should stand upright, keep shoulders relaxed, and have a slight elbow bend when gripping the handles.'],
+              ['What are the signs that the walker may be causing pain or unsafe walking?', 'Watch for leaning, shoulder shrugging, wrist pain, dragging the walker, or avoiding the walker altogether.'],
             ].map(([question, answer]) => (
               <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
                 <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary>
@@ -348,26 +268,24 @@ function CaregiversGuideWalkerDetail() {
           </div>
 
           {/* Final Thoughts */}
-          <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
+          <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-7">
             <div className="flex items-center gap-3">
               <span className="text-[24px] text-[#ffc400]">◇</span>
               <h2 className="text-[16px] font-black text-black">Final Thoughts</h2>
             </div>
-            <Paragraph>Caregivers are often the most important factor in how well a senior adapts to using a walker. Your patience, attention to fit, and consistent reinforcement of good technique can make the difference between a walker that enhances independence and one that sits unused in the corner.</Paragraph>
-            <Paragraph>Take the time to choose together, fit correctly, teach patiently, and check regularly. A well-chosen, properly fitted walker is one of the most powerful tools available for keeping a senior safe and independent at home and in the community.</Paragraph>
+            <Paragraph>As a caregiver, your role is about more than just providing a walker—it's about making it a tool that helps seniors move confidently and safely. From selecting the right walker to teaching safe usage and regular maintenance, every step helps foster independence and reduce mobility risks. Many seniors may resist walkers due to concerns about dependence, but by emphasizing how the walker enhances their safety and quality of life, you can ease their worries. Personalizing the walker with comfortable grips or accessories can also make it feel like a helpful companion.</Paragraph>
+            <Paragraph>Your guidance and support are crucial in helping them embrace their mobility aids. The difference you make in their lives is immeasurable. When you ensure the walker is properly fitted and used safely, you're helping them live a more active and independent life. Your patience and encouragement provide more than just physical support—they help empower seniors to live with dignity and confidence.</Paragraph>
           </section>
 
           {/* References */}
-          <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-9">
+          <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
             <div className="flex items-center gap-3">
               <span className="text-[22px] text-[#ffc400]">↪</span>
               <h2 className="text-[16px] font-black text-black">References</h2>
             </div>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
-              <li>American Occupational Therapy Association: Mobility Aid Selection for Caregivers. https://www.aota.org</li>
-              <li>National Council on Aging: Caregiver Resources — Assistive Devices. https://www.ncoa.org</li>
-              <li>CDC: Older Adult Fall Prevention — Caregiver Role. https://www.cdc.gov/falls</li>
-              <li>AARP: Family Caregiver Guide — Choosing a Walker. https://www.aarp.org</li>
+              <li>Study looks at older adults' use of mobility devices, incidence of falls</li>
+              <li>Housing design that improves the independence and safety of older adults using a walker.</li>
             </ol>
           </section>
 
@@ -376,11 +294,6 @@ function CaregiversGuideWalkerDetail() {
           {/* Comments */}
           <section className="mt-8 rounded-[10px] bg-white p-8 shadow-[0_14px_40px_rgba(0,0,0,0.05)]">
             <h2 className="text-center text-[14px] font-black text-black">What do you think?</h2>
-            <div className="mt-6 border-b border-[#d8dde2] pb-6">
-              <p className="font-manrope text-[11px] font-black text-black">Maria C.</p>
-              <p className="mt-2 font-manrope text-[11px] font-medium leading-5 text-[#303a42]">As a home health aide, this is exactly the kind of practical guide I needed. The section on common caregiver mistakes was especially eye-opening. I had been skipping the height check for years.</p>
-              <button className="mt-2 rounded-full bg-[#07364f] px-4 py-1 font-manrope text-[10px] font-black text-white">Reply</button>
-            </div>
             <form className="mt-6 space-y-4" action="#">
               <label className="block">
                 <span className="font-manrope text-[11px] font-black text-black">Comment *</span>
