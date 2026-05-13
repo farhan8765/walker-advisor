@@ -18,7 +18,7 @@ function MobilityGuide() {
             Struggling with walker choices?
           </h2>
 
-          <div className="grid w-full max-w-[430px] grid-cols-2 gap-4 md:gap-5">
+          <div className="grid w-full max-w-[430px] grid-cols-2 pt-12 gap-4 md:gap-5">
             <img
               className="aspect-square w-full rounded-lg object-cover"
               src={`${imagePath}/Rectangle 42035.png`}

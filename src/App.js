@@ -1,6 +1,9 @@
 import "./App.css";
 import { useLayoutEffect } from "react";
 import AboutUs from "./pages/AboutUs";
+import AmirAbbasi from "./pages/AmirAbbasi";
+import Robin from "./pages/Robin";
+import Ali from "./pages/Ali";
 import AmazonReturnsDetail from "./pages/AmazonReturnsDetail";
 import AmazonShoppingHackDetail from "./pages/AmazonShoppingHackDetail";
 import Articles from "./pages/Articles";
@@ -8,6 +11,10 @@ import BlogDetail from "./pages/BlogDetail";
 import BuyingWalkerDetail from "./pages/BuyingWalkerDetail";
 import CaregiversCorner from "./pages/CaregiversCorner";
 import Contact from "./pages/Contact";
+import Cookies from "./pages/Cookies";
+import Disclaimer from "./pages/Disclaimer";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
 import ProperWalkingShoesDetail from "./pages/ProperWalkingShoesDetail";
 import ReplacementWalkerHandGripsDetail from "./pages/ReplacementWalkerHandGripsDetail";
 import AdjustWalkerHeightDetail from "./pages/AdjustWalkerHeightDetail";
@@ -78,6 +85,9 @@ function Home() {
 const routes = {
   "/": Home,
   "/about-us": AboutUs,
+  "/amir-abbasi": AmirAbbasi,
+  "/robin-dolan": Robin,
+  "/syed-ali": Ali,
   "/every-way-to-return-amazon-orders-for-free": AmazonReturnsDetail,
   "/the-secret-amazon-shopping-hack-to-get-a-deal-on-just-about-anything": AmazonShoppingHackDetail,
   "/how-to-travel-with-a-walker-tips-for-seniors": TravelWithWalkerDetail,
@@ -112,6 +122,10 @@ const routes = {
   "/will-medicare-really-pay-for-your-walker-the-truth-every-senior-should-know": MedicareWalkerCoverageDetail,
   "/caregivers-corner": CaregiversCorner,
   "/contact": Contact,
+  "/cookies-policy": Cookies,
+  "/disclaimer": Disclaimer,
+  "/privacy-policy": PrivacyPolicy,
+  "/terms-and-conditions": TermsConditions,
   "/tools": Tools,
 };
 

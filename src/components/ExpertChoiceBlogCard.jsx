@@ -10,12 +10,12 @@ function ExpertChoiceBlogCard({ image, alt, title, description, href }) {
       />
 
       <h3
-        className="mt-8 min-h-0 w-full max-w-[420px] text-[24px] font-bold leading-[32px] tracking-[0.5%] text-[#172129]"
+        className="line-clamp-2 mt-8 min-h-0 w-full max-w-[420px] overflow-hidden text-[24px] font-bold leading-[32px] tracking-[0.5%] text-[#172129]"
         style={{ fontFamily: 'Manrope, sans-serif' }}
       >
         {title}
       </h3>
-      <p className="mt-4 text-base font-medium leading-7 text-[#66737c] md:text-lg">
+      <p className="line-clamp-2 mt-4 overflow-hidden text-base font-medium leading-7 text-[#66737c] md:text-lg">
         {description}
       </p>
 

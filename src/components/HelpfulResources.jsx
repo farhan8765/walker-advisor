@@ -13,27 +13,11 @@ function ResourceIcon() {
       className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-[#fff0ad]"
       aria-hidden="true"
     >
-      <svg
-        className="h-5 w-5 text-[#4a3a13]"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M7.5 16.5H16a3 3 0 0 0 0-6h-.35A4.5 4.5 0 0 0 7 9.3 3.6 3.6 0 0 0 7.5 16.5Z"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M8.5 13.5h7M10.5 10.5l-2 3 2 3"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
+      <img
+        className="h-5 w-auto max-w-[22px] object-contain"
+        src={`${process.env.PUBLIC_URL}/images/hand.svg`}
+        alt=""
+      />
     </span>
   );
 }

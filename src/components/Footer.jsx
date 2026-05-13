@@ -1,7 +1,14 @@
+const defaultHashHref = (label) =>
+  `#${label.toLowerCase().replaceAll(' ', '-')}`;
+
 const footerColumns = [
   {
     title: 'Authors',
-    links: ['Amir Abbasi', 'Robin Dolan', 'Syed Ali'],
+    links: [
+      { label: 'Amir Abbasi', href: `${process.env.PUBLIC_URL}/amir-abbasi` },
+      { label: 'Robin Dolan', href: `${process.env.PUBLIC_URL}/robin-dolan` },
+      { label: 'Syed Ali', href: `${process.env.PUBLIC_URL}/syed-ali` },
+    ],
   },
   {
     title: 'Walkers by categories',
@@ -14,18 +21,29 @@ const footerColumns = [
 ];
 
 const footerLinks = [
-  'Contact Us',
-  'Disclaimer',
-  'Terms & Conditions',
-  'Privacy Policy',
-  'Cookies Policy',
+  { label: 'Contact Us', href: `${process.env.PUBLIC_URL}/contact` },
+  { label: 'Disclaimer', href: `${process.env.PUBLIC_URL}/disclaimer` },
+  { label: 'Terms & Conditions', href: `${process.env.PUBLIC_URL}/terms-and-conditions` },
+  { label: 'Privacy Policy', href: `${process.env.PUBLIC_URL}/privacy-policy` },
+  { label: 'Cookies Policy', href: `${process.env.PUBLIC_URL}/cookies-policy` },
 ];
 
 function SocialIcon({ label, children }) {
+  const socialLinks = {
+    Pinterest: 'https://www.pinterest.com/walkeradvisor2/',
+    Facebook: 'https://www.facebook.com/people/The-Walker-Advisor/61570872987227/',
+    Instagram: 'https://www.instagram.com/thewalkeradvisor/',
+    Medium: 'https://medium.com/@walkeradvisor2',
+    YouTube: 'https://www.youtube.com/@WalkerAdvisor',
+    Quora: 'https://www.quora.com/profile/The-Walker-Advisor-1',
+  };
+
   return (
     <a
       className="flex h-5 w-5 items-center justify-center text-white transition-colors duration-150 hover:text-[#ffc400] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"
-      href={`#${label.toLowerCase()}`}
+      href={socialLinks[label] || '#'}
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label={label}
     >
       {children}
@@ -59,16 +77,21 @@ function Footer() {
                 {column.title}
               </h3>
               <ul className="mt-6 space-y-4">
-                {column.links.map((link) => (
-                  <li key={link}>
-                    <a
-                      className="font-manrope text-base font-normal text-white no-underline transition-colors hover:text-[#ffc400] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"
-                      href={`#${link.toLowerCase().replaceAll(' ', '-')}`}
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
+                {column.links.map((link) => {
+                  const label = typeof link === 'string' ? link : link.label;
+                  const href =
+                    typeof link === 'string' ? defaultHashHref(label) : link.href;
+                  return (
+                    <li key={label}>
+                      <a
+                        className="font-manrope text-base font-normal text-white no-underline transition-colors hover:text-[#ffc400] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"
+                        href={href}
+                      >
+                        {label}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
@@ -76,6 +99,11 @@ function Footer() {
 
         <div className="mt-auto flex flex-col items-start justify-between gap-6 pt-12 md:flex-row md:items-center">
           <div className="flex items-center gap-3">
+            <SocialIcon label="Pinterest">
+              <span className="flex h-5 w-5 items-center justify-center rounded-full border border-current text-[13px] font-black leading-none">
+                P
+              </span>
+            </SocialIcon>
             <SocialIcon label="Facebook">
               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-current text-[14px] font-black leading-none">
                 <span className="text-[#111111]">f</span>
@@ -97,12 +125,9 @@ function Footer() {
                 <circle cx="16.7" cy="7.4" r="1.2" fill="currentColor" />
               </svg>
             </SocialIcon>
-            <SocialIcon label="X">
-              <span className="text-[22px] font-normal leading-none">X</span>
-            </SocialIcon>
-            <SocialIcon label="LinkedIn">
-              <span className="flex h-4 w-4 items-center justify-center rounded-sm bg-current text-[11px] font-black leading-none">
-                <span className="text-[#111111]">in</span>
+            <SocialIcon label="Medium">
+              <span className="flex h-4 w-4 items-center justify-center bg-current text-[11px] font-black leading-none">
+                <span className="text-[#111111]">M</span>
               </span>
             </SocialIcon>
             <SocialIcon label="YouTube">
@@ -110,18 +135,26 @@ function Footer() {
                 <span className="text-[#111111]">▶</span>
               </span>
             </SocialIcon>
+            <SocialIcon label="Quora">
+              <span className="text-[20px] font-bold leading-none">Q</span>
+            </SocialIcon>
           </div>
 
           <nav className="flex flex-wrap gap-x-6 gap-y-3" aria-label="Footer links">
-            {footerLinks.map((link) => (
-              <a
-                className="font-manrope text-base font-normal text-white no-underline transition-colors hover:text-[#ffc400] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"
-                href={`#${link.toLowerCase().replaceAll(' ', '-')}`}
-                key={link}
-              >
-                {link}
-              </a>
-            ))}
+            {footerLinks.map((link) => {
+              const label = typeof link === 'string' ? link : link.label;
+              const href =
+                typeof link === 'string' ? defaultHashHref(label) : link.href;
+              return (
+                <a
+                  className="font-manrope text-base font-normal text-white no-underline transition-colors hover:text-[#ffc400] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"
+                  href={href}
+                  key={label}
+                >
+                  {label}
+                </a>
+              );
+            })}
           </nav>
         </div>
       </div>

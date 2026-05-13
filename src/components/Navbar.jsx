@@ -80,7 +80,7 @@ function Navbar() {
 
   const desktopNav = (
     <nav
-      className="flex min-h-[64px] max-w-[1200px] items-center gap-0 rounded-full bg-white px-1 py-1 shadow-[0_14px_32px_rgba(235,198,120,0.18)]"
+      className="flex min-h-[64px] max-w-[1200px] shrink-0 items-center gap-0 rounded-full bg-white px-1 py-1 shadow-[0_14px_32px_rgba(235,198,120,0.18)]"
       aria-label="Primary navigation"
     >
       {navItems.map((item) => {
@@ -134,25 +134,27 @@ function Navbar() {
         </button>
       </div>
 
-      {/* Desktop: wider logo track + pill starts after it (avoid wide pill overflowing under logo) */}
-      <div className="mt-6 hidden w-full grid-cols-[minmax(186px,_auto)_minmax(0,_1fr)_180px] items-start gap-x-2 lg:mt-3 lg:grid">
-        <a
-          className="relative z-10 inline-flex shrink-0 items-center justify-self-start"
-          href="/"
-          aria-label="The Walker Advisor home"
-        >
-          <img
-            className="block h-[82px] w-[146px] max-w-none object-contain"
-            src={`${process.env.PUBLIC_URL}/images/TWA-logo.webp`}
-            alt="The Walker Advisor"
-          />
-        </a>
+      {/* Desktop: logo left, pill nav centered in header, balanced right column */}
+      <div className="mt-6 hidden w-full grid-cols-[1fr_auto_1fr] items-center gap-x-3 lg:mt-3 lg:grid">
+        <div className="flex min-w-0 justify-start">
+          <a
+            className="relative z-10 inline-flex shrink-0 items-center"
+            href="/"
+            aria-label="The Walker Advisor home"
+          >
+            <img
+              className="block h-[82px] w-[146px] max-w-none object-contain"
+              src={`${process.env.PUBLIC_URL}/images/TWA-logo.webp`}
+              alt="The Walker Advisor"
+            />
+          </a>
+        </div>
 
-        <div className="flex min-h-0 min-w-0 justify-start pt-2 pl-0 lg:justify-start xl:pl-2">
+        <div className="flex shrink-0 justify-center self-center pt-2 lg:pt-0">
           {desktopNav}
         </div>
 
-        <div className="w-full shrink-0" aria-hidden="true" />
+        <div className="min-w-0" aria-hidden="true" />
       </div>
 
       <nav

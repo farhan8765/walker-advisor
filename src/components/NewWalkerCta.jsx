@@ -23,7 +23,7 @@ function NewWalkerCta() {
         </div>
 
         <img
-          className="absolute right-2 top-0 h-[300px] w-auto max-w-none object-contain md:right-8 md:h-[420px] lg:right-8 lg:h-[530px]"
+          className="absolute right-2 top-[-20px] h-[300px] w-auto max-w-none object-contain md:right-8 md:h-[420px] lg:right-8 lg:h-[530px]"
           src={`${process.env.PUBLIC_URL}/images/unsplash_KsFxqyZCJDA.png`}
           alt="Caregiver helping a person use a walker"
         />

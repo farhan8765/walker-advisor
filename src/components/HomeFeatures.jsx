@@ -100,15 +100,17 @@ function HomeFeatures() {
             <div id="featured-articles" className="min-w-0">
               {featuredArticle ? (
                 <>
-                  <article className="grid overflow-hidden rounded-lg bg-[#fff1b3] lg:grid-cols-2">
-                    <img
-                      className="min-h-[260px] w-full object-cover lg:min-h-[342px]"
-                      src={`${process.env.PUBLIC_URL}/images/${featuredArticle.image}`}
-                      alt={featuredArticle.alt}
-                    />
+                  <article className="grid overflow-hidden rounded-lg bg-[#fff1b3] lg:grid-cols-2 lg:items-stretch">
+                    <div className="relative min-h-[260px] w-full overflow-hidden lg:min-h-0 lg:h-full">
+                      <img
+                        className="h-full min-h-[260px] w-full object-cover lg:absolute lg:inset-0 lg:min-h-0 lg:h-full"
+                        src={`${process.env.PUBLIC_URL}/images/${featuredArticle.image}`}
+                        alt={featuredArticle.alt}
+                      />
+                    </div>
                     <div className="px-7 py-8 md:px-12 md:py-10 lg:px-14">
                       <h3
-                        className="w-full max-w-[400px] text-[30px] font-bold leading-[1.15] tracking-[0.5%] text-[#172129] md:text-[36px]"
+                        className="line-clamp-2 w-full max-w-[400px] overflow-hidden text-[30px] font-bold leading-[1.15] tracking-[0.5%] text-[#172129] md:text-[36px]"
                         style={{ fontFamily: 'Manrope, sans-serif' }}
                       >
                         {featuredArticle.title}
@@ -128,18 +130,20 @@ function HomeFeatures() {
                   <div className="mt-6 grid gap-6 md:grid-cols-3">
                     {supportingArticles.map((card) => (
                       <article className="font-manrope" key={card.id}>
-                        <img
-                          className="min-h-[210px] w-full rounded-lg object-cover md:min-h-[218px]"
-                          src={`${process.env.PUBLIC_URL}/images/${card.image}`}
-                          alt={card.alt}
-                        />
+                        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg">
+                          <img
+                            className="absolute inset-0 h-full w-full object-cover"
+                            src={`${process.env.PUBLIC_URL}/images/${card.image}`}
+                            alt={card.alt}
+                          />
+                        </div>
                         <h3
-                          className="mt-6 w-full max-w-[329.33px] text-[18px] font-bold leading-snug tracking-[0.5%] text-[#172129] md:mt-7 md:text-[20px] md:leading-7"
+                          className="line-clamp-2 mt-6 w-full max-w-[329.33px] overflow-hidden text-[18px] font-bold leading-snug tracking-[0.5%] text-[#172129] md:mt-7 md:text-[20px] md:leading-7"
                           style={{ fontFamily: 'Manrope, sans-serif' }}
                         >
                           {card.title}
                         </h3>
-                        <p className="mt-3 text-sm font-medium leading-6 text-[#66737c] md:mt-4">
+                        <p className="line-clamp-2 mt-3 overflow-hidden text-sm font-medium leading-6 text-[#66737c] md:mt-4">
                           {card.description}
                         </p>
                         <a

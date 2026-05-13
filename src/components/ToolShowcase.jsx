@@ -263,7 +263,7 @@ function ToolShowcase() {
           </p>
         </div>
 
-        <div className="mx-auto mt-12 flex w-full max-w-[1180px] flex-nowrap items-center justify-between gap-3 overflow-x-auto pb-2 md:mt-16 md:gap-6">
+        <div className="mx-auto mt-12 flex w-full max-w-[800px] flex-nowrap items-center justify-evenly gap-3 overflow-x-auto pb-2 md:mt-16 md:gap-6">
           {toolTabs.map((tab) => (
             <button
               className={`h-12 rounded-full px-6 font-manrope text-base font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] md:text-lg ${

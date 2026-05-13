@@ -30,17 +30,11 @@ function CardIcon({ highlighted = false }) {
       }`}
       aria-hidden="true"
     >
-      <svg
-        className="h-5 w-5 text-[#3f351d]"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect x="5" y="4" width="14" height="16" rx="1.5" stroke="currentColor" strokeWidth="1.8" />
-        <path d="M9 16V11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <path d="M12 16V8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        <path d="M15 16V13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
+      <img
+        className="h-8 w-8 object-contain"
+        src={`${process.env.PUBLIC_URL}/images/Thumb.svg`}
+        alt=""
+      />
     </span>
   );
 }
