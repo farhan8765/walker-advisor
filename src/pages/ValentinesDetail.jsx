@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -220,13 +221,13 @@ function ValentinesDetail() {
           </div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
-            <div className="flex items-center gap-3"><span className="text-[24px] text-[#ffc400]">◇</span><h2 className="text-[18px] font-black text-black">Final Thoughts</h2></div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>The best gifts seniors give each other are not about perfection. They are about presence, appreciation, and reminding one another that the love is still strong and valued.</Paragraph>
             <Paragraph>Celebrate gently, creatively, and joyfully. Even a small gesture can become a beautiful memory.</Paragraph>
           </section>
 
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-9">
-            <div className="flex items-center gap-3"><span className="text-[22px] text-[#ffc400]">◔</span><h2 className="text-[18px] font-black text-black">References</h2></div>
+            <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
               <li>Love For Our Elders. Senior Love Notes and Meaningful Gestures.</li>
               <li>The Daily Heartbeat. Valentine’s Day Ideas for Senior Couples.</li>

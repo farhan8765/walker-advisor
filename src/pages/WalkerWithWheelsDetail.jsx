@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -259,7 +260,7 @@ function WalkerWithWheelsDetail() {
           </div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
-            <div className="flex items-center gap-3"><span className="text-[24px] text-[#ffc400]">◇</span><h2 className="text-[18px] font-black text-black">Final Thoughts</h2></div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Using a walker with wheels properly can dramatically improve mobility, independence, and quality of life. The safest results come from correct adjustment, steady pacing, brake control, and regular maintenance.</Paragraph>
           </section>
 

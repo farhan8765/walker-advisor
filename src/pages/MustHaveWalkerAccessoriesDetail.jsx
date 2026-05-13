@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -411,20 +412,14 @@ function MustHaveWalkerAccessoriesDetail() {
 
           {/* ── Final Thoughts ── */}
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-7">
-            <div className="flex items-center gap-3">
-              <span className="text-[24px] text-[#ffc400]">◇</span>
-              <h2 className="text-[16px] font-black text-black">Final Thoughts</h2>
-            </div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Walker accessories are among the most cost-effective investments a senior can make in daily safety and independence. A sturdy bag eliminates the need to ask for help carrying items. A tray table allows meal transport without risk. A cup holder keeps hydration in reach. A phone mount keeps help within reach at all times.</Paragraph>
             <Paragraph>Start with the accessory that solves your most common daily frustration, and build from there. A well-equipped walker is a safer, more independent walker.</Paragraph>
           </section>
 
           {/* ── References ── */}
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
-            <div className="flex items-center gap-3">
-              <span className="text-[22px] text-[#ffc400]">↪</span>
-              <h2 className="text-[16px] font-black text-black">References</h2>
-            </div>
+            <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
               <li>National Institute on Aging: Walker Accessories and Safe Mobility. https://www.nia.nih.gov</li>
               <li>CDC: Fall Prevention for Older Adults — Mobility Aid Maintenance. https://www.cdc.gov/falls</li>

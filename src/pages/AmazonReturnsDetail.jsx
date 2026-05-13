@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -239,7 +240,7 @@ function AmazonReturnsDetail() {
           <div className="mt-4 space-y-2">{faqs.map((question) => <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}><summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary><p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">It depends on the exact item and return option Amazon displays. Always follow the instructions shown for that order before dropping it off.</p></details>)}</div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6">
-            <div className="flex items-center gap-3"><span className="text-[24px] text-[#ffc400]">◇</span><h2 className="text-[18px] font-black text-black">Final Thoughts</h2></div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>The easiest free Amazon return is the one Amazon offers directly inside your order. Look for no-box, no-label drop-offs first, choose the closest convenient location, and keep your receipt until the refund is complete.</Paragraph>
           </section>
 

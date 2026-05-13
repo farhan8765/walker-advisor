@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -187,7 +188,7 @@ function MobilityDevicesDetail() {
           <SectionHeading id="section-9">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">{['What is the best mobility device for seniors?', 'Are walkers safer than canes?', 'What mobility device works best outdoors?', 'Can mobility devices prevent falls?'].map((question) => <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}><summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary><p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">The best device depends on balance, strength, endurance, and where it will be used.</p></details>)}</div>
 
-          <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-10"><div className="flex items-center gap-3"><span className="text-[24px] text-[#ffc400]">◇</span><h2 className="text-[18px] font-black text-black">Final Thoughts</h2></div><Paragraph>Mobility devices can restore confidence, safety, and independence. The right choice should match the senior's physical ability, daily environment, and comfort level.</Paragraph></section>
+          <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-10"><ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading><Paragraph>Mobility devices can restore confidence, safety, and independence. The right choice should match the senior's physical ability, daily environment, and comfort level.</Paragraph></section>
 
           <SocialDots />
 

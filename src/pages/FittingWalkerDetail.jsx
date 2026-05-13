@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -361,20 +362,14 @@ function FittingWalkerDetail() {
 
           {/* Final Thoughts */}
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
-            <div className="flex items-center gap-3">
-              <span className="text-[24px] text-[#ffc400]">◇</span>
-              <h2 className="text-[16px] font-black text-black">Final Thoughts</h2>
-            </div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Fitting a walker correctly is one of the most impactful things a senior or caregiver can do to improve daily safety and comfort. A few minutes of adjustment can prevent months of back pain, reduce fall risk, and make walking feel easier and more natural.</Paragraph>
             <Paragraph>Whether the walker is brand new or has been in use for years, it is always worth checking the fit. Pair the right height with the right walker type, and mobility becomes far less of a struggle.</Paragraph>
           </section>
 
           {/* References */}
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-9">
-            <div className="flex items-center gap-3">
-              <span className="text-[22px] text-[#ffc400]">↪</span>
-              <h2 className="text-[16px] font-black text-black">References</h2>
-            </div>
+            <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
               <li>National Institute on Aging: Using Walkers Safely. https://www.nia.nih.gov</li>
               <li>CDC: Older Adult Fall Prevention — Mobility Aids. https://www.cdc.gov/falls</li>

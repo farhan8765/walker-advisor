@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -15,7 +16,7 @@ const toc = [
   'Walker comparison table',
   'Frequently asked questions',
   'Final Thoughts',
-  'Reference',
+  'References',
 ];
 
 const comparisonRows = [
@@ -251,19 +252,13 @@ function BuyingWalkerDetail() {
           </div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-4">
-            <div className="flex items-center gap-3">
-              <span className="text-[24px] leading-none text-[#ffc400]">💎</span>
-              <h2 className="text-[16px] font-black text-black">Final Thoughts</h2>
-            </div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Choosing the right walker and using it properly can greatly enhance your mobility, independence, and quality of life. Whether you opt for a simple standard walker or a more advanced rollator, it's important to understand the different types, features, and adjustments to meet your specific needs.</Paragraph>
             <Paragraph>Always prioritize safety, and don't hesitate to consult with a healthcare professional or physical therapist for personalized advice. By following the right tips for choosing and using walkers, you can move confidently and securely, whether you're at home or on the go. For more tips on where to purchase the best walkers, check out our guide on <a className="font-black text-[#0b61a4] no-underline hover:underline" href="/articles">buying mobility aids</a></Paragraph>
           </section>
 
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-5">
-            <div className="flex items-center gap-3">
-              <span className="text-[22px] leading-none text-[#ffc400]">🌎</span>
-              <h2 className="text-[16px] font-black text-black">Reference</h2>
-            </div>
+            <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
               <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://jrrd.org/">Journal of Rehabilitation Research and Development, 2019.</a></li>
             </ol>

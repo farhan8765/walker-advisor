@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -253,10 +254,7 @@ function WalkerRollatorTypesDetail() {
           </div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-6">
-            <div className="flex items-center gap-3">
-              <span className="text-[24px] leading-none text-[#ffc400]">💎</span>
-              <h2 className="text-[16px] font-black text-black">Final Thoughts</h2>
-            </div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Choosing the right mobility aid, whether it's a walker or rollator, is a crucial decision for individuals with mobility challenges. While both options offer support, rollators provide enhanced features like mobility, comfort, and flexibility, making them ideal for those who need more independence.</Paragraph>
             <Paragraph>On the other hand, standard walkers offer greater stability for users who need more assistance. It's important to evaluate your specific needs, walking environment, and comfort preferences to select the best option.</Paragraph>
           </section>

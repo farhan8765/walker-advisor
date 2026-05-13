@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -16,7 +17,7 @@ const toc = [
   'Troubleshooting common large-wheel walker issues',
   'Frequently Asked Questions',
   'Final Thoughts',
-  'Reference',
+  'References',
 ];
 
 const relatedArticles = [
@@ -298,19 +299,13 @@ function LargeWheelWalkerTipsDetail() {
           </div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-6">
-            <div className="flex items-center gap-3">
-              <span className="text-[24px] leading-none text-[#ffc400]">💎</span>
-              <h2 className="text-[16px] font-black text-black">Final Thoughts</h2>
-            </div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Walkers with larger wheels offer significant advantages for seniors who need mobility support while maintaining an active lifestyle. The <a className="font-black text-[#0b61a4] no-underline hover:underline" href="/tools">best walkers for seniors</a> provide stability, ease of movement, and comfort, helping users navigate various terrains more smoothly.</Paragraph>
             <Paragraph>By following proper usage techniques and avoiding common mistakes, seniors can enjoy increased independence and safety. Always consult a healthcare provider or physical therapist when selecting or adjusting a walker.</Paragraph>
           </section>
 
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-7">
-            <div className="flex items-center gap-3">
-              <span className="text-[22px] leading-none text-[#ffc400]">🌎</span>
-              <h2 className="text-[16px] font-black text-black">Reference</h2>
-            </div>
+            <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
               <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://pubmed.ncbi.nlm.nih.gov/22157334/">PubMed - The effect of first-time 4-wheeled walker use on gait</a></li>
               <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6852995/">PMC - Walking with rollator: A systematic review</a></li>

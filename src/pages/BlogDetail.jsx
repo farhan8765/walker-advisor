@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -31,22 +32,22 @@ const riskReducers = [
 
 const relatedArticles = [
   {
-    image: 'image-9-1.webp',
-    title: 'Exercise Programs for Elderly Adults',
-    description:
-      "Most seniors don't realize they're missing these 4 essential exercises until mobility starts to decline. Discover the simple routine that keeps you active, balanced, and",
-  },
-  {
-    image: 'blog.webp',
+    image: 'unnamed-768x512.png',
     title: 'Social Activities for Older Adults: The Best Ways to Stay Connected, Active, and Happy',
     description:
       'Loneliness in seniors is not just sad, it is as dangerous to health as smoking 15 cigarettes a day. Here are the best ways older',
   },
   {
-    image: 'blog2.webp',
+    image: 'image-11-768x429.png',
     title: '3 Foods for Seniors to Avoid',
     description:
       'Your body after 70 is a different machine entirely. Metabolism slows. The immune system becomes more reactive. Kidneys filter less efficiently, and',
+  },
+  {
+    image: 'image-9-1-768x419.png',
+    title: 'Understanding Upright Walkers: How They Improve Senior Posture',
+    description:
+      "Most seniors don't realize they're missing these 4 essential exercises until mobility starts to decline. Discover the simple routine that keeps you active, balanced, and",
   },
 ];
 
@@ -217,9 +218,11 @@ function BlogDetail() {
             />
 
             <div className="mt-6 flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">
-                AA
-              </div>
+              <img
+                className="h-8 w-8 rounded-full object-cover"
+                src={`${process.env.PUBLIC_URL}/images/amir-abbasi_avatar-300x300.jpg`}
+                alt="Amir Abbasi"
+              />
               <p className="font-manrope text-[12px] font-black text-black">Amir Abbasi</p>
             </div>
           </header>
@@ -231,12 +234,11 @@ function BlogDetail() {
             <Paragraph>
               For seniors already managing heart conditions, understanding this connection can be life-changing and potentially life-saving.
             </Paragraph>
-            <Paragraph>
-              Having the right mobility support in place is one of the most practical steps a senior with heart issues can take. Our guide on Best Walkers for Seniors with Balance Problems is a great place to start when looking for the right stability aid.
-            </Paragraph>
-            <Paragraph>
-              Whether you walk daily for fitness, spend long hours standing at work, or simply want safer movement, understanding shoe structure will help you make an informed choice.
-            </Paragraph>
+            <p className="mt-3 font-manrope text-[12px] font-medium leading-[1.85] text-[#1f2930]">
+              Having the right mobility support in place is one of the most practical steps a senior with heart issues can take. Our guide on{' '}
+              <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/best-walkers-for-seniors-with-balance-problems" target="_blank" rel="noopener noreferrer">Best Walkers for Seniors with Balance Problems</a>
+              {' '}is a great place to start when looking for the right stability aid.
+            </p>
           </div>
 
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
@@ -290,6 +292,12 @@ function BlogDetail() {
             </div>
           </div>
 
+          <img
+            className="mx-auto mt-7 h-auto w-full max-w-[520px] rounded-[10px] object-cover"
+            src={`${process.env.PUBLIC_URL}/images/pump.png`}
+            alt="Diagram showing how the heart pumps blood and affects balance"
+          />
+
           <h3 className="mt-7 text-[14px] font-black text-black">2. Arrhythmia (Irregular Heartbeat)</h3>
           <Paragraph>
             An irregular heartbeat means the heart is not pumping blood consistently. This can cause sudden feelings of weakness, palpitations, fainting, or brief blackouts, all of which dramatically increase fall risk.
@@ -302,9 +310,11 @@ function BlogDetail() {
           <Paragraph>
             Heart failure does not mean the heart has stopped. It means the heart is not pumping as efficiently as it should. This leads to fatigue, fluid buildup in the legs, and reduced oxygen delivery to muscles and the brain.
           </Paragraph>
-          <Paragraph>
-            Seniors with heart failure often experience leg weakness and breathlessness, making it much harder to stay steady on their feet. A sturdy walker can provide critical support in these moments. See our Safest Walkers for Seniors: Top 5 Secure and Sturdy Choices for reliable options.
-          </Paragraph>
+          <p className="mt-3 font-manrope text-[12px] font-medium leading-[1.85] text-[#1f2930]">
+            Seniors with heart failure often experience leg weakness and breathlessness, making it much harder to stay steady on their feet. A sturdy walker can provide critical support in these moments. See our{' '}
+            <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/safest-walkers-for-seniors" target="_blank" rel="noopener noreferrer">Safest Walkers for Seniors: Top 5 Secure and Sturdy Choices</a>
+            {' '}for reliable options.
+          </p>
 
           <h3 className="mt-7 text-[14px] font-black text-black">4. Coronary Artery Disease (CAD)</h3>
           <Paragraph>
@@ -323,9 +333,11 @@ function BlogDetail() {
           <Paragraph>
             What seniors eat directly affects their heart health, and by extension, their fall risk. A diet high in sodium, saturated fats, and processed foods can worsen cardiovascular conditions and contribute to instability.
           </Paragraph>
-          <Paragraph>
-            Proper footwear also plays a role in reducing fall risk. Read our guide on Why Seniors Need Proper Walking Shoes for practical recommendations.
-          </Paragraph>
+          <p className="mt-3 font-manrope text-[12px] font-medium leading-[1.85] text-[#1f2930]">
+            Proper footwear also plays a role in reducing fall risk. Read our guide on{' '}
+            <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/why-seniors-need-proper-walking-shoes" target="_blank" rel="noopener noreferrer">Why Seniors Need Proper Walking Shoes</a>
+            {' '}for practical recommendations.
+          </p>
 
           <SectionHeading id="section-4">How to Reduce Fall Risk if You Have Heart Issues</SectionHeading>
           <div className="mt-5 grid grid-cols-2 border-y border-[#d8dde2] font-manrope text-[11px] text-[#1f2930]">
@@ -352,13 +364,15 @@ function BlogDetail() {
               <li>Brief episodes of confusion or disorientation</li>
             </ul>
             <p className="mt-3 font-manrope text-[11px] font-semibold leading-6 text-[#1f2930]">
-              These symptoms should always be reported to a doctor immediately. In the meantime, having a reliable mobility aid on hand can provide critical support. Our guide on Best Mobility Devices for Seniors covers a wide range of options to suit different needs.
+              These symptoms should always be reported to a doctor immediately. In the meantime, having a reliable mobility aid on hand can provide critical support. Our guide on{' '}
+              <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/best-mobility-devices-for-seniors" target="_blank" rel="noopener noreferrer">Best Mobility Devices for Seniors</a>
+              {' '}covers a wide range of options to suit different needs.
             </p>
           </div>
 
           <img
-            className="mx-auto mt-8 h-auto w-full max-w-[520px] rounded-[10px] bg-[#f3f3f3] p-3"
-            src={`${process.env.PUBLIC_URL}/images/blogg.webp`}
+            className="mx-auto mt-8 h-auto w-full max-w-[520px] rounded-[10px] object-cover"
+            src={`${process.env.PUBLIC_URL}/images/blog1.png`}
             alt="Senior woman near a walker monitoring her health"
           />
 
@@ -377,27 +391,24 @@ function BlogDetail() {
           <SectionHeading id="section-7">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
             {[
-              'Can a heart condition directly cause a fall?',
-              'What heart medication is most associated with falls in seniors?',
-              'Should seniors with heart conditions use a walker?',
-              'Can exercise help reduce fall risk for seniors with heart disease?',
-            ].map((question) => (
+              ['Can a heart condition directly cause a fall?', 'Heart conditions like arrhythmia and orthostatic hypotension can cause sudden dizziness, fainting, or weakness that directly leads to falls. Managing your heart condition actively is one of the best ways to reduce this risk.'],
+              ['What heart medication is most associated with falls in seniors?', 'Diuretics and blood pressure medications are most commonly linked to falls because they can cause dehydration and low blood pressure. Always discuss side effects with your doctor and never stop taking prescribed medication without medical advice.'],
+              ['Should seniors with heart conditions use a walker?', 'In many cases, yes. A walker provides stability during episodes of dizziness or weakness.'],
+              ['Can exercise help reduce fall risk for seniors with heart disease?', 'Gentle, doctor-approved exercise can strengthen the heart and improve balance. Always consult your physician before starting any new exercise routine.'],
+            ].map(([question, answer]) => (
               <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
                 <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">
                   {question}
                 </summary>
                 <p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">
-                  Dizziness, blood pressure changes, fatigue, and medication side effects can all make falls more likely.
+                  {answer}
                 </p>
               </details>
             ))}
           </div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
-            <div className="flex items-center gap-3">
-              <span className="text-[24px] text-[#ffc400]">◇</span>
-              <h2 className="text-[18px] font-black text-black">Final Thoughts</h2>
-            </div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>
               Heart health and fall prevention are more closely connected than most people realize. By understanding how heart conditions affect balance, blood pressure, and energy levels, seniors and their caregivers can take proactive steps to reduce risk.
             </Paragraph>
@@ -407,16 +418,23 @@ function BlogDetail() {
           </section>
 
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-9">
-            <div className="flex items-center gap-3">
-              <span className="text-[22px] text-[#ffc400]">◔</span>
-              <h2 className="text-[18px] font-black text-black">References</h2>
-            </div>
+            <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
-              <li>Centers for Disease Control and Prevention (CDC). Older Adult Falls. https://www.cdc.gov/falls/about/index.html</li>
-              <li>American Heart Association. Heart Failure and Fall Risk in Older Adults. https://www.heart.org/en/health-topics/heart-failure</li>
-              <li>National Institute on Aging. Falls and Older Adults. https://www.nia.nih.gov/health/falls-and-older-adults</li>
-              <li>Mayo Clinic. Orthostatic Hypotension: Symptoms and Causes. https://www.mayoclinic.org/diseases-conditions/orthostatic-hypotension</li>
-              <li>Journal of the American Geriatrics Society. Cardiovascular Conditions and Fall Risk. https://agsjournals.onlinelibrary.wiley.com</li>
+              <li>Centers for Disease Control and Prevention (CDC). Older Adult Falls.{' '}
+                <a className="text-[#0b61a4] no-underline hover:underline" href="https://www.cdc.gov/falls/about/index.html" target="_blank" rel="noopener noreferrer">https://www.cdc.gov/falls/about/index.html</a>
+              </li>
+              <li>American Heart Association. Heart Failure and Fall Risk in Older Adults.{' '}
+                <a className="text-[#0b61a4] no-underline hover:underline" href="https://www.heart.org/en/health-topics/heart-failure" target="_blank" rel="noopener noreferrer">https://www.heart.org/en/health-topics/heart-failure</a>
+              </li>
+              <li>National Institute on Aging. Falls and Older Adults.{' '}
+                <a className="text-[#0b61a4] no-underline hover:underline" href="https://www.nia.nih.gov/health/falls-and-older-adults" target="_blank" rel="noopener noreferrer">https://www.nia.nih.gov/health/falls-and-older-adults</a>
+              </li>
+              <li>Mayo Clinic. Orthostatic Hypotension: Symptoms and Causes.{' '}
+                <a className="text-[#0b61a4] no-underline hover:underline" href="https://www.mayoclinic.org/diseases-conditions/orthostatic-hypotension" target="_blank" rel="noopener noreferrer">https://www.mayoclinic.org/diseases-conditions/orthostatic-hypotension</a>
+              </li>
+              <li>Journal of the American Geriatrics Society. Cardiovascular Conditions and Fall Risk.{' '}
+                <a className="text-[#0b61a4] no-underline hover:underline" href="https://agsjournals.onlinelibrary.wiley.com" target="_blank" rel="noopener noreferrer">https://agsjournals.onlinelibrary.wiley.com</a>
+              </li>
             </ol>
           </section>
 

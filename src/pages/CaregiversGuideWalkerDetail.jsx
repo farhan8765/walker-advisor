@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -269,20 +270,14 @@ function CaregiversGuideWalkerDetail() {
 
           {/* Final Thoughts */}
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-7">
-            <div className="flex items-center gap-3">
-              <span className="text-[24px] text-[#ffc400]">◇</span>
-              <h2 className="text-[16px] font-black text-black">Final Thoughts</h2>
-            </div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>As a caregiver, your role is about more than just providing a walker—it's about making it a tool that helps seniors move confidently and safely. From selecting the right walker to teaching safe usage and regular maintenance, every step helps foster independence and reduce mobility risks. Many seniors may resist walkers due to concerns about dependence, but by emphasizing how the walker enhances their safety and quality of life, you can ease their worries. Personalizing the walker with comfortable grips or accessories can also make it feel like a helpful companion.</Paragraph>
             <Paragraph>Your guidance and support are crucial in helping them embrace their mobility aids. The difference you make in their lives is immeasurable. When you ensure the walker is properly fitted and used safely, you're helping them live a more active and independent life. Your patience and encouragement provide more than just physical support—they help empower seniors to live with dignity and confidence.</Paragraph>
           </section>
 
           {/* References */}
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
-            <div className="flex items-center gap-3">
-              <span className="text-[22px] text-[#ffc400]">↪</span>
-              <h2 className="text-[16px] font-black text-black">References</h2>
-            </div>
+            <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
               <li>Study looks at older adults' use of mobility devices, incidence of falls</li>
               <li>Housing design that improves the independence and safety of older adults using a walker.</li>

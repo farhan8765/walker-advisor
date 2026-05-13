@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -290,20 +291,14 @@ function EmergencyPreparednessDetail() {
 
           {/* Final Thoughts */}
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-6">
-            <div className="flex items-center gap-3">
-              <span className="text-[24px] text-[#ffc400]">◇</span>
-              <h2 className="text-[16px] font-black text-black">Final Thoughts</h2>
-            </div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Emergency preparedness is one of the most valuable investments a senior or caregiver can make. A single well-chosen medical alert device, combined with a clear emergency plan, can dramatically reduce the risk of a fall turning into a prolonged injury.</Paragraph>
             <Paragraph>Start with one reliable device that the senior will actually wear consistently, build a simple emergency plan around it, and test it regularly. Technology is most effective when it becomes a trusted habit rather than an afterthought.</Paragraph>
           </section>
 
           {/* References */}
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-7">
-            <div className="flex items-center gap-3">
-              <span className="text-[22px] text-[#ffc400]">↪</span>
-              <h2 className="text-[16px] font-black text-black">References</h2>
-            </div>
+            <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
               <li>Real-World Accuracy and Use of a Wearable Fall Detection Device by Older Adults. https://pmc.ncbi.nlm.nih.gov/articles/PMC4662041/</li>
               <li>Preliminary Examination of the Accuracy of a Fall Detection Device Embedded into Hearing Instruments. https://www.tinnitus-connect.com/products/journals/pdf/10.3766/jaaa19056.pdf</li>

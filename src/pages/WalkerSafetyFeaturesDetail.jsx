@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -15,7 +16,7 @@ const toc = [
   'How to choose the right walker',
   'Frequently Asked Questions',
   'Final Thoughts',
-  'Reference',
+  'References',
 ];
 
 const comparisonRows = [
@@ -259,19 +260,13 @@ function WalkerSafetyFeaturesDetail() {
           </div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-5">
-            <div className="flex items-center gap-3">
-              <span className="text-[24px] leading-none text-[#ffc400]">💎</span>
-              <h2 className="text-[16px] font-black text-black">Final Thoughts</h2>
-            </div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Selecting the right walker is essential for ensuring safety, comfort, and mobility for seniors. A walker with key safety features like a sturdy frame, adjustable height, ergonomic grips, and a reliable braking system can make a significant difference in maintaining balance and independence.</Paragraph>
             <Paragraph>Invest in a high-quality walker tailored to specific mobility needs to enhance a senior's quality of life!</Paragraph>
           </section>
 
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-6">
-            <div className="flex items-center gap-3">
-              <span className="text-[22px] leading-none text-[#ffc400]">🌎</span>
-              <h2 className="text-[16px] font-black text-black">Reference</h2>
-            </div>
+            <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
               <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9482089/">Circumstances of falls among older adult walker users in long-term care facilities</a></li>
               <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8742690/">Older Adult's Perceptions About Participation and Safety Using Walkers</a></li>

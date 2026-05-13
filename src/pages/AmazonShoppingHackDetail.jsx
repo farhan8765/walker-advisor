@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -227,7 +228,7 @@ function AmazonShoppingHackDetail() {
           <div className="mt-4 space-y-2">{faqs.map((question) => <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}><summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary><p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">Check the product condition, seller, coupon terms, and return eligibility before buying. Amazon's displayed checkout price is the final number to trust.</p></details>)}</div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-7">
-            <div className="flex items-center gap-3"><span className="text-[24px] text-[#ffc400]">◇</span><h2 className="text-[18px] font-black text-black">Final Thoughts</h2></div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Amazon Warehouse and coupons are not complicated, but most shoppers skip them. Before buying, check Warehouse condition notes, clip available coupons, compare sellers, and confirm the final checkout price.</Paragraph>
           </section>
 

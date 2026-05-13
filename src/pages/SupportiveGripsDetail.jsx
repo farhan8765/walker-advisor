@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -352,20 +353,14 @@ function SupportiveGripsDetail() {
 
           {/* Final Thoughts */}
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
-            <div className="flex items-center gap-3">
-              <span className="text-[24px] leading-none text-[#ffc400]">💎</span>
-              <h2 className="text-[16px] font-black text-black">Final Thoughts</h2>
-            </div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Supportive grips are essential for seniors who rely on walkers to preserve their mobility. These grips enhance protection, promote comfort, and assist seniors to regain confidence in their ability to transport independently.</Paragraph>
             <Paragraph>By selecting the <a className="font-black text-[#0b61a4] no-underline hover:underline" href="/tools">best walkers for seniors</a> with well-designed supportive grips, they can experience existence and keep conducting their everyday activities with more ease and security.</Paragraph>
           </section>
 
           {/* References */}
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-9">
-            <div className="flex items-center gap-3">
-              <span className="text-[22px] leading-none text-[#ffc400]">🌎</span>
-              <h2 className="text-[16px] font-black text-black">Reference</h2>
-            </div>
+            <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
               <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9482089/">Circumstances of falls among older adult walker users in long-term care and the associated walker design deficits</a></li>
               <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3890129/">Applications of biomechanics for the prevention of work-related musculoskeletal disorders</a></li>

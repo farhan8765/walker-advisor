@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -170,7 +171,7 @@ function OsteoarthritisFallsDetail() {
           <SectionHeading id="section-5">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">{['Can osteoarthritis directly cause falls?', 'Which joints increase fall risk the most?', 'Can walking aids help seniors with osteoarthritis?', 'Is exercise safe for seniors with osteoarthritis?', 'Should seniors with arthritis use a walker?'].map((question) => <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}><summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary><p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">Yes, osteoarthritis can increase fall risk by causing pain, stiffness, weakness, and reduced balance.</p></details>)}</div>
 
-          <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-6"><div className="flex items-center gap-3"><span className="text-[24px] text-[#ffc400]">◇</span><h2 className="text-[18px] font-black text-black">Final Thoughts</h2></div><Paragraph>Osteoarthritis can increase the risk of falls in seniors, mostly by affecting joint health, balance, and walking confidence. With the right support, mobility aids, exercise, and home safety measures, seniors can stay mobile, confident, and safer.</Paragraph></section>
+          <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-6"><ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading><Paragraph>Osteoarthritis can increase the risk of falls in seniors, mostly by affecting joint health, balance, and walking confidence. With the right support, mobility aids, exercise, and home safety measures, seniors can stay mobile, confident, and safer.</Paragraph></section>
 
           <SocialDots />
 

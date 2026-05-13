@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -15,7 +16,7 @@ const toc = [
   'How to properly use a walker',
   'Frequently Asked Questions',
   'Final Thoughts',
-  'Reference',
+  'References',
 ];
 
 const relatedArticles = [
@@ -303,7 +304,7 @@ function WalkerMistakesDetail() {
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-5">
             <div className="flex items-center gap-3">
               <DiamondIcon />
-              <h2 className="text-[16px] font-black text-black">Final Thoughts</h2>
+              <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             </div>
             <Paragraph>Using a walker properly can transform daily life by enhancing mobility and safety. By following these guidelines and tips, you can boost your confidence, independence, and quality of life. Remember, small adjustments and consistent practice make a big difference.</Paragraph>
             <Paragraph>Don't hesitate to seek advice from a physical therapist for personalized support and keep improving your technique!</Paragraph>
@@ -312,7 +313,7 @@ function WalkerMistakesDetail() {
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-6">
             <div className="flex items-center gap-3">
               <GlobeIcon />
-              <h2 className="text-[16px] font-black text-black">Reference</h2>
+              <ArticleIconHeading type="references">References</ArticleIconHeading>
             </div>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
               <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://academic.oup.com/gerontologist">Journal of Gerontology - Study on the popularity and benefits of rolling walkers.</a></li>

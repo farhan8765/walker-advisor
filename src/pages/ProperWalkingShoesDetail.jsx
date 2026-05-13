@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -232,13 +233,13 @@ function ProperWalkingShoesDetail() {
           </div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-9">
-            <div className="flex items-center gap-3"><span className="text-[24px] text-[#ffc400]">◇</span><h2 className="text-[18px] font-black text-black">Final Thoughts</h2></div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Proper walking shoes are one of the easiest ways seniors can improve comfort, stability, and confidence. Shoes should support the whole body, not just cover the feet.</Paragraph>
             <Paragraph>If shoes are worn out, slippery, too narrow, or painful, replacing them is a practical step toward safer daily movement.</Paragraph>
           </section>
 
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-10">
-            <div className="flex items-center gap-3"><span className="text-[22px] text-[#ffc400]">◔</span><h2 className="text-[18px] font-black text-black">References</h2></div>
+            <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
               <li>American Podiatric Medical Association. Senior Foot Health.</li>
               <li>National Institute on Aging. Falls and Older Adults.</li>

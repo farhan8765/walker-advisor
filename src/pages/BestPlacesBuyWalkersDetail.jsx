@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -15,7 +16,7 @@ const toc = [
   'Factors to Consider When Buying a Walker',
   'Frequently Asked Questions',
   'Final Thoughts',
-  'Reference',
+  'References',
 ];
 
 const relatedArticles = [
@@ -292,7 +293,7 @@ function BestPlacesBuyWalkersDetail() {
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-5">
             <div className="flex items-center gap-3">
               <DiamondIcon />
-              <h2 className="text-[16px] font-black text-black">Final Thoughts</h2>
+              <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             </div>
             <Paragraph>Finding the right walker can greatly enhance a senior’s independence, confidence, and quality of life. Whether purchasing from a local medical store, online retailer, or second-hand option, it’s important to prioritize comfort, safety, and usability.</Paragraph>
             <Paragraph>Take the time to research and test different models, and don’t hesitate to consult with professionals for guidance. Investing in the right walker ensures long-term benefits and peace of mind.</Paragraph>
@@ -301,7 +302,7 @@ function BestPlacesBuyWalkersDetail() {
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-6">
             <div className="flex items-center gap-3">
               <GlobeIcon />
-              <h2 className="text-[16px] font-black text-black">Reference</h2>
+              <ArticleIconHeading type="references">References</ArticleIconHeading>
             </div>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
               <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://www.researchgate.net/journal/Journal-of-Aging-Research-2090-2212">Journal of Aging Research.</a></li>

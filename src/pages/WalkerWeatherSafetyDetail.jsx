@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -14,7 +15,7 @@ const toc = [
   'General walker safety tips for all weather',
   'Frequently Asked Questions',
   'Final Thoughts',
-  'Reference',
+  'References',
 ];
 
 const relatedArticles = [
@@ -217,19 +218,13 @@ function WalkerWeatherSafetyDetail() {
           </div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-4">
-            <div className="flex items-center gap-3">
-              <span className="text-[24px] leading-none text-[#ffc400]">💎</span>
-              <h2 className="text-[16px] font-black text-black">Final Thoughts</h2>
-            </div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Weather shouldn't limit your mobility or independence—with the right strategies, you can use your walker safely in any condition. Equip it with weather-appropriate accessories like ice grips for winter or foam handles for summer, and adjust your walking technique for slippery or windy surfaces.</Paragraph>
             <Paragraph>Stay proactive by checking forecasts, maintaining your walker, and dressing appropriately. Small adjustments, like reflective gear for low visibility or a weighted base for stability, make a big difference in safety. By adapting to each season's challenges, you can stay confident and active year-round. Remember, your walker is a tool for freedom—use these tips to keep moving forward, no matter the weather.</Paragraph>
           </section>
 
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-5">
-            <div className="flex items-center gap-3">
-              <span className="text-[22px] leading-none text-[#ffc400]">🌎</span>
-              <h2 className="text-[16px] font-black text-black">Reference</h2>
-            </div>
+            <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
               <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://eatwalklearn.com/walking-in-the-rain-comfortably-and-safely/">Eatwalklearn.com. (2025). Walking In The Rain Comfortably And Safely.</a></li>
               <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://www.ramblers.org.uk/go-walking-hub/summer-walking-5-ways-stay-safe-heat">The Ramblers. (n.d.). Summer walking - 5 ways to stay safe in the heat.</a></li>

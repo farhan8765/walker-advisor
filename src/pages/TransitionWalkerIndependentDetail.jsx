@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -291,20 +292,14 @@ function TransitionWalkerIndependentDetail() {
 
           {/* Final Thoughts */}
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-7">
-            <div className="flex items-center gap-3">
-              <span className="text-[24px] text-[#ffc400]">◇</span>
-              <h2 className="text-[16px] font-black text-black">Final Thoughts</h2>
-            </div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Transitioning from a walker to independent walking is not about rushing. It is about choosing the right level of support at the right time.</Paragraph>
             <Paragraph>Use mobility aids as tools, not failures. With therapy, practice, and honest balance checks, many seniors can move from full walker support to lighter aids and sometimes to independent walking.</Paragraph>
           </section>
 
           {/* References */}
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
-            <div className="flex items-center gap-3">
-              <span className="text-[22px] text-[#ffc400]">↪</span>
-              <h2 className="text-[16px] font-black text-black">References</h2>
-            </div>
+            <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
               <li>Cleveland Clinic. https://my.clevelandclinic.org/health/procedures/how-to-use-a-walker</li>
               <li>APTA. https://ppsapta.org/blog/marketing/physical-therapists-recommendation-walk</li>

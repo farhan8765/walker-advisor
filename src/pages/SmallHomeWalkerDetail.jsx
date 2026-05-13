@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ArticleIconHeading from '../components/ArticleIconHeading';
 
 const navItems = [
   ['Home', '/'],
@@ -10,31 +11,34 @@ const navItems = [
 ];
 
 const toc = [
-  'Choosing the right walker for small spaces',
-  'Optimizing home layout for walker use',
-  'Safe maneuvering techniques in tight spaces',
-  'Storage solutions for walkers when not in use',
-  'Maintaining and repairing your walker',
+  'Choosing the Right Walker for Small Spaces',
+  'Optimizing Home Layout for Walker Use',
+  'Safe Maneuvering Techniques in Tight Spaces',
+  'Storage Solutions When Not in Use',
+  'Maintenance and Walker Care',
+  'Additional Accessories',
+  'Emergency Preparedness',
+  'Psychological Considerations',
   'Frequently Asked Questions',
   'Final Thoughts',
-  'Reference',
+  'References',
 ];
 
 const relatedArticles = [
   {
     image: 'twa-blog11-1024x683.webp',
     title: 'Social Activities for Older Adults: The Best Ways to Stay Connected, Active, and Happy',
-    description: 'A stronger social routine can support confidence, movement, and daily independence.',
+    description: 'Loneliness in seniors is not just sad, it is as dangerous to health as smoking 15 cigarettes a day. Here are the best ways older adults can stay connected.',
   },
   {
     image: 'image-2-1.webp',
     title: 'Can Heart Issues Increase Fall Risk in Seniors?',
-    description: 'Your heart, blood flow, and medications can quietly affect balance and fall risk.',
+    description: 'You might think falls are just about balance, but what if your heart is the real culprit? Discover the hidden connection between heart issues and fall risk.',
   },
   {
     image: 'blogg.webp',
     title: '3 Foods for Seniors to Avoid',
-    description: 'The wrong food choices can affect energy, inflammation, and mobility comfort.',
+    description: 'Your body after 60 is a different machine entirely. Metabolism slows, the immune system becomes more reactive, and the gut microbiome shifts.',
   },
 ];
 
@@ -67,12 +71,16 @@ function SubHeading({ children }) {
   return <h3 className="mt-5 text-[12px] font-black leading-tight text-black">{children}</h3>;
 }
 
+function SubSubHeading({ children }) {
+  return <h4 className="mt-4 text-[11px] font-black leading-tight text-black">{children}</h4>;
+}
+
 function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
 }
 
-function TipBox({ children }) {
-  return <section className="mt-5 rounded-[8px] border-l-4 border-[#ffc400] bg-[#fff3c9] p-4"><p className="font-manrope text-[10px] font-bold leading-5 text-[#1f2930]">{children}</p></section>;
+function NumberedList({ children }) {
+  return <ol className="mt-3 list-decimal space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ol>;
 }
 
 function SocialDots() {
@@ -150,101 +158,148 @@ function SmallHomeWalkerDetail() {
           </header>
 
           <div className="mt-6 flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">SA</div>
+            <img className="h-8 w-8 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/syed-ali_avatar-300x300.webp`} alt="Syed Ali" />
             <p className="font-manrope text-[12px] font-black text-black">Syed Ali</p>
           </div>
 
+          {/* Key Summary */}
           <section className="mt-5 rounded-[8px] bg-[#f3f3f3] p-5">
             <h2 className="text-[14px] font-black text-black">Key Summary</h2>
-            <Paragraph>Small homes, narrow hallways, and crowded rooms can make walker use feel difficult. The solution is not only a smaller walker. It is a safer layout, better turning habits, clear pathways, and smart storage choices that keep the walker accessible without blocking daily movement.</Paragraph>
+            <Paragraph>This comprehensive guide addresses the challenges of using a walker in small homes by offering tailored solutions. It emphasizes selecting the right walker with a focus on narrow designs and foldability. Strategic home modifications, such as optimizing pathways and furniture, are discussed to enhance mobility. The guide also provides detailed maneuvering techniques for tight spaces and emphasizes the importance of accessories and emergency preparedness. Ultimately, this resource aims to improve the independence and safety of seniors using walkers in compact living environments.</Paragraph>
           </section>
 
-          <Paragraph>Using a walker at home should make life easier, not more stressful. A compact apartment, bedroom, or bathroom can still be walker-friendly when furniture is placed carefully and the walker matches the user's needs.</Paragraph>
-          <Paragraph>Before buying a new walker, look at the home environment. Measure doorways, remove clutter, check rugs, and decide where the walker will be parked when it is not being used.</Paragraph>
+          {/* Intro */}
+          <Paragraph>For individuals with mobility challenges, navigating a small home with a walker can feel overwhelming. Tight corners, narrow hallways (often just 30 inches wide), and cluttered rooms turn simple movements into frustrating obstacles, increasing the risk of falls by up to 31%.</Paragraph>
+          <Paragraph>With the right walker model, strategic home modifications, and specialized techniques, you can transform your compact living space into a safe, accessible environment that supports independent mobility.</Paragraph>
+          <p className="mt-3 font-manrope text-[10px] font-medium leading-[1.9] text-[#1f2930]">This comprehensive guide combines evidence-based strategies from occupational therapists, space-saving innovations, and real-world solutions to address every aspect of walker use in limited spaces. Whether you're recovering from surgery, managing age-related mobility changes, or assisting a loved one, these practical approaches will help you maintain independence without sacrificing living space. For foundational knowledge, our guide on <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/what-is-the-proper-way-to-use-a-walker/" target="_blank" rel="noopener noreferrer">What Is The Proper Way To Use A Walker?</a> covers essential usage techniques.</p>
 
+          {/* Table of Contents */}
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
             <h2 className="bg-[#ffc400] px-5 py-3 text-[15px] font-black leading-none text-black">Table of Contents</h2>
             <ol className="space-y-2 px-6 py-5 font-manrope text-[10px] font-semibold leading-5 text-[#1f2930]">
-              {toc.map((item, index) => <li key={item}><a className="text-[#1f2930] no-underline hover:text-black" href={`#section-${index + 1}`}>{index + 1}. {item}</a></li>)}
+              {toc.map((item, index) => (
+                <li key={item}><a className="text-[#1f2930] no-underline hover:text-black" href={`#section-${index + 1}`}>{index + 1}. {item}</a></li>
+              ))}
             </ol>
           </nav>
 
+          {/* Section 1 */}
           <SectionHeading id="section-1">Choosing the Right Walker for Small Spaces</SectionHeading>
-          <Paragraph>The best walker for a small home is stable enough for support but compact enough to move through doorways, around furniture, and into bathrooms without constant lifting or bumping.</Paragraph>
-          <SubHeading>Best Walker Types for Small Homes</SubHeading>
+          <Paragraph>Selecting the optimal walker for constrained environments requires evaluating multiple functional and spatial factors:</Paragraph>
+          <SubHeading>Critical Considerations:</SubHeading>
           <BlogList>
-            <li><strong>Standard walkers:</strong> good for maximum stability but may require lifting.</li>
-            <li><strong>Two-wheel walkers:</strong> easier to slide forward in hallways and bedrooms.</li>
-            <li><strong>Narrow rollators:</strong> useful when the user needs wheels, brakes, and a seat.</li>
-            <li><strong>Folding walkers:</strong> helpful when storage space is limited.</li>
+            <li><strong>Frame Width:</strong> Standard walkers need 36" clearance, but narrow models (as slim as 21") fit 30" doorways</li>
+            <li><strong>Foldability:</strong> Look for one-handed folding mechanisms that collapse to 4–6" depth for storage</li>
+            <li><strong>Weight Capacity:</strong> Bariatric models support 500 lbs but often sacrifice compactness</li>
+            <li><strong>Wheel Type:</strong> 6–8" wheels navigate thresholds better than small casters</li>
+            <li><strong>Adjustability:</strong> Handle heights should allow a 15–30° elbow bend to prevent strain</li>
           </BlogList>
-          <SubHeading>Check These Measurements</SubHeading>
-          <BlogList>
-            <li>Doorway width, especially bathroom and bedroom doors.</li>
-            <li>Hallway turning space.</li>
-            <li>Distance around the bed, sofa, and dining table.</li>
-            <li>Storage spot where the walker can stand without creating a trip hazard.</li>
-          </BlogList>
-          <TipBox>A walker that feels perfect in a store can be awkward at home. Measure the narrowest spaces before choosing a model.</TipBox>
+          <SubHeading>Best Models for Small Homes:</SubHeading>
+          <NumberedList>
+            <li><strong>Ultra-Narrow Folding Walkers</strong> (22–26" wide, collapses flat)</li>
+            <li><strong>Space-Saving Rollators</strong> (with 180° swivel wheels)</li>
+            <li><strong>Convertible Walker-Cane Hybrids</strong> (adjustable support levels)</li>
+            <li><strong>Apartment-Specific Designs</strong> (vertical storage features)</li>
+          </NumberedList>
+          <p className="mt-3 font-manrope text-[10px] font-medium leading-[1.9] text-[#1f2930]">The <a className="text-[#0b61a4] no-underline hover:underline" href="https://www.arthritis.org/health-wellness/healthy-living/managing-pain/joint-protection/16-joint-protection-tips" target="_blank" rel="noopener noreferrer">Arthritis Foundation</a> emphasizes proper handle height adjustment to prevent joint strain. Test any model in your actual living space before purchasing — some medical supply stores offer trial rentals. Our comprehensive <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/tips-for-choosing-and-using-walkers-a-comprehensive-guide/" target="_blank" rel="noopener noreferrer">Tips for Choosing and Using Walkers</a> provides detailed comparisons of 15+ models.</p>
 
+          {/* Section 2 */}
           <SectionHeading id="section-2">Optimizing Home Layout for Walker Use</SectionHeading>
-          <SubHeading>Decluttering Essentials</SubHeading>
+          <Paragraph>Transforming small spaces requires strategic modifications:</Paragraph>
+          <SubHeading>Pathway Creation:</SubHeading>
           <BlogList>
-            <li>Remove loose shoes, baskets, cords, and floor decorations.</li>
-            <li>Keep daily items at waist height so the user does not need to bend.</li>
-            <li>Move small tables away from main walking paths.</li>
-            <li>Use wall hooks or shelves instead of floor storage.</li>
+            <li>Maintain 32" absolute minimum (36" ideal) clear walkways</li>
+            <li>Remove all floor obstacles (rugs, cords, decor)</li>
+            <li>Use contrasting tape to mark pathway edges</li>
           </BlogList>
-          <SubHeading>Furniture Adjustments</SubHeading>
+          <SubHeading>Furniture Solutions:</SubHeading>
           <BlogList>
-            <li>Leave a clear path from bed to bathroom.</li>
-            <li>Angle chairs so the walker can approach straight on.</li>
-            <li>Choose stable chairs with arms for easier sitting and standing.</li>
-            <li>Keep frequently used rooms open and simple.</li>
+            <li>Replace coffee tables with wall-mounted drop-leafs</li>
+            <li>Choose nesting tables that tuck away</li>
+            <li>Install floating shelves instead of floor cabinets</li>
           </BlogList>
-          <SubHeading>Lighting Improvements</SubHeading>
-          <Paragraph>Good lighting reduces hesitation and helps seniors see rugs, thresholds, pets, and furniture edges. Add night lights in hallways and bathrooms, and keep switches easy to reach.</Paragraph>
+          <SubHeading>Doorway Modifications:</SubHeading>
+          <BlogList>
+            <li>Remove doors (store safely for reinstallation)</li>
+            <li>Install offset hinges (gains 2" clearance)</li>
+            <li>Use temporary doorway expander kits</li>
+          </BlogList>
+          <SubHeading>Lighting Enhancements:</SubHeading>
+          <BlogList>
+            <li>Motion-activated night lights along routes</li>
+            <li>Under-cabinet lighting in kitchens</li>
+            <li>Glow strips on walker frames</li>
+          </BlogList>
+          <p className="mt-3 font-manrope text-[10px] font-medium leading-[1.9] text-[#1f2930]">The National Association of Home Builders recommends chair rail molding at walker height to prevent wall damage. For financial assistance with modifications, see <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/does-medicare-pay-for-walkers-for-seniors/" target="_blank" rel="noopener noreferrer">Does Medicare Pay For Walkers For Seniors?</a></p>
 
+          {/* Section 3 */}
           <SectionHeading id="section-3">Safe Maneuvering Techniques in Tight Spaces</SectionHeading>
-          <SubHeading>Turning Methods That Work</SubHeading>
-          <Paragraph>Turn slowly with small steps instead of twisting the walker sharply. Keep both hands on the grips and stay inside the walker frame as much as possible.</Paragraph>
+          <Paragraph>Advanced techniques for confined areas can significantly improve mobility and safety when using a walker in small homes. Here's a detailed breakdown of these techniques:</Paragraph>
+
+          <SubHeading>Turning Methods</SubHeading>
+          <SubSubHeading>Two-Step Pivot</SubSubHeading>
+          <Paragraph>This method is ideal for making tight turns in confined spaces:</Paragraph>
+          <NumberedList>
+            <li>Advance the walker slightly forward.</li>
+            <li>Step forward with one foot, placing it between the back legs of the walker.</li>
+            <li>Bring your other foot together with the first, maintaining balance.</li>
+            <li>Rotate the walker in the desired direction, using your body as a pivot point.</li>
+            <li>Step forward with your lead foot in the new direction.</li>
+          </NumberedList>
+          <SubSubHeading>Three-Point Turn</SubSubHeading>
+          <Paragraph>For larger turns or 90-degree corners:</Paragraph>
+          <NumberedList>
+            <li>Position the walker at a 45-degree angle to your intended direction.</li>
+            <li>Step forward with your stronger leg, placing it near the inside corner of the walker.</li>
+            <li>Shift your weight onto this leg and pivot your body.</li>
+            <li>Reposition the walker in your new direction.</li>
+            <li>Step forward with your other leg to complete the turn.</li>
+          </NumberedList>
+
+          <SubHeading>Doorway Navigation</SubHeading>
+          <Paragraph>Navigating doorways can be challenging, but these techniques can help:</Paragraph>
           <BlogList>
-            <li>Move the walker a few inches at a time.</li>
-            <li>Step with the weaker leg first if advised by a clinician.</li>
-            <li>Avoid backing up unless there is no safer option.</li>
-            <li>Use brakes before sitting if the walker has wheels.</li>
-          </BlogList>
-          <SubHeading>Bathroom Safety Tips</SubHeading>
-          <BlogList>
-            <li>Remove bath mats that slide or bunch up.</li>
-            <li>Add grab bars near the toilet and shower.</li>
-            <li>Use a raised toilet seat if standing is difficult.</li>
-            <li>Keep towels and toiletries within easy reach.</li>
-          </BlogList>
-          <SubHeading>Kitchen Safety</SubHeading>
-          <BlogList>
-            <li>Carry items in a walker basket or tray instead of holding them by hand.</li>
-            <li>Keep heavy cookware on easy-access shelves.</li>
-            <li>Use non-slip footwear when standing on tile.</li>
+            <li>Approach at a 30-degree angle rather than straight-on. This allows for easier maneuvering through the opening.</li>
+            <li>For extremely narrow openings, use the "side-step shuffle": turn your body sideways to the doorway, move the walker through the opening first, take small side steps to pass through keeping your body close to the walker, then reposition yourself and the walker to continue forward.</li>
           </BlogList>
 
-          <SectionHeading id="section-4">Storage Solutions for Walkers When Not in Use</SectionHeading>
+          <SubHeading>Backing Up</SubHeading>
+          <Paragraph>Backing up with a walker requires extra caution:</Paragraph>
+          <NumberedList>
+            <li>Maintain a one-handed grip on the walker for stability.</li>
+            <li>Take small, controlled steps backward.</li>
+            <li>Frequently check behind you to avoid obstacles or tripping hazards.</li>
+            <li>If possible, pivot and walk forward instead of backing up for longer distances.</li>
+          </NumberedList>
+
+          <SubHeading>Carpet Techniques</SubHeading>
+          <Paragraph>Navigating carpeted areas, especially those with plush pile, can be challenging:</Paragraph>
+          <NumberedList>
+            <li>Apply firm downward pressure when pushing the walker to prevent the legs from catching on the carpet fibers.</li>
+            <li>Consider using glide skis or tennis balls on the back legs of the walker to reduce friction.</li>
+            <li>Take wider turns to prevent tipping, especially on thick carpets.</li>
+            <li>Lift the walker slightly if necessary when moving from hard floors to carpeted areas.</li>
+          </NumberedList>
+
+          {/* Section 4 */}
+          <SectionHeading id="section-4">Storage Solutions When Not in Use</SectionHeading>
           <div className="mt-4 overflow-hidden rounded-[7px] border border-black/20">
             <table className="w-full border-collapse font-manrope text-[10px]">
               <thead className="bg-[#ffc400] text-black">
                 <tr>
-                  <th className="border border-black/20 px-3 py-2 text-left">Storage Option</th>
+                  <th className="border border-black/20 px-3 py-2 text-left">#</th>
+                  <th className="border border-black/20 px-3 py-2 text-left">Solution</th>
                   <th className="border border-black/20 px-3 py-2 text-left">Best For</th>
-                  <th className="border border-black/20 px-3 py-2 text-left">Tip</th>
+                  <th className="border border-black/20 px-3 py-2 text-left">Space Saved</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ['Fold beside a chair', 'Daily access', 'Keep brakes locked'],
-                  ['Wall corner parking', 'Small bedrooms', 'Avoid blocking outlets'],
-                  ['Entryway spot', 'Leaving home', 'Keep path clear'],
-                  ['Closet storage', 'Backup walker', 'Store upright if possible'],
-                  ['Bedside parking', 'Nighttime use', 'Keep lights nearby'],
+                  ['1', 'Wall-mounted hooks', 'Foldable walkers', '100% floor space'],
+                  ['2', 'Under-bed storage', 'Studio apartments', 'Keeps walker hidden'],
+                  ['3', 'Over-door hangers', 'Rental units', 'No installation needed'],
+                  ['4', 'Multi-function furniture', 'Small living rooms', 'Double as seating'],
+                  ['5', 'Ceiling pulleys', 'Garages/utility rooms', 'Full vertical storage'],
                 ].map((row) => (
                   <tr className="odd:bg-white even:bg-[#f7f7f7]" key={row[0]}>
                     {row.map((cell) => <td className="border border-black/20 px-3 py-2" key={cell}>{cell}</td>)}
@@ -254,43 +309,108 @@ function SmallHomeWalkerDetail() {
             </table>
           </div>
 
-          <SectionHeading id="section-5">Maintaining and Repairing Your Walker</SectionHeading>
-          <SubHeading>Regular Checks</SubHeading>
+          {/* Section 5 */}
+          <SectionHeading id="section-5">Maintenance and Walker Care</SectionHeading>
+          <Paragraph>Essential upkeep schedule:</Paragraph>
+          <SubHeading>Weekly:</SubHeading>
           <BlogList>
-            <li>Check rubber tips for wear.</li>
-            <li>Make sure wheels roll smoothly.</li>
-            <li>Test brakes before every outing.</li>
-            <li>Tighten loose screws or knobs.</li>
-            <li>Replace worn grips if hands slip.</li>
+            <li>Inspecting frame for cracks/bends</li>
+            <li>Check bolt tightness</li>
+            <li>Test brake function</li>
+            <li>Clean wheel axles</li>
           </BlogList>
-          <SubHeading>When to Replace Parts</SubHeading>
-          <Paragraph>Replace walker tips, wheels, brake cables, or hand grips as soon as they become worn. A small repair can prevent a serious fall.</Paragraph>
-
-          <SectionHeading>Additional Accessories</SectionHeading>
-          <SubHeading>Walker Basket</SubHeading>
-          <Paragraph>A basket helps carry small items without using the hands. It should be centered and lightweight so the walker does not tip.</Paragraph>
-          <SubHeading>Walker Tray</SubHeading>
-          <Paragraph>A tray can help move a cup or plate short distances. Use it only on flat surfaces and avoid carrying hot liquids in crowded spaces.</Paragraph>
-          <SubHeading>Clip-On Lights</SubHeading>
-          <Paragraph>Small lights can improve visibility during night bathroom trips or dim hallway walking.</Paragraph>
-
-          <SectionHeading>Emergency Preparedness</SectionHeading>
-          <Paragraph>Keep a phone or medical alert device within reach. Seniors who live alone should have a plan for falls, power outages, and blocked pathways.</Paragraph>
+          <SubHeading>Monthly:</SubHeading>
           <BlogList>
-            <li>Keep emergency numbers near the phone.</li>
-            <li>Use non-slip footwear indoors.</li>
-            <li>Store a flashlight near the bed.</li>
-            <li>Tell caregivers where the walker is parked at night.</li>
+            <li>Replace rubber tips</li>
+            <li>Lubricate folding mechanisms</li>
+            <li>Check tire pressure (if applicable)</li>
+            <li>Sanitize hand grips</li>
+          </BlogList>
+          <SubHeading>Seasonally:</SubHeading>
+          <BlogList>
+            <li>Deep clean entire frame</li>
+            <li>Replace any worn components</li>
+            <li>Reassess height adjustments</li>
+          </BlogList>
+          <Paragraph>Journal of Gerontology studies show 27% of walker-related falls stem from equipment failure — proper maintenance significantly reduces risks.</Paragraph>
+
+          {/* Section 6 */}
+          <SectionHeading id="section-6">Additional Accessories</SectionHeading>
+          <Paragraph>Enhancing your walker with the right accessories can significantly improve safety, comfort, and functionality, especially in small homes. Here are some must-have add-ons:</Paragraph>
+          <SubHeading>Lighting</SubHeading>
+          <Paragraph>Handlebar-mounted LEDs are essential for navigating dimly lit areas. These lights can illuminate your path, making it easier to avoid obstacles and navigate through tight spaces. Look for models with adjustable brightness and wide beam angles for optimal visibility.</Paragraph>
+          <SubHeading>Storage</SubHeading>
+          <Paragraph>Modular basket systems allow you to customize storage based on your needs. These can include detachable bags, cupholders, and trays. In small homes, opt for collapsible storage solutions that can be easily removed when not in use to maintain maneuverability.</Paragraph>
+          <SubHeading>Comfort</SubHeading>
+          <Paragraph>Gel-padded seats and grips can significantly reduce fatigue during extended use. Ergonomically designed handles can alleviate pressure on wrists and hands, while padded seats provide a comfortable resting spot in compact living spaces.</Paragraph>
+          <SubHeading>Safety</SubHeading>
+          <Paragraph>Reflective strips and emergency horns enhance visibility and communication. Attach reflective materials to multiple sides of the walker for better visibility in low-light conditions. Emergency horns can be crucial for alerting others in case of a fall or emergency.</Paragraph>
+          <SubHeading>Traction</SubHeading>
+          <Paragraph>Ice grippers for outdoor use and carpet glides for indoor navigation can greatly improve stability. These accessories adapt your walker to different surfaces, reducing the risk of slips and making movement smoother across various flooring types.</Paragraph>
+          <Paragraph>Recent innovations in walker technology have led to the development of socially assistive walkers. These advanced devices are designed to provide not only physical support but also cognitive assistance to older adults. Features may include built-in navigation systems, reminder alerts for medications or appointments, and even basic health monitoring capabilities.</Paragraph>
+
+          {/* Section 7 */}
+          <SectionHeading id="section-7">Emergency Preparedness</SectionHeading>
+          <Paragraph>Creating a comprehensive emergency plan is crucial for walker users, especially in small homes where quick evacuation might be challenging. Here's a detailed approach to critical safety planning:</Paragraph>
+          <NumberedList>
+            <li>
+              <strong>Identify Two Accessible Exits from Each Room</strong><br />
+              Map out primary and secondary escape routes from every room in your home. Ensure these paths are wide enough for your walker and free from obstacles. In small spaces, consider how furniture can be quickly moved to clear evacuation paths.
+            </li>
+            <li>
+              <strong>Keep a Foldable Emergency Walker Near the Bed</strong><br />
+              Store a lightweight, easily deployable walker close to your sleeping area. This backup can be crucial if your primary walker is inaccessible during an emergency. Practice unfolding and using this walker regularly to ensure familiarity.
+            </li>
+            <li>
+              <strong>Install Smoke Detectors with Strobe Lights</strong><br />
+              Enhance standard smoke detectors with visual alerts. Strobe lights can provide critical warnings for those with hearing impairments or when sleeping. Position these devices strategically throughout your small home, ensuring visibility from all areas.
+            </li>
+            <li>
+              <strong>Create a Walker-Mounted Emergency Kit</strong><br />
+              Assemble a compact emergency kit that can be attached to your walker. Include essentials like a small first-aid kit, emergency contact information, a flashlight with extra batteries, a whistle for signaling for help, a few days' supply of critical medications, and a portable phone charger.
+            </li>
+            <li>
+              <strong>Practice Evacuation Drills Regularly</strong><br />
+              Conduct monthly evacuation drills to familiarize yourself with your escape routes. Time these drills and work on improving your speed and efficiency. In small spaces, practice maneuvering around tight corners and through narrow doorways with your walker.
+            </li>
+          </NumberedList>
+          <p className="mt-3 font-manrope text-[10px] font-medium leading-[1.9] text-[#1f2930]">Research by <a className="text-[#0b61a4] no-underline hover:underline" href="https://icord.org/2021/02/factors-influencing-the-size-of-activity-spaces-for-people-who-use-mobility-devices/" target="_blank" rel="noopener noreferrer">ICORD</a> explores how personal and environmental factors affect the activity spaces of individuals using mobility devices. It emphasizes the impact of physical and social barriers on mobility.</p>
+
+          {/* Section 8 */}
+          <SectionHeading id="section-8">Psychological Considerations</SectionHeading>
+          <Paragraph>Overcoming emotional challenges:</Paragraph>
+          <BlogList>
+            <li>Reframe the walker as an independence tool</li>
+            <li>Decorate with colorful wraps/stickers</li>
+            <li>Develop "walker parking" protocols for guests</li>
+            <li>Join support groups (in-person/virtual)</li>
+            <li>Use lighting to draw attention from the device</li>
           </BlogList>
 
-          <SectionHeading id="section-6">Frequently Asked Questions</SectionHeading>
+          {/* Section 9 — FAQ */}
+          <SectionHeading id="section-9">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
             {[
-              ['What is the best walker for a small space?', 'A narrow two-wheel walker or compact rollator often works well, but the safest choice depends on balance, doorway width, and turning space.'],
-              ['How much space does a walker need?', 'The walker should pass through doorways comfortably and allow the user to turn without twisting or lifting the frame awkwardly.'],
-              ['Can you use a walker in a small bathroom?', 'Yes, but rugs should be removed, grab bars should be added, and the path to the toilet or shower should stay clear.'],
-              ['How do I make my home safer for walker use?', 'Remove clutter, improve lighting, secure rugs, widen walking paths, and keep everyday items within easy reach.'],
-              ['Are folding walkers better for small homes?', 'They can be helpful for storage, but stability and proper fit should still come first.'],
+              [
+                "What's the narrowest walker available for small spaces?",
+                'Some ultra-compact models measure just 21 inches wide when unfolded, making them ideal for navigating tight spaces in small homes.',
+              ],
+              [
+                'How can I protect hardwood floors when using a walker?',
+                'Use non-marking rubber tips or tennis ball-style floor protectors on your walker legs to prevent scratching and damage to hardwood floors.',
+              ],
+              [
+                'Can I use a rollator walker in my small condo or apartment?',
+                'Yes, compact rollator walkers with foldable frames, good wheels, and narrow designs are suitable for small living spaces. Look for models with smooth-rolling wheels and lightweight construction for easy maneuverability.',
+              ],
+              [
+                'How often should I perform maintenance on my walker?',
+                'Perform weekly inspections of the frame, bolts, and brakes. Monthly, replace rubber tips and lubricate moving parts. Seasonally, do a deep clean and reassess the walker\'s fit.',
+              ],
+              [
+                'Are there walkers designed specifically for small homes?',
+                'Yes, there are apartment-specific designs and ultra-narrow folding walkers that are ideal for compact living spaces. These models often feature vertical storage options and collapsible frames.',
+              ],
             ].map(([question, answer]) => (
               <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
                 <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary>
@@ -299,24 +419,20 @@ function SmallHomeWalkerDetail() {
             ))}
           </div>
 
-          <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-7">
-            <div className="flex items-center gap-3">
-              <span className="text-[24px] leading-none text-[#ffc400]">💎</span>
-              <h2 className="text-[16px] font-black text-black">Final Thoughts</h2>
-            </div>
+          {/* Section 10 — Final Thoughts */}
+          <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-10">
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Choosing the best walker for seniors in small homes requires careful consideration of space constraints, mobility needs, and safety features. When selecting a walker, focus on factors such as frame width, foldability, weight capacity, and adjustability. Ultra-narrow folding walkers, space-saving rollators, and convertible walker-cane hybrids are excellent options for compact living spaces. Don't overlook accessories like LED lights, modular storage, and safety features to enhance usability and comfort.</Paragraph>
             <Paragraph>By implementing the strategies outlined in this guide and prioritizing proper setup, technique, and regular maintenance, you can transform small-space walker use from challenging to functional. Ultimately, the right walker can significantly improve a senior's independence, safety, and quality of life, even in small living environments. Consult with healthcare professionals and consider trying different models to find the perfect fit for your specific needs and home layout.</Paragraph>
           </section>
 
-          <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
-            <div className="flex items-center gap-3">
-              <span className="text-[22px] leading-none text-[#ffc400]">🌎</span>
-              <h2 className="text-[16px] font-black text-black">Reference</h2>
-            </div>
+          {/* Section 11 — References */}
+          <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-11">
+            <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
-              <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://www.arthritis.org/health-wellness/healthy-living/managing-pain/joint-protection/walking-aids">Arthritis Foundation Recommendations</a></li>
-              <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://www.researchgate.net/publication/7909503_Socially_assistive_walkers_Research_trends_and_prospects">Socially Assistive Walkers</a></li>
-              <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://pubmed.ncbi.nlm.nih.gov/23774283/">Factors influencing the size of activity spaces for people who use mobility devices</a></li>
+              <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://www.arthritis.org/health-wellness/healthy-living/managing-pain/joint-protection/16-joint-protection-tips" target="_blank" rel="noopener noreferrer">Arthritis Foundation Recommendations</a></li>
+              <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11362817/" target="_blank" rel="noopener noreferrer">Socially Assistive Walkers</a></li>
+              <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://icord.org/2021/02/factors-influencing-the-size-of-activity-spaces-for-people-who-use-mobility-devices/" target="_blank" rel="noopener noreferrer">Factors influencing the size of activity spaces for people who use mobility devices</a></li>
             </ol>
           </section>
 
