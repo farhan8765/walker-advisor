@@ -5,6 +5,7 @@ import AmazonReturnsDetail from "./pages/AmazonReturnsDetail";
 import AmazonShoppingHackDetail from "./pages/AmazonShoppingHackDetail";
 import Articles from "./pages/Articles";
 import BlogDetail from "./pages/BlogDetail";
+import BuyingWalkerDetail from "./pages/BuyingWalkerDetail";
 import CaregiversCorner from "./pages/CaregiversCorner";
 import Contact from "./pages/Contact";
 import ProperWalkingShoesDetail from "./pages/ProperWalkingShoesDetail";
@@ -21,7 +22,10 @@ import Tools from "./pages/Tools";
 import TravelWithWalkerDetail from "./pages/TravelWithWalkerDetail";
 import UprightWalkersDetail from "./pages/UprightWalkersDetail";
 import ValentinesDetail from "./pages/ValentinesDetail";
+import WalkerRollatorTypesDetail from "./pages/WalkerRollatorTypesDetail";
+import WalkerSafetyFeaturesDetail from "./pages/WalkerSafetyFeaturesDetail";
 import WalkerStairsSafetyDetail from "./pages/WalkerStairsSafetyDetail";
+import WalkerWeatherSafetyDetail from "./pages/WalkerWeatherSafetyDetail";
 import WalkerWithWheelsDetail from "./pages/WalkerWithWheelsDetail";
 import WalkingShoesDetail from "./pages/WalkingShoesDetail";
 import ExpertsChoice from "./components/ExpertsChoice";
@@ -31,6 +35,8 @@ import HolidaySafetySeniorsDetail from "./pages/HolidaySafetySeniorsDetail";
 import HolidayWalkerSafetyDetail from "./pages/HolidayWalkerSafetyDetail";
 import HomeFeatures from "./components/HomeFeatures";
 import HomeHero from "./components/HomeHero";
+import LargeWheelWalkerTipsDetail from "./pages/LargeWheelWalkerTipsDetail";
+import MedicareWalkerCoverageDetail from "./pages/MedicareWalkerCoverageDetail";
 import MentalHealthDetail from "./pages/MentalHealthDetail";
 import MobilityDevicesDetail from "./pages/MobilityDevicesDetail";
 import MobilityGuide from "./components/MobilityGuide";
@@ -98,6 +104,12 @@ const routes = {
   "/how-to-transition-from-a-walker-to-walking-independently": TransitionWalkerIndependentDetail,
   "/caregivers-guide-to-helping-seniors-pick-and-use-the-perfect-walker": CaregiversGuideWalkerDetail,
   "/how-do-supportive-grips-on-walkers-help-seniors-with-mobility": SupportiveGripsDetail,
+  "/the-complete-guide-to-walker-and-rollator-types-which-one-fits-you-best": WalkerRollatorTypesDetail,
+  "/buying-a-walker-dont-make-a-move-until-you-read-this": BuyingWalkerDetail,
+  "/rain-snow-or-shine-how-to-stay-safe-with-your-walker": WalkerWeatherSafetyDetail,
+  "/the-must-have-walker-safety-features-every-senior-should-know-about": WalkerSafetyFeaturesDetail,
+  "/got-a-walker-with-large-wheels-try-these-game-changing-tips-for-seniors": LargeWheelWalkerTipsDetail,
+  "/will-medicare-really-pay-for-your-walker-the-truth-every-senior-should-know": MedicareWalkerCoverageDetail,
   "/caregivers-corner": CaregiversCorner,
   "/contact": Contact,
   "/tools": Tools,

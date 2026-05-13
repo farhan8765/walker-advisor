@@ -249,6 +249,66 @@ export const articles = [
     description:
       'Supportive grips boost comfort, improve balance, and make every step safer — here is why they matter and how to choose the right ones.',
   },
+  {
+    id: 26,
+    category: 'Informational',
+    image: 'twa-blog12.webp',
+    href: '/rain-snow-or-shine-how-to-stay-safe-with-your-walker',
+    alt: 'Snow-covered road lined with trees in winter',
+    title: 'Rain, Snow, or Shine. How to Stay Safe with Your Walker',
+    description:
+      'From slippery sidewalks to scorching heat, here is how seniors can navigate any weather with confidence.',
+  },
+  {
+    id: 27,
+    category: 'Comparison',
+    image: 'twa-blog4.webp',
+    href: '/buying-a-walker-dont-make-a-move-until-you-read-this',
+    alt: 'Senior woman using a walker outdoors on a paved path',
+    title: "Buying a Walker? Don't Make a Move Until You Read This!",
+    description:
+      'Picking the wrong walker can cost you comfort, safety, and money. Our guide shows you how to get it right.',
+  },
+  {
+    id: 28,
+    category: 'Comparison',
+    image: 'twa-blog5.webp',
+    href: '/the-complete-guide-to-walker-and-rollator-types-which-one-fits-you-best',
+    alt: 'Clinician helping a senior compare walker and rollator options',
+    title: 'The Complete Guide to Walker & Rollator Types, Which One Fits You Best?',
+    description:
+      'From basic frames to deluxe rollators, here is how to choose the mobility aid that matches your lifestyle.',
+  },
+  {
+    id: 29,
+    category: 'Informational',
+    image: 'doctor-talking-senior-man-indoors.webp',
+    href: '/will-medicare-really-pay-for-your-walker-the-truth-every-senior-should-know',
+    alt: 'Doctor speaking with a senior man using a walker',
+    title: 'Will Medicare Really Pay for Your Walker? The Truth Every Senior Should Know',
+    description:
+      "Many seniors miss out on walker coverage simply because they don't know the rules. Here's what Medicare actually covers, and how to qualify.",
+  },
+  {
+    id: 30,
+    category: 'Informational',
+    image: 'twa-blog7-1-1024x684.webp',
+    href: '/got-a-walker-with-large-wheels-try-these-game-changing-tips-for-seniors',
+    alt: 'Older man using a large wheel walker on a porch with caregiver support',
+    title: 'Got a Walker with Large Wheels? Try These Game-Changing Tips for Seniors',
+    description:
+      'Large-wheel walkers can make mobility smoother, if you know how to use them right. These expert tips will help seniors move safely and confidently.',
+  },
+  {
+    id: 31,
+    category: 'Informational',
+    image: 'TWA-BLOG8-1024x682.webp',
+    href: '/the-must-have-walker-safety-features-every-senior-should-know-about',
+    alt: 'Caregiver helping a senior hold a walker handle safely',
+    title: 'The Must-Have Walker Safety Features Every Senior Should Know About',
+    description:
+      'Not all walkers keep you equally safe. Here are the essential safety features that can prevent falls and give seniors more confidence.',
+  },
 ];
 
 export function getLatestBlogArticles(count = 3) {
