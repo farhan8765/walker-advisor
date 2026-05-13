@@ -21,38 +21,18 @@ const toc = [
   'References',
 ];
 
-const gripTypes = [
-  {
-    title: 'Standard Foam Grips',
-    image: 'twa-blog6-640x427.webp',
-    alt: 'Close-up of elderly hands gripping a foam-covered walker handle',
-    text: 'Standard foam grips are the most common grip type. They provide basic cushioning and reduce vibration transmitted to the hands and wrists. They are lightweight, inexpensive, and available in various diameters to fit different walker handle sizes.',
-  },
-  {
-    title: 'Gel Grips',
-    image: 'twa-blog26-3-683x1024.webp',
-    alt: 'Standard walker showing handle area with enhanced grip support',
-    text: 'Gel grips distribute hand pressure more evenly than foam, making them ideal for seniors with neuropathy, arthritis, or reduced hand strength. The gel material conforms slightly to the shape of the hand for a more personalized fit.',
-  },
-  {
-    title: 'Ergonomic Contoured Grips',
-    image: 'waaaaa-683x1024.webp',
-    alt: 'Standard walker with ergonomic grip handles on a neutral background',
-    text: 'Ergonomic grips are shaped to match the natural curve of the palm and fingers. They reduce the muscular effort needed to hold the walker and minimize pressure points during extended use. Most are made from soft rubber or gel-infused materials.',
-  },
-  {
-    title: 'Platform (Forearm) Grips',
-    image: 'twa-blog26-1-1.webp',
-    alt: 'Senior men using upright walkers with forearm platform support',
-    text: 'Platform grips are used on upright walkers. Instead of gripping a handle with the hand, the forearm rests on a padded platform and a vertical handle is gripped lightly. This type completely removes wrist and hand weight-bearing.',
-  },
-];
-
 const gripBenefits = [
   ['Reduces hand fatigue', 'Cushioned grips absorb vibration and reduce the effort needed to maintain grip during longer walks.'],
   ['Improves balance and control', 'A secure, comfortable grip allows the user to apply force confidently without the hand slipping.'],
   ['Reduces joint pain', 'Soft materials reduce the pressure transmitted to arthritic finger joints and inflamed wrists.'],
   ['Increases grip confidence', 'Seniors who are not confident in their grip tend to hold the walker with less force, which reduces stability. Better grips restore that confidence.'],
+];
+
+const gripTypeRows = [
+  ['Foam grips', 'Soft cushioning', 'Light daily use and basic comfort'],
+  ['Gel grips', 'Pressure relief and shock absorption', 'Arthritis, neuropathy, or sore palms'],
+  ['Ergonomic grips', 'Contoured hand support', 'Weak grip strength or longer walking sessions'],
+  ['Platform grips', 'Forearm weight support', 'Wrist pain or limited hand weight-bearing'],
 ];
 
 const choosingTips = [
@@ -80,22 +60,22 @@ const choosingTips = [
 
 const relatedArticles = [
   {
-    image: 'twa-fi.webp',
-    href: '/replacement-walker-hand-grips-for-all-kinds-of-walkers',
-    title: 'Replacement Walker Hand Grips',
-    description: 'Sore hands or slippery grips? Find the best replacement grips for every walker style.',
+    image: 'twa-blog5.webp',
+    href: '/the-complete-guide-to-walker-and-rollator-types-which-one-fits-you-best',
+    title: 'The Complete Guide to Walker & Rollator Types, Which One Fits You Best?',
+    description: 'From basic frames to deluxe rollators, here is how to choose the mobility aid that matches your lifestyle.',
   },
   {
-    image: 'blog-27-1.webp',
-    href: '/must-have-walker-accessories-to-make-life-easier-and-safer',
-    title: 'Must-Have Walker Accessories',
-    description: 'Smart accessories that boost comfort, independence, and everyday ease for walker users.',
+    image: 'twa-blog4.webp',
+    href: '/buying-a-walker-dont-make-a-move-until-you-read-this',
+    title: "Buying a Walker? Don't Make a Move Until You Read This!",
+    description: 'Picking the wrong walker can cost you comfort, safety, and money. Our guide shows you how to get it right.',
   },
   {
-    image: 'twa-blog26-1-1.webp',
-    href: '/stop-the-struggle-the-ultimate-easy-guide-to-fitting-a-walker-for-seniors',
-    title: 'Guide to Fitting a Walker for Seniors',
-    description: 'A step-by-step guide for seniors on choosing, adjusting, and maintaining walkers safely.',
+    image: 'twa-blog12.webp',
+    href: '/rain-snow-or-shine-how-to-stay-safe-with-your-walker',
+    title: 'Rain, Snow, or Shine. How to Stay Safe with Your Walker',
+    description: 'From slippery sidewalks to scorching heat, here is how seniors can navigate any weather with confidence.',
   },
 ];
 
@@ -126,6 +106,25 @@ function SectionHeading({ children, id }) {
 
 function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
+}
+
+function SupportTable() {
+  return (
+    <div className="mt-5 overflow-hidden border border-black font-manrope">
+      <div className="grid grid-cols-[0.9fr_1.1fr_1.3fr] bg-[#ffc400] text-[8px] font-black leading-4 text-black">
+        <div className="border-r border-black px-3 py-2">Grip Type</div>
+        <div className="border-r border-black px-3 py-2">Main Benefit</div>
+        <div className="px-3 py-2">Best For</div>
+      </div>
+      {gripTypeRows.map(([type, benefit, bestFor]) => (
+        <div className="grid grid-cols-[0.9fr_1.1fr_1.3fr] text-[8px] font-semibold leading-4 text-[#1f2930]" key={type}>
+          <div className="border-r border-t border-black px-3 py-2">{type}</div>
+          <div className="border-r border-t border-black px-3 py-2">{benefit}</div>
+          <div className="border-t border-black px-3 py-2">{bestFor}</div>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 function SocialDots() {
@@ -245,6 +244,7 @@ function SupportiveGripsDetail() {
           <SectionHeading id="section-1">What Are Supportive Grips on Walkers?</SectionHeading>
           <Paragraph>Supportive grips are the handle coverings on a walker that the user holds during walking. They serve as the primary interface between the user's hands and the walker's frame, transferring body weight and guiding movement direction.</Paragraph>
           <Paragraph>Standard grips are typically hard plastic tubes. Supportive grips replace or cover these tubes with materials designed to reduce pressure, improve friction, absorb vibration, and accommodate different hand shapes and conditions.</Paragraph>
+          <Paragraph>For seniors, this contact point matters because the hands are doing more than holding the walker. They help guide the frame, control turning, stabilize the body during each step, and provide confidence when standing from a chair or navigating tight spaces.</Paragraph>
           <BlogList>
             <li>Common materials include foam, gel, rubber, and thermoplastic elastomer (TPE).</li>
             <li>Supportive grips come in slide-on, wrap-on, and replacement styles.</li>
@@ -253,8 +253,10 @@ function SupportiveGripsDetail() {
           </BlogList>
 
           {/* Section 2 */}
-          <SectionHeading id="section-2">How Grips Improve Mobility and Safety</SectionHeading>
-          <Paragraph>The quality of the grip affects the user's confidence, endurance, and technique. Better grips lead to better outcomes in each of these areas.</Paragraph>
+          <SectionHeading id="section-2">The Role of Supportive Grips in Senior Mobility</SectionHeading>
+          <Paragraph>The quality of the grip affects the user's confidence, endurance, and technique. A walker only works well when the user can comfortably press down, steer, and reposition it. If the grip is painful, slippery, or too narrow, the senior may avoid using enough hand pressure, which can make the walker feel unstable.</Paragraph>
+          <Paragraph>Supportive grips help by making that hand contact steadier and less tiring. Better grips allow seniors to maintain a natural wrist position, apply controlled downward force, and keep the walker aligned as they move from room to room.</Paragraph>
+          <SectionHeading id="section-2-benefits">Benefits of Supportive Grips for Seniors</SectionHeading>
           <div className="mt-5 grid grid-cols-2 border-y border-[#d8dde2] font-manrope text-[9px] text-[#1f2930]">
             <div className="px-3 py-3 font-black">Benefit</div>
             <div className="border-l border-[#d8dde2] px-3 py-3 font-black">How It Helps</div>
@@ -269,22 +271,25 @@ function SupportiveGripsDetail() {
           {/* Section 3 */}
           <SectionHeading id="section-3">Types of Supportive Grips Available</SectionHeading>
           <Paragraph>Different grip types serve different needs. Understanding the options available helps seniors and caregivers make the best choice for their specific situation.</Paragraph>
-          {gripTypes.map((item) => (
-            <section className="mt-5" key={item.title}>
-              <h3 className="text-[13px] font-black text-black">{item.title}</h3>
-              <div className="mt-3 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
-                <img
-                  className="mx-auto h-[200px] w-full object-contain p-3"
-                  src={`${process.env.PUBLIC_URL}/images/${item.image}`}
-                  alt={item.alt}
-                />
-              </div>
-              <Paragraph>{item.text}</Paragraph>
-            </section>
-          ))}
+          <SupportTable />
+          <Paragraph>Foam grips are the most common and work well for light daily use. Gel and ergonomic grips are better when hand pain, arthritis, or reduced grip strength are part of the picture. Platform grips are used on upright walkers and shift some pressure from the hand to the forearm.</Paragraph>
 
           {/* Section 4 */}
-          <SectionHeading id="section-4">Grips and Arthritis — A Special Consideration</SectionHeading>
+          <SectionHeading id="section-4">How Supportive Grips Improve Safety</SectionHeading>
+          <Paragraph>Supportive grips improve safety by reducing the small moments of uncertainty that can lead to a fall. When the hand is comfortable and secure, the senior can focus on stepping, turning, and watching the floor instead of constantly adjusting their hand position.</Paragraph>
+          <BlogList>
+            <li>Better traction helps prevent the hand from sliding during transfers.</li>
+            <li>Extra cushioning reduces pressure on the palm and wrist.</li>
+            <li>A larger grip diameter can make it easier for weak hands to hold the walker.</li>
+            <li>Consistent hand placement improves steering and walker control.</li>
+            <li>Comfortable grips encourage regular walker use instead of unsafe furniture walking.</li>
+          </BlogList>
+
+          <SectionHeading id="section-4-arthritis">Psychological Benefits of Using a Walker with Supportive Grips</SectionHeading>
+          <Paragraph>Comfort affects confidence. Seniors who feel pain or slipping at the handles often become hesitant, shorten their walking distance, or rely more heavily on caregivers. Supportive grips can make the walker feel more predictable and easier to control.</Paragraph>
+          <Paragraph>This confidence matters during daily activities such as walking to the bathroom at night, standing in a kitchen, moving across carpet, or stepping through a doorway. The grip is small, but it can influence whether a senior feels willing to move independently.</Paragraph>
+
+          <SectionHeading id="section-4-extra">Grips and Arthritis: A Special Consideration</SectionHeading>
           <Paragraph>Arthritis in the hands is one of the most common reasons seniors find standard walker grips uncomfortable or painful. The inflammation and joint changes associated with arthritis reduce grip strength and increase sensitivity to pressure.</Paragraph>
           <BlogList>
             <li>Larger diameter grips require less finger flexion and reduce joint stress during gripping.</li>
@@ -312,8 +317,8 @@ function SupportiveGripsDetail() {
           </div>
 
           {/* Section 6 */}
-          <SectionHeading id="section-6">Installing and Replacing Walker Grips</SectionHeading>
-          <Paragraph>Most replacement grips are simple to install without professional help. The process typically involves sliding the new grip onto the handle tube and securing it in place.</Paragraph>
+          <SectionHeading id="section-6">Walker Care and Maintenance with Supportive Grips</SectionHeading>
+          <Paragraph>Supportive grips only help when they remain secure, clean, and intact. Seniors and caregivers should inspect grips as part of the same routine used to check walker tips, wheels, brakes, and frame stability.</Paragraph>
           <BlogList>
             <li>Remove the old grip by twisting and pulling firmly, or slitting it with scissors if it is permanently attached.</li>
             <li>Clean the handle tube with rubbing alcohol to remove residue and improve adhesion.</li>
@@ -322,6 +327,11 @@ function SupportiveGripsDetail() {
             <li>Allow 30 minutes to dry before using the walker if a lubricant was used.</li>
             <li>Replace grips when the surface becomes smooth, cracked, or excessively compressed.</li>
           </BlogList>
+          <Paragraph>Loose grips should be corrected immediately. A grip that rotates unexpectedly can make the walker feel unstable, especially when the user stands up, turns, or places more weight through one side.</Paragraph>
+
+          <SectionHeading id="section-6-extra">Supportive Grips and Long-Term Health</SectionHeading>
+          <Paragraph>Comfortable walker grips can support long-term mobility by reducing hand strain and encouraging consistent movement. Seniors who avoid walking because their hands hurt may gradually lose strength, balance, and endurance.</Paragraph>
+          <Paragraph>When grips reduce pain and improve control, the walker becomes easier to use throughout the day. That can support safer bathroom trips, short indoor walks, outdoor strolls, and light household routines that help maintain independence.</Paragraph>
 
           {/* Section 7 - FAQ */}
           <SectionHeading id="section-7">Frequently Asked Questions</SectionHeading>
@@ -343,24 +353,22 @@ function SupportiveGripsDetail() {
           {/* Final Thoughts */}
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
             <div className="flex items-center gap-3">
-              <span className="text-[24px] text-[#ffc400]">◇</span>
+              <span className="text-[24px] leading-none text-[#ffc400]">💎</span>
               <h2 className="text-[16px] font-black text-black">Final Thoughts</h2>
             </div>
-            <Paragraph>The grip is where the body meets the walker. It is a small detail that has an outsized impact on comfort, safety, and daily usability. For seniors with hand pain, arthritis, or reduced grip strength, upgrading the walker grips may be one of the most immediately impactful changes they can make.</Paragraph>
-            <Paragraph>Start with the correct diameter, choose the right material for your hand condition, and replace grips regularly. A firm, comfortable, well-fitting grip makes every walk easier, safer, and more confident.</Paragraph>
+            <Paragraph>Supportive grips are essential for seniors who rely on walkers to preserve their mobility. These grips enhance protection, promote comfort, and assist seniors to regain confidence in their ability to transport independently.</Paragraph>
+            <Paragraph>By selecting the <a className="font-black text-[#0b61a4] no-underline hover:underline" href="/tools">best walkers for seniors</a> with well-designed supportive grips, they can experience existence and keep conducting their everyday activities with more ease and security.</Paragraph>
           </section>
 
           {/* References */}
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-9">
             <div className="flex items-center gap-3">
-              <span className="text-[22px] text-[#ffc400]">↪</span>
-              <h2 className="text-[16px] font-black text-black">References</h2>
+              <span className="text-[22px] leading-none text-[#ffc400]">🌎</span>
+              <h2 className="text-[16px] font-black text-black">Reference</h2>
             </div>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
-              <li>Arthritis Foundation: Assistive Devices for People with Arthritis. https://www.arthritis.org</li>
-              <li>American Occupational Therapy Association: Hand Function and Mobility Aids. https://www.aota.org</li>
-              <li>National Institute on Aging: Walkers and Canes for Safe Mobility. https://www.nia.nih.gov</li>
-              <li>CDC: Older Adult Fall Prevention — Equipment Maintenance. https://www.cdc.gov/falls</li>
+              <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9482089/">Circumstances of falls among older adult walker users in long-term care and the associated walker design deficits</a></li>
+              <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3890129/">Applications of biomechanics for the prevention of work-related musculoskeletal disorders</a></li>
             </ol>
           </section>
 
@@ -396,13 +404,13 @@ function SupportiveGripsDetail() {
         </article>
 
         {/* Related Articles */}
-        <section className="mx-auto mt-16 max-w-[680px]">
+        <section className="mx-auto mt-16 max-w-[1120px]">
           <h2 className="font-manrope text-[13px] font-black text-black">Related Articles</h2>
           <div className="mt-5 grid gap-6 md:grid-cols-3">
             {relatedArticles.map((article) => (
-              <a className="overflow-hidden rounded-[8px] border border-[#d8dde2] bg-white no-underline" href={article.href} key={article.title}>
-                <img className="h-32 w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
-                <div className="p-4">
+              <a className="overflow-hidden bg-white no-underline" href={article.href} key={article.title}>
+                <img className="h-56 w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <div className="pt-3">
                   <h3 className="text-[13px] font-black leading-tight text-[#172129]">{article.title}</h3>
                   <p className="mt-2 font-manrope text-[10px] font-medium leading-5 text-[#303a42]">{article.description}</p>
                 </div>
