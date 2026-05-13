@@ -309,6 +309,36 @@ export const articles = [
     description:
       'Not all walkers keep you equally safe. Here are the essential safety features that can prevent falls and give seniors more confidence.',
   },
+  {
+    id: 32,
+    category: 'Informational',
+    image: 'twa-blogg.webp',
+    href: '/articles',
+    alt: 'Senior woman holding a walker in a small home',
+    title: 'Struggling with a Walker in a Small Home? Try These Space-Saving Hacks',
+    description:
+      'Tight spaces don’t have to limit your mobility. These smart tips make using a walker in small homes safer and easier.',
+  },
+  {
+    id: 33,
+    category: 'Informational',
+    image: 'improving-mobility-impairment-one-step-time-shot-nurse-helping-senior-man-with-walker.webp',
+    href: '/articles',
+    alt: 'Physical therapist helping a senior man use a rollator walker',
+    title: 'The 7 Best Places to Buy Walkers for Seniors',
+    description:
+      'Don’t waste money on the wrong store. Our expert picks reveal where to get the best walkers, at prices you’ll love.',
+  },
+  {
+    id: 34,
+    category: 'Informational',
+    image: 'injured-man-doing-physiotherapy-exercises-walking-1-scaled.webp',
+    href: '/most-people-use-walkers-wrong-are-you-making-these-mistakes',
+    alt: 'Person using a walker in a rehabilitation room',
+    title: 'Most People Use Walkers Wrong. Are You Making These Mistakes?',
+    description:
+      'Using a walker seems simple, until you realize most people do it incorrectly. Learn the right way before it affects your safety.',
+  },
 ];
 
 export function getLatestBlogArticles(count = 3) {
