@@ -313,7 +313,7 @@ export const articles = [
     id: 32,
     category: 'Informational',
     image: 'twa-blogg.webp',
-    href: '/articles',
+    href: '/struggling-with-a-walker-in-a-small-home-try-these-space-saving-hacks',
     alt: 'Senior woman holding a walker in a small home',
     title: 'Struggling with a Walker in a Small Home? Try These Space-Saving Hacks',
     description:
@@ -323,7 +323,7 @@ export const articles = [
     id: 33,
     category: 'Informational',
     image: 'improving-mobility-impairment-one-step-time-shot-nurse-helping-senior-man-with-walker.webp',
-    href: '/articles',
+    href: '/the-7-best-places-to-buy-walkers-for-seniors',
     alt: 'Physical therapist helping a senior man use a rollator walker',
     title: 'The 7 Best Places to Buy Walkers for Seniors',
     description:
