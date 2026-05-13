@@ -74,16 +74,8 @@ function SectionHeading({ children, id }) {
   return <h2 className="mt-8 text-[15px] font-black leading-tight text-black" id={id}>{children}</h2>;
 }
 
-function SubHeading({ children }) {
-  return <h3 className="mt-5 text-[12px] font-black leading-tight text-black">{children}</h3>;
-}
-
 function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
-}
-
-function TipBox({ children }) {
-  return <section className="mt-5 rounded-[8px] border-l-4 border-[#ffc400] bg-[#fff3c9] p-4"><p className="font-manrope text-[10px] font-bold leading-5 text-[#1f2930]">{children}</p></section>;
 }
 
 function CoverageTable() {
