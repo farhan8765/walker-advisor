@@ -7,6 +7,7 @@ import Ali from "./pages/Ali";
 import AmazonReturnsDetail from "./pages/AmazonReturnsDetail";
 import AmazonShoppingHackDetail from "./pages/AmazonShoppingHackDetail";
 import Articles from "./pages/Articles";
+import BestPlacesBuyWalkersDetail from "./pages/BestPlacesBuyWalkersDetail";
 import BlogDetail from "./pages/BlogDetail";
 import BuyingWalkerDetail from "./pages/BuyingWalkerDetail";
 import CaregiversCorner from "./pages/CaregiversCorner";
@@ -53,10 +54,12 @@ import OsteoarthritisFallsDetail from "./pages/OsteoarthritisFallsDetail";
 import Newsletter from "./components/Newsletter";
 import PerformanceHighlight from "./components/PerformanceHighlight";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import SmallHomeWalkerDetail from "./pages/SmallHomeWalkerDetail";
 import ToolShowcase from "./components/ToolShowcase";
 import WalkerChoices from "./components/WalkerChoices";
 import WalkerInsightsPromo from "./components/WalkerInsightsPromo";
 import { applyHomePageDocumentSeo, setCanonicalToCurrentPath } from "./seo/siteDocument";
+import WalkerMistakesDetail from "./pages/WalkerMistakesDetail";
 
 function Home() {
   useLayoutEffect(() => {
@@ -120,6 +123,9 @@ const routes = {
   "/the-must-have-walker-safety-features-every-senior-should-know-about": WalkerSafetyFeaturesDetail,
   "/got-a-walker-with-large-wheels-try-these-game-changing-tips-for-seniors": LargeWheelWalkerTipsDetail,
   "/will-medicare-really-pay-for-your-walker-the-truth-every-senior-should-know": MedicareWalkerCoverageDetail,
+  "/most-people-use-walkers-wrong-are-you-making-these-mistakes": WalkerMistakesDetail,
+  "/the-7-best-places-to-buy-walkers-for-seniors": BestPlacesBuyWalkersDetail,
+  "/struggling-with-a-walker-in-a-small-home-try-these-space-saving-hacks": SmallHomeWalkerDetail,
   "/caregivers-corner": CaregiversCorner,
   "/contact": Contact,
   "/cookies-policy": Cookies,

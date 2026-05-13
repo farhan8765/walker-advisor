@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@500&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,5 +16,35 @@
   h5,
   h6 {
     @apply font-heading font-normal;
+  }
+
+  main > article header h1 {
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    line-height: 100% !important;
+    letter-spacing: 0 !important;
+  }
+
+  main > article p,
+  main > article li,
+  main > article summary {
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    line-height: 28px !important;
+    letter-spacing: 0 !important;
+  }
+
+  main > article h2,
+  main > article h3,
+  main > article h4,
+  main > article h5,
+  main > article h6 {
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    line-height: 36px !important;
+    letter-spacing: 0 !important;
   }
 }
