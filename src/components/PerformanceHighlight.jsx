@@ -5,19 +5,19 @@ const base = `${process.env.PUBLIC_URL}/images`;
 const authorSlides = [
   {
     id: 'amir',
-    image: 'amir.webp',
+    image: 'Amir.png',
     name: 'Amir Murtaza',
     bio: "Amir Abbasi is an experienced IT professional whose journey has grown far beyond technology. Since 2012, he has also served as a devoted caregiver for his parents, an experience that has given him unique insight into the everyday realities of aging. Through this personal role, Amir came to understand how the right products, resources, and support can make a profound difference in the lives of seniors and their families.",
   },
   {
     id: 'robin',
-    image: 'robin.webp',
+    image: 'Robin.png',
     name: 'Robin',
     bio: 'Robin Dolan, LVN (Licensed Vocational Nurse), has been serving in the nursing profession since 2024, dedicating her career to geriatric and rehabilitative care. She began her journey at Scripps Home in Altadena, California, a multilevel facility supporting low-income seniors. Over the years, she has gained extensive experience working in skilled nursing, rehabilitation centers, and assisted living facilities, where she witnessed the unique challenges seniors and their families face in accessing quality healthcare.',
   },
   {
     id: 'editorial',
-    image: 'newsletter-pic-1024x1024.webp',
+    image: 'Ali.png',
     name: 'Syed Ali',
     bio: 'Syed brings a wealth of hands-on experience to the advisor site for mobility devices. As a dedicated caregiver for aging relatives facing Parkinson’s, stroke rehabilitation, diabetes, and other long-term conditions, Syed has personally navigated the wide spectrum of mobility and senior products. His practical expertise covers everything from canes and walkers to emergency assistive devices, grab bars, and specialized bathroom safety equipment, always with the goal of enhancing comfort and safety.',
   },

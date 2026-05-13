@@ -142,9 +142,10 @@ const toolCards = [
   },
 ];
 
-const toolCardCount = toolCards.length;
-
 const CAROUSEL_GAP_PX = 24; // gap-6
+
+/** In tabs: 3-up desktop carousel + mobile horizontal strip (same as All). */
+const CAROUSEL_TAB_IDS = new Set(['All', 'Elenker']);
 
 function ToolShowCard({ card, className = '', style }) {
   return (
@@ -184,21 +185,37 @@ function ToolShowCard({ card, className = '', style }) {
 
 function ToolShowcase() {
   const [activeTab, setActiveTab] = useState('All');
-  const [allSlideIndex, setAllSlideIndex] = useState(0);
-  const allCarouselViewportRef = useRef(null);
+  const [carouselSlideIndex, setCarouselSlideIndex] = useState(0);
+  const carouselViewportRef = useRef(null);
   const [carouselStepPx, setCarouselStepPx] = useState(0);
   const [carouselCardWidthPx, setCarouselCardWidthPx] = useState(0);
 
-  const allMaxSlide = useMemo(
-    () => Math.max(0, toolCardCount - 3),
-    [],
+  const useCarouselLayout = CAROUSEL_TAB_IDS.has(activeTab);
+
+  const carouselItems = useMemo(() => {
+    if (activeTab === 'All') {
+      return toolCards;
+    }
+    if (activeTab === 'Elenker') {
+      return toolCards.filter((card) => card.brand === 'Elenker');
+    }
+    return [];
+  }, [activeTab]);
+
+  const carouselItemCount = carouselItems.length;
+
+  const carouselMaxSlide = useMemo(
+    () => Math.max(0, carouselItemCount - 3),
+    [carouselItemCount],
   );
 
-  const visibleCards =
-    activeTab === 'All' ? [] : toolCards.filter((card) => card.brand === activeTab);
+  const gridCards =
+    activeTab === 'All' || activeTab === 'Elenker'
+      ? []
+      : toolCards.filter((card) => card.brand === activeTab);
 
   useLayoutEffect(() => {
-    const el = allCarouselViewportRef.current;
+    const el = carouselViewportRef.current;
     if (!el) {
       return undefined;
     }
@@ -218,18 +235,18 @@ function ToolShowcase() {
   }, [activeTab]);
 
   useEffect(() => {
-    setAllSlideIndex(0);
+    setCarouselSlideIndex(0);
   }, [activeTab]);
 
   useEffect(() => {
-    if (activeTab !== 'All' || allMaxSlide === 0) {
+    if (!useCarouselLayout || carouselMaxSlide === 0) {
       return undefined;
     }
     const id = setInterval(() => {
-      setAllSlideIndex((i) => (i >= allMaxSlide ? 0 : i + 1));
+      setCarouselSlideIndex((i) => (i >= carouselMaxSlide ? 0 : i + 1));
     }, 4500);
     return () => clearInterval(id);
-  }, [activeTab, allMaxSlide]);
+  }, [useCarouselLayout, carouselMaxSlide]);
 
   return (
     <section className="w-full bg-[#fbf6e6] px-4 py-16 md:px-8 lg:px-14 lg:py-24">
@@ -263,11 +280,11 @@ function ToolShowcase() {
           ))}
         </div>
 
-        {activeTab === 'All' ? (
+        {useCarouselLayout ? (
           <>
             <div className="mt-24 md:hidden overflow-x-auto pb-4">
               <div className="flex w-max gap-6 pr-2">
-                {toolCards.map((card) => (
+                {carouselItems.map((card) => (
                   <ToolShowCard
                     key={card.id}
                     card={card}
@@ -278,7 +295,7 @@ function ToolShowcase() {
             </div>
 
             <div
-              ref={allCarouselViewportRef}
+              ref={carouselViewportRef}
               className="mt-24 hidden w-full max-w-[1280px] overflow-hidden md:block"
             >
               <div
@@ -287,11 +304,11 @@ function ToolShowcase() {
                   gap: `${CAROUSEL_GAP_PX}px`,
                   transform:
                     carouselStepPx > 0
-                      ? `translateX(-${allSlideIndex * carouselStepPx}px)`
+                      ? `translateX(-${carouselSlideIndex * carouselStepPx}px)`
                       : undefined,
                 }}
               >
-                {toolCards.map((card) => (
+                {carouselItems.map((card) => (
                   <ToolShowCard
                     key={card.id}
                     card={card}
@@ -305,14 +322,14 @@ function ToolShowcase() {
                 ))}
               </div>
               <p className="sr-only" aria-live="polite">
-                Showing cards {allSlideIndex + 1} to {Math.min(allSlideIndex + 3, toolCardCount)} of{' '}
-                {toolCardCount}
+                Showing cards {carouselSlideIndex + 1} to{' '}
+                {Math.min(carouselSlideIndex + 3, carouselItemCount)} of {carouselItemCount}
               </p>
             </div>
           </>
         ) : (
           <div className="mt-24 grid gap-6 md:grid-cols-3">
-            {visibleCards.map((card) => (
+            {gridCards.map((card) => (
               <ToolShowCard key={card.id} card={card} />
             ))}
           </div>

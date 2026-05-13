@@ -1,4 +1,5 @@
 import "./App.css";
+import { useLayoutEffect } from "react";
 import AboutUs from "./pages/AboutUs";
 import AmazonReturnsDetail from "./pages/AmazonReturnsDetail";
 import AmazonShoppingHackDetail from "./pages/AmazonShoppingHackDetail";
@@ -42,8 +43,13 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import ToolShowcase from "./components/ToolShowcase";
 import WalkerChoices from "./components/WalkerChoices";
 import WalkerInsightsPromo from "./components/WalkerInsightsPromo";
+import { applyHomePageDocumentSeo, setCanonicalToCurrentPath } from "./seo/siteDocument";
 
 function Home() {
+  useLayoutEffect(() => {
+    applyHomePageDocumentSeo();
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -98,6 +104,10 @@ const routes = {
 };
 
 function App() {
+  useLayoutEffect(() => {
+    setCanonicalToCurrentPath();
+  }, []);
+
   const Page = routes[window.location.pathname] || Home;
 
   return (
