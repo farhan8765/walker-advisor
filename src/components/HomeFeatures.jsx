@@ -1,3 +1,6 @@
+import { useMemo, useState } from 'react';
+import { articles } from '../data/blogArticles';
+
 const sideLinks = [
   'Best Rollator Walkers for Seniors',
   'How to Choose a Walker for Stability',
@@ -6,51 +9,22 @@ const sideLinks = [
   'Caregiver Tips for Fall Prevention',
 ];
 
-const featureCards = [
-  {
-    id: 1,
-    title: 'Best Mobility Devices for Seniors',
-    description:
-      'Discover practical mobility aids that make daily life safer, easier, and more independent for seniors.',
-  },
-  {
-    id: 2,
-    title: 'How to Choose Walking Shoes for Balance',
-    description:
-      'Learn the key shoe features that support better grip, posture, and confidence while walking.',
-  },
-  {
-    id: 3,
-    title: 'Understanding Upright Walkers',
-    description:
-      'Find out how upright walkers can improve posture, comfort, and everyday mobility.',
-  },
-];
-
-function ImagePlaceholder({ className = '' }) {
-  return (
-    <div
-      className={`flex items-center justify-center bg-[#d8d8d8] ${className}`}
-      aria-hidden="true"
-    >
-      <svg
-        className="h-16 w-16 text-[#b9b9b9] md:h-20 md:w-20"
-        viewBox="0 0 96 96"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect x="12" y="18" width="72" height="60" rx="8" fill="currentColor" />
-        <path
-          d="M26 66l17-22 13 16 8-10 16 16H26z"
-          fill="#ededed"
-        />
-        <circle cx="62" cy="35" r="6" fill="#ededed" />
-      </svg>
-    </div>
-  );
-}
+const categoryFilters = ['All', "Caregiver's Corner", 'Informational', 'Comparison'];
 
 function HomeFeatures() {
+  const [activeCategory, setActiveCategory] = useState('All');
+
+  const filteredArticles = useMemo(() => {
+    const list =
+      activeCategory === 'All'
+        ? articles
+        : articles.filter((article) => article.category === activeCategory);
+    return [...list].sort((a, b) => b.id - a.id);
+  }, [activeCategory]);
+
+  const featuredArticle = filteredArticles[0];
+  const supportingArticles = filteredArticles.slice(1, 4);
+
   return (
     <section className="w-full bg-white px-4 py-16 md:px-8 lg:px-14 lg:py-24">
       <div className="mx-auto max-w-[1280px]">
@@ -81,21 +55,20 @@ function HomeFeatures() {
             </h3>
 
             <div className="flex flex-nowrap items-center gap-2 md:gap-4">
-              {['All', "Caregiver's Corner", 'Informational', 'Comparison'].map(
-                (category) => (
-                  <button
-                    className={`h-12 whitespace-nowrap rounded-full px-4 font-manrope text-base font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] md:text-[17px] ${
-                      category === 'All'
-                        ? 'border border-[#172129] bg-white text-[#172129]'
-                        : 'border border-transparent bg-white text-black hover:text-[#a87900]'
-                    }`}
-                    key={category}
-                    type="button"
-                  >
-                    {category}
-                  </button>
-                ),
-              )}
+              {categoryFilters.map((category) => (
+                <button
+                  className={`h-12 whitespace-nowrap rounded-full px-4 font-manrope text-base font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] md:text-[17px] ${
+                    category === activeCategory
+                      ? 'border border-[#172129] bg-white text-[#172129]'
+                      : 'border border-transparent bg-white text-black hover:text-[#a87900]'
+                  }`}
+                  key={category}
+                  type="button"
+                  onClick={() => setActiveCategory(category)}
+                >
+                  {category}
+                </button>
+              ))}
             </div>
           </div>
 
@@ -125,51 +98,74 @@ function HomeFeatures() {
             </aside>
 
             <div id="featured-articles" className="min-w-0">
-              <article className="grid overflow-hidden rounded-lg bg-[#fff1b3] lg:grid-cols-2">
-                <ImagePlaceholder className="min-h-[260px] lg:min-h-[342px]" />
-                <div className="px-7 py-8 md:px-12 md:py-10 lg:px-14">
-                  <h3
-                    className="h-[144px] w-[400px] text-[48px] font-bold leading-[100%] tracking-[0.5%] text-[#172129]"
-                    style={{ fontFamily: 'Manrope, sans-serif' }}
-                  >
-                    Blog title heading will go here
-                  </h3>
-                  <p className="mt-5 max-w-[440px] font-manrope text-base font-medium leading-7 text-[#66737c] md:text-lg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
+              {featuredArticle ? (
+                <>
+                  <article className="grid overflow-hidden rounded-lg bg-[#fff1b3] lg:grid-cols-2">
+                    <img
+                      className="min-h-[260px] w-full object-cover lg:min-h-[342px]"
+                      src={`${process.env.PUBLIC_URL}/images/${featuredArticle.image}`}
+                      alt={featuredArticle.alt}
+                    />
+                    <div className="px-7 py-8 md:px-12 md:py-10 lg:px-14">
+                      <h3
+                        className="w-full max-w-[400px] text-[30px] font-bold leading-[1.15] tracking-[0.5%] text-[#172129] md:text-[36px]"
+                        style={{ fontFamily: 'Manrope, sans-serif' }}
+                      >
+                        {featuredArticle.title}
+                      </h3>
+                      <p className="mt-4 max-w-[440px] font-manrope text-sm font-medium leading-6 text-[#66737c] md:text-base md:leading-7">
+                        {featuredArticle.description}
+                      </p>
+                      <a
+                        className="mt-7 inline-flex items-center gap-3 font-manrope text-sm font-semibold text-[#3f351d] no-underline transition-colors hover:text-black md:mt-8 md:text-base"
+                        href={featuredArticle.href}
+                      >
+                        Learn More <span aria-hidden="true">-&gt;</span>
+                      </a>
+                    </div>
+                  </article>
+
+                  <div className="mt-6 grid gap-6 md:grid-cols-3">
+                    {supportingArticles.map((card) => (
+                      <article className="font-manrope" key={card.id}>
+                        <img
+                          className="min-h-[210px] w-full rounded-lg object-cover md:min-h-[218px]"
+                          src={`${process.env.PUBLIC_URL}/images/${card.image}`}
+                          alt={card.alt}
+                        />
+                        <h3
+                          className="mt-6 w-full max-w-[329.33px] text-[18px] font-bold leading-snug tracking-[0.5%] text-[#172129] md:mt-7 md:text-[20px] md:leading-7"
+                          style={{ fontFamily: 'Manrope, sans-serif' }}
+                        >
+                          {card.title}
+                        </h3>
+                        <p className="mt-3 text-sm font-medium leading-6 text-[#66737c] md:mt-4">
+                          {card.description}
+                        </p>
+                        <a
+                          className="mt-6 inline-flex items-center gap-3 text-sm font-semibold text-[#3f351d] no-underline transition-colors hover:text-black md:mt-8 md:text-base"
+                          href={card.href}
+                        >
+                          Learn More <span aria-hidden="true">-&gt;</span>
+                        </a>
+                      </article>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <article className="rounded-lg bg-[#fff1b3] px-7 py-12 md:px-12">
+                  <p className="font-manrope text-lg font-medium text-[#66737c]">
+                    No articles in this category yet. Try &quot;All&quot; or check
+                    back soon.
                   </p>
                   <a
-                    className="mt-9 inline-flex items-center gap-3 font-manrope text-base font-semibold text-[#3f351d] no-underline transition-colors hover:text-black md:text-lg"
-                    href="#featured-articles"
+                    className="mt-6 inline-flex items-center gap-3 font-manrope text-base font-semibold text-[#3f351d] no-underline hover:text-black"
+                    href="/articles"
                   >
-                    Learn More <span aria-hidden="true">-&gt;</span>
+                    View all articles <span aria-hidden="true">-&gt;</span>
                   </a>
-                </div>
-              </article>
-
-              <div className="mt-6 grid gap-6 md:grid-cols-3">
-                {featureCards.map((card) => (
-                  <article className="font-manrope" key={card.id}>
-                    <ImagePlaceholder className="min-h-[210px] rounded-lg md:min-h-[218px]" />
-                    <h3
-                      className="mt-7 h-[64px] w-[329.33px] text-[24px] font-bold leading-[32px] tracking-[0.5%] text-[#172129]"
-                      style={{ fontFamily: 'Manrope, sans-serif' }}
-                    >
-                      {card.title}
-                    </h3>
-                    <p className="mt-4 text-base font-medium leading-7 text-[#66737c]">
-                      {card.description}
-                    </p>
-                    <a
-                      className="mt-8 inline-flex items-center gap-3 text-base font-semibold text-[#3f351d] no-underline transition-colors hover:text-black md:text-lg"
-                      href="#featured-articles"
-                    >
-                      Learn More <span aria-hidden="true">-&gt;</span>
-                    </a>
-                  </article>
-                ))}
-              </div>
+                </article>
+              )}
             </div>
           </div>
         </div>
