@@ -2,25 +2,25 @@ function Newsletter() {
   return (
     <section className="w-full overflow-hidden pt-0">
       <div className="relative w-full pt-20 md:pt-[84px]">
-        <div className="relative min-h-[500px] bg-[#fbf6e6] px-6 py-12 md:px-10 lg:min-h-[420px] lg:px-[464px] lg:py-[60px]">
+        <div className="relative min-h-[500px] bg-[#fbf6e6] px-6 py-12 md:px-10 lg:min-h-[420px] lg:py-[60px] lg:pl-[min(420px,38vw)] lg:pr-10 xl:pl-[460px] xl:pr-14">
           <img
             className="pointer-events-none absolute bottom-0 left-4 hidden h-[500px] w-auto object-contain md:block lg:left-10"
             src={`${process.env.PUBLIC_URL}/images/newsletter-pic-1024x1024.webp`}
             alt="Senior man walking with a wheeled walker"
           />
 
-          <div className="relative z-10 mx-auto max-w-[820px] lg:mx-0">
-            <h2 className="font-heading text-[60px] font-normal uppercase leading-[100%] tracking-normal text-black">
+          <div className="relative z-10 w-full max-w-none lg:ml-0">
+            <h2 className="w-full font-heading text-[60px] font-normal uppercase leading-[100%] tracking-normal text-black">
               Welcome to The Walker Advisor Newsletter!
             </h2>
-            <p className="mt-4 max-w-[720px] font-['Manrope',sans-serif] text-[18px] font-medium leading-7 tracking-[0.5%] text-[#5A666E] md:mt-6">
+            <p className="mt-4 w-full font-['Manrope',sans-serif] text-[18px] font-medium leading-7 tracking-[0.5%] text-[#5A666E] md:mt-6">
               Stay informed with our monthly updates on the best mobility aids,
               safety tips, and exclusive deals designed to support senior
               independence.
             </p>
 
             <form
-              className="mt-12 flex w-full max-w-[565px] items-center rounded-full border-2 border-[#303830] bg-transparent p-1"
+              className="mt-12 flex w-full max-w-[520px] items-center rounded-full border-2 border-[#303830] bg-transparent p-1"
               action="#"
             >
               <label className="sr-only" htmlFor="newsletter-email">
