@@ -4,10 +4,8 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
 
-
-
 const tableOfContents = [
-  'What is Osteoarthritis?',
+  'What Is Osteoarthritis?',
   'How Osteoarthritis Increases Fall Risk in Seniors',
   'Why Falls Are Dangerous for Older Adults',
   'How Seniors with Osteoarthritis Can Reduce Fall Risk',
@@ -15,25 +13,21 @@ const tableOfContents = [
   'Final Thoughts',
 ];
 
-const relatedArticles = [
-  {
-    image: 'image-9-1.webp',
-    title: 'Exercise Programs for Elderly Adults',
-    description: "Most seniors don't realize they're missing these 4 essential exercises until mobility starts to decline.",
-  },
-  {
-    image: 'blog.webp',
-    title: 'Social Activities for Older Adults: The Best Ways to Stay Connected, Active, and Happy',
-    description: 'Loneliness in seniors is not just sad, it is as dangerous to health as smoking 15 cigarettes a day.',
-  },
-  {
-    image: 'image-2-1.webp',
-    title: 'Can Heart Issues Increase Fall Risk in Seniors?',
-    description: 'You might think falls are just about balance, but what if your heart is the real culprit?',
-  },
+const faqs = [
+  ['Can osteoarthritis directly cause falls?', 'Osteoarthritis does not directly cause falls, but it increases fall risk by affecting balance, strength, and mobility.'],
+  ['Which joints increase fall risk the most?', 'Osteoarthritis in the knees and hips poses the highest fall risk because these joints support body weight and movement.'],
+  ['Can walking aids help seniors with osteoarthritis?', 'Yes. Walkers and canes provide added stability, reduce joint strain, and significantly lower fall risk.'],
+  ['Is exercise safe for seniors with osteoarthritis?', 'Low-impact exercises are not only safe but recommended. They strengthen muscles and improve balance when done correctly.'],
+  ['Should seniors with osteoarthritis avoid walking?', 'No. Avoiding movement can worsen muscle weakness. Walking with proper support is beneficial.'],
 ];
 
-
+function ArticleLink({ children, href }) {
+  return (
+    <a className="font-black text-[#0b61a4] no-underline hover:underline" href={href} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}>
+      {children}
+    </a>
+  );
+}
 
 function SectionHeading({ children, id }) {
   return <h2 className="mt-9 text-[18px] font-black leading-tight text-black" id={id}>{children}</h2>;
@@ -47,19 +41,9 @@ function Paragraph({ children }) {
   return <p className="mt-3 font-manrope text-[12px] font-medium leading-[1.85] text-[#1f2930]">{children}</p>;
 }
 
-function SocialDots() {
-  return (
-    <div className="mt-9 flex items-center justify-center gap-2" aria-label="Share article">
-      {['f', 'in', 'x'].map((item) => (
-        <a className="flex h-6 w-6 items-center justify-center rounded-full bg-black font-manrope text-[10px] font-black text-white no-underline" href={`#share-${item}`} key={item}>{item}</a>
-      ))}
-    </div>
-  );
+function BlogList({ children }) {
+  return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">{children}</ul>;
 }
-
-
-
-
 
 function OsteoarthritisFallsDetail() {
   useEffect(() => {
@@ -78,52 +62,96 @@ function OsteoarthritisFallsDetail() {
           <header className="pt-9 text-center">
             <h1 className="mx-auto max-w-[560px] text-[25px] font-black leading-tight text-black md:text-[28px]">Can Osteoarthritis Lead to More Falls in Seniors?</h1>
             <p className="mx-auto mt-3 max-w-[600px] font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">Osteoarthritis can quietly increase fall risk in seniors by affecting balance, strength, and mobility, often before warning signs appear.</p>
-            <img className="mt-5 h-auto w-full rounded-[8px] object-cover" src={`${process.env.PUBLIC_URL}/images/blog1.webp`} alt="Senior woman near walker with knee discomfort" />
+            <img className="mt-5 h-auto w-full rounded-[8px] object-cover" src={`${process.env.PUBLIC_URL}/images/twaa-1.webp`} alt="Senior woman sitting beside a walker with knee pain" />
           </header>
 
-          <div className="mt-6 flex items-center gap-3"><div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">AA</div><p className="font-manrope text-[12px] font-black text-black">Amir Abbasi</p></div>
+          <div className="mt-6 flex items-center gap-3">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">AA</div>
+            <p className="font-manrope text-[12px] font-black text-black">Amir Abbasi</p>
+          </div>
 
-          <section className="mt-5 rounded-[8px] bg-[#f3f3f3] p-5"><h2 className="text-[16px] font-black text-black">Key Summary</h2><Paragraph>Osteoarthritis affects joints, balance, movement, and confidence. It can make seniors more likely to trip, stumble, or avoid activity, which may increase fall risk.</Paragraph></section>
+          <section className="mt-5 rounded-[8px] bg-[#f3f3f3] p-5">
+            <h2 className="text-[16px] font-black text-black">Key Summary</h2>
+            <Paragraph>Osteoarthritis affects balance, strength, and movement in seniors. Joint pain and stiffness increase the likelihood of falls. Proper support, exercise, and fall-prevention strategies can reduce risk.</Paragraph>
+          </section>
 
-          <Paragraph>As people age, joint health becomes a major concern. One of the most common conditions affecting older adults is osteoarthritis, a disease that causes joint pain, stiffness, and reduced mobility.</Paragraph>
-          <Paragraph>The real concern is not only pain. Osteoarthritis can change how seniors walk, stand, and move, increasing the chance of falls.</Paragraph>
+          <Paragraph>As people age, joint health becomes a major concern. One of the most common conditions affecting older adults is osteoarthritis, a degenerative joint disease that can significantly impact mobility. A common and important question many families ask is: Can osteoarthritis increase the risk of falls in seniors? The short answer is yes, and understanding why is essential for prevention and safety.</Paragraph>
 
-          <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents"><h2 className="bg-[#ffc400] px-5 py-3 text-[17px] font-black leading-none text-black">Table of Contents</h2><ol className="space-y-3 px-6 py-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">{tableOfContents.map((item, index) => <li key={item}><a className="text-[#1f2930] no-underline hover:text-black" href={`#section-${index + 1}`}>{index + 1}. {item}</a></li>)}</ol></nav>
+          <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
+            <h2 className="bg-[#ffc400] px-5 py-3 text-[17px] font-black leading-none text-black">Table of Contents</h2>
+            <ol className="space-y-3 px-6 py-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
+              {tableOfContents.map((item, index) => <li key={item}><a className="text-[#1f2930] no-underline hover:text-black" href={`#section-${index + 1}`}>{index + 1}. {item}</a></li>)}
+            </ol>
+          </nav>
 
           <SectionHeading id="section-1">What Is Osteoarthritis?</SectionHeading>
-          <Paragraph>Osteoarthritis is the gradual wear and tear of protective cartilage that cushions the joints. It commonly affects the knees, hips, hands, and spine.</Paragraph>
+          <Paragraph>Osteoarthritis (OA) occurs when the protective cartilage that cushions the joints gradually wears away. It most commonly affects the knees, hips, hands, and spine, especially in older adults.</Paragraph>
           <Paragraph>Common symptoms include:</Paragraph>
-          <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]"><li>Joint pain and stiffness</li><li>Swelling or tenderness</li><li>Reduced range of motion</li><li>Difficulty standing or walking for long periods</li><li>Grinding or popping sensations in joints</li></ul>
+          <BlogList>
+            <li>Joint pain and stiffness</li>
+            <li>Swelling or tenderness</li>
+            <li>Reduced range of motion</li>
+            <li>Difficulty walking or standing for long periods</li>
+          </BlogList>
+          <Paragraph>Over time, these symptoms can interfere with balance, coordination, and daily movement.</Paragraph>
 
           <SectionHeading id="section-2">How Osteoarthritis Increases Fall Risk in Seniors</SectionHeading>
-          <SubHeading>Joint Pain and Weakness</SubHeading><Paragraph>Painful joints can make seniors shift weight unevenly or avoid using certain muscles. Over time, this can reduce strength and stability.</Paragraph>
-          <SubHeading>Reduced Balance and Stability</SubHeading><Paragraph>Limited joint movement affects posture and balance reactions, making it harder to recover from a slip or stumble.</Paragraph>
-          <SubHeading>Muscle Weakness</SubHeading><Paragraph>Less movement often leads to weaker muscles, especially in the legs and hips, which are critical for preventing falls.</Paragraph>
-          <SubHeading>Stiffness After Rest</SubHeading><Paragraph>Stiff joints after sitting or sleeping can make first steps more uncertain, especially when standing quickly.</Paragraph>
-          <SubHeading>Fear of Movement</SubHeading><Paragraph>Fear of pain can cause seniors to move less. Reduced activity can worsen weakness and balance problems.</Paragraph>
+          <Paragraph>Osteoarthritis does not directly cause falls, but it creates conditions that make falls more likely.</Paragraph>
+          <SubHeading>Joint Pain and Weakness</SubHeading>
+          <Paragraph>Painful joints make walking uncomfortable. Seniors may limp, walk slowly, or shift weight unevenly, increasing instability.</Paragraph>
+          <SubHeading>Reduced Balance and Stability</SubHeading>
+          <Paragraph>Limited joint movement affects posture and balance reactions, making it harder to recover from a slip or stumble.</Paragraph>
+          <SubHeading>Muscle Weakness</SubHeading>
+          <Paragraph>Pain often leads to reduced activity. Less movement results in weaker leg muscles, which are critical for maintaining balance.</Paragraph>
+          <SubHeading>Stiffness After Rest</SubHeading>
+          <Paragraph>Stiff joints after sitting or sleeping can make sudden movement risky, especially when standing up quickly.</Paragraph>
+          <SubHeading>Fear of Movement</SubHeading>
+          <Paragraph>Fear of pain can cause hesitant or unnatural walking patterns, which paradoxically increases fall risk.</Paragraph>
 
           <SectionHeading id="section-3">Why Falls Are Dangerous for Older Adults</SectionHeading>
           <Paragraph>Falls are a leading cause of injury among seniors. For those with osteoarthritis, falls can result in:</Paragraph>
-          <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]"><li>Hip or wrist fractures</li><li>Head injuries</li><li>Loss of mobility and independence</li><li>Extended recovery periods</li></ul>
+          <BlogList>
+            <li>Hip or wrist fractures</li>
+            <li>Head injuries</li>
+            <li>Loss of mobility and independence</li>
+            <li>Extended recovery periods</li>
+          </BlogList>
 
           <SectionHeading id="section-4">How Seniors with Osteoarthritis Can Reduce Fall Risk</SectionHeading>
-          <Paragraph>Managing osteoarthritis does not mean avoiding movement. The goal is to move safely and consistently.</Paragraph>
-          <SubHeading>Practical Safety Measures</SubHeading><ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]"><li>Use walking aids such as a cane or walker when needed.</li><li>Wear supportive non-slip shoes.</li><li>Keep floors free from clutter and rugs.</li><li>Install grab bars in bathrooms and hallways.</li><li>Exercise gently to maintain strength and flexibility.</li></ul>
-          <SubHeading>Stay Active with Low-Impact Exercise</SubHeading><Paragraph>Low-impact activities like walking, stretching, chair exercises, or water aerobics help improve strength and flexibility without stressing the joints.</Paragraph>
-          <SubHeading>Manage Pain Properly</SubHeading><Paragraph>Work with a healthcare provider to manage pain safely. Pain control can make movement easier and safer.</Paragraph>
-          <SubHeading>Prepare for Emergencies</SubHeading><Paragraph>Keep emergency contacts accessible and consider using a medical alert device if fall risk is high.</Paragraph>
+          <Paragraph>Although osteoarthritis cannot be cured, fall risk can be managed effectively.</Paragraph>
+          <SubHeading>Practical Safety Measures</SubHeading>
+          <BlogList>
+            <li>Use walking aids such as walkers or canes</li>
+            <li>Wear supportive, non-slip footwear</li>
+            <li>Keep floors clutter-free and well-lit</li>
+            <li>Install grab bars in bathrooms and hallways</li>
+            <li>Stand up slowly from sitting or lying positions</li>
+          </BlogList>
+          <Paragraph>Using a walker correctly is just as important as having one. If you’re unsure about proper setup, read <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/an-easy-guide-on-how-to-fit-a-walker-for-seniors/">The Ultimate Easy Guide to Fitting a Walker for Seniors Safely</ArticleLink> to ensure maximum stability and comfort.</Paragraph>
+          <SubHeading>Stay Active with Low-Impact Exercise</SubHeading>
+          <Paragraph>Gentle activities like walking, stretching, chair exercises, or water aerobics help improve strength and flexibility without stressing the joints.</Paragraph>
+          <SubHeading>Manage Pain Properly</SubHeading>
+          <Paragraph>Effective pain management through medical guidance, physical therapy, or lifestyle changes helps seniors move with confidence and control.</Paragraph>
+          <Paragraph>Caregivers also play a vital role in fall prevention. If you’re supporting a loved one, explore <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/caregivers-guide-to-senior-walker-selection-and-usage/">How Caregivers Can Assist Seniors in Choosing and Using Walkers</ArticleLink> better to understand safe mobility practices and proper walker use.</Paragraph>
+          <SubHeading>Prepare for Emergencies</SubHeading>
+          <Paragraph>Even with precautions, falls can still happen. Having the right safety systems in place can make a critical difference. Consider reading <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/emergency-preparedness-for-walker-users/">Emergency Preparedness for Walker Users</ArticleLink> to learn how technology can provide quick assistance during emergencies.</Paragraph>
 
           <SectionHeading id="section-5">Frequently Asked Questions</SectionHeading>
-          <div className="mt-4 space-y-2">{['Can osteoarthritis directly cause falls?', 'Which joints increase fall risk the most?', 'Can walking aids help seniors with osteoarthritis?', 'Is exercise safe for seniors with osteoarthritis?', 'Should seniors with arthritis use a walker?'].map((question) => <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}><summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary><p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">Yes, osteoarthritis can increase fall risk by causing pain, stiffness, weakness, and reduced balance.</p></details>)}</div>
+          <div className="mt-4 space-y-2">
+            {faqs.map(([question, answer]) => (
+              <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
+                <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary>
+                <p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">{answer}</p>
+              </details>
+            ))}
+          </div>
 
-          <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-6"><ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading><Paragraph>Osteoarthritis can increase the risk of falls in seniors, mostly by affecting joint health, balance, and walking confidence. With the right support, mobility aids, exercise, and home safety measures, seniors can stay mobile, confident, and safer.</Paragraph></section>
-
-          <SocialDots />
-
-          <section className="mt-8 rounded-[10px] bg-white p-8 shadow-[0_14px_40px_rgba(0,0,0,0.05)]"><h2 className="text-center text-[14px] font-black text-black">What do you think?</h2><div className="mt-6 space-y-5 border-b border-[#d8dde2] pb-6"><div className="flex gap-3"><div className="h-10 w-10 rounded-full bg-[#d8dde2]" /><div><p className="font-manrope text-[12px] font-black">Harris Jabbar</p><p className="mt-1 font-manrope text-[11px] text-[#303a42]">This article is helpful.</p><button className="mt-2 rounded-full bg-[#07364f] px-4 py-1 font-manrope text-[10px] font-black text-white">Reply</button></div></div><div className="ml-12 flex gap-3"><div className="h-10 w-10 rounded-full bg-[#d8dde2]" /><div><p className="font-manrope text-[12px] font-black">thewalkeradvisor</p><p className="mt-1 font-manrope text-[11px] text-[#303a42]">Thank you. Glad it helped.</p><button className="mt-2 rounded-full bg-[#07364f] px-4 py-1 font-manrope text-[10px] font-black text-white">Reply</button></div></div></div><form className="mt-6 space-y-4" action="#"><label className="block"><span className="font-manrope text-[11px] font-black text-black">Comment *</span><textarea className="mt-2 min-h-[100px] w-full rounded-[4px] border border-black px-3 py-2 font-manrope text-[12px] outline-none" /></label><label className="block"><span className="font-manrope text-[11px] font-black text-black">Name *</span><input className="mt-2 h-8 w-full rounded-[4px] border border-black px-3 font-manrope text-[12px] outline-none" /></label><label className="block"><span className="font-manrope text-[11px] font-black text-black">Email *</span><input className="mt-2 h-8 w-full rounded-[4px] border border-black px-3 font-manrope text-[12px] outline-none" type="email" /></label><label className="flex items-center gap-2 font-manrope text-[10px] font-medium text-[#1f2930]"><input type="checkbox" /> Save my name, email, and website in this browser for the next time I comment.</label><button className="rounded-full bg-[#07364f] px-7 py-3 font-manrope text-[11px] font-black text-white" type="submit">Post Comment</button></form></section>
+          <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-6">
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
+            <Paragraph>Yes, osteoarthritis can increase the risk of falls in seniors, mainly by affecting pain levels, balance, and muscle strength. However, with the right support, lifestyle adjustments, and preventive measures, seniors can stay mobile, confident, and safe.</Paragraph>
+            <Paragraph>Focusing on joint health today can help protect independence and prevent dangerous falls tomorrow.</Paragraph>
+          </section>
         </article>
-
-        <section className="mx-auto mt-16 w-full"><h2 className="font-manrope text-[13px] font-black text-black">Related Articles</h2><div className="mt-5 grid gap-6 md:grid-cols-3">{relatedArticles.map((article) => <article className="overflow-hidden rounded-[8px] border border-[#d8dde2] bg-white" key={article.title}><img className="h-40 w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" /><div className="p-5"><h3 className="text-[17px] font-black leading-tight text-[#172129]">{article.title}</h3><p className="mt-3 font-manrope text-[12px] font-medium leading-6 text-[#303a42]">{article.description}</p></div></article>)}</div></section>
       </main>
       <Newsletter />
       <Footer />
