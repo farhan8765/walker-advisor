@@ -7,20 +7,22 @@ import Newsletter from '../components/Newsletter';
 
 
 const toc = [
-  'Best features',
-  'Seat for resting',
-  'Walker comparison table',
+  'Key tips for choosing and using walkers',
+  'Walker comparison guide',
   'Frequently asked questions',
-  'Final Thoughts',
-  'References',
+  'Final thoughts',
+  'Reference',
 ];
 
 const comparisonRows = [
-  ['Standard walker', 'Maximum stability', 'Indoor recovery', 'Low', 'No seat'],
-  ['Two-wheel walker', 'Stable with easier movement', 'Indoor daily use', 'Low', 'No seat'],
-  ['Three-wheel rollator', 'Light and narrow', 'Tight spaces', 'Medium', 'Usually no seat'],
-  ['Four-wheel rollator', 'Seat, brakes, storage', 'Errands and outdoor use', 'Medium', 'Yes'],
-  ['Heavy-duty rollator', 'Wider frame and higher capacity', 'Larger users and long walks', 'High', 'Yes'],
+  ['Weight capacity', 'Lower (up to 250 lbs)', 'Medium to high (up to 350 lbs)', 'Higher (up to 500 lbs)', 'Varies'],
+  ['Wheels', 'None or 2', '4 wheels', '4 wheels (larger)', '2 or 4 wheels'],
+  ['Brakes', 'No', 'Yes, hand brakes', 'Yes, heavy-duty', 'No or minimal'],
+  ['Height adjustment', 'Yes', 'Yes', 'Yes', 'Yes'],
+  ['Seat', 'No', 'Yes', 'Yes', 'Optional'],
+  ['Storage', 'No', 'Baskets or bags', 'Larger storage', 'Portable storage'],
+  ['Portability', 'Not foldable', 'Usually foldable', 'Typically non-foldable', 'Highly portable'],
+  ['Best for', 'Home use, max stability', 'Active, mobile users', 'Bariatric needs', 'Travel and tight spaces'],
 ];
 
 const relatedArticles = [
@@ -59,23 +61,32 @@ function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
 }
 
-function ComparisonTable() {
+function TipBox({ children }) {
   return (
-    <div className="mt-5 overflow-hidden border border-black font-manrope">
-      <div className="grid grid-cols-[0.9fr_1fr_1fr_0.8fr_0.7fr] bg-[#ffc400] text-[7px] font-black leading-4 text-black">
-        <div className="border-r border-black px-2 py-2">Walker Type</div>
-        <div className="border-r border-black px-2 py-2">Main Benefit</div>
-        <div className="border-r border-black px-2 py-2">Best For</div>
-        <div className="border-r border-black px-2 py-2">Mobility Level</div>
-        <div className="px-2 py-2">Seat</div>
-      </div>
-      {comparisonRows.map((row) => (
-        <div className="grid grid-cols-[0.9fr_1fr_1fr_0.8fr_0.7fr] text-[7px] font-semibold leading-4 text-[#1f2930]" key={row[0]}>
-          {row.map((cell, index) => (
-            <div className={`${index === row.length - 1 ? '' : 'border-r'} border-t border-black px-2 py-2`} key={cell}>{cell}</div>
+    <section className="mt-4 rounded-[8px] border-l-4 border-[#ffc400] bg-[#fff8df] p-4">
+      <p className="font-manrope text-[10px] font-bold leading-5 text-[#1f2930]">{children}</p>
+    </section>
+  );
+}
+
+function ComparisonTable() {
+  const headers = ['Feature', 'Standard', 'Rollator', 'Bariatric', 'Folding'];
+  return (
+    <div className="mt-5 overflow-x-auto">
+      <div className="min-w-[520px] overflow-hidden rounded-[8px] border border-[#d8dde2] font-manrope text-[9px] font-medium text-[#1f2930]">
+        <div className="grid grid-cols-5 bg-[#ffc400]">
+          {headers.map((h, i) => (
+            <div className={`px-3 py-2 font-black text-black${i > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={h}>{h}</div>
           ))}
         </div>
-      ))}
+        {comparisonRows.map((row, ri) => (
+          <div className={`grid grid-cols-5${ri % 2 === 0 ? ' bg-white' : ' bg-[#f9f9f9]'}`} key={row[0]}>
+            {row.map((cell, ci) => (
+              <div className={`px-3 py-2 border-t border-[#d8dde2]${ci > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={`${ri}-${ci}`}>{cell}</div>
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -97,7 +108,7 @@ function SocialDots() {
 function BuyingWalkerDetail() {
   useEffect(() => {
     const previousTitle = document.title;
-    document.title = "Buying a Walker? Don't Make a Move Until You Read This! - The Walker Advisor";
+    document.title = "Buying a Walker? Don't Make a Move Until You Read This! | The Walker Advisor";
     return () => { document.title = previousTitle; };
   }, []);
 
@@ -109,7 +120,7 @@ function BuyingWalkerDetail() {
           <header className="pt-8 text-center">
             <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">Buying a Walker? Don't Make a Move Until You Read This!</h1>
             <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">Picking the wrong walker can cost you comfort, safety, and money. Our guide shows you how to get it right.</p>
-            <img className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa-blog4.webp`} alt="Senior woman testing a walker outdoors" />
+            <img className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa-blog4.webp`} alt="Buying a Walker? Don't Make a Move Until You Read This!" />
           </header>
 
           <div className="mt-6 flex items-center gap-3">
@@ -119,87 +130,116 @@ function BuyingWalkerDetail() {
 
           <section className="mt-5 rounded-[8px] bg-[#f3f3f3] p-5">
             <h2 className="text-[14px] font-black text-black">Key Summary</h2>
-            <Paragraph>Buying a walker should be based on where it will be used, how much support the user needs, and whether features like wheels, brakes, a seat, and storage will improve safety or create extra risk.</Paragraph>
+            <Paragraph>Walkers are essential mobility aids for seniors and individuals with physical impairments, providing them with the support they need to maintain their independence and move around safely. Whether you're purchasing a walker for yourself or a loved one, selecting the right model and learning how to use it properly is crucial to ensuring comfort, safety, and effectiveness.</Paragraph>
+            <Paragraph>This comprehensive guide will walk you through everything you need to know about choosing and using walkers.</Paragraph>
           </section>
 
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
             <h2 className="bg-[#ffc400] px-5 py-3 text-[15px] font-black leading-none text-black">Table of Contents</h2>
             <ol className="space-y-2 px-6 py-5 font-manrope text-[10px] font-semibold leading-5 text-[#1f2930]">
-              {toc.map((item, index) => <li key={item}><a className="text-[#1f2930] no-underline hover:text-black" href={`#section-${index + 1}`}>{index + 1}. {item}</a></li>)}
+              {toc.map((item, index) => (
+                <li key={item}><a className="text-[#1f2930] no-underline hover:text-black" href={`#section-${index + 1}`}>{index + 1}. {item}</a></li>
+              ))}
             </ol>
           </nav>
 
+          {/* Section 1 */}
           <SectionHeading id="section-1">Key Tips for Choosing and Using Walkers</SectionHeading>
           <BlogList>
-            <li>Start with the user's balance level, not the product style.</li>
-            <li>Measure handle height so wrists, shoulders, and posture stay comfortable.</li>
-            <li>Choose wheels only when the user can control movement safely.</li>
-            <li>Look for brakes that are easy to squeeze and lock.</li>
-            <li>Consider the home layout, doorways, rugs, thresholds, and outdoor terrain.</li>
+            <li>Ensure the right fit</li>
+            <li>Consider the walker's weight capacity</li>
+            <li>Look for key features for comfort and ease of use</li>
+            <li>Test the walker before use</li>
+            <li>Use the walker correctly for safety</li>
+            <li>Ensure safe surroundings</li>
+            <li>Perform regular maintenance</li>
+            <li>Replace the walker when necessary</li>
           </BlogList>
 
-          <SubHeading>1. Know the Right Fit</SubHeading>
-          <Paragraph>Fit is the first safety feature. A walker that is too high can strain the shoulders. A walker that is too low can cause leaning and back discomfort. The handles should usually sit near the wrist crease when the user stands upright with relaxed arms.</Paragraph>
-
-          <section className="mt-6 rounded-[8px] border-l-4 border-[#ffc400] bg-[#fff8df] p-4">
-            <p className="font-manrope text-[10px] font-bold leading-5 text-[#1f2930]">Tip: If the user leans heavily, skips steps, or struggles to turn, the walker may not be the right style or height. A professional fitting can prevent pain and falls.</p>
-          </section>
+          <SubHeading>1. Ensure the Right Fit</SubHeading>
+          <Paragraph>One of the most important factors in choosing a walker is ensuring it fits the user correctly. The walker should be at the right height, with the top of the handles coming up to the user's wrist crease when their arms are relaxed by their sides. Proper height adjustment helps maintain good posture and reduces strain on the wrists and shoulders.</Paragraph>
+          <TipBox>Tip: Adjust the walker height so the user's elbows are slightly bent at about 15 degrees when holding the handles. If you're unsure about the right height, consult a healthcare professional. A study published in the Journal of Rehabilitation Research and Development found that incorrect walker height can lead to increased strain on the shoulders and wrists, leading to discomfort or further injury in elderly users.</TipBox>
 
           <SubHeading>2. Consider the Walker's Weight Capacity</SubHeading>
-          <Paragraph>Every walker has a maximum weight rating. Staying within that rating protects the frame, wheels, brakes, and seat. Heavier users may need a bariatric or heavy-duty model with a wider frame and stronger construction.</Paragraph>
+          <Paragraph>Walkers come with different weight limits, so it's crucial to choose one that can safely support the user's weight. Choosing a walker with a weight capacity higher than needed adds stability and ensures safety.</Paragraph>
+          <TipBox>Tip: Always double-check the weight capacity of the walker before making a purchase, especially for bariatric users.</TipBox>
 
           <SubHeading>3. Look for Key Features for Comfort and Ease of Use</SubHeading>
+          <Paragraph>Walkers come with various features that can enhance comfort and ease of use. Some features to look for include:</Paragraph>
           <BlogList>
-            <li>Padded grips reduce pressure on the hands.</li>
-            <li>Storage baskets or pouches help carry essentials safely.</li>
-            <li>A seat is useful for seniors who get tired during walks or errands.</li>
-            <li>Large wheels can handle outdoor paths better than small wheels.</li>
+            <li>Padded Handles: Look for walkers with cushioned handles, which can provide more comfort, especially for those with arthritis or sensitive hands.</li>
+            <li>Brakes: Rollators and walkers with wheels often come with hand brakes. These allow users to control speed and ensure stability when standing or sitting.</li>
+            <li>Storage: Many walkers come with baskets or bags for carrying personal items. This is especially helpful when going out for walks or running errands.</li>
           </BlogList>
+          <TipBox>Tip: Choose a walker with features that match the user's lifestyle and needs, such as a built-in seat for resting during long outings.</TipBox>
 
           <SubHeading>4. Test the Walker Before Use</SubHeading>
-          <Paragraph>Before daily use, test the walker on the surfaces the user will actually encounter: bedroom floors, hallways, kitchen tile, sidewalks, car transitions, and thresholds. A model that feels good in a store may behave differently at home.</Paragraph>
+          <Paragraph>Once you've selected a walker, it's important to test it before regular use. Ensure the walker is easy to maneuver, stable, and fits the user comfortably. If possible, try walking on different surfaces to see how the walker performs.</Paragraph>
+          <Paragraph>When testing a walker, pay attention to how it feels on different types of flooring — hardwood, carpet, and tile all respond differently to walker wheels and rubber tips. A walker that glides smoothly on one surface may feel resistant or unstable on another. Additionally, test how easily the walker folds and unfolds, especially if portability is a priority. Many users overlook this step and later find that a stiff folding mechanism becomes a daily frustration. Taking just 10 to 15 minutes to thoroughly test these aspects before committing to a purchase can save you from significant inconvenience down the line.</Paragraph>
+          <TipBox>Tip: Make adjustments to the height and features as needed before using the walker regularly. If you have access to a trial model, take advantage of that option.</TipBox>
 
           <SubHeading>5. Use the Walker Correctly for Safety</SubHeading>
-          <Paragraph>A walker should stay close to the body. Reaching too far forward can pull the user off balance. For rollators, brakes should be locked before sitting, standing, or leaning on the frame.</Paragraph>
+          <Paragraph>Using a walker correctly is just as important as choosing the right one. Here are some tips for safe and effective walker usage:</Paragraph>
+          <BlogList>
+            <li>Move the Walker First: Always move the walker a few inches ahead before taking a step. This helps maintain balance and stability.</li>
+            <li>Take Small, Steady Steps: Walk at a slow and steady pace to avoid losing balance. Take your time, especially when walking on uneven surfaces.</li>
+            <li>Keep Posture Straight: Avoid leaning forward on the walker, as this can strain the back and shoulders. Stand up straight and use the walker for support, not as a crutch.</li>
+          </BlogList>
+          <TipBox>Tip: Practice using the walker in a safe, controlled environment before taking it outside or into unfamiliar spaces.</TipBox>
 
           <SubHeading>6. Ensure Safe Surroundings</SubHeading>
-          <Paragraph>Clear loose rugs, cords, clutter, and narrow furniture paths. Walkers need predictable space. Small obstacles can catch wheels or rear tips and create a fall risk.</Paragraph>
+          <Paragraph>The environment in which the walker is used plays a key role in safety. Ensure that the floors are clear of obstacles like rugs, cords, or furniture that could cause tripping or difficulty moving.</Paragraph>
+          <Paragraph>Beyond clearing the floor, it's important to consider lighting conditions throughout the home. Poor lighting in hallways, bathrooms, or stairwells can make it difficult to spot hazards in time, even with a walker providing physical support. Installing motion-sensor night lights in frequently used areas can dramatically reduce the risk of nighttime falls. Outdoor environments require equal attention — uneven sidewalks, wet surfaces, and gravel paths all present unique challenges for walker users. Before venturing outdoors, always assess the terrain and plan a route that minimizes exposure to unstable or unpredictable surfaces.</Paragraph>
+          <TipBox>Tip: Choose areas with smooth, flat surfaces to reduce the risk of instability. Avoid using the walker on stairs or steep inclines.</TipBox>
+          <p className="mt-3 font-manrope text-[10px] font-medium leading-[1.9] text-[#1f2930]">If you're uncertain about the different options, <a className="text-[#0b61a4] no-underline hover:underline" href="/the-complete-guide-to-walker-and-rollator-types-which-one-fits-you-best">our detailed guide on walker types</a> can help clarify your choices.</p>
 
-          <SubHeading>7. Pay Attention to Fatigue</SubHeading>
-          <Paragraph>Fatigue changes walking quality. If the user begins leaning, shuffling, or rushing, a walker with a seat or a planned rest routine may be safer.</Paragraph>
+          <SubHeading>7. Perform Regular Maintenance</SubHeading>
+          <Paragraph>To keep the walker in optimal condition, regular maintenance is essential. Check the walker periodically for loose screws, damaged parts, or wear on the wheels or brakes. For wheeled walkers, ensure the brakes are functioning properly.</Paragraph>
+          <TipBox>Tip: Inspect the walker before every use and perform minor repairs as needed to ensure everything is in working order.</TipBox>
 
           <SubHeading>8. Replace the Walker When Necessary</SubHeading>
-          <Paragraph>Replace worn tips, loose grips, weak brakes, damaged wheels, or bent frames. A walker is safety equipment and should not be used when parts are unstable.</Paragraph>
+          <Paragraph>Over time, walkers can wear out. If the walker becomes wobbly, unstable, or difficult to adjust, it may be time to replace it. Ensuring that the walker is always in good condition is crucial for maintaining the user's safety.</Paragraph>
+          <TipBox>Tip: If you notice any significant wear or damage, don't hesitate to replace the walker or its parts, such as the wheels or brakes.</TipBox>
 
+          {/* Section 2 */}
           <SectionHeading id="section-2">Walker Comparison Guide: Key Features to Look For</SectionHeading>
           <ComparisonTable />
+          <Paragraph>When evaluating walkers, it's important to look at various factors, such as weight capacity, portability, and comfort-enhancing features like padded handles or built-in seats.</Paragraph>
+          <p className="mt-3 font-manrope text-[10px] font-medium leading-[1.9] text-[#1f2930]">If you're wondering <a className="text-[#0b61a4] no-underline hover:underline" href="/the-7-best-places-to-buy-walkers-for-seniors">where to buy the best walker for your needs</a>, there are several reliable retailers offering a wide range of models. For additional guidance on where to find quality mobility aids, we've got you covered in another helpful resource.</p>
 
+          {/* Section 3 - FAQ */}
           <SectionHeading id="section-3">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
             {[
-              ['What is the most stable type of walker?', 'A standard walker is usually the most stable because it has four fixed points of contact.'],
-              ['Does every walker need a seat?', 'No. A seat is useful for fatigue, but it adds size and requires brake control.'],
-              ['What walker is best for outdoor use?', 'A rollator with larger wheels is usually better for sidewalks and errands.'],
-              ['Can insurance cover a walker?', 'Coverage varies. Ask the insurer or clinician what documentation is required.'],
-              ['How do I choose the right size?', 'Measure handle height and make sure the frame fits through important doorways at home.'],
+              ['What is the most stable type of walker?', 'Standard walkers offer maximum stability.'],
+              ['How often should I maintain my walker?', 'Perform checks every few weeks and clean regularly.'],
+              ['What not to do when using a walker?', "Don't use the walker to pull yourself up from sitting to standing.\nDon't bend your back to lean into the walker.\nDon't step forward with your foot until all four feet of the walker are on the ground.\nDon't slide a rubber-footed walker or lift-step a wheeled walker."],
+              ['What should I look for when buying a walker?', 'Indoor or outdoor use and stability needs. What do you need the most help with? ...\nFit of the walker or rollator. Before you purchase a walker or rollator, you need to make sure it can accommodate your height and weight. ...\nGrips.\nPortability and storage.'],
+              ['Can I customize my walker?', 'Yes, with accessories like glide caps and storage pouches.'],
+              ['What is the proper teaching for ambulating with a walker?', "Your injured or weaker leg goes first. Use your grip on the walker to bear most of the weight of your first step. Then follow with your stronger leg. It's a three-step pattern: 1) walker, 2) bad leg, 3) good leg."],
+              ['Why should I use The Walker Advisor?', 'We provide unbiased, detailed reviews to guide your decision.'],
+              ['Which leg goes first with a walker?', 'Make sure all 4 tips or wheels of your walker are touching the ground before taking a step. Step forward with your weak leg first. If you had surgery on both legs, start with the leg that feels weaker. Then step forward with your other leg, placing it in front of the weaker leg.'],
+              ['How do I choose the right walker?', 'Choose a walker frame and seat that can support your weight safely, with adjustable handles, a wide enough seat for comfort, and the ability to sit with your feet touching the ground.'],
             ].map(([question, answer]) => (
               <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
                 <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary>
-                <p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">{answer}</p>
+                <p className="mt-2 whitespace-pre-line font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">{answer}</p>
               </details>
             ))}
           </div>
 
+          {/* Section 4 - Final Thoughts */}
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-4">
             <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Choosing the right walker and using it properly can greatly enhance your mobility, independence, and quality of life. Whether you opt for a simple standard walker or a more advanced rollator, it's important to understand the different types, features, and adjustments to meet your specific needs.</Paragraph>
-            <Paragraph>Always prioritize safety, and don't hesitate to consult with a healthcare professional or physical therapist for personalized advice. By following the right tips for choosing and using walkers, you can move confidently and securely, whether you're at home or on the go. For more tips on where to purchase the best walkers, check out our guide on <a className="font-black text-[#0b61a4] no-underline hover:underline" href="/articles">buying mobility aids</a></Paragraph>
+            <Paragraph>Always prioritize safety, and don't hesitate to consult with a healthcare professional or physical therapist for personalized advice. By following the right tips for choosing and using walkers, you can move confidently and securely, whether you're at home or on the go. For more tips on where to purchase the best walkers, check out our guide on <a className="font-black text-[#0b61a4] no-underline hover:underline" href="/the-7-best-places-to-buy-walkers-for-seniors">buying mobility aids</a>.</Paragraph>
           </section>
 
+          {/* Section 5 - Reference */}
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-5">
-            <ArticleIconHeading type="references">References</ArticleIconHeading>
+            <ArticleIconHeading type="references">Reference</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
-              <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://jrrd.org/">Journal of Rehabilitation Research and Development, 2019.</a></li>
+              <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://www.rehab.research.va.gov/jour/jourindx.html" target="_blank" rel="noopener noreferrer"><em>Journal of Rehabilitation Research and Development</em>, 2019.</a></li>
             </ol>
           </section>
 
@@ -210,13 +250,13 @@ function BuyingWalkerDetail() {
             <p className="mt-8 font-manrope text-[12px] font-black text-[#1f2930]">4 Comments:</p>
             <div className="mt-6 space-y-7 border-b border-[#d8dde2] pb-8">
               {[
-                ['Pam Kosh', 'Thanks for the clear checklist. I had no idea brake style mattered this much.'],
-                ['Robin Dolan', 'Glad it helped. Brake comfort is one of the first things to test.'],
-                ['Alex Henderson', 'We upgraded to a wider rollator for my dad and it made outdoor walks easier.'],
-                ['thewalkeradvisor', 'That is a good example of matching wheel size and frame strength to the user.'],
-              ].map(([name, text], index) => (
-                <div className={`${index % 2 === 1 ? 'ml-8' : ''} flex gap-4`} key={name}>
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#d8dde2] font-manrope text-[10px] font-black text-[#07364f]">{name.split(' ').map((part) => part[0]).join('').slice(0, 2)}</div>
+                ['Pam O\'Neal', 'Will you give me a call I am interested in one of those walkers 336-401-5378', false],
+                ['Robin Dolan', "Thank you, Pam! I'll contact you shortly.", true],
+                ['Arvin Redenbacher', "This is a very relevant topic, always there's choice, it is very difficult to figure out what works and what does not and obviously the budget, thank you for detailed write up.", false],
+                ['thewalkeradvisor', "Thank you for your kind feedback. We're glad the guide helped clarify options and budget considerations.", true],
+              ].map(([name, text, isReply], index) => (
+                <div className={`${isReply ? 'ml-8' : ''} flex gap-4`} key={name + index}>
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#d8dde2] font-manrope text-[10px] font-black text-[#07364f]">{name.split(' ').map((part) => part[0]).join('').slice(0, 2).toUpperCase()}</div>
                   <div>
                     <p className="font-manrope text-[11px] font-black text-black">{name}</p>
                     <p className="mt-2 font-manrope text-[11px] font-medium leading-5 text-[#303a42]">{text}</p>
