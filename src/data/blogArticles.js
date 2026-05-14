@@ -144,10 +144,10 @@ export const articles = [
     category: 'Informational',
     image: 'twa-1-1-e1761912917887.webp',
     href: '/how-to-travel-with-a-walker-tips-for-seniors',
-    alt: 'Person traveling with a walker',
-    title: 'How to Travel with a Walker – Tips for Seniors',
+    alt: 'Senior traveling safely with a walker',
+    title: 'Travel Safely with a Walker: Senior Tips',
     description:
-      'Think travelling with a walker sounds stressful? Think again! With the right planning, packing tricks, and a few mobility-smart hacks, you can explore the world',
+      'Discover expert travel tips for seniors using walkers. Learn how to pack, plan, and move with confidence. Start your safe journey today!',
   },
   {
     id: 16,
