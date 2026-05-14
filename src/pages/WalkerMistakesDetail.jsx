@@ -1,14 +1,8 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
-
-const navItems = [
-  ['Home', '/'],
-  ['Best Tools', '/tools'],
-  ['Articles', '/articles'],
-  ['About Us', '/about-us'],
-  ['Contact Us', '/contact'],
-  ["Caregiver's Corner", '/caregivers-corner'],
-];
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+import Newsletter from '../components/Newsletter';
 
 const toc = [
   'Why walkers are essential for seniors',
@@ -37,25 +31,12 @@ const relatedArticles = [
   },
 ];
 
-function DetailHeader() {
-  return (
-    <header className="w-full bg-white px-4 py-3">
-      <div className="mx-auto flex max-w-[720px] items-center justify-between gap-4">
-        <a href="/" aria-label="The Walker Advisor home">
-          <img className="h-auto w-[68px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA-logo.webp`} alt="The Walker Advisor" />
-        </a>
-        <nav className="hidden items-center gap-5 md:flex" aria-label="Blog detail navigation">
-          {navItems.map(([label, href]) => (
-            <a className="font-manrope text-[11px] font-bold text-[#08131b] no-underline transition-colors hover:text-[#b88b00]" href={href} key={label}>{label}</a>
-          ))}
-        </nav>
-      </div>
-    </header>
-  );
-}
-
 function Paragraph({ children }) {
   return <p className="mt-3 font-manrope text-[10px] font-medium leading-[1.9] text-[#1f2930]">{children}</p>;
+}
+
+function HeadingDescription({ children, className = '' }) {
+  return <p className={`text-[#1f2930] ${className}`.trim()}>{children}</p>;
 }
 
 function SectionHeading({ children, id }) {
@@ -74,24 +55,6 @@ function TipBox({ children }) {
   return <section className="mt-5 rounded-[8px] border-l-4 border-[#ffc400] bg-[#fff3c9] p-4"><p className="font-manrope text-[10px] font-bold leading-5 text-[#1f2930]">{children}</p></section>;
 }
 
-function DiamondIcon() {
-  return (
-    <svg className="h-7 w-7 shrink-0 text-[#ffc400]" viewBox="0 0 32 32" aria-hidden="true">
-      <path d="M7 6h18l5 7-14 15L2 13 7 6Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" />
-      <path d="M7 6l4 7 5-7 5 7 4-7M2 13h28M11 13l5 15 5-15" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.4" />
-    </svg>
-  );
-}
-
-function GlobeIcon() {
-  return (
-    <svg className="h-7 w-7 shrink-0 text-[#ffc400]" viewBox="0 0 32 32" aria-hidden="true">
-      <circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" strokeWidth="3" />
-      <path d="M5 14h7l2-5h5l2 5h6M8 22h6l2-4 3 2 1 6" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.4" />
-    </svg>
-  );
-}
-
 function SocialDots() {
   return (
     <div className="mt-9 flex items-center justify-center gap-2" aria-label="Share article">
@@ -99,52 +62,6 @@ function SocialDots() {
         <a className="flex h-6 w-6 items-center justify-center rounded-full bg-black font-manrope text-[10px] font-black text-white no-underline" href={`#share-${item}`} key={item}>{item}</a>
       ))}
     </div>
-  );
-}
-
-function DetailNewsletter() {
-  return (
-    <section className="mt-20 w-full bg-[#ffe8b6] px-4">
-      <div className="mx-auto grid max-w-[1020px] items-end gap-8 py-8 md:grid-cols-[360px_1fr] md:py-0">
-        <img className="mx-auto hidden h-[260px] w-auto object-contain md:block" src={`${process.env.PUBLIC_URL}/images/newsletter-pic-1024x1024.webp`} alt="Senior man walking with a wheeled walker" />
-        <div className="py-8 md:py-12">
-          <h2 className="text-[24px] font-black leading-tight text-black">Welcome to The Walker Advisor Newsletter!</h2>
-          <p className="mt-3 max-w-[620px] font-manrope text-[12px] font-medium leading-6 text-[#303a42]">Stay informed with our monthly updates on the best mobility aids, safety tips, and exclusive deals designed to support senior independence.</p>
-          <form className="mt-6 flex max-w-[560px] rounded-full bg-white p-1" action="#">
-            <input className="min-w-0 flex-1 rounded-full px-5 font-manrope text-[12px] outline-none" placeholder="Email" type="email" />
-            <button className="rounded-full bg-[#07364f] px-8 py-3 font-manrope text-[12px] font-black text-white" type="submit">Subscribe Now</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function DetailFooter() {
-  return (
-    <footer className="w-full bg-black px-4 py-12 text-white">
-      <div className="mx-auto grid max-w-[900px] gap-10 md:grid-cols-[1.3fr_0.8fr_0.9fr_0.8fr]">
-        <div>
-          <img className="h-auto w-[112px] object-contain brightness-0 invert" src={`${process.env.PUBLIC_URL}/images/TWA-logo.webp`} alt="The Walker Advisor" />
-          <p className="mt-4 max-w-[250px] font-manrope text-[12px] font-medium leading-6">The Walker Advisor is committed to helping seniors and their families find the best mobility aids for safe and independent living.</p>
-          <div className="mt-5 flex gap-3 font-manrope text-[12px]">○ ○ ○ ○ ○</div>
-        </div>
-        {[
-          ['About Authors', ['Meet Amir Abbasi', 'Meet Robin Dolan', 'Meet Syed Ali']],
-          ['Walkers by categories', ['Without Wheels', 'Two Wheels', 'Rollator']],
-          ['Walkers by brands', ['Winlove', 'Helavo', 'Elenker', 'Carex', 'Nova']],
-        ].map(([title, links]) => (
-          <div key={title}>
-            <h3 className="font-manrope text-[12px] font-black">{title}</h3>
-            <ul className="mt-4 space-y-3">{links.map((link) => <li className="font-manrope text-[12px] font-medium" key={link}>{link}</li>)}</ul>
-          </div>
-        ))}
-      </div>
-      <div className="mx-auto mt-10 flex max-w-[900px] flex-col justify-between gap-4 border-t border-white/20 pt-5 font-manrope text-[11px] md:flex-row">
-        <p>©2026 All Right Reserved By The Walker Advisor</p>
-        <p className="text-[#ffc400]">Disclaimer &nbsp; Terms & Conditions &nbsp; Privacy Policy &nbsp; Contact Us &nbsp; Cookies</p>
-      </div>
-    </footer>
   );
 }
 
@@ -157,14 +74,18 @@ function WalkerMistakesDetail() {
 
   return (
     <>
-      <DetailHeader />
-      <main className="bg-white px-4 pb-12">
-        <article className="mx-auto max-w-[430px]">
-          <header className="pt-8 text-center">
-            <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">Most People Use Walkers Wrong. Are You Making These Mistakes?</h1>
-            <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">Using a walker seems simple, until you realize most people do it incorrectly. Learn the right way before it affects your safety.</p>
-            <img className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/injured-man-doing-physiotherapy-exercises-walking-1-scaled.webp`} alt="Person using a walker in a rehabilitation room" />
-          </header>
+      <Navbar />
+      <main className="mx-auto w-full max-w-[1080px] bg-white px-4 pb-12 sm:px-6 lg:px-8">
+          <article className="blog-detail-article w-full">
+            <header className="w-full pt-16 text-center">
+              <h1 className="mx-auto max-w-[min(100%,56rem)] text-black">
+                Most People Use Walkers Wrong. Are You Making These Mistakes?
+              </h1>
+              <HeadingDescription className="mx-auto mt-10 max-w-[min(100%,56rem)]">
+                Using a walker seems simple, until you realize most people do it incorrectly. Learn the right way before it affects your safety.
+              </HeadingDescription>
+              <img className="mx-auto mt-14 h-auto w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/injured-man-doing-physiotherapy-exercises-walking-1-scaled.webp`} alt="Person using a walker in a rehabilitation room" />
+            </header>
 
           <div className="mt-8 flex items-center gap-6">
             <img className="h-20 w-20 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/syed-ali_avatar-300x300.webp`} alt="Syed Ali" />
@@ -173,9 +94,9 @@ function WalkerMistakesDetail() {
 
           <section className="mt-14 rounded-[18px] bg-[#f3f3f3] p-6">
             <h2 className="font-manrope text-[30px] font-bold leading-9 text-black">key summary</h2>
-            <p className="mt-5 font-manrope text-[18px] font-normal leading-7 text-[#303030]">
+            <HeadingDescription className="mt-5">
               Walkers improve mobility and independence for those facing challenges in walking. Whether recovering from surgery or dealing with balance issues, a walker can significantly enhance safety. Yet, learning the proper techniques is vital to prevent falls and injuries. In this blog, we will cover the essential steps for using a walker effectively, along with safety tips.. Key Questions to Consider: Who can benefit the most from using a walker? What are the main safety concerns when using a walker? How can you make sure your walker fits correctly? These are just some of the questions we'll address as we explore this topic.
-            </p>
+            </HeadingDescription>
           </section>
 
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
@@ -186,7 +107,7 @@ function WalkerMistakesDetail() {
           </nav>
 
           <SectionHeading id="section-1">Why Walkers Are Essential for Seniors</SectionHeading>
-          <Paragraph>Walkers provide seniors with the stability, safety, and independence they need for daily movement. Whether recovering from surgery, managing arthritis, or simply needing balance support, walkers reduce fall risks and improve confidence.</Paragraph>
+          <HeadingDescription className="mt-3">Walkers provide seniors with the stability, safety, and independence they need for daily movement. Whether recovering from surgery, managing arthritis, or simply needing balance support, walkers reduce fall risks and improve confidence.</HeadingDescription>
           <SubHeading>Benefits of Using Walkers:</SubHeading>
           <BlogList>
             <li>Improve balance and prevent falls.</li>
@@ -205,7 +126,7 @@ function WalkerMistakesDetail() {
           <Paragraph>For a detailed guide on different walker options, check out our article: <a className="text-[#0b61a4] no-underline hover:underline" href="/the-complete-guide-to-walker-and-rollator-types-which-one-fits-you-best">Types of Medical Walkers and Rollators: A Comprehensive Guide.</a></Paragraph>
 
           <SectionHeading id="section-2">Walker Buying Guide – Features to Look For</SectionHeading>
-          <Paragraph>Choosing the best walker for seniors depends on specific needs. Here’s what to consider:</Paragraph>
+          <HeadingDescription className="mt-3">Choosing the best walker for seniors depends on specific needs. Here’s what to consider:</HeadingDescription>
           <ol className="mt-6 space-y-5 pl-5 font-manrope text-[18px] font-normal leading-7 text-[#303030]">
             <li><strong>Weight Capacity:</strong> Ensure it supports your weight. Bariatric walkers are ideal for heavier users.</li>
             <li><strong>Adjustability:</strong> Adjustable handles provide a custom fit for comfort and safety.</li>
@@ -302,19 +223,13 @@ function WalkerMistakesDetail() {
           </div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-5">
-            <div className="flex items-center gap-3">
-              <DiamondIcon />
-              <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
-            </div>
-            <Paragraph>Using a walker properly can transform daily life by enhancing mobility and safety. By following these guidelines and tips, you can boost your confidence, independence, and quality of life. Remember, small adjustments and consistent practice make a big difference.</Paragraph>
-            <Paragraph>Don't hesitate to seek advice from a physical therapist for personalized support and keep improving your technique!</Paragraph>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
+            <HeadingDescription className="mt-3">Using a walker properly can transform daily life by enhancing mobility and safety. By following these guidelines and tips, you can boost your confidence, independence, and quality of life. Remember, small adjustments and consistent practice make a big difference.</HeadingDescription>
+            <HeadingDescription className="mt-3">Don't hesitate to seek advice from a physical therapist for personalized support and keep improving your technique!</HeadingDescription>
           </section>
 
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-6">
-            <div className="flex items-center gap-3">
-              <GlobeIcon />
-              <ArticleIconHeading type="references">References</ArticleIconHeading>
-            </div>
+            <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
               <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://academic.oup.com/gerontologist">Journal of Gerontology - Study on the popularity and benefits of rolling walkers.</a></li>
               <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://academic.oup.com/ageing">Age and Ageing - Research on the role of hand brakes in improving walker safety.</a></li>
@@ -336,7 +251,7 @@ function WalkerMistakesDetail() {
           </section>
         </article>
 
-        <section className="mx-auto mt-16 max-w-[680px]">
+        <section className="mx-auto mt-16 w-full">
           <h2 className="font-manrope text-[13px] font-black text-black">Related Articles</h2>
           <div className="mt-5 grid gap-6 md:grid-cols-3">
             {relatedArticles.map((article) => (
@@ -351,8 +266,8 @@ function WalkerMistakesDetail() {
           </div>
         </section>
       </main>
-      <DetailNewsletter />
-      <DetailFooter />
+      <Newsletter />
+      <Footer />
     </>
   );
 }

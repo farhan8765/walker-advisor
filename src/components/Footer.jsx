@@ -59,8 +59,8 @@ function Footer() {
           <div>
             <a className="inline-flex" href="/" aria-label="The Walker Advisor home">
               <img
-                className="h-auto w-[184px] object-contain brightness-0 invert"
-                src={`${process.env.PUBLIC_URL}/images/TWA-logo.webp`}
+                className="h-auto w-[184px] object-contain"
+                src={`${process.env.PUBLIC_URL}/images/footerlogo.png`}
                 alt="The Walker Advisor"
               />
             </a>

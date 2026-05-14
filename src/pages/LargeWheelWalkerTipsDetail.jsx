@@ -1,14 +1,10 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+import Newsletter from '../components/Newsletter';
 
-const navItems = [
-  ['Home', '/'],
-  ['Best Tools', '/tools'],
-  ['Articles', '/articles'],
-  ['About Us', '/about-us'],
-  ['Contact Us', '/contact'],
-  ["Caregiver's Corner", '/caregivers-corner'],
-];
+
 
 const toc = [
   'Understanding Walkers with Larger Wheels',
@@ -37,22 +33,7 @@ const relatedArticles = [
   },
 ];
 
-function DetailHeader() {
-  return (
-    <header className="w-full bg-white px-4 py-3">
-      <div className="mx-auto flex max-w-[720px] items-center justify-between gap-4">
-        <a href="/" aria-label="The Walker Advisor home">
-          <img className="h-auto w-[68px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA-logo.webp`} alt="The Walker Advisor" />
-        </a>
-        <nav className="hidden items-center gap-5 md:flex" aria-label="Blog detail navigation">
-          {navItems.map(([label, href]) => (
-            <a className="font-manrope text-[11px] font-bold text-[#08131b] no-underline transition-colors hover:text-[#b88b00]" href={href} key={label}>{label}</a>
-          ))}
-        </nav>
-      </div>
-    </header>
-  );
-}
+
 
 function Paragraph({ children }) {
   return <p className="mt-3 font-manrope text-[10px] font-medium leading-[1.9] text-[#1f2930]">{children}</p>;
@@ -84,51 +65,9 @@ function SocialDots() {
   );
 }
 
-function DetailNewsletter() {
-  return (
-    <section className="mt-20 w-full bg-[#ffe8b6] px-4">
-      <div className="mx-auto grid max-w-[1020px] items-end gap-8 py-8 md:grid-cols-[360px_1fr] md:py-0">
-        <img className="mx-auto hidden h-[260px] w-auto object-contain md:block" src={`${process.env.PUBLIC_URL}/images/newsletter-pic-1024x1024.webp`} alt="Senior man walking with a wheeled walker" />
-        <div className="py-8 md:py-12">
-          <h2 className="text-[24px] font-black leading-tight text-black">Welcome to The Walker Advisor Newsletter!</h2>
-          <p className="mt-3 max-w-[620px] font-manrope text-[12px] font-medium leading-6 text-[#303a42]">Stay informed with our monthly updates on the best mobility aids, safety tips, and exclusive deals designed to support senior independence.</p>
-          <form className="mt-6 flex max-w-[560px] rounded-full bg-white p-1" action="#">
-            <input className="min-w-0 flex-1 rounded-full px-5 font-manrope text-[12px] outline-none" placeholder="Email" type="email" />
-            <button className="rounded-full bg-[#07364f] px-8 py-3 font-manrope text-[12px] font-black text-white" type="submit">Subscribe Now</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  );
-}
 
-function DetailFooter() {
-  return (
-    <footer className="w-full bg-black px-4 py-12 text-white">
-      <div className="mx-auto grid max-w-[900px] gap-10 md:grid-cols-[1.3fr_0.8fr_0.9fr_0.8fr]">
-        <div>
-          <img className="h-auto w-[112px] object-contain brightness-0 invert" src={`${process.env.PUBLIC_URL}/images/TWA-logo.webp`} alt="The Walker Advisor" />
-          <p className="mt-4 max-w-[250px] font-manrope text-[12px] font-medium leading-6">The Walker Advisor is committed to helping seniors and their families find the best mobility aids for safe and independent living.</p>
-          <div className="mt-5 flex gap-3 font-manrope text-[12px]">○ ○ ○ ○ ○</div>
-        </div>
-        {[
-          ['About Authors', ['Meet Amir Abbasi', 'Meet Robin Dolan', 'Meet Syed Ali']],
-          ['Walkers by categories', ['Without Wheels', 'Two Wheels', 'Rollator']],
-          ['Walkers by brands', ['Winlove', 'Helavo', 'Elenker', 'Carex', 'Nova']],
-        ].map(([title, links]) => (
-          <div key={title}>
-            <h3 className="font-manrope text-[12px] font-black">{title}</h3>
-            <ul className="mt-4 space-y-3">{links.map((link) => <li className="font-manrope text-[12px] font-medium" key={link}>{link}</li>)}</ul>
-          </div>
-        ))}
-      </div>
-      <div className="mx-auto mt-10 flex max-w-[900px] flex-col justify-between gap-4 border-t border-white/20 pt-5 font-manrope text-[11px] md:flex-row">
-        <p>©2026 All Right Reserved By The Walker Advisor</p>
-        <p className="text-[#ffc400]">Disclaimer &nbsp; Terms & Conditions &nbsp; Privacy Policy &nbsp; Contact Us &nbsp; Cookies</p>
-      </div>
-    </footer>
-  );
-}
+
+
 
 function LargeWheelWalkerTipsDetail() {
   useEffect(() => {
@@ -139,9 +78,9 @@ function LargeWheelWalkerTipsDetail() {
 
   return (
     <>
-      <DetailHeader />
-      <main className="bg-white px-4 pb-12">
-        <article className="mx-auto max-w-[430px]">
+      <Navbar />
+      <main className="mx-auto w-full max-w-[1080px] bg-white px-4 pb-12 sm:px-6 lg:px-8">
+        <article className="blog-detail-article w-full">
           <header className="pt-8 text-center">
             <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">Got a Walker with Large Wheels? Try These Game-Changing Tips for Seniors</h1>
             <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">Large-wheel walkers can make mobility smoother, if you know how to use them right. These expert tips will help seniors move safely and confidently.</p>
@@ -344,7 +283,7 @@ function LargeWheelWalkerTipsDetail() {
           </section>
         </article>
 
-        <section className="mx-auto mt-16 max-w-[680px]">
+        <section className="mx-auto mt-16 w-full">
           <h2 className="font-manrope text-[13px] font-black text-black">Related Articles</h2>
           <div className="mt-5 grid gap-6 md:grid-cols-3">
             {relatedArticles.map((article) => (
@@ -359,8 +298,8 @@ function LargeWheelWalkerTipsDetail() {
           </div>
         </section>
       </main>
-      <DetailNewsletter />
-      <DetailFooter />
+      <Newsletter />
+      <Footer />
     </>
   );
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -24,6 +24,97 @@
     font-weight: 700 !important;
     line-height: 100% !important;
     letter-spacing: 0 !important;
+  }
+
+  /* Blog detail pages: hero header band (match Walker layout) */
+  main > article.blog-detail-article > header {
+    width: 100% !important;
+    text-align: center !important;
+    padding-top: 4rem !important;
+  }
+
+  /* Blog detail pages: hero title in article header (Walker title spec) */
+  main > article.blog-detail-article header h1 {
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    font-style: normal !important;
+    line-height: 40px !important;
+    letter-spacing: 0.005em !important;
+    text-align: center !important;
+    max-width: min(100%, 56rem) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    color: #000000 !important;
+  }
+
+  /* Blog detail: hero intro under title */
+  main > article.blog-detail-article header h1 + p {
+    text-align: center !important;
+  }
+
+  /* Blog detail pages: body text (non-heading copy) */
+  main > article.blog-detail-article p,
+  main > article.blog-detail-article li,
+  main > article.blog-detail-article summary,
+  main > article.blog-detail-article label,
+  main > article.blog-detail-article button,
+  main > article.blog-detail-article input:not([type='checkbox']):not([type='radio']),
+  main > article.blog-detail-article textarea {
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    line-height: 24px !important;
+    letter-spacing: 0.005em !important;
+    text-align: left !important;
+  }
+
+  /* Blog detail: H2 typography */
+  main > article.blog-detail-article h2 {
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    font-style: normal !important;
+    line-height: 36px !important;
+    letter-spacing: 0.005em !important;
+    padding-top: 0.75rem !important;
+  }
+
+  /* Final Thoughts / References row: no extra top padding on H2 */
+  main > article.blog-detail-article .blog-detail-icon-heading h2 {
+    padding-top: 0 !important;
+  }
+
+  /* Blog detail: H3 typography */
+  main > article.blog-detail-article h3 {
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    font-style: normal !important;
+    line-height: 28px !important;
+    letter-spacing: 0.005em !important;
+  }
+
+  /* Blog detail: table cell text (Text Regular / Roboto 400, 150% leading) */
+  main > article.blog-detail-article table th,
+  main > article.blog-detail-article table td {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0 !important;
+  }
+
+  main > article.blog-detail-article table p {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0 !important;
+    text-align: left !important;
   }
 
   main > article p,
