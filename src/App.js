@@ -11,6 +11,7 @@ import BestPlacesBuyWalkersDetail from "./pages/BestPlacesBuyWalkersDetail";
 import BlogDetail from "./pages/BlogDetail";
 import BuyingWalkerDetail from "./pages/BuyingWalkerDetail";
 import CaregiversCorner from "./pages/CaregiversCorner";
+import CaneSideEffectsDetail from "./pages/CaneSideEffectsDetail";
 import Contact from "./pages/Contact";
 import Cookies from "./pages/Cookies";
 import Disclaimer from "./pages/Disclaimer";
@@ -103,7 +104,7 @@ const routes = {
   "/can-osteoarthritis-lead-to-more-falls-in-seniors": OsteoarthritisFallsDetail,
   "/holiday-safety-tips-for-seniors-prevent-falls-fires-seasonal-risks": HolidaySafetySeniorsDetail,
   "/holiday-safety-tips-for-seniors-using-walkers": HolidayWalkerSafetyDetail,
-  "/the-side-effects-of-using-a-cane": HolidayWalkerSafetyDetail,
+  "/the-side-effects-of-using-a-cane": CaneSideEffectsDetail,
   "/senior-safety-how-to-use-a-walker-on-stairs": WalkerStairsSafetyDetail,
   "/understanding-upright-walkers-how-they-improve-senior-posture": UprightWalkersDetail,
   "/valentines-day-ideas-what-seniors-can-give-each-other": ValentinesDetail,
