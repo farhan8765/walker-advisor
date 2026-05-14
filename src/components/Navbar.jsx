@@ -80,7 +80,7 @@ function Navbar() {
 
   const desktopNav = (
     <nav
-      className="flex min-h-[64px] max-w-[1200px] shrink-0 items-center gap-0 rounded-full bg-white px-1 py-1 shadow-[0_14px_32px_rgba(235,198,120,0.18)]"
+      className="flex min-h-[52px] max-w-[1200px] shrink-0 items-center gap-0 rounded-full bg-white px-0.5 py-0.5 shadow-[0_14px_32px_rgba(235,198,120,0.18)]"
       aria-label="Primary navigation"
     >
       {navItems.map((item) => {
@@ -91,7 +91,7 @@ function Navbar() {
 
         return (
           <a
-            className={`whitespace-nowrap rounded-full px-3 py-[14px] text-base font-normal leading-none no-underline transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] lg:px-4 lg:py-4 lg:text-[22px] ${
+            className={`whitespace-nowrap rounded-full px-2.5 py-2.5 text-sm font-normal leading-none no-underline transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] lg:px-3 lg:py-2.5 lg:text-[18px] ${
               isActive
                 ? 'bg-[#ffc400] text-black'
                 : 'text-[#5f6870] hover:text-black'
@@ -172,7 +172,7 @@ function Navbar() {
 
           return (
             <a
-              className={`block rounded-xl px-4 py-3 text-base font-medium leading-snug no-underline transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] ${
+              className={`block rounded-xl px-4 py-2.5 text-sm font-medium leading-snug no-underline transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] ${
                 isActive
                   ? 'bg-[#ffc400] text-black'
                   : 'text-[#5f6870] hover:bg-[#fbf6e6] hover:text-black'
