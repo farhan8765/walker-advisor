@@ -9,26 +9,27 @@ import Newsletter from '../components/Newsletter';
 const toc = [
   'Types of Walkers for Gradual Independence',
   'Physical Therapy Exercises to Regain Strength',
-  'Steps You Can Follow to Move On the Next Stage',
-  'Balance Test Checklist for Mobility Aids',
-  'Transition Timeline for Mobility Aids',
+  "Signs You're Ready to Move to the Next Stage",
+  'Guidance for Staying Safe In the Transition',
+  'Transition Timeline for Mobility Aid',
   'Frequently Asked Questions',
   'Final Thoughts',
   'References',
 ];
 
 const timelineRows = [
-  ['1', 'Standard Walker', 'Maximum support, safe gait practice', '1-4 weeks'],
-  ['2', 'Rollator/rolling walker', 'More freedom, light turning practice', '2-6 weeks'],
-  ['3', 'Quad cane', 'One-sided support, balance confidence', '2-4 weeks'],
-  ['4', 'Single-point cane', 'Light touch support only', '1-3 weeks'],
-  ['5', 'No aid', 'Independent walking, check-ins', 'Ongoing'],
+  ['4-Wheel Walker (Rollator)', 'Basic mobility, weight-bearing', '2–3 weeks'],
+  ['3-Wheel/Hemi Walker', 'Better balance, moderate leg strength', '2–4 weeks'],
+  ['Side-Style Walker', 'Good coordination, less upper body help', '2–3 weeks'],
+  ['Quad Cane', 'Independent standing, basic stride', '1–3 weeks'],
+  ['Single Cane', 'Controlled foot movement, full balance', '1–2 weeks'],
+  ['No Aid', 'Confident, full strength, and control', 'Variable'],
 ];
 
 const relatedArticles = [
   {
-    image: 'blog.webp',
-    href: '/articles',
+    image: 'twa-blog11-1024x683.webp',
+    href: '/social-activities-for-older-adults',
     title: 'Social Activities for Older Adults: The Best Ways to Stay Connected, Active, and Happy',
     description: 'Loneliness in seniors is not just sad, it can affect health and confidence. Here are practical ways to stay connected.',
   },
@@ -39,8 +40,8 @@ const relatedArticles = [
     description: 'You might think falls are just about balance, but heart health can play a major role in sudden falls.',
   },
   {
-    image: 'blog2.webp',
-    href: '/articles',
+    image: 'blogg.webp',
+    href: '/3-foods-seniors-should-avoid',
     title: '3 Foods for Seniors to Avoid',
     description: 'Your body after 70 changes in important ways. These common foods can make daily health harder to manage.',
   },
@@ -77,7 +78,7 @@ function SocialDots() {
 function TransitionWalkerIndependentDetail() {
   useEffect(() => {
     const previousTitle = document.title;
-    document.title = 'How to Transition From a Walker to Walking Independently: A Step-by-Step Guide - The Walker Advisor';
+    document.title = 'How to Transition From a Walker to Walking Independently: A Step-by-Step Guide | The Walker Advisor';
     return () => { document.title = previousTitle; };
   }, []);
 
@@ -104,18 +105,19 @@ function TransitionWalkerIndependentDetail() {
 
           {/* Author */}
           <div className="mt-6 flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">RB</div>
-            <p className="font-manrope text-[12px] font-black text-black">Robin Bell</p>
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">RD</div>
+            <p className="font-manrope text-[12px] font-black text-black">Robin Dolan</p>
           </div>
 
           {/* Key Summary */}
           <section className="mt-5 rounded-[8px] bg-[#f3f3f3] p-5">
             <h2 className="text-[14px] font-black text-black">Key Summary</h2>
-            <Paragraph>Moving from a walker to walking independently should happen slowly, with the right support, balance checks, and professional guidance. The goal is not to stop using mobility aids too early. The goal is to reduce support only when your body, confidence, and environment are ready.</Paragraph>
+            <Paragraph>Transitioning from a walker to walking on your own takes time and the right steps. Start by using lighter mobility aids, build strength and balance through targeted exercises, pay attention to your body's readiness, and stay safe with each move forward.</Paragraph>
           </section>
 
-          <Paragraph>A walker offers safety, confidence, and stability. For many seniors, it remains the right long-term tool. For others, especially after recovery from surgery or injury, a gradual step-down plan may help them regain more natural walking.</Paragraph>
-          <Paragraph>This guide explains common mobility aids, therapy exercises, balance checkpoints, and a safe transition timeline so seniors and caregivers can understand the process before discussing it with a clinician.</Paragraph>
+          <Paragraph>Letting go of a walker after weeks or months of relying on it can feel both exciting and overwhelming. Whether you've been using one due to surgery, an injury, or simply to cope with age-related changes, the idea of walking on your own again might seem like a big leap. And it is, but it's possible. Transitioning from a walker to independent walking isn't something that happens overnight. It's a gradual process that focuses on rebuilding your strength, improving balance, and restoring confidence in your movements.</Paragraph>
+          <Paragraph>The timeline looks different for everyone. Your age, your overall health, the reason you started using a walker, and the kind of support you have all play a role in how quickly and safely you can make the switch. With patience, a clear plan, and the right professional support, you can take steady steps toward full independence.</Paragraph>
+          <Paragraph>As the <a className="text-[#2361a1] underline" href="https://my.clevelandclinic.org/health/procedures/how-to-use-a-walker" target="_blank" rel="noopener noreferrer">Cleveland Clinic</a> notes, "Learning to use your walker the right way and practicing basic safety guidelines can minimize this risk" of falls and injuries. They recommend always following your health provider's advice and using the walker as instructed to stay safe during the transition.</Paragraph>
 
           {/* TOC */}
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
@@ -130,80 +132,89 @@ function TransitionWalkerIndependentDetail() {
           </nav>
 
           <SectionHeading id="section-1">Types of Walkers for Gradual Independence</SectionHeading>
-          <Paragraph>A full walker is not the only mobility option. Many people move through several levels of support before walking independently.</Paragraph>
+          <Paragraph>One of the most important steps in transitioning away from walkers is understanding the mobility aid ladder, which allows you to decrease support gradually without compromising safety.</Paragraph>
+          <Paragraph><strong>Here's the typical progression path:</strong></Paragraph>
 
-          <h3 className="mt-5 text-[12px] font-black text-black">1. Standard Walker (Maximum Support)</h3>
-          <Paragraph>A standard walker offers the most support and is often used after surgery, injury, or a major decline in balance. It is stable, but it requires lifting and placing the frame forward with each step.</Paragraph>
+          <h3 className="mt-5 text-[12px] font-black text-black">1. 4-Wheel Walkers (Rollators)</h3>
+          <Paragraph>4-wheel walkers, also known as rollators, are among the most supportive mobility aids, an excellent starting point for those transitioning from immobility to walking. These walkers feature a sturdy frame, hand brakes for added safety, and a built-in seat that allows users to rest during longer walks. Because they offer full-body support, they're ideal for individuals facing strength or balance challenges. As <a className="text-[#2361a1] underline" href="https://medlineplus.gov/ency/patientinstructions/000342.htm" target="_blank" rel="noopener noreferrer">MedlinePlus</a> notes, "There are many types of walkers. Your surgeon or physical therapist will help you choose the type of walker that is best for you." If you're exploring the best options available, you may want to check out our <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/highest-rated-walkers-for-seniors-expert-picks/" target="_blank" rel="noopener noreferrer">Highest Rated Walkers for Seniors: Expert-Recommended Choices</a> for detailed comparisons and professional recommendations.</Paragraph>
           <div className="mt-4 rounded-[8px] bg-[#f3f3f3] py-4">
-            <img className="mx-auto h-[180px] w-auto rounded-[4px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA-4-683x1024.webp`} alt="Standard walker for maximum support" />
+            <img className="mx-auto h-[180px] w-auto rounded-[4px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA2-682x1024.webp`} alt="4-wheel rollator walker" />
           </div>
 
-          <h3 className="mt-5 text-[12px] font-black text-black">2. Wheeled Walkers and Rollators</h3>
-          <Paragraph>Rollators are easier to push and may allow a smoother walking rhythm, but they require better control because the wheels move continuously. Many include brakes, baskets, and seats.</Paragraph>
+          <h3 className="mt-5 text-[12px] font-black text-black">2. 3-Wheel Walkers or Hemi Walkers</h3>
+          <Paragraph>These are better suited for people who have gained some strength and confidence in their stride because they are lighter and easier to maneuver than 4-wheel rollators. The slim frame of a 3-wheel walker usually makes it easier to maneuver through confined areas, such as kitchens or hallways. Hemi walkers are made to be used with one hand, which is common for stroke survivors or people who have trouble using one side of their body. These models encourage users to use more leg and core muscles while walking and to rely less on outside assistance.</Paragraph>
           <div className="mt-4 rounded-[8px] bg-[#f3f3f3] py-4">
-            <img className="mx-auto h-[170px] w-auto rounded-[4px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA2-682x1024.webp`} alt="Rollator walker with seat and basket" />
+            <img className="mx-auto h-[170px] w-auto rounded-[4px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA-3-751x1024.webp`} alt="3-wheel hemi walker" />
           </div>
 
-          <h3 className="mt-5 text-[12px] font-black text-black">3. Rollator Brakes and Progressive Training</h3>
-          <Paragraph>A rollator can help a senior practice longer walking distances while still having support nearby. Brake control is essential before using a rollator outdoors.</Paragraph>
+          <h3 className="mt-5 text-[12px] font-black text-black">3. Side-Style Walkers (Reciprocal Walkers)</h3>
+          <Paragraph>These walkers are a common sight indoors, built to give you really balanced support. Unlike rollators, you won't find wheels or seats here; instead, you lift and move the walker forward with each step. This simple action is great for improving your arm-leg coordination and slowly building up your strength and balance. They're especially handy in rehab or tighter spaces where you need to move carefully. Think of them as a key stepping stone on the path to getting your mobility back.</Paragraph>
           <div className="mt-4 rounded-[8px] bg-[#f3f3f3] py-4">
-            <img className="mx-auto h-[170px] w-auto rounded-[4px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA-3-751x1024.webp`} alt="Red rollator walker with hand brakes" />
+            <img className="mx-auto h-[170px] w-auto rounded-[4px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA-4-683x1024.webp`} alt="Side-style reciprocal walker" />
           </div>
 
           <h3 className="mt-5 text-[12px] font-black text-black">4. Quad Canes</h3>
-          <Paragraph>A quad cane is a smaller step down from a walker. Its four-point base gives more stability than a single-point cane while allowing the user to practice a less restricted walking pattern.</Paragraph>
+          <Paragraph>A quad cane is a fantastic step up from a regular cane, thanks to its four-legged base that provides much better stability. It's the perfect choice if you no longer need a walker for full-body support but could still use a little help with your balance. Users often find their confidence improves significantly as they start moving more freely, covering short to moderate distances. Plus, these canes are height-adjustable and designed to be really stable, which makes them a safer option for older adults who are getting closer to walking completely on their own.</Paragraph>
+          <Paragraph><strong>Also read:</strong> <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/time-to-switch-cane-to-walker/" target="_blank" rel="noopener noreferrer">When Should an Elderly Person Upgrade From a Cane to a Walker?</a></Paragraph>
           <div className="mt-4 rounded-[8px] bg-[#f3f3f3] py-4">
-            <img className="mx-auto h-[170px] w-auto rounded-[4px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA-5-751x1024.webp`} alt="Quad cane for mobility transition" />
+            <img className="mx-auto h-[170px] w-auto rounded-[4px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA-5-751x1024.webp`} alt="Quad cane" />
           </div>
 
           <h3 className="mt-5 text-[12px] font-black text-black">5. Single-Point Canes</h3>
-          <Paragraph>A single-point cane offers the least support. It is usually the final mobility aid before independent walking and should be used only when balance and strength are strong enough.</Paragraph>
+          <Paragraph>Single-point canes provide minimal support and are typically the last step before walking unaided. They help users fine-tune their posture, balance, and stride by offering a subtle point of contact for reassurance. Often used outdoors or during outings, single canes work best for individuals who may have mild arthritis, occasional instability, or are overcoming long-term use of a walker. Transitioning to this stage means the person has regained significant lower-body strength.</Paragraph>
+          <Paragraph><strong>Related:</strong> <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/transition-cane-to-walker-guide/" target="_blank" rel="noopener noreferrer">How to Transition From a Cane to a Walker: What You Need to Know</a></Paragraph>
           <div className="mt-4 rounded-[8px] bg-[#f3f3f3] py-4">
-            <img className="mx-auto h-[170px] w-auto rounded-[4px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA-6-768x768.webp`} alt="Single-point cane height range" />
+            <img className="mx-auto h-[170px] w-auto rounded-[4px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA-6-768x768.webp`} alt="Single-point cane" />
           </div>
 
           <SectionHeading id="section-2">Physical Therapy Exercises to Regain Strength</SectionHeading>
-          <Paragraph>Strength and balance exercises help prepare the body for less support. These should be practiced near a stable surface or with a therapist when fall risk is high.</Paragraph>
+          <Paragraph>Physical therapy is crucial for regaining the strength and balance needed to walk independently. The right exercises focus on your <strong>core, leg muscles, hip stability, and proprioception (body awareness)</strong>.</Paragraph>
+          <Paragraph>The <a className="text-[#2361a1] underline" href="https://ppsapta.org/blog/marketing/physical-therapists-recommendation-walk" target="_blank" rel="noopener noreferrer">American Physical Therapy Association</a> recommends exercises such as:</Paragraph>
           <BlogList>
-            <li><strong>Sit-to-stand practice:</strong> rise from a firm chair without pulling on the walker.</li>
-            <li><strong>Heel raises:</strong> hold a counter and lift the heels to strengthen calf muscles.</li>
-            <li><strong>Side stepping:</strong> move sideways along a counter to build hip stability.</li>
-            <li><strong>Marching in place:</strong> lift one knee at a time while holding a stable surface.</li>
-            <li><strong>Heel-to-toe walking:</strong> practice only with supervision if balance is limited.</li>
+            <li><strong>Heel Raises:</strong> Improve calf strength and balance</li>
+            <li><strong>Sit-to-Stand:</strong> Builds lower body strength essential for walking</li>
+            <li><strong>Single-Leg Stands:</strong> Enhances balance and coordination</li>
+            <li><strong>Marching in Place:</strong> Train motor control and endurance</li>
+            <li><strong>Wall Squats:</strong> Build thigh and gluteal muscle strength</li>
+            <li><strong>Step-Ups on Low Steps:</strong> Boosts climbing ability and leg confidence</li>
           </BlogList>
+          <Paragraph><strong>Check out:</strong> <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/best-stair-walkers-for-seniors/" target="_blank" rel="noopener noreferrer">Best Stair Walkers for Seniors</a></Paragraph>
 
-          <SectionHeading id="section-3">Steps You Can Follow to Move On the Next Stage</SectionHeading>
-          <Paragraph>Moving to a lower-support device should happen in small steps. Do not change mobility aids because of impatience or comparison with someone else.</Paragraph>
+          <SectionHeading id="section-3">Signs You're Ready to Move to the Next Stage</SectionHeading>
+          <Paragraph>Moving to a less supportive aid or walking unassisted requires clinical and physical readiness. Here are <strong>signs that you may be ready</strong>:</Paragraph>
           <BlogList>
-            <li>Start with short indoor walks on flat floors.</li>
-            <li>Practice near a wall, counter, or caregiver.</li>
-            <li>Use the walker again when tired, dizzy, or uncertain.</li>
-            <li>Try a rollator or cane only after a therapist confirms readiness.</li>
-            <li>Increase distance slowly and return to more support after any setback.</li>
+            <li>You can walk 50–100 feet with your current aid without resting</li>
+            <li>You feel stable while turning or changing direction</li>
+            <li>You can stand from a seated position without help</li>
+            <li>Your physical therapist or doctor clears you</li>
+            <li>You can manage stairs or uneven surfaces with minimal wobble</li>
           </BlogList>
+          <Paragraph><strong>Related read:</strong> <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/when-to-upgrade-cane-to-walker/" target="_blank" rel="noopener noreferrer">How Do You Know It's Time to Start Using a Walker Instead of a Cane?</a></Paragraph>
           <div className="mt-5 rounded-[8px] bg-[#f3f3f3] py-4">
-            <img className="mx-auto h-[220px] w-auto rounded-[4px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA-7-683x1024.webp`} alt="Walker to independence flowchart" />
+            <img className="mx-auto h-[220px] w-auto rounded-[4px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA-7-683x1024.webp`} alt="Signs you're ready for next mobility stage" />
           </div>
 
-          <SectionHeading id="section-4">Balance Test Checklist for Mobility Aids</SectionHeading>
-          <Paragraph>Before reducing support, review these signs with a therapist or caregiver. If any item feels unsafe, stay with the current aid and keep practicing.</Paragraph>
+          <SectionHeading id="section-4">Guidance for Staying Safe In the Transition</SectionHeading>
+          <Paragraph>Throughout your trip, safety must always come first. These pointers are crucial whether you're just beginning or getting close to complete independence:</Paragraph>
           <BlogList>
-            <li>Can you stand for 30 seconds without swaying heavily?</li>
-            <li>Can you turn slowly without grabbing for furniture?</li>
-            <li>Can you take several steps without dragging either foot?</li>
-            <li>Can you recover balance after a small stumble?</li>
-            <li>Can you walk while carrying on a short conversation?</li>
+            <li>Steer clear of clutter: Keep walkways clear of obstructions and clean.</li>
+            <li>Wearing non-slip shoes improves grip and lowers the chance of slipping.</li>
+            <li>Install grab bars, particularly in doorways, on stairs, and in restrooms.</li>
+            <li>Attend all of your therapy sessions.</li>
+            <li>Eat healthily and drink plenty of water because dehydration can cause muscle imbalance and fatigue.</li>
+            <li>Don't rush changes; instead, give your body time to adapt.</li>
           </BlogList>
+          <Paragraph>Also explore: <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/how-to-use-walker-large-wheels-seniors-safely/" target="_blank" rel="noopener noreferrer">What Are Some Helpful Suggestions for Using a New Walker With Larger Wheels?</a></Paragraph>
 
-          <SectionHeading id="section-5">Transition Timeline for Mobility Aids</SectionHeading>
+          <SectionHeading id="section-5">Transition Timeline for Mobility Aid</SectionHeading>
           <div className="mt-4 overflow-hidden rounded-[6px] border border-[#d8dde2]">
-            <div className="grid grid-cols-[0.5fr_1.1fr_1.6fr_0.9fr] bg-[#ffc400] font-manrope text-[8.5px] font-black text-black">
-              {['Stage', 'Mobility Aid', 'Goal', 'Timeline'].map((heading) => (
+            <div className="grid grid-cols-3 bg-[#ffc400] font-manrope text-[8.5px] font-black text-black">
+              {['Mobility Aid', 'Required Skills', 'Duration (Approx)'].map((heading) => (
                 <div className="border-r border-black/10 px-2 py-2 last:border-r-0" key={heading}>{heading}</div>
               ))}
             </div>
             {timelineRows.map((row) => (
-              <div className="grid grid-cols-[0.5fr_1.1fr_1.6fr_0.9fr] border-t border-[#d8dde2] font-manrope text-[8.5px] font-medium leading-4 text-[#1f2930]" key={row[0]}>
+              <div className="grid grid-cols-3 border-t border-[#d8dde2] font-manrope text-[8.5px] font-medium leading-4 text-[#1f2930]" key={row[0]}>
                 {row.map((cell) => (
                   <div className="border-r border-[#d8dde2] px-2 py-2 last:border-r-0" key={cell}>{cell}</div>
                 ))}
@@ -214,11 +225,30 @@ function TransitionWalkerIndependentDetail() {
           <SectionHeading id="section-6">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
             {[
-              ['How soon after surgery should I reduce my walker use?', 'Only after your surgeon or physical therapist clears you. Recovery timelines vary by surgery, strength, pain, and balance.'],
-              ['Can I skip the cane and go straight to walking independently?', 'Some people can, but many seniors benefit from stepping down gradually through a cane or quad cane.'],
-              ['How do I know I am ready to walk outside without my walker?', 'You should be steady indoors, able to turn safely, and cleared by a clinician before outdoor walking without a walker.'],
-              ['What if I feel more tired after reducing walker support?', 'Return to more support and shorten practice sessions. Fatigue is a sign the body may need more time.'],
-              ['Should I keep my walker after I start using a cane?', 'Yes. Keep it available for tired days, illness, longer walks, or uneven surfaces.'],
+              [
+                'How much time does it take to go from using a walker to walking on your own?',
+                "Although everyone's timeline is different, most people make progress over weeks to months. The rate of recovery is affected by a number of factors, including age, physical condition, and the reason for using a walker.",
+              ],
+              [
+                "Can I make the transition without a physical therapist's assistance?",
+                "Although it's not impossible, it's highly discouraged. A physical therapist makes sure you're moving at a healthy pace, monitors your safety, and customizes exercises for your condition.",
+              ],
+              [
+                "How can I tell when I'm ready to walk alone or switch to the next mobility aid?",
+                'If you can walk 50 to 100 feet without stopping, turn safely, and get up on your own, and your doctor or therapist is satisfied with your progress, you might be ready.',
+              ],
+              [
+                'What should I do if the transition causes me pain or instability?',
+                'Stop right away and speak with your doctor. Your body uses pain as a warning that something may be amiss, and ignoring it could result in problems.',
+              ],
+              [
+                'Is it typical to experience anxiety when walking without a walker?',
+                'Indeed, emotional preparedness is equally as crucial as physical prowess. Although many people are afraid of falling, confidence can be gradually increased with little victories, a caring environment, and appropriate safety precautions.',
+              ],
+              [
+                'What safety advice for the house can be useful during this change?',
+                "Use non-slip rugs, install grab bars, keep floors clear of clutter, and wear appropriate footwear. Additionally, make sure your house is well-lit, and refrain from multitasking when you're walking.",
+              ],
             ].map(([question, answer]) => (
               <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
                 <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary>
@@ -230,17 +260,16 @@ function TransitionWalkerIndependentDetail() {
           {/* Final Thoughts */}
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-7">
             <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
-            <Paragraph>Transitioning from a walker to independent walking is not about rushing. It is about choosing the right level of support at the right time.</Paragraph>
-            <Paragraph>Use mobility aids as tools, not failures. With therapy, practice, and honest balance checks, many seniors can move from full walker support to lighter aids and sometimes to independent walking.</Paragraph>
+            <Paragraph>Transitioning from a walker to independent walking is not about speed; it's about strategy, self-awareness, and support. With the right combination of professional guidance, strength-building routines, and the correct use of mobility aids, anyone can regain the confidence to walk without assistance. Keep in mind that every small step counts, and regression can happen. Don't rush, trust the process, and lean on your support system.</Paragraph>
           </section>
 
           {/* References */}
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
             <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
-              <li>Cleveland Clinic. https://my.clevelandclinic.org/health/procedures/how-to-use-a-walker</li>
-              <li>APTA. https://ppsapta.org/blog/marketing/physical-therapists-recommendation-walk</li>
-              <li>Medline Plus https://medlineplus.gov/ency/patientinstructions/000342.htm</li>
+              <li>Cleveland Clinic. <a className="text-[#2361a1] underline" href="https://my.clevelandclinic.org/health/procedures/how-to-use-a-walker" target="_blank" rel="noopener noreferrer">https://my.clevelandclinic.org/health/procedures/how-to-use-a-walker</a></li>
+              <li>APTA. <a className="text-[#2361a1] underline" href="https://ppsapta.org/blog/marketing/physical-therapists-recommendation-walk" target="_blank" rel="noopener noreferrer">https://ppsapta.org/blog/marketing/physical-therapists-recommendation-walk</a></li>
+              <li>Medline Plus <a className="text-[#2361a1] underline" href="https://medlineplus.gov/ency/patientinstructions/000342.htm" target="_blank" rel="noopener noreferrer">https://medlineplus.gov/ency/patientinstructions/000342.htm</a></li>
             </ol>
           </section>
 
@@ -249,18 +278,6 @@ function TransitionWalkerIndependentDetail() {
           {/* Comments */}
           <section className="mt-8 rounded-[10px] bg-white p-8 shadow-[0_14px_40px_rgba(0,0,0,0.05)]">
             <h2 className="text-center text-[14px] font-black text-black">What do you think?</h2>
-            {[
-              ['Linda J.', 'This was very helpful. I did not realize a cane could be part of the process.'],
-              ['Martin P.', 'The balance checklist is useful before changing devices.'],
-              ['George B.', 'My therapist told me the same thing: do not rush the walker transition.'],
-              ['Ella R.', 'I am saving this for my mother. The timeline table makes it easier to understand.'],
-            ].map(([name, comment]) => (
-              <div className="mt-6 border-b border-[#d8dde2] pb-5" key={name}>
-                <p className="font-manrope text-[11px] font-black text-black">{name}</p>
-                <p className="mt-2 font-manrope text-[11px] font-medium leading-5 text-[#303a42]">{comment}</p>
-                <button className="mt-2 rounded-full bg-[#07364f] px-4 py-1 font-manrope text-[10px] font-black text-white">Reply</button>
-              </div>
-            ))}
             <form className="mt-6 space-y-4" action="#">
               <label className="block">
                 <span className="font-manrope text-[11px] font-black text-black">Comment *</span>
