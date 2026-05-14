@@ -7,121 +7,52 @@ import Newsletter from '../components/Newsletter';
 
 
 const toc = [
-  'Why walker accessories matter',
-  'Types of must-have walker accessories',
-  'Best walker accessories to buy now',
-  'How to choose the right accessories',
-  'Installation and setup tips',
+  'Storage and convenience accessories',
+  'Non-slip tips and walker glides',
+  'Comfort upgrades',
+  'Customizing your walker for daily use',
+  'Accessories and their uses',
   'Frequently Asked Questions',
   'Final Thoughts',
-  'References',
-];
-
-/* 4 accessory type cards — image left, text right */
-const accessoryTypes = [
-  {
-    title: 'Walker Bags & Organizers',
-    image: 'twa-3-1-768x684.webp',
-    alt: 'Black walker bag organizer with multiple pockets holding notebook, keys, phone and thermos',
-    text: 'Walker bags attach to the front bar of the walker and allow seniors to carry essentials hands-free — phones, medications, water bottles, and personal items — without needing a separate bag.',
-  },
-  {
-    title: 'Walker Tray Tables',
-    image: 'twa-6-2-683x1024.webp',
-    alt: 'Gray plastic walker tray table attached to standard folding walker',
-    text: 'Walker trays slide onto the front bar and create a flat surface for carrying meals, books, or daily items from room to room. Bamboo and plastic options are both widely available.',
-  },
-  {
-    title: 'Cup & Bottle Holders',
-    image: 'twa-12-764x1024.webp',
-    alt: 'Black adjustable cup holder clamp for walker or rollator frame',
-    text: 'Cup holders clamp directly onto the walker frame and keep drinks within easy reach during walks. They support water bottles, travel mugs, and insulated cups of various sizes.',
-  },
-  {
-    title: 'Phone Mounts & Holders',
-    image: 'twa-14-749x1024.webp',
-    alt: 'Drive brand black phone holder mount that attaches to walker frame',
-    text: 'Phone mounts attach to the walker handle or frame bar and hold smartphones securely, making GPS navigation, calls, and music accessible without putting the phone in a pocket.',
-  },
+  'Reference',
 ];
 
 /* compact grid — shown 3 per row (12 items = 4 rows) */
 const gridProducts = [
-  { title: 'Multi-Pocket Walker Bag (Gray)', image: 'twa-1-768x764.webp', alt: 'Gray multi-pocket walker bag organizer with tablet and cup holder' },
-  { title: 'Floral Walker Organizer Bag', image: 'twa-2-768x591.webp', alt: 'Floral pattern walker bag with food, tablet and phone inside' },
-  { title: 'Black Walker Storage Bag', image: 'twa-3-1-768x684.webp', alt: 'Black walker bag with notebook, keys, thermos and phone pockets' },
-  { title: 'Bamboo Walker Tray Table', image: 'twa-4-2-768x760.webp', alt: 'Bamboo wood walker tray table with plate of food and glass of milk' },
-  { title: 'Fabric Walker Meal Tray', image: 'twa-5-2-768x773.webp', alt: 'Black fabric walker tray being used to carry meal and thermos' },
-  { title: 'Plastic Walker Tray', image: 'twa-6-2-683x1024.webp', alt: 'Gray plastic walker tray attached to folding walker frame' },
-  { title: 'Cup + Phone Holder Combo', image: 'twa-7-1-768x827.webp', alt: 'Cup holder and phone holder combo attachment on blue walker' },
-  { title: 'Black Cup & Phone Combo', image: 'twa-11-768x845.webp', alt: 'Black cup holder and phone holder combo unit with clamp mount' },
-  { title: 'Adjustable Cup Holder', image: 'twa-12-764x1024.webp', alt: 'Black adjustable cup holder clamp for walker frame' },
-  { title: 'Multi Cup & Phone Mount', image: 'twa-13-768x709.webp', alt: 'Multi cup holder with phone mount on stroller or walker' },
-  { title: 'Drive Phone Holder Mount', image: 'twa-14-749x1024.webp', alt: 'Drive brand black phone holder mount for walker' },
-  { title: 'Walker Phone Clamp Mount', image: 'twa-8-768x793.webp', alt: 'Phone clamp mount attached to walker pole showing golf GPS app' },
+  { title: 'Multi-Pocket Walker Bag', image: 'twa-1-768x764.webp', alt: 'Gray multi-pocket walker bag organizer with tablet and cup holder', buyHref: 'https://amzn.to/4mD00TR' },
+  { title: 'Floral Walker Organizer Bag', image: 'twa-2-768x591.webp', alt: 'Floral pattern walker bag with food, tablet and phone inside', buyHref: 'https://amzn.to/470QwgB' },
+  { title: 'Black Walker Storage Bag', image: 'twa-3-1-768x684.webp', alt: 'Black walker bag with notebook, keys, thermos and phone pockets', buyHref: 'https://amzn.to/4nt0LA9' },
+  { title: 'Fabric Walker Meal Tray', image: 'twa-5-2-768x773.webp', alt: 'Black fabric walker tray being used to carry meal and thermos', buyHref: 'https://amzn.to/4nsUPHt' },
+  { title: 'Bamboo Walker Tray Table', image: 'twa-4-2-768x760.webp', alt: 'Bamboo wood walker tray table with plate of food and glass of milk', buyHref: 'https://amzn.to/4nptwh3' },
+  { title: 'Plastic Walker Tray', image: 'twa-6-2-683x1024.webp', alt: 'Gray plastic walker tray attached to folding walker frame', buyHref: 'https://amzn.to/4o15kBL' },
+  { title: 'Cup + Phone Holder Combo', image: 'twa-7-1-768x827.webp', alt: 'Cup holder and phone holder combo attachment on blue walker', buyHref: 'https://amzn.to/3W21SLj' },
+  { title: 'Black Cup & Phone Combo', image: 'twa-11-768x845.webp', alt: 'Black cup holder and phone holder combo unit with clamp mount', buyHref: 'https://amzn.to/46Eaxtv' },
+  { title: 'Adjustable Cup Holder', image: 'twa-12-764x1024.webp', alt: 'Black adjustable cup holder clamp for walker frame', buyHref: 'https://amzn.to/483sFhp' },
+  { title: 'Walker Phone Clamp Mount', image: 'twa-8-768x793.webp', alt: 'Phone clamp mount attached to walker pole showing golf GPS app', buyHref: 'https://amzn.to/3KNdb7p' },
+  { title: 'Multi Cup & Phone Mount', image: 'twa-13-768x709.webp', alt: 'Multi cup holder with phone mount on stroller or walker', buyHref: 'https://amzn.to/4gKU1el' },
+  { title: 'Drive Phone Holder Mount', image: 'twa-14-749x1024.webp', alt: 'Drive brand black phone holder mount for walker', buyHref: 'https://amzn.to/3WgYQTe' },
 ];
 
-/* full detail sections with pros/cons */
-const products = [
-  {
-    title: 'Multi-Pocket Walker Bag Organizer',
-    image: 'twa-1-768x764.webp',
-    alt: 'Gray multi-pocket walker bag organizer with tablet, glasses, keys and cup holder pocket',
-    bestFor: 'Seniors who need to carry multiple daily essentials including a tablet, phone, glasses, keys, and a water bottle all in one place attached to their walker.',
-    pros: ['Multiple pockets for organization', 'Includes built-in cup holder pocket', 'Attaches to most standard walkers', 'Durable gray linen-look material'],
-    cons: ['May add weight to one side of walker', 'Zipper pockets can be stiff initially'],
-  },
-  {
-    title: 'Bamboo Walker Tray Table',
-    image: 'twa-4-2-768x760.webp',
-    alt: 'Bamboo walker tray table attached to walker frame with plate of food and glass of milk on top',
-    bestFor: 'Seniors who want to carry meals or drinks between rooms without assistance, using a natural bamboo tray that fits over the walker frame.',
-    pros: ['Natural bamboo surface is easy to clean', 'Fits most standard walker handle widths', 'Folds flat for storage', 'Elegant, practical design'],
-    cons: ['Heavier than plastic tray options', 'Must check handle width compatibility before ordering'],
-  },
-  {
-    title: 'Universal Cup & Phone Holder Combo',
-    image: 'twa-7-1-768x827.webp',
-    alt: 'Black cup holder and phone mount combo attached to blue rollator walker frame',
-    bestFor: 'Seniors who want both a drink holder and a phone mount in a single attachment that clamps onto any walker or rollator frame bar.',
-    pros: ['Holds both cup and phone in one unit', 'Universal clamp fits most walker bars', 'Phone can rotate for best viewing angle', 'Easy one-handed installation'],
-    cons: ['Combo unit is larger than individual mounts', 'Not ideal for very small walker frames'],
-  },
-  {
-    title: 'Drive Medical Phone & Holder Mount',
-    image: 'twa-14-749x1024.webp',
-    alt: 'Drive Medical brand black phone holder that clips onto walker or rollator handlebar',
-    bestFor: 'Trusted Drive Medical brand phone holder for seniors who want a secure, purpose-built clip-on mount for their smartphone on a walker or rollator.',
-    pros: ['Drive Medical quality brand', 'Secure clip-on mechanism', 'Compatible with most smartphones', 'Simple installation, no tools needed'],
-    cons: ['Designed primarily for rollators', 'May not fit all standard walker handle shapes'],
-  },
+const accessoryUseRows = [
+  ['Storage Bag', 'Carrying daily essentials', 'Front or side frame', 'Indoor and outdoor'],
+  ['Tray', 'Meals and small objects', 'Over walker handles', 'Indoor'],
+  ['Cup Holder', 'Hydration access', 'Side frame or handlebar', 'Indoor and outdoor'],
+  ['Phone Mount', 'Calls, messages, and GPS', 'Handlebar/front frame', 'Outdoor'],
+  ['Seat Cushion', 'Long sitting periods', 'On a built-in seat', 'Both'],
+  ['Non-slip Tips', 'Stability on hard floors', 'Bottom of the walker legs', 'Indoor'],
+  ['Glides/Ski Tips', 'Smooth gliding over surfaces', 'Rear walker legs', 'Outdoor'],
 ];
-
-const relatedArticles = [
-  {
-    image: 'twa-fi.webp',
-    href: '/replacement-walker-hand-grips-for-all-kinds-of-walkers',
-    title: 'Replacement Walker Hand Grips',
-    description: 'Sore hands or slippery grips? Find the best replacement grips for every walker style.',
-  },
-  {
-    image: 'twa-blog26-1-1.webp',
-    href: '/stop-the-struggle-the-ultimate-easy-guide-to-fitting-a-walker-for-seniors',
-    title: 'Guide to Fitting a Walker for Seniors',
-    description: 'Discover this step-by-step guide for seniors on choosing and adjusting walkers safely.',
-  },
-  {
-    image: 'twa-featured-image.webp',
-    href: '/how-to-adjust-a-walker-to-the-correct-height-a-safety-checklist',
-    title: 'How to Adjust a Walker to the Correct Height',
-    description: 'The right walker height improves posture, comfort, and balance every step of the way.',
-  },
-];
-
-
 
 function Paragraph({ children }) {
   return <p className="mt-3 font-manrope text-[10px] font-medium leading-[1.9] text-[#1f2930]">{children}</p>;
+}
+
+function ArticleLink({ children, href }) {
+  return (
+    <a className="font-black text-[#0b61a4] no-underline hover:underline" href={href} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}>
+      {children}
+    </a>
+  );
 }
 
 function SectionHeading({ children, id }) {
@@ -132,42 +63,28 @@ function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
 }
 
-function ProductTable({ product }) {
+function AccessoryUseTable() {
+  const headers = ['Accessory', 'Best For', 'Where It Attaches', 'Use'];
+
   return (
-    <div className="mt-3 overflow-hidden border border-black">
-      <div className="grid grid-cols-[1fr_1fr_74px] bg-[#ffc400] font-manrope text-[8px] font-black text-black">
-        <div className="border-r border-black px-2 py-2">Pros</div>
-        <div className="border-r border-black px-2 py-2">Cons</div>
-        <div className="px-2 py-2 text-center">Buy</div>
-      </div>
-      <div className="grid grid-cols-[1fr_1fr_74px] font-manrope text-[8px] font-semibold leading-4 text-[#1f2930]">
-        <ul className="list-disc space-y-1 border-r border-black px-4 py-3">
-          {product.pros.map((item) => <li key={item}>{item}</li>)}
-        </ul>
-        <ul className="list-disc space-y-1 border-r border-black px-4 py-3">
-          {product.cons.map((item) => <li key={item}>{item}</li>)}
-        </ul>
-        <div className="flex items-center justify-center px-2 py-3">
-          <a className="rounded-full bg-[#ffc400] px-3 py-2 text-center text-[8px] font-black text-black no-underline" href="/tools">Check Price</a>
+    <div className="mt-4 overflow-x-auto">
+      <div className="min-w-[620px] overflow-hidden rounded-[8px] border border-[#d8dde2] font-manrope text-[9px] font-medium text-[#1f2930]">
+        <div className="grid grid-cols-4 bg-[#ffc400]">
+          {headers.map((header, index) => (
+            <div className={`px-3 py-2 font-black text-black${index > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={header}>{header}</div>
+          ))}
         </div>
+        {accessoryUseRows.map((row, rowIndex) => (
+          <div className={`grid grid-cols-4${rowIndex % 2 === 0 ? ' bg-white' : ' bg-[#f9f9f9]'}`} key={row[0]}>
+            {row.map((cell, cellIndex) => (
+              <div className={`border-t border-[#d8dde2] px-3 py-2${cellIndex > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={`${row[0]}-${cell}`}>{cell}</div>
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   );
 }
-
-function SocialDots() {
-  return (
-    <div className="mt-9 flex items-center justify-center gap-2" aria-label="Share article">
-      {['f', 'in', 'x'].map((item) => (
-        <a className="flex h-6 w-6 items-center justify-center rounded-full bg-black font-manrope text-[10px] font-black text-white no-underline" href={`#share-${item}`} key={item}>{item}</a>
-      ))}
-    </div>
-  );
-}
-
-
-
-
 
 function MustHaveWalkerAccessoriesDetail() {
   useEffect(() => {
@@ -199,18 +116,18 @@ function MustHaveWalkerAccessoriesDetail() {
 
           {/* ── Author ── */}
           <div className="mt-6 flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">AA</div>
-            <p className="font-manrope text-[12px] font-black text-black">Amir Abbasi</p>
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">RD</div>
+            <p className="font-manrope text-[12px] font-black text-black">Robin Dolan</p>
           </div>
 
           {/* ── Key Summary ── */}
           <section className="mt-5 rounded-[8px] bg-[#f3f3f3] p-5">
             <h2 className="text-[14px] font-black text-black">Key Summary</h2>
-            <Paragraph>The right accessories transform a basic walker into a personalized, safer daily companion. Walker bags carry essentials hands-free, tray tables transport meals between rooms, cup holders keep hydration within reach, and phone mounts keep seniors connected. This guide covers the most impactful accessories available for standard walkers and rollators.</Paragraph>
+            <Paragraph>Mobility, safety, and independence can all be significantly increased by upgrading your walker with the appropriate accessories. These improvements address daily needs both indoors and out, from storage bags to glides, seat cushions, and lights. This guide explains the most important walker accessories, their advantages, and how to customize them to fit your needs.</Paragraph>
           </section>
 
-          <Paragraph>Most walkers are sold with standard handles and a bare frame. Yet most seniors walk for extended periods, carry personal items, and need features their basic walker simply does not provide out of the box.</Paragraph>
-          <Paragraph>Adding the right accessories costs very little but can significantly improve daily comfort, safety, and independence.</Paragraph>
+          <Paragraph>Mobility and stability are already improved by using a walker, but the well-chosen accessories are what really turn it from a medical device to a lifestyle partner. Finding a comfortable grip, carrying objects, and navigating uneven surfaces are just a few of the everyday challenges that seniors and people with limited mobility frequently face. In addition to resolving these issues, the appropriate accessories promote convenience, self-reliance, and confidence.</Paragraph>
+          <Paragraph>Trays and cup holders, for example, remove the need to balance objects while walking. Cushions and ergonomic grips lessen joint strain, and non-slip glides enable safe mobility on carpet or hardwood floors. Most significantly, accessories enable individualization, turning a typical walker into one that is precisely tailored to your needs.</Paragraph>
 
           {/* ── TOC ── */}
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
@@ -225,42 +142,15 @@ function MustHaveWalkerAccessoriesDetail() {
           </nav>
 
           {/* ── Section 1 ── */}
-          <SectionHeading id="section-1">Why Walker Accessories Matter</SectionHeading>
-          <Paragraph>Walker accessories fill the gap between what a standard walker provides and what a senior actually needs in daily life. From carrying a water bottle to transporting a meal between rooms, small additions make a real difference in how comfortable and independent everyday walking feels.</Paragraph>
+          <SectionHeading id="section-1">Storage and Convenience Accessories</SectionHeading>
+          <h3 className="mt-5 text-[12px] font-black leading-tight text-black">1. Storage Bags, Trays, Cup Holders & Phone Mounts</h3>
+          <Paragraph>Carrying personal items while using a walker can be tricky without proper attachments. Fortunately, several accessories are designed specifically for that purpose:</Paragraph>
           <BlogList>
-            <li>Storage bags let seniors carry essentials without depending on others.</li>
-            <li>Tray tables allow meal transport between rooms with both hands on the walker.</li>
-            <li>Cup holders ensure hydration is always within easy reach during walks.</li>
-            <li>Phone mounts keep emergency contacts and GPS accessible at all times.</li>
-            <li>The right accessories reduce daily frustration and increase confidence.</li>
+            <li><strong>Storage Bags:</strong> These soft pouches attach to the front or sides of your walker and are perfect for holding medications, wallets, books, or grocery items. Look for zippered compartments and waterproof materials for <ArticleLink href="https://www.walkersforseniors.com/post/accessorize-to-maximize-elevating-your-walker-experience-with-must-have-add-ons">outdoor use</ArticleLink>.</li>
+            <li><strong>Walker Trays:</strong> For transporting food, paperwork, or small objects around the house. Many are detachable and dishwasher-safe. They fit snugly over the handles and provide a stable platform.</li>
+            <li><strong>Cup Holders:</strong> Designed to fit a variety of bottle sizes, a good cup holder securely mounts to your walker’s <ArticleLink href="https://evolutionwalker.com/most-popular-walker-accessories-for-seniors/">frame</ArticleLink> without tipping.</li>
+            <li><strong>Phone Mounts:</strong> Essential in today’s connected world. These holders keep your smartphone visible and accessible for calls, messages, or GPS use.</li>
           </BlogList>
-
-          {/* ── Section 2: Types ── */}
-          <SectionHeading id="section-2">Types of Must-Have Walker Accessories</SectionHeading>
-          <Paragraph>Walker accessories fall into four main categories. Understanding each type helps narrow down which additions will have the greatest impact on your daily routine.</Paragraph>
-          <div className="mt-4 space-y-4">
-            {accessoryTypes.map((item) => (
-              <div className="overflow-hidden rounded-[8px] border border-[#d8dde2] bg-white" key={item.title}>
-                <div className="flex items-start gap-3 p-3">
-                  <div className="flex-shrink-0 overflow-hidden rounded-[6px] bg-[#f3f3f3]">
-                    <img
-                      className="h-[90px] w-[90px] object-contain p-2"
-                      src={`${process.env.PUBLIC_URL}/images/${item.image}`}
-                      alt={item.alt}
-                    />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <h3 className="text-[11px] font-black leading-tight text-black">{item.title}</h3>
-                    <p className="mt-1 font-manrope text-[9px] font-medium leading-[1.7] text-[#1f2930]">{item.text}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* ── Section 3: Best accessories — compact 3-col grid ── */}
-          <SectionHeading id="section-3">Best Walker Accessories to Buy Now</SectionHeading>
-          <Paragraph>These are the most popular and highly rated walker accessories available today. Scroll down for detailed pros, cons, and pricing on each top pick.</Paragraph>
 
           {/* 3-column compact product grid */}
           <div className="mt-4 grid grid-cols-3 gap-2">
@@ -274,71 +164,85 @@ function MustHaveWalkerAccessoriesDetail() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-2">
-                  <p className="font-manrope text-[7px] font-black leading-tight text-[#172129]">{item.title}</p>
                   <a
-                    className="mt-auto mt-2 inline-block rounded-full bg-[#ffc400] px-2 py-1 text-center font-manrope text-[6px] font-black text-black no-underline"
-                    href="/tools"
+                    className="mt-auto inline-block rounded-full bg-[#ffc400] px-2 py-1 text-center font-manrope text-[6px] font-black text-black no-underline"
+                    href={item.buyHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Check Price
+                    Buy Now
                   </a>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Full product detail sections */}
-          {products.map((product) => (
-            <section className="mt-6" key={product.title}>
-              <h3 className="text-[13px] font-black text-black">{product.title}</h3>
-              <div className="mt-3 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
-                <img
-                  className="mx-auto h-[200px] w-full object-contain p-4"
-                  src={`${process.env.PUBLIC_URL}/images/${product.image}`}
-                  alt={product.alt}
-                />
-              </div>
-              <Paragraph>{product.bestFor}</Paragraph>
-              <ProductTable product={product} />
-            </section>
-          ))}
-
-          {/* ── Section 4 ── */}
-          <SectionHeading id="section-4">How to Choose the Right Accessories</SectionHeading>
+          <h3 className="mt-8 text-[12px] font-black leading-tight text-black">Lighting Attachments for Better Visibility</h3>
+          <Paragraph>Lighting is often overlooked, but it’s one of the most crucial safety upgrades, especially for seniors navigating dim hallways or nighttime outings.</Paragraph>
+          <BlogList>
+            <li><strong>Clip-On LED Lights:</strong> Attach to the frame or handlebars to improve visibility during evening walks. See more practical upgrade ideas from <ArticleLink href="https://equip2adapt.com/blog/walker-accessories/">walker accessory guides</ArticleLink>.</li>
+            <li><strong>Reflective Strips:</strong> Useful for outdoor use, especially during early mornings or dusk.</li>
+          </BlogList>
           <div className="mt-3 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
             <img
-              className="mx-auto h-[220px] w-full object-cover p-3"
-              src={`${process.env.PUBLIC_URL}/images/twa-blog6-640x427.webp`}
-              alt="Elderly woman's hands gripping a walker handle showing proper grip and accessory use"
+              className="mx-auto h-[240px] w-full object-contain p-3"
+              src={`${process.env.PUBLIC_URL}/images/blog-27-6-683x1024.webp`}
+              alt="Clip-on walker light attachment for better visibility"
             />
           </div>
-          <Paragraph>With so many accessories available, focusing on the ones that solve your most immediate problems is the best approach. Start with everyday essentials, then add convenience items as your routine develops.</Paragraph>
+
+          {/* ── Section 2 ── */}
+          <SectionHeading id="section-2">Non-Slip Tips and Walker Glides</SectionHeading>
+          <Paragraph>Walkers must adapt to different floor types. Non-slip tips and glides not only improve movement but also prevent dangerous snags or slips.</Paragraph>
           <BlogList>
-            <li>If you carry items daily, start with a walker bag — it provides the most immediate independence.</li>
-            <li>If you eat meals alone, a tray table is the safest way to move food between rooms.</li>
-            <li>If you take medications or supplements with water, add a cup holder next.</li>
-            <li>Check that any attachment is compatible with your walker frame width before ordering.</li>
-            <li>Test any new accessory on a short walk before relying on it for longer distances.</li>
+            <li><strong>Ski Glides:</strong> Designed to move smoothly on both indoor and outdoor surfaces while reducing drag.</li>
+            <li><strong>Non-slip Tips:</strong> Help create better traction on hard floors and should be replaced when worn down.</li>
+            <li><strong>Walker Glides:</strong> Help the rear legs move without catching on carpet, thresholds, or small floor transitions.</li>
           </BlogList>
+          <Paragraph>If you’re wondering which walker wheels and glides work best together, check out <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-wheel-size-for-walkers/">What size wheels are best for a walker?</ArticleLink> for insights into compatibility with accessories.</Paragraph>
+
+          {/* ── Section 3 ── */}
+          <SectionHeading id="section-3">Comfort Upgrades: Hand Grips & Seat Cushions</SectionHeading>
+          <Paragraph>Long walks or standing periods can take a toll, especially on joints and pressure points. Comfort accessories help prevent pain and fatigue:</Paragraph>
+          <BlogList>
+            <li><strong>Ergonomic Hand Grips:</strong> Help reduce wrist and palm strain during longer use.</li>
+            <li><strong>Seat Cushions:</strong> Add comfort for rollator users who rest on built-in seats.</li>
+            <li><strong>Backrests:</strong> Adjustable backrests give added lumbar support while seated.</li>
+          </BlogList>
+          <Paragraph>This is particularly important when using all-terrain or heavy-duty walkers. Check our guide on <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-all-terrain-walkers-for-seniors-ultimate-guide/">Best All-Terrain Walkers for Seniors</ArticleLink> to see how comfort accessories pair with rugged models.</Paragraph>
+          <div className="mt-3 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
+            <img
+              className="mx-auto h-[240px] w-full object-contain p-3"
+              src={`${process.env.PUBLIC_URL}/images/blog-27-8-683x1024.webp`}
+              alt="Walker comfort upgrade accessory"
+            />
+          </div>
+
+          {/* ── Section 4 ── */}
+          <SectionHeading id="section-4">Customizing Your Walker for Daily Use</SectionHeading>
+          <Paragraph>Every walker user has different routines: some use them for errands, others for home support, or long walks. Here’s how to optimize your walker based on your lifestyle:</Paragraph>
+          <BlogList>
+            <li>Add a lockable storage bag for valuables if you travel often.</li>
+            <li>Use walker skis or glides if you’re primarily on carpet.</li>
+            <li>Invest in a walker tray and cup holder combo if you live alone and handle meals independently.</li>
+            <li>Install light and phone mounts for outdoor walks.</li>
+          </BlogList>
+          <Paragraph>Caregivers play a major role, too. As explained in <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/caregivers-guide-to-senior-walker-selection-and-usage/">How Caregivers Can Assist Seniors in Choosing and Using Walkers</ArticleLink>, the right customization can improve user confidence and reduce caregiver strain.</Paragraph>
 
           {/* ── Section 5 ── */}
-          <SectionHeading id="section-5">Installation and Setup Tips</SectionHeading>
-          <BlogList>
-            <li>Walker bags typically use velcro or buckle straps — attach at the top bar and tighten snugly so the bag does not sway during walking.</li>
-            <li>For tray tables, slide the mounting brackets onto both side bars of the walker and lock in place before adding any items.</li>
-            <li>Cup holders use a universal clamp — position on the side bar at a comfortable height and tighten the screw until the holder does not rotate.</li>
-            <li>Phone mounts should be placed at eye level or slightly below so you can glance at the screen without bending your neck.</li>
-            <li>After installing any accessory, push the walker forward a few steps empty before adding weight, to confirm it is balanced and stable.</li>
-          </BlogList>
+          <SectionHeading id="section-5">Accessories and Their Uses</SectionHeading>
+          <AccessoryUseTable />
 
           {/* ── Section 6: FAQ ── */}
           <SectionHeading id="section-6">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
             {[
-              ['What are the most important walker accessories for daily use?', 'A walker bag or organizer is the single most useful accessory for most seniors. It allows hands-free carrying of essentials and immediately improves independence in daily routines.'],
-              ['Do walker bags and trays fit all walkers?', 'Most are designed for standard folding walkers with 7/8 inch or 1 inch frame bars. Always check the width specifications before purchasing to confirm compatibility.'],
-              ['Can accessories make a walker less stable?', 'Properly installed accessories do not affect stability. Overloading a bag or placing it off-center can shift your balance — always distribute weight evenly and stay within the weight limit of the accessory.'],
-              ['Are these accessories available at pharmacies?', 'Yes. Walker bags, cup holders, and basic trays are available at most pharmacies and medical supply stores. A wider selection including bamboo trays and combo phone-cup mounts is available online.'],
-              ['How do I clean a walker bag?', 'Most walker bags are made from water-resistant polyester or nylon. Wipe clean with a damp cloth, or hand wash in mild soap and air dry. Check the product label before machine washing.'],
+              ['Are walker accessories universal?', 'Not all accessories fit every walker. Be sure to check compatibility with your specific walker model.'],
+              ['How can I clean walker accessories?', 'Most fabric bags are spot-cleanable, while trays and cup holders are dishwasher-safe or easy to wipe clean.'],
+              ['Can I use multiple accessories at once?', 'Yes, but ensure they don’t interfere with your safety. Overloading can affect balance.'],
+              ['Are there safety standards for accessories?', 'While not mandatory, it’s best to buy accessories from recognized brands or consult a therapist.'],
+              ['Can accessories help me walk longer distances?', 'Definitely. Cushions, grips, and carry solutions reduce fatigue and allow longer, more independent walks.'],
+              ['Where can I buy these walker accessories?', 'You can find them online or in stores.'],
             ].map(([question, answer]) => (
               <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
                 <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary>
@@ -350,67 +254,21 @@ function MustHaveWalkerAccessoriesDetail() {
           {/* ── Final Thoughts ── */}
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-7">
             <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
-            <Paragraph>Walker accessories are among the most cost-effective investments a senior can make in daily safety and independence. A sturdy bag eliminates the need to ask for help carrying items. A tray table allows meal transport without risk. A cup holder keeps hydration in reach. A phone mount keeps help within reach at all times.</Paragraph>
-            <Paragraph>Start with the accessory that solves your most common daily frustration, and build from there. A well-equipped walker is a safer, more independent walker.</Paragraph>
+            <Paragraph>Walker accessories go beyond convenience; they’re game changers in terms of mobility, comfort, and confidence. Whether you’re outfitting a basic walker or upgrading a premium rollator, the right add-ons can make everyday tasks easier and safer.</Paragraph>
+            <Paragraph>Start by assessing your daily needs, flooring, and mobility level. Then, gradually build your walker with the accessories mentioned above. Small upgrades can lead to massive improvements in quality of life.</Paragraph>
           </section>
 
           {/* ── References ── */}
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
-            <ArticleIconHeading type="references">References</ArticleIconHeading>
+            <ArticleIconHeading type="references">Reference</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
-              <li>National Institute on Aging: Walker Accessories and Safe Mobility. https://www.nia.nih.gov</li>
-              <li>CDC: Fall Prevention for Older Adults — Mobility Aid Maintenance. https://www.cdc.gov/falls</li>
-              <li>American Occupational Therapy Association: Walker Adaptations for Independence. https://www.aota.org</li>
-              <li>AARP: Mobility Aid Accessories Guide for Seniors. https://www.aarp.org</li>
+              <li>Accessorize to Maximize: Elevating Your Walker Experience with Must-Have Add-ons <ArticleLink href="https://www.walkersforseniors.com/post/accessorize-to-maximize-elevating-your-walker-experience-with-must-have-add-ons">https://www.walkersforseniors.com/post/accessorize-to-maximize-elevating-your-walker-experience-with-must-have-add-ons</ArticleLink></li>
+              <li>Most Popular Walker Accessories for Seniors <ArticleLink href="https://evolutionwalker.com/most-popular-walker-accessories-for-seniors/">https://evolutionwalker.com/most-popular-walker-accessories-for-seniors/</ArticleLink></li>
+              <li>Walker Upgrades: Enhance Your Mobility with These 12 Helpful Accessories <ArticleLink href="https://equip2adapt.com/blog/walker-accessories/">https://equip2adapt.com/blog/walker-accessories/</ArticleLink></li>
             </ol>
           </section>
 
-          <SocialDots />
-
-          {/* ── Comments ── */}
-          <section className="mt-8 rounded-[10px] bg-white p-8 shadow-[0_14px_40px_rgba(0,0,0,0.05)]">
-            <h2 className="text-center text-[14px] font-black text-black">What do you think?</h2>
-            <div className="mt-6 border-b border-[#d8dde2] pb-6">
-              <p className="font-manrope text-[11px] font-black text-black">Patricia L.</p>
-              <p className="mt-2 font-manrope text-[11px] font-medium leading-5 text-[#303a42]">The walker bag was a game-changer for my mother. She can carry her phone and water bottle now without needing to ask for help every time she walks to another room.</p>
-              <button className="mt-2 rounded-full bg-[#07364f] px-4 py-1 font-manrope text-[10px] font-black text-white">Reply</button>
-            </div>
-            <form className="mt-6 space-y-4" action="#">
-              <label className="block">
-                <span className="font-manrope text-[11px] font-black text-black">Comment *</span>
-                <textarea className="mt-2 min-h-[100px] w-full rounded-[4px] border border-black px-3 py-2 font-manrope text-[12px] outline-none" />
-              </label>
-              <label className="block">
-                <span className="font-manrope text-[11px] font-black text-black">Name *</span>
-                <input className="mt-2 h-8 w-full rounded-[4px] border border-black px-3 font-manrope text-[12px] outline-none" />
-              </label>
-              <label className="block">
-                <span className="font-manrope text-[11px] font-black text-black">Email *</span>
-                <input className="mt-2 h-8 w-full rounded-[4px] border border-black px-3 font-manrope text-[12px] outline-none" type="email" />
-              </label>
-              <label className="flex items-center gap-2 font-manrope text-[10px] font-medium text-[#1f2930]">
-                <input type="checkbox" /> Save my name, email, and website in this browser for the next time I comment.
-              </label>
-              <button className="rounded-full bg-[#07364f] px-7 py-3 font-manrope text-[11px] font-black text-white" type="submit">Post Comment</button>
-            </form>
-          </section>
         </article>
-
-        {/* ── Related Articles ── */}
-        <section className="mx-auto mt-16 w-full">
-          <h2 className="font-manrope text-[13px] font-black text-black">Related Articles</h2>
-          <div className="mt-5 grid gap-6 md:grid-cols-3">
-            {relatedArticles.map((article) => (
-              <a className="overflow-hidden rounded-[8px] border border-[#d8dde2] bg-white no-underline" href={article.href} key={article.title}>
-                <img className="h-32 w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
-                <div className="p-4">
-                  <h3 className="text-[13px] font-black leading-tight text-[#172129]">{article.title}</h3>
-                  <p className="mt-2 font-manrope text-[10px] font-medium leading-5 text-[#303a42]">{article.description}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
       </main>
       <Newsletter />
       <Footer />
