@@ -13,8 +13,8 @@ const navItems = [
 const toc = [
   'Safety tips for different weather conditions',
   'General walker safety tips for all weather',
-  'Frequently Asked Questions',
-  'Final Thoughts',
+  'Frequently asked questions',
+  'Final thoughts',
   'References',
 ];
 
@@ -69,11 +69,14 @@ function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
 }
 
-function CheckList({ items }) {
+function QuickTipBox({ title, items }) {
   return (
-    <ul className="mt-3 space-y-1 font-manrope text-[10px] font-semibold leading-5 text-[#1f2930]">
-      {items.map((item) => <li key={item}>✓ {item}</li>)}
-    </ul>
+    <section className="mt-4 rounded-[8px] border-l-4 border-[#ffc400] bg-[#fff8df] p-4">
+      <p className="font-manrope text-[10px] font-black leading-5 text-[#1f2930]">{title}</p>
+      <ul className="mt-2 space-y-1 font-manrope text-[10px] font-semibold leading-5 text-[#1f2930]">
+        {items.map((item) => <li key={item}>✓ {item}</li>)}
+      </ul>
+    </section>
   );
 }
 
@@ -136,7 +139,7 @@ function DetailFooter() {
 function WalkerWeatherSafetyDetail() {
   useEffect(() => {
     const previousTitle = document.title;
-    document.title = 'Rain, Snow, or Shine. How to Stay Safe with Your Walker - The Walker Advisor';
+    document.title = "Rain, Snow, or Shine, How to Stay Safe with Your Walker | The Walker Advisor";
     return () => { document.title = previousTitle; };
   }, []);
 
@@ -146,9 +149,9 @@ function WalkerWeatherSafetyDetail() {
       <main className="bg-white px-4 pb-12">
         <article className="mx-auto max-w-[430px]">
           <header className="pt-8 text-center">
-            <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">Rain, Snow, or Shine. How to Stay Safe with Your Walker</h1>
-            <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">From slippery sidewalks to scorching heat, here is how seniors can navigate any weather with confidence.</p>
-            <img className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa-blog12.webp`} alt="Snow-covered road lined with trees in winter" />
+            <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">Rain, Snow, or Shine, How to Stay Safe with Your Walker</h1>
+            <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">From slippery sidewalks to scorching heat, here's how seniors can navigate any weather with confidence.</p>
+            <img className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa-blog12.jpg`} alt="Rain, Snow, or Shine, How to Stay Safe with Your Walker" />
           </header>
 
           <div className="mt-6 flex items-center gap-3">
@@ -158,57 +161,113 @@ function WalkerWeatherSafetyDetail() {
 
           <section className="mt-5 rounded-[8px] bg-[#f3f3f3] p-5">
             <h2 className="text-[14px] font-black text-black">Key Summary</h2>
-            <Paragraph>Using a walker safely in bad weather requires preparation and careful surface choices. Rain, snow, heat, and wind can all change traction, visibility, endurance, and control. The safest plan is to inspect the walker, choose footwear carefully, and avoid risky routes when conditions are poor.</Paragraph>
+            <Paragraph>Using a walker safely in all weather conditions requires preparation and smart adaptations. For rain, ensure non-slip tips and waterproof grips; for snow, add ice grips and wear cleated boots. In heat, use foam handles and stay hydrated, while windy days call for weighted walkers and angled walking. Low visibility demands reflective gear and LED lights. With these weather-specific strategies, seniors can maintain stability, confidence, and independence year-round—keeping mobility safe in any season.</Paragraph>
           </section>
 
-          <Paragraph>Every season creates different walker safety challenges. Wet floors can make rubber tips slip, snow can hide uneven pavement, heat can cause fatigue, and wind can make outdoor balance more difficult.</Paragraph>
-          <Paragraph>The goal is not to stop moving. The goal is to adjust your route, equipment, and timing so movement stays safe and comfortable.</Paragraph>
+          <Paragraph>For seniors and mobility-aid users, harsh weather conditions—rain, snow, ice, heat, and wind—turn simple walks into dangerous challenges. Slippery surfaces, poor visibility, and extreme temperatures increase the risk of slips, falls, and discomfort, making outdoor mobility stressful and unsafe. Without the right precautions, every step outside becomes a hazard. Wet pavement can cause walkers to slide, icy paths lead to instability, and scorching heat makes metal frames unbearable to touch. Even a mild breeze can throw off balance, while fog or heavy rain reduces visibility. These risks don't just limit independence—they create fear and hesitation, keeping seniors from staying active and engaged.</Paragraph>
+          <Paragraph>The good news? With the right strategies, walker users can stay safe and confident in any weather. This guide covers essential tips—from weather-resistant accessories (like non-slip grips and wheel covers) to smart movement techniques (such as shorter steps on ice). Whether it's rain, snow, or blazing sun, you'll learn how to adapt and move with security.</Paragraph>
 
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
             <h2 className="bg-[#ffc400] px-5 py-3 text-[15px] font-black leading-none text-black">Table of Contents</h2>
             <ol className="space-y-2 px-6 py-5 font-manrope text-[10px] font-semibold leading-5 text-[#1f2930]">
-              {toc.map((item, index) => <li key={item}><a className="text-[#1f2930] no-underline hover:text-black" href={`#section-${index + 1}`}>{index + 1}. {item}</a></li>)}
+              {toc.map((item, index) => (
+                <li key={item}><a className="text-[#1f2930] no-underline hover:text-black" href={`#section-${index + 1}`}>{index + 1}. {item}</a></li>
+              ))}
             </ol>
           </nav>
 
+          {/* Section 1 */}
           <SectionHeading id="section-1">Safety Tips for Different Weather Conditions</SectionHeading>
+
           <SubHeading>1. Rainy Weather</SubHeading>
-          <Paragraph>Rain creates slippery surfaces, especially on tile, painted concrete, ramps, and smooth sidewalks. Before going outside, check walker tips, wheels, and brakes.</Paragraph>
-          <CheckList items={['Use non-slip shoes', 'Wipe wet walker tips', 'Avoid painted curbs and ramps', 'Slow down when turning']} />
+          <Paragraph>Rain creates slippery surfaces, increasing the risk of falls. To stay safe, ensure your walker has non-slip rubber tips for better traction. If the tips are worn out, replace them immediately—this small change can prevent dangerous slips.</Paragraph>
+          <Paragraph>Accessories like waterproof handle covers keep your grip secure, while a hands-free rain poncho ensures you stay dry without compromising stability. Avoid plastic bags on handles, as they can become slippery. Instead, opt for textured, waterproof covers designed for walkers.</Paragraph>
+          <Paragraph>Footwear matters—choose shoes with deep treads for better grip. Walk slowly and deliberately, avoiding quick steps that could lead to imbalance. Stick to textured surfaces like concrete rather than smooth tiles or metal grates. After use, dry your walker to prevent rust and maintain functionality.</Paragraph>
+          <QuickTipBox
+            title="Quick Tips for Rainy Weather:"
+            items={[
+              'Use rubber-tipped walkers',
+              'Wear slip-resistant shoes',
+              'Walk slowly on textured paths',
+              'Dry your walker after use to prevent rust',
+            ]}
+          />
 
           <SubHeading>2. Snowy and Icy Conditions</SubHeading>
-          <Paragraph>Snow and ice are the highest-risk conditions for walker users. Hidden ice, uneven snow piles, and salt buildup can make walker movement unpredictable.</Paragraph>
-          <CheckList items={['Avoid icy sidewalks', 'Use cleared entrances', 'Ask for help with outdoor routes', 'Consider indoor walking instead']} />
+          <Paragraph>Winter weather poses serious slipping hazards. Ice grips or snow treads can be attached to walker legs for better stability. These accessories dig into ice, reducing the risk of falls.</Paragraph>
+          <Paragraph>Dressing in warm, layered clothing helps regulate body temperature without restricting movement. Waterproof gloves improve grip, and boots with ice cleats add extra security. Always check weather reports before heading out—postponing trips during heavy snowfall may be the safest choice.</Paragraph>
+          <Paragraph>When walking on ice, take small, flat-footed steps to minimize slipping. Avoid leaning too far forward, as this shifts weight unevenly. If possible, walk on salted or sanded paths for better traction. On extreme weather days, consider indoor exercises instead.</Paragraph>
+          <QuickTipBox
+            title="Quick Tips for Snow & Ice:"
+            items={[
+              'Attach ice grips to walker legs',
+              'Wear boots with cleats',
+              'Walk slowly on treated paths',
+              'Avoid icy patches when possible',
+            ]}
+          />
 
-          <SubHeading>3. Hot and Humid Conditions</SubHeading>
-          <Paragraph>Heat can cause fatigue, dizziness, and slower reaction time. Seniors using walkers should plan walks during cooler parts of the day and carry water when appropriate.</Paragraph>
-          <CheckList items={['Drink water before walking', 'Avoid midday heat', 'Use shaded routes', 'Rest before fatigue starts']} />
+          <SubHeading>3. Hot and Sunny Conditions</SubHeading>
+          <Paragraph>Extreme heat can lead to dehydration and fatigue, making walker use more strenuous. Stay hydrated by carrying a water bottle in a walker-mounted holder. Wear breathable, light-colored clothing to reflect sunlight and reduce overheating.</Paragraph>
+          <Paragraph>A wide-brimmed hat and sunscreen protect against sunburn. Foam-grip covers prevent handles from becoming too hot to hold. Plan walks for early morning or late evening when temperatures are cooler.</Paragraph>
+          <Paragraph>Overheating can cause dizziness, increasing fall risk. Recognize signs of heat exhaustion (excessive sweating, nausea, confusion) and take breaks in shaded areas. A folding walker with a seat provides a quick resting spot when needed.</Paragraph>
+          <QuickTipBox
+            title="Quick Tips for Hot Weather:"
+            items={[
+              'Drink plenty of water',
+              'Wear a hat and sunscreen',
+              'Use foam grip covers',
+              'Walk during cooler hours',
+            ]}
+          />
 
           <SubHeading>4. Windy Conditions</SubHeading>
-          <Paragraph>Strong wind can affect posture and balance, especially with lightweight walkers or rollators. Avoid carrying loose bags that catch air or shift weight suddenly.</Paragraph>
-          <CheckList items={['Use both hands on the walker', 'Avoid open windy areas', 'Keep bags secured', 'Pause before crossing driveways']} />
+          <Paragraph>Strong winds can destabilize lightweight walkers. To counter this, use a heavier walker or add weight to the base (some models allow sandbag attachments). Keep a firm grip on the handles, and avoid walking in gusts exceeding 20 mph if possible.</Paragraph>
+          <Paragraph>Wear fitted clothing to reduce wind resistance. Walk at an angle against the wind rather than directly into it—this improves balance. Be cautious when moving between sheltered and open areas, as sudden wind bursts can catch you off guard.</Paragraph>
+          <QuickTipBox
+            title="Quick Tips for Windy Weather:"
+            items={[
+              'Use a weighted walker',
+              'Wear snug-fitting clothes',
+              'Walk at an angle to the wind',
+              'Avoid open areas in strong gusts',
+            ]}
+          />
 
           <SubHeading>5. Foggy and Low-Visibility Weather</SubHeading>
-          <Paragraph>Poor visibility can make curbs, puddles, and obstacles harder to see. Bright clothing, reflective details, and indoor alternatives can reduce risk.</Paragraph>
-          <CheckList items={['Wear reflective gear', 'Use bright clothing', 'Walk with a companion', 'Avoid unfamiliar routes']} />
+          <Paragraph>Poor visibility increases accident risks. Wear reflective clothing to stay visible to drivers and pedestrians. Attach LED lights or reflectors to your walker for better recognition.</Paragraph>
+          <Paragraph>If possible, walk with a companion for added safety. Stick to well-lit paths and avoid unfamiliar routes.</Paragraph>
+          <QuickTipBox
+            title="Quick Tips for Foggy Weather:"
+            items={[
+              'Use reflective gear',
+              'Attach walker lights',
+              'Walk in well-lit areas',
+              'Avoid walking alone',
+            ]}
+          />
 
+          {/* Section 2 */}
           <SectionHeading id="section-2">General Walker Safety Tips for All Weather</SectionHeading>
           <BlogList>
-            <li>Inspect grips, wheels, and tips before every outing.</li>
-            <li>Keep both hands on the walker while moving.</li>
-            <li>Choose well-lit, familiar paths whenever possible.</li>
-            <li>Do not rush across wet, icy, or uneven surfaces.</li>
-            <li>Postpone outdoor walks when the weather feels unsafe.</li>
+            <li>Inspect your walker regularly—check for loose screws, worn tips, or damage.</li>
+            <li>Adjust walker height so elbows bend slightly when holding handles.</li>
+            <li>Use accessories (LED lights, reflective strips) for visibility.</li>
+            <li>Plan routes carefully—choose even, obstacle-free paths.</li>
+            <li>Practice maneuvering in different environments for confidence.</li>
           </BlogList>
+          <p className="mt-3 font-manrope text-[10px] font-medium leading-[1.9] text-[#1f2930]">For detailed guidance, see our article on <a className="text-[#0b61a4] no-underline hover:underline" href="/most-people-use-walkers-wrong-are-you-making-these-mistakes">What Is The Proper Way To Use A Walker?</a></p>
 
+          {/* Section 3 - FAQ */}
           <SectionHeading id="section-3">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
             {[
-              ['Can I use a regular walker in the snow?', 'Only on cleared, dry, and stable paths. Avoid ice, packed snow, and uneven outdoor surfaces.'],
-              ['Is a rollator safe in cold or wet weather?', 'It can be, but only if brakes, wheels, and user control are reliable. Wet or icy surfaces increase risk.'],
-              ['How do I keep my walker from slipping in the rain?', 'Use good rubber tips, avoid smooth wet surfaces, and dry the walker tips when moving indoors.'],
-              ['Is it safe to walk in cold weather?', 'Yes, when paths are clear, clothing is warm, and fatigue or dizziness is not present.'],
-              ['Are four-wheel walkers safe in the wind?', 'They can be harder to control in strong wind. Avoid open areas and secure all bags or loose items.'],
+              ['Can I use a regular walker in the snow?', 'Standard walkers lack traction on ice. Adding snow treads or ice grips improves safety.'],
+              ['Is it better to walk in cold or warm weather?', 'Running generates more heat than walking, and so, unless you are sitting in a cozy, well-heated room or are well wrapped up in thick clothing, it is better to run and warm up rather than walk and lose heat to the colder surroundings in cold weather.'],
+              ['How do I keep my walker from slipping in the rain?', 'Ensure rubber tips are intact, walk slowly, and avoid smooth surfaces.'],
+              ['Is it safe to walk in cold weather?', "It's easy to lose motivation to exercise when it's cold outside. However, you can remain active and exercise safely, especially outdoors, during the winter. A general rule to follow when exercising in the cold is to work your way slowly into the exercises. Also, start with lower loads or intensity."],
+              ["What's the best walker for hot weather?", 'Look for models with ventilated handles and foam grips to prevent overheating.'],
+              ['Are four-wheel walkers safer in the wind?', 'Not necessarily—three-wheel models may be more stable due to their triangular base.'],
             ].map(([question, answer]) => (
               <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
                 <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary>
@@ -217,18 +276,20 @@ function WalkerWeatherSafetyDetail() {
             ))}
           </div>
 
+          {/* Section 4 - Final Thoughts */}
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-4">
             <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Weather shouldn't limit your mobility or independence—with the right strategies, you can use your walker safely in any condition. Equip it with weather-appropriate accessories like ice grips for winter or foam handles for summer, and adjust your walking technique for slippery or windy surfaces.</Paragraph>
             <Paragraph>Stay proactive by checking forecasts, maintaining your walker, and dressing appropriately. Small adjustments, like reflective gear for low visibility or a weighted base for stability, make a big difference in safety. By adapting to each season's challenges, you can stay confident and active year-round. Remember, your walker is a tool for freedom—use these tips to keep moving forward, no matter the weather.</Paragraph>
           </section>
 
+          {/* Section 5 - References */}
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-5">
             <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
-              <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://eatwalklearn.com/walking-in-the-rain-comfortably-and-safely/">Eatwalklearn.com. (2025). Walking In The Rain Comfortably And Safely.</a></li>
-              <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://www.ramblers.org.uk/go-walking-hub/summer-walking-5-ways-stay-safe-heat">The Ramblers. (n.d.). Summer walking - 5 ways to stay safe in the heat.</a></li>
-              <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://www.abc.net.au/news/2011-01-24/safety-tips-for-walking-in-the-heat/1917176">ABC News. (2011). 10 Safety Tips for Walking in the Heat.</a></li>
+              <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://eatwalklearn.com/walking-in-the-rain-comfortably-and-safely/" target="_blank" rel="noopener noreferrer">Eatwalklearn.com. (2025). Walking In The Rain Comfortably And Safely.</a></li>
+              <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://www.ramblers.org.uk/go-walking-hub/summer-walking" target="_blank" rel="noopener noreferrer">The Ramblers. (n.d.). Summer walking — 5 ways to stay safe in the heat.</a></li>
+              <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://abcnews.go.com/Health/Wellness/10-safety-tips-walking-heat/story?id=14056562" target="_blank" rel="noopener noreferrer">ABC News. (2011). 10 Safety Tips for Walking in the Heat.</a></li>
             </ol>
           </section>
 
