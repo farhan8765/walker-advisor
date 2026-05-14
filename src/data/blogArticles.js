@@ -180,16 +180,6 @@ export const articles = [
       'Struggling to find the right walker fit? Discover this easy step-by-step guide for seniors on choosing, adjusting, and maintaining walkers for maximum comfort, safety, and',
   },
   {
-    id: 19,
-    category: 'Comparison',
-    image: 'twa-fi.webp',
-    href: '/replacement-walker-hand-grips-for-all-sizes-at-walmart',
-    alt: 'Group of seniors outdoors with walkers and canes',
-    title: 'Replacement Walker Hand Grips for All Sizes at Walmart',
-    description:
-      'Find the right replacement walker hand grips at Walmart. Whether you need extra cushioning, a firmer grip, or a simple padded cover, Walmart carries options for every walker size.',
-  },
-  {
     id: 20,
     category: 'Informational',
     image: 'blog-27-1.webp',
