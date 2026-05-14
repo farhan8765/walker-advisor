@@ -7,111 +7,119 @@ import Newsletter from '../components/Newsletter';
 
 
 const toc = [
-  'The Purpose of Fitting a Walker Correctly',
-  'Types of Walkers Available',
-  'Step-by-Step Walker Fitting Guide',
-  'How to Adjust Walker Height',
+  'The Importance of Walker Fit',
+  'Types of Walkers for Seniors',
+  'Step-by-Step Guide to Fitting a Walker',
   'Common Mistakes to Avoid',
-  'Walker Maintenance Safety Checks',
+  'Maintenance Tips for Walkers',
+  'Walker Types vs. Best Fit Scenarios',
   'Frequently Asked Questions',
   'Final Thoughts',
-  'References',
+  'Reference',
 ];
 
 const walkerTypes = [
   {
-    title: 'Standard Walker (No Wheels)',
+    title: 'Standard Walker',
     image: 'twa-blog26-3-683x1024.webp',
     alt: 'Standard walker with no wheels on light gray background',
-    text: 'A standard walker has four rubber-tipped legs and no wheels. It must be lifted and placed forward with each step. This type offers maximum stability and is best for seniors who need strong support.',
+    text: 'Features four legs with rubber tips. It must be lifted slightly to move, providing maximum stability for seniors who move slowly or require strong balance support. Often recommended post-surgery when weight-bearing is limited.',
   },
   {
     title: 'Two-Wheel Walker',
     image: 'twablog26-4-683x1024.webp',
     alt: 'Two-wheel walker with front wheels and rubber back tips',
-    text: 'A two-wheel walker has front wheels that allow the walker to glide forward while the rear legs drag. It requires less lifting effort than a standard walker and suits seniors with moderate balance needs.',
+    text: 'Combines two front wheels with rubber tips at the back. It allows smoother forward motion without lifting, making it ideal for moderate mobility challenges.',
   },
   {
-    title: 'Rollator Walker (Four Wheels with Seat)',
+    title: 'Rollator (Four-Wheel Walker)',
     image: 'twablog26-5-683x1024.webp',
     alt: 'Blue rollator walker with seat, bag, and four wheels',
-    text: 'A rollator has four wheels, hand brakes, and a built-in seat. It rolls smoothly and allows for a more natural gait. The seat provides a rest option during longer walks.',
+    text: 'Includes four wheels, brakes, and often a built-in seat. Best for active seniors who want to walk longer distances with rest options.',
+    link: ['What options should I consider when buying a 4-wheel walker with seats?', 'https://darkcyan-lion-250828.hostingersite.com/best-4-wheel-walkers-with-seats/'],
   },
   {
-    title: 'Four-Wheel Walker (No Seat)',
+    title: 'Heavy-Duty / Bariatric Walker',
     image: 'twablog26-6-683x1024.webp',
-    alt: 'Dark graphite four-wheel walker without seat on gray background',
-    text: 'A four-wheel walker without a seat offers the smooth rolling of a rollator with a lighter, more compact frame. It suits active seniors who want easy movement without the bulk of a full rollator.',
+    alt: 'Heavy-duty walker on light background',
+    text: 'Designed for higher weight capacity, reinforced frames, and wider designs to enhance safety and comfort.',
   },
   {
-    title: 'Upright Walker',
-    image: 'twa-blog26-1-1.webp',
-    alt: 'Senior men using upright walkers with forearm support',
-    text: 'An upright walker supports the forearms rather than the wrists, encouraging an upright posture. It is especially helpful for seniors with back pain, hunched posture, or wrist weakness.',
+    title: 'Lightweight Folding Walker',
+    image: 'waaaaa-683x1024.webp',
+    alt: 'Lightweight folding walker on light background',
+    text: 'Portable and easy to store, perfect for seniors who travel or frequently move indoors and outdoors.',
+    link: ['What are the benefits of using a lightweight folding walker for seniors?', 'https://darkcyan-lion-250828.hostingersite.com/thewalkeradvisor-com-lightweight-folding-walker-benefits/'],
   },
 ];
 
 const fittingSteps = [
   {
     step: '1',
-    title: 'Stand upright inside the walker',
-    text: 'Stand tall with your shoulders relaxed and arms hanging naturally at your sides. Do not lean forward or slouch. The walker should surround you on three sides.',
+    title: 'Wear Everyday Shoes',
+    text: 'Adjust walkers while seniors are in their usual footwear to ensure correct height.',
   },
   {
     step: '2',
-    title: 'Check your elbow bend',
-    text: 'When your hands rest on the grips, your elbows should be bent at approximately 15 to 20 degrees. A slight bend allows the arms to absorb impact and support movement naturally.',
+    title: 'Stand Naturally',
+    text: 'Have the senior stand inside the walker with shoulders relaxed and arms resting naturally at their sides.',
   },
   {
     step: '3',
-    title: 'Align the handles with your wrist',
-    text: 'The top of the walker handle should line up with the crease of your wrist when your arms hang straight down. This is the most reliable measurement for correct height.',
+    title: 'Set Handle Height',
+    text: 'Handles should align with the wrist crease, allowing elbows to bend 15-20 degrees. This ensures comfort and reduces strain.',
   },
   {
     step: '4',
-    title: 'Adjust the height using the push-button pins',
-    text: 'Press the push-button adjustment pins on each leg and slide the leg up or down to the correct notch. Make sure both sides are set to the same height before walking.',
+    title: 'Check Posture',
+    text: 'Ask the senior to take a few steps. They should remain upright without leaning or overreaching.',
   },
   {
     step: '5',
-    title: 'Test the grip and stability',
-    text: 'Hold the grips firmly, take a few steps, and check that the walker moves smoothly without rocking. If it wobbles or feels uneven, recheck the leg settings.',
+    title: 'Test Walker Movement',
+    text: 'Standard walkers should lift easily; wheeled models should glide smoothly without resistance.',
+  },
+  {
+    step: '6',
+    title: 'Check Brakes (Rollators)',
+    text: 'Ensure brakes lock firmly, and the seat is stable for safe resting.',
+  },
+  {
+    step: '7',
+    title: 'Reevaluate Comfort',
+    text: 'Ask for feedback. Any stiffness or discomfort indicates a need for readjustment.',
   },
 ];
 
 const mistakes = [
-  ['Setting the walker too high', 'Forces the shoulders upward and creates neck and shoulder tension.'],
-  ['Setting the walker too low', 'Causes hunching, back strain, and reduced balance control.'],
-  ['Leaning too far forward', 'Shifts weight away from center and increases fall risk.'],
-  ['Using a walker sized for someone else', 'Fit varies by body height, arm length, and condition.'],
-  ['Skipping the safety pin check', 'Unsecured legs can slip under pressure during walking.'],
+  ['Incorrect Handle Height', 'Too high forces shoulder strain; too low causes hunching.'],
+  ['Skipping Shoe Adjustment', 'Height measurements are inaccurate without regular shoes.'],
+  ['Ignoring Feedback', 'Discomfort often signals poor fit.'],
+  ['Overlooking Home Environment', 'Walkers must navigate hallways and doorways safely.'],
+  ['Neglecting Brakes', 'Rollators with weak brakes are unsafe.'],
+  ['Not Reassessing', 'Seniors’ needs change over time; periodic adjustments are essential.'],
 ];
 
-const relatedArticles = [
-  {
-    image: 'twa-36-1-3.webp',
-    href: '/how-to-use-a-walker-with-wheels',
-    title: 'How To Use A Walker With Wheels',
-    description: 'A walker with wheels can greatly improve balance and mobility when used correctly.',
-  },
-  {
-    image: 'image-9-1.webp',
-    href: '/understanding-upright-walkers-how-they-improve-senior-posture',
-    title: 'Understanding Upright Walkers',
-    description: 'Learn how upright walkers promote better alignment, balance, and confidence.',
-  },
-  {
-    image: 'twa33-1.webp',
-    href: '/holiday-safety-tips-for-seniors-prevent-falls-fires-seasonal-risks',
-    title: 'Holiday Safety Tips for Seniors',
-    description: 'The holidays can hide serious dangers for seniors, from slippery floors to fire hazards.',
-  },
+const fitRows = [
+  ['Standard Walker', 'Severe balance issues, post-surgery recovery', 'Maximum stability & weight support'],
+  ['Two-Wheel Walker', 'Moderate mobility challenges', 'Easier forward movement without full lift'],
+  ['Four-Wheel Rollator', 'Active seniors needing mobility & rest', 'Seat, brakes, smooth movement'],
+  ['Bariatric Walker', 'Heavier individuals', 'Reinforced frame & higher weight capacity'],
+  ['Lightweight Folding Walker', 'Seniors who travel or need portability', 'Easy to fold, transport, and store'],
 ];
 
 
 
 function Paragraph({ children }) {
   return <p className="mt-3 font-manrope text-[10px] font-medium leading-[1.9] text-[#1f2930]">{children}</p>;
+}
+
+function ArticleLink({ children, href }) {
+  return (
+    <a className="font-black text-[#0b61a4] no-underline hover:underline" href={href} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}>
+      {children}
+    </a>
+  );
 }
 
 function SectionHeading({ children, id }) {
@@ -122,12 +130,24 @@ function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
 }
 
-function SocialDots() {
+function FitScenarioTable() {
+  const headers = ['Type of Walker', 'Best For', 'Key Benefit'];
   return (
-    <div className="mt-9 flex items-center justify-center gap-2" aria-label="Share article">
-      {['f', 'in', 'x'].map((item) => (
-        <a className="flex h-6 w-6 items-center justify-center rounded-full bg-black font-manrope text-[10px] font-black text-white no-underline" href={`#share-${item}`} key={item}>{item}</a>
-      ))}
+    <div className="mt-5 overflow-x-auto">
+      <div className="min-w-[620px] overflow-hidden rounded-[8px] border border-[#d8dde2] font-manrope text-[9px] font-medium text-[#1f2930]">
+        <div className="grid grid-cols-3 bg-[#ffc400]">
+          {headers.map((header, index) => (
+            <div className={`px-3 py-2 font-black text-black${index > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={header}>{header}</div>
+          ))}
+        </div>
+        {fitRows.map((row, rowIndex) => (
+          <div className={`grid grid-cols-3${rowIndex % 2 === 0 ? ' bg-white' : ' bg-[#f9f9f9]'}`} key={row[0]}>
+            {row.map((cell, cellIndex) => (
+              <div className={`border-t border-[#d8dde2] px-3 py-2${cellIndex > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={`${row[0]}-${cell}`}>{cell}</div>
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -166,18 +186,17 @@ function FittingWalkerDetail() {
 
           {/* Author */}
           <div className="mt-6 flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">AA</div>
-            <p className="font-manrope text-[12px] font-black text-black">Amir Abbasi</p>
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">RD</div>
+            <p className="font-manrope text-[12px] font-black text-black">Robin Dolan</p>
           </div>
 
           {/* Key Summary */}
           <section className="mt-5 rounded-[8px] bg-[#f3f3f3] p-5">
             <h2 className="text-[14px] font-black text-black">Key Summary</h2>
-            <Paragraph>A walker that is set to the wrong height or used incorrectly can cause back pain, poor posture, and increased fall risk. This guide walks through every step needed to fit a walker correctly, choose the right type, and keep it safe for daily use.</Paragraph>
+            <Paragraph>A well-fitted walker gives seniors the perfect balance of comfort, stability, and support, helping to lower the risk of falls. Selecting the right walker type, whether a standard walker, two-wheel model, or rollator, ensures daily movement is safe, comfortable, and energy-efficient. With proper fitting and regular maintenance, walkers enable seniors to stay mobile, active, and independent, enhancing both confidence and quality of life.</Paragraph>
           </section>
 
-          <Paragraph>Many seniors receive a walker without proper fitting instructions. A walker set too high forces the shoulders up and strains the neck. A walker set too low causes hunching and back pain. Neither extreme is safe.</Paragraph>
-          <Paragraph>Fitting a walker correctly takes only a few minutes and can dramatically improve comfort, posture, and confidence during every walk.</Paragraph>
+          <Paragraph>For many older adults, a walker is more than a mobility device, it is a lifeline for independence. Unfortunately, many caregivers overlook the critical factor of fit. Walkers that are too short force seniors to hunch forward, causing back strain and fatigue, while those set too high make seniors overreach, leaving them unstable and insecure with every step. The Walker Advisor emphasizes that a properly fitted walker aligns with a senior’s body, supports natural posture, and distributes weight evenly, ensuring every step is safe and controlled.</Paragraph>
 
           {/* TOC */}
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
@@ -192,20 +211,21 @@ function FittingWalkerDetail() {
           </nav>
 
           {/* Section 1 */}
-          <SectionHeading id="section-1">The Purpose of Fitting a Walker Correctly</SectionHeading>
-          <Paragraph>A properly fitted walker keeps the spine aligned, reduces joint strain, and allows the body to move with confidence. When the fit is off, the benefits of using a walker can quickly become drawbacks.</Paragraph>
-          <Paragraph>Correct fitting also helps caregivers understand what to look for when a senior seems uncomfortable, is walking with a stoop, or is gripping the handles too tightly.</Paragraph>
-          <BlogList>
-            <li>Maintains upright posture and reduces back strain.</li>
-            <li>Allows arms to bear weight naturally through the wrists.</li>
-            <li>Prevents overreaching or overcrowding the frame.</li>
-            <li>Reduces the chance of tripping over the walker legs.</li>
-            <li>Improves the confidence needed for daily walking.</li>
-          </BlogList>
+          <SectionHeading id="section-1">The Importance of Walker Fit</SectionHeading>
+          <Paragraph>In the world of mobility aids, there is no “one size fits all.” Seniors vary greatly in height, strength, and stability, making proper walker fitting crucial for safety and comfort. The <ArticleLink href="https://www.cdc.gov/falls/data-research/index.html">Centers for Disease Control and Prevention (CDC)</ArticleLink> reports millions of emergency visits each year from falls among older adults, and improper adjustment of walkers is a key contributing factor. A walker that doesn’t fit well can create instability, strain muscles, and reduce confidence in mobility.</Paragraph>
+          <Paragraph>Proper fitting also directly affects posture alignment. Seniors using a well-fitted walker can maintain an upright stance, distribute weight evenly, and walk without adding stress to the spine or shoulders. For seniors with <ArticleLink href="https://orthoinfo.aaos.org/en/recovery/how-to-use-crutches-canes-and-walkers/">chronic conditions</ArticleLink> like arthritis, osteoporosis, or post-surgery recovery, these adjustments are not just helpful, they are essential for safe walking.</Paragraph>
+          <Paragraph>Confidence is another important factor. Seniors who feel secure using their walker are more likely to engage in daily activities, attend social events, and maintain independence. Conversely, poorly fitted walkers can discourage consistent use, limiting mobility and reducing quality of life.</Paragraph>
+          <div className="mt-3 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
+            <img
+              className="mx-auto h-[240px] w-full object-contain p-3"
+              src={`${process.env.PUBLIC_URL}/images/twa-blog26-2-683x1024.webp`}
+              alt="Walker height fitting guide"
+            />
+          </div>
 
           {/* Section 2 */}
-          <SectionHeading id="section-2">Types of Walkers Available</SectionHeading>
-          <Paragraph>Each walker type fits differently and suits different levels of mobility. Choosing the correct type before adjusting the fit is an important first step.</Paragraph>
+          <SectionHeading id="section-2">Types of Walkers for Seniors</SectionHeading>
+          <Paragraph>Choosing the right walker is critical before focusing on fit. Each type serves different needs and mobility levels:</Paragraph>
           {walkerTypes.map((item) => (
             <section className="mt-5" key={item.title}>
               <h3 className="text-[13px] font-black text-black">{item.title}</h3>
@@ -216,13 +236,14 @@ function FittingWalkerDetail() {
                   alt={item.alt}
                 />
               </div>
-              <Paragraph>{item.text}</Paragraph>
+              <Paragraph>{item.text} {item.link ? <ArticleLink href={item.link[1]}>{item.link[0]}</ArticleLink> : null}</Paragraph>
             </section>
           ))}
+          <Paragraph>The WalkerAdvisor highlights that selecting the right walker type is just as important as fitting it correctly. Families should also consider reputable brands and read expert comparisons, such as <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/winlove-vs-drive-medical-comparison/">Winlove vs Drive Medical: Comparing Features, Price & Durability</ArticleLink>.</Paragraph>
 
           {/* Section 3 */}
-          <SectionHeading id="section-3">Step-by-Step Walker Fitting Guide</SectionHeading>
-          <Paragraph>Follow these steps in order for a safe and accurate fit. Have the senior wear the shoes they plan to walk in, since shoe thickness affects the correct measurement.</Paragraph>
+          <SectionHeading id="section-3">Step-by-Step Guide to Fitting a Walker</SectionHeading>
+          <Paragraph>Proper fitting ensures <ArticleLink href="https://orthoinfo.aaos.org/en/recovery/how-to-use-crutches-canes-and-walkers/">safety</ArticleLink>, comfort, and confidence. Follow these steps:</Paragraph>
           <div className="mt-4 space-y-3">
             {fittingSteps.map((item) => (
               <div className="rounded-[8px] border border-[#d8dde2] p-4" key={item.step}>
@@ -236,27 +257,11 @@ function FittingWalkerDetail() {
               </div>
             ))}
           </div>
+          <Paragraph>Seniors with balance issues can also explore <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-walkers-for-seniors-with-balance-problems-top-5/">Best Walkers for Seniors with Balance Problems</ArticleLink> for models optimized for stability.</Paragraph>
 
           {/* Section 4 */}
-          <SectionHeading id="section-4">How to Adjust Walker Height</SectionHeading>
-          <div className="mt-3 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
-            <img
-              className="mx-auto h-[220px] w-full object-contain p-3"
-              src={`${process.env.PUBLIC_URL}/images/twa-blog26-2-683x1024.webp`}
-              alt="Too-short walker vs correct walker height comparison"
-            />
-          </div>
-          <Paragraph>Most walkers use push-button height adjustment pins on each leg. To adjust, press the button firmly, slide the leg to the desired notch, and release. The button should snap into place with a click.</Paragraph>
-          <BlogList>
-            <li>Always adjust all four legs to the same height.</li>
-            <li>Press and hold the button fully before sliding the leg.</li>
-            <li>Check the pin is locked before putting weight on the walker.</li>
-            <li>Some walkers use twist-lock screws instead of pins, which need to be tightened by hand.</li>
-            <li>Re-check the height after every few weeks of regular use.</li>
-          </BlogList>
-
-          {/* Section 5 */}
-          <SectionHeading id="section-5">Common Mistakes to Avoid</SectionHeading>
+          <SectionHeading id="section-4">Common Mistakes to Avoid</SectionHeading>
+          <Paragraph>Even minor fitting errors can create hazards:</Paragraph>
           <div className="mt-5 grid grid-cols-2 border-y border-[#d8dde2] font-manrope text-[9px] text-[#1f2930]">
             <div className="px-3 py-3 font-black">Mistake</div>
             <div className="border-l border-[#d8dde2] px-3 py-3 font-black">Why It Matters</div>
@@ -267,28 +272,35 @@ function FittingWalkerDetail() {
               </div>
             ))}
           </div>
+          <Paragraph>By avoiding these mistakes, seniors can confidently use their walkers every day.</Paragraph>
+
+          {/* Section 5 */}
+          <SectionHeading id="section-5">Maintenance Tips for Walkers</SectionHeading>
+          <Paragraph>Maintenance extends usability and ensures safety:</Paragraph>
+          <BlogList>
+            <li><strong>Check Rubber Tips & Wheels:</strong> Replace worn tips; ensure wheels rotate smoothly.</li>
+            <li><strong>Test Brakes Regularly:</strong> Weak or sticking brakes must be repaired immediately.</li>
+            <li><strong>Tighten Screws & Joints:</strong> Loose parts cause instability.</li>
+            <li><strong>Clean Regularly:</strong> Dirt can block wheels; wipe with mild soap and water.</li>
+            <li><strong>Replace Worn Parts:</strong> Grips, wheels, or brakes should be replaced promptly.</li>
+            <li><strong>Store Safely:</strong> Keep indoors, dry, and away from moisture to prevent rust.</li>
+          </BlogList>
+          <Paragraph><ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/">The Walker Advisor</ArticleLink> recommends monthly inspections for optimal performance and safety.</Paragraph>
 
           {/* Section 6 */}
-          <SectionHeading id="section-6">Walker Maintenance Safety Checks</SectionHeading>
-          <Paragraph>A well-fitted walker is only safe if it is also well-maintained. Carry out these checks regularly to prevent unexpected failures during use.</Paragraph>
-          <BlogList>
-            <li>Inspect rubber tips on all legs for wear — replace when worn smooth.</li>
-            <li>Check that all push-button pins are snapping securely into place.</li>
-            <li>Examine the frame for cracks, bends, or loose joints.</li>
-            <li>For wheeled walkers, test that the wheels roll smoothly and do not wobble.</li>
-            <li>For rollators, check that the hand brakes engage and hold firmly.</li>
-            <li>Wipe down the grips and frame regularly to keep surfaces hygienic.</li>
-          </BlogList>
+          <SectionHeading id="section-6">Walker Types vs. Best Fit Scenarios</SectionHeading>
+          <FitScenarioTable />
 
           {/* Section 7 - FAQ */}
           <SectionHeading id="section-7">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
             {[
-              ['How do I know if my walker is the right height?', 'Stand upright in your walker. Your elbows should have a slight 15 to 20 degree bend when holding the grips. The grip top should align with your wrist crease when arms hang at your sides.'],
-              ['Can a walker that is too tall cause back pain?', 'Yes. A walker set too high forces the shoulders and arms upward, which creates tension in the upper back, neck, and shoulders during walking.'],
-              ['What type of walker is best for seniors with poor balance?', 'A standard four-leg walker without wheels provides the most stability. Rollators and two-wheel walkers are better for seniors with more mobility but less endurance.'],
-              ['How often should walker tips be replaced?', 'Replace rubber tips when they become worn smooth, cracked, or compressed. On average this is every 6 to 12 months depending on how often the walker is used.'],
-              ['Can I adjust my walker myself or do I need a professional?', 'Most walkers can be adjusted at home using the push-button pins. However, if you are unsure about the correct height, an occupational therapist or physiotherapist can help with proper fitting.'],
+              ['How do I know if my walker is the right height?', 'Handles should align with your wrist crease when standing upright.'],
+              ['Can one walker fit everyone?', 'No; walkers must be customized to height, weight, and mobility needs.'],
+              ['How do you properly size an elderly walker?', 'Stand inside the walker with arms relaxed; grips should line up with the inside wrist crease.'],
+              ['How often should I check my walker’s fit?', 'Every 6-12 months, or sooner if posture or comfort changes.'],
+              ['Is a rollator better than a standard walker?', 'It depends on needs, rollators for mobility and rest, standard walkers for maximum stability.'],
+              ['Where can I purchase reliable walkers?', <>Visit <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/where-to-buy-walkers-for-seniors-top-brands-reviews/">Where to Buy Walkers for Seniors</ArticleLink> and consult The Walker Advisor for trusted options.</>],
             ].map(([question, answer]) => (
               <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
                 <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary>
@@ -300,67 +312,21 @@ function FittingWalkerDetail() {
           {/* Final Thoughts */}
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
             <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
-            <Paragraph>Fitting a walker correctly is one of the most impactful things a senior or caregiver can do to improve daily safety and comfort. A few minutes of adjustment can prevent months of back pain, reduce fall risk, and make walking feel easier and more natural.</Paragraph>
-            <Paragraph>Whether the walker is brand new or has been in use for years, it is always worth checking the fit. Pair the right height with the right walker type, and mobility becomes far less of a struggle.</Paragraph>
+            <Paragraph>Walkers are more than mobility aids, they are confidence builders. Their effectiveness depends on correct fitting and consistent maintenance. A well-fitted walker feels like a natural extension of the body, making every step safer, smoother, and more comfortable. By choosing the right type, fitting it properly, avoiding common mistakes, and maintaining it regularly, seniors can enjoy the benefits of independence and stability.</Paragraph>
+            <Paragraph>For families seeking guidance, TheWalkerAdvisor provides expert advice and trusted reviews on the best walkers for seniors to ensure safety, comfort, and long-term usability.</Paragraph>
           </section>
 
           {/* References */}
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-9">
-            <ArticleIconHeading type="references">References</ArticleIconHeading>
+            <ArticleIconHeading type="references">Reference</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
-              <li>National Institute on Aging: Using Walkers Safely. https://www.nia.nih.gov</li>
-              <li>CDC: Older Adult Fall Prevention — Mobility Aids. https://www.cdc.gov/falls</li>
-              <li>American Physical Therapy Association: Walker Fitting Guidelines. https://www.apta.org</li>
-              <li>Mayo Clinic: Walker Use and Adjustment for Seniors. https://www.mayoclinic.org</li>
+              <li>Centers for Disease Control and Prevention (CDC) – Falls Among Older Adults <ArticleLink href="https://www.cdc.gov/falls/data-research/index.html">https://www.cdc.gov/falls/data-research/index.html</ArticleLink></li>
+              <li>National Institute on Aging – Falls and Fractures <ArticleLink href="https://www.nia.nih.gov/health/falls-and-falls-prevention/falls-and-fractures-older-adults-causes-and-prevention">https://www.nia.nih.gov/health/falls-and-falls-prevention/falls-and-fractures-older-adults-causes-and-prevention</ArticleLink></li>
+              <li>Mayo Clinic – Mobility Aids: Tips for Choosing <ArticleLink href="https://www.mayoclinic.org/healthy-lifestyle/healthy-aging/in-depth/walker/art-20546805">https://www.mayoclinic.org/healthy-lifestyle/healthy-aging/in-depth/walker/art-20546805</ArticleLink></li>
+              <li>American Academy of Orthopaedic Surgeons – How to Use a Walker Safely <ArticleLink href="https://orthoinfo.aaos.org/en/recovery/how-to-use-crutches-canes-and-walkers/">https://orthoinfo.aaos.org/en/recovery/how-to-use-crutches-canes-and-walkers/</ArticleLink></li>
             </ol>
           </section>
-
-          <SocialDots />
-
-          {/* Comments */}
-          <section className="mt-8 rounded-[10px] bg-white p-8 shadow-[0_14px_40px_rgba(0,0,0,0.05)]">
-            <h2 className="text-center text-[14px] font-black text-black">What do you think?</h2>
-            <div className="mt-6 border-b border-[#d8dde2] pb-6">
-              <p className="font-manrope text-[11px] font-black text-black">Robert M.</p>
-              <p className="mt-2 font-manrope text-[11px] font-medium leading-5 text-[#303a42]">I followed the wrist alignment tip and it completely fixed the back pain my father was having. Simple fix that made a huge difference.</p>
-              <button className="mt-2 rounded-full bg-[#07364f] px-4 py-1 font-manrope text-[10px] font-black text-white">Reply</button>
-            </div>
-            <form className="mt-6 space-y-4" action="#">
-              <label className="block">
-                <span className="font-manrope text-[11px] font-black text-black">Comment *</span>
-                <textarea className="mt-2 min-h-[100px] w-full rounded-[4px] border border-black px-3 py-2 font-manrope text-[12px] outline-none" />
-              </label>
-              <label className="block">
-                <span className="font-manrope text-[11px] font-black text-black">Name *</span>
-                <input className="mt-2 h-8 w-full rounded-[4px] border border-black px-3 font-manrope text-[12px] outline-none" />
-              </label>
-              <label className="block">
-                <span className="font-manrope text-[11px] font-black text-black">Email *</span>
-                <input className="mt-2 h-8 w-full rounded-[4px] border border-black px-3 font-manrope text-[12px] outline-none" type="email" />
-              </label>
-              <label className="flex items-center gap-2 font-manrope text-[10px] font-medium text-[#1f2930]">
-                <input type="checkbox" /> Save my name, email, and website in this browser for the next time I comment.
-              </label>
-              <button className="rounded-full bg-[#07364f] px-7 py-3 font-manrope text-[11px] font-black text-white" type="submit">Post Comment</button>
-            </form>
-          </section>
         </article>
-
-        {/* Related Articles */}
-        <section className="mx-auto mt-16 w-full">
-          <h2 className="font-manrope text-[13px] font-black text-black">Related Articles</h2>
-          <div className="mt-5 grid gap-6 md:grid-cols-3">
-            {relatedArticles.map((article) => (
-              <a className="overflow-hidden rounded-[8px] border border-[#d8dde2] bg-white no-underline" href={article.href} key={article.title}>
-                <img className="h-32 w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
-                <div className="p-4">
-                  <h3 className="text-[13px] font-black leading-tight text-[#172129]">{article.title}</h3>
-                  <p className="mt-2 font-manrope text-[10px] font-medium leading-5 text-[#303a42]">{article.description}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
       </main>
       <Newsletter />
       <Footer />
