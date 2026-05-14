@@ -4,52 +4,35 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
 
-
-
 const tableOfContents = [
   'Why Free Returns Matter',
-  'Method 1: Amazon Fresh and Whole Foods Drop-Offs',
+  'Method 1: Amazon Fresh and Whole Foods Drop-Off',
   "Method 2: Kohl's Drop-Off",
   'Method 3: UPS Store Drop-Off',
   'Method 4: Amazon Hub Locker Returns',
-  'Method 5: Amazon Pickup Location',
-  'How to Choose These Free Return Options',
+  'Method 5: Amazon Pickup Locations',
+  'How to Access These Free Return Options',
   'Important Tips for Smooth Returns',
   'When You Might Not Get Free Returns',
   'Frequently Asked Questions',
+  'Final Thoughts',
 ];
 
 const faqs = [
-  'Is every Amazon return free?',
-  'Do I always need original packaging for Amazon returns?',
-  'Can I return Amazon orders at Kohl\'s?',
-  'Do UPS Store Amazon returns require a box?',
-  'What should I do if no free return option appears?',
-  'How quickly will I get my refund after an Amazon return?',
+  ['Do I need to repack items in their original boxes for free returns?', 'No, most free return locations like Kohl’s, UPS stores, and Whole Foods will pack items for you, so you can bring them unboxed.'],
+  ['How long does it take to get my refund after dropping off a return?', 'Most refunds are processed within 2-3 business days after the return is received at Amazon’s facility, though it may take longer for the funds to appear in your account.'],
+  ['Can I return items without a printer if I don\'t have one?', 'Yes, all free return methods use QR codes that you can display on your smartphone, eliminating the need to print anything.'],
+  ['Are there limits on how many free returns I can make?', 'While Amazon doesn’t publicly state a limit, excessive returns may flag your account for review, so only return items when genuinely necessary.'],
+  ["Will I get the Kohl's coupon even for small Amazon returns?", 'Yes, Kohl’s typically provides a 25% off coupon for any Amazon return regardless of the item’s value, making it a popular choice.'],
+  ['What happens if I miss the return window deadline?', 'Contact Amazon customer service immediately, as they may extend the deadline on a case-by-case basis, especially for defective items or if there were extenuating circumstances.'],
 ];
-
-const relatedArticles = [
-  {
-    image: 'image-9-1.webp',
-    title: 'Exercise Programs for Elderly Adults',
-    description: "Most seniors don't realize they're missing these 4 essential exercises until mobility starts to decline.",
-  },
-  {
-    image: 'blog.webp',
-    title: 'Social Activities for Older Adults: The Best Ways to Stay Connected, Active, and Happy',
-    description: 'Loneliness in seniors is not just sad, it is as dangerous to health as smoking 15 cigarettes a day.',
-  },
-  {
-    image: 'image-2-1.webp',
-    title: 'Can Heart Issues Increase Fall Risk in Seniors?',
-    description: 'You might think falls are just about balance, but what if your heart is the real culprit?',
-  },
-];
-
-
 
 function SectionHeading({ children, id }) {
   return <h2 className="mt-9 text-[18px] font-black leading-tight text-black" id={id}>{children}</h2>;
+}
+
+function SubHeading({ children }) {
+  return <h3 className="mt-5 text-[14px] font-black text-black">{children}</h3>;
 }
 
 function Paragraph({ children }) {
@@ -60,42 +43,30 @@ function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">{children}</ul>;
 }
 
-function ReturnMethod({ id, title, children, image, imageAlt }) {
+function ReturnMethod({ id, title, bestFor, children, pros, cons, image, imageAlt }) {
   return (
     <section id={id}>
       <SectionHeading>{title}</SectionHeading>
+      <SubHeading>Best for: {bestFor}</SubHeading>
       {children}
+      <div className="mt-4 grid gap-4 border-y border-[#d8dde2] py-4 md:grid-cols-2">
+        <div>
+          <h4 className="font-manrope text-[11px] font-black text-black">Pros:</h4>
+          <Paragraph>{pros}</Paragraph>
+        </div>
+        <div>
+          <h4 className="font-manrope text-[11px] font-black text-black">Cons:</h4>
+          <Paragraph>{cons}</Paragraph>
+        </div>
+      </div>
       {image && (
         <div className="mt-5 rounded-[8px] bg-[#f3f3f3] px-5 py-4">
-          <img className="mx-auto h-[210px] w-auto max-w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/${image}`} alt={imageAlt} />
+          <img className="mx-auto h-[240px] w-auto max-w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/${image}`} alt={imageAlt} />
         </div>
       )}
     </section>
   );
 }
-
-function ProsCons({ pros, cons }) {
-  return (
-    <div className="mt-4 grid gap-4 border-y border-[#d8dde2] py-4 md:grid-cols-2">
-      <div>
-        <h4 className="font-manrope text-[11px] font-black text-black">Pros</h4>
-        <BlogList>{pros.map((item) => <li key={item}>{item}</li>)}</BlogList>
-      </div>
-      <div>
-        <h4 className="font-manrope text-[11px] font-black text-black">Cons</h4>
-        <BlogList>{cons.map((item) => <li key={item}>{item}</li>)}</BlogList>
-      </div>
-    </div>
-  );
-}
-
-function SocialDots() {
-  return <div className="mt-9 flex items-center justify-center gap-2" aria-label="Share article">{['f', 'in', 'x'].map((item) => <a className="flex h-6 w-6 items-center justify-center rounded-full bg-black font-manrope text-[10px] font-black text-white no-underline" href={`#share-${item}`} key={item}>{item}</a>)}</div>;
-}
-
-
-
-
 
 function AmazonReturnsDetail() {
   useEffect(() => {
@@ -111,111 +82,99 @@ function AmazonReturnsDetail() {
         <article className="blog-detail-article w-full">
           <header className="pt-9 text-center">
             <h1 className="mx-auto max-w-[560px] text-[25px] font-black leading-tight text-black md:text-[28px]">Every Way to Return Amazon Orders for Free: Your Complete Guide to Hassle-Free Returns</h1>
-            <p className="mx-auto mt-3 max-w-[600px] font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">Wondering how to return Amazon orders for free? Learn the simple options that save time, avoid surprise costs, and make returns easier.</p>
+            <p className="mx-auto mt-3 max-w-[600px] font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">Wondering how to return Amazon orders for free? Learn every hassle-free option, from Kohl’s to UPS and Amazon Lockers, step by step.</p>
             <img className="mt-5 h-auto w-full rounded-[8px] object-cover" src={`${process.env.PUBLIC_URL}/images/twainfo-1.webp`} alt="Amazon packages stacked near a front door" />
           </header>
 
-          <div className="mt-6 flex items-center gap-3"><div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">SA</div><p className="font-manrope text-[12px] font-black text-black">Syed Ali</p></div>
+          <div className="mt-6 flex items-center gap-3">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">SA</div>
+            <p className="font-manrope text-[12px] font-black text-black">Syed Ali</p>
+          </div>
 
           <section className="mt-5 rounded-[8px] bg-[#f3f3f3] p-5">
             <h2 className="text-[16px] font-black text-black">Key Summary</h2>
-            <Paragraph>Amazon offers several free return options, including no-box drop-offs at select stores, UPS Store returns, Amazon Hub Lockers, and Amazon Pickup Locations. The best choice depends on what Amazon shows for your order during the return process.</Paragraph>
+            <Paragraph>Amazon offers five completely free return methods including Kohl’s, UPS stores, Whole Foods, Amazon Lockers, and local pickup locations—all requiring no boxes or printed labels. Most returns can be processed with just a QR code on your smartphone, making the process quick and convenient. Understanding these options saves you money on return shipping and ensures a hassle-free experience when items don’t meet your expectations.</Paragraph>
           </section>
 
-          <Paragraph>Returning Amazon purchases should not feel complicated. In many cases, Amazon lets you return eligible items without printing a label, finding a box, or paying for postage.</Paragraph>
-          <Paragraph>The trick is knowing where to look in the return flow and choosing the free option that is most convenient for you.</Paragraph>
+          <Paragraph>You’ve just gotten an Amazon package, and something isn’t quite right — the device you ordered is smaller than you had anticipated, or your son’s tuba tutor fell short of expectations. Now you’re left to wonder if returning it will cost you almost as much as the price of the item — compounding your dud purchase with fresh hassles. The idea of scavenging for boxes, printing labels, schlepping to carriers and paying postage is exhausting. So many shoppers wind upwith things they didn’t want just because the return process seemed too complicated or expensive to handle.</Paragraph>
+          <Paragraph>Here’s the good news: Amazon provides five totally free return options that don’t require a box, printed label or payment. If you’ve ever dropped stuff at Kohl’s, and got a discount coupon! to 24/7 Amazon Lockers, there’s a convenient option close by for hassle-free returns in minutes with no box required, just scan a QR code on your phone. We’ll go over each and every free return option for when you want to shop with certainty.</Paragraph>
 
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
             <h2 className="bg-[#ffc400] px-5 py-3 text-[17px] font-black leading-none text-black">Table of Contents</h2>
-            <ol className="space-y-3 px-6 py-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">{tableOfContents.map((item, index) => <li key={item}><a className="text-[#1f2930] no-underline hover:text-black" href={`#section-${index + 1}`}>{index + 1}. {item}</a></li>)}</ol>
+            <ol className="space-y-3 px-6 py-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
+              {tableOfContents.map((item, index) => <li key={item}><a className="text-[#1f2930] no-underline hover:text-black" href={`#section-${index + 1}`}>{index + 1}. {item}</a></li>)}
+            </ol>
           </nav>
 
           <SectionHeading id="section-1">Why Free Returns Matter</SectionHeading>
-          <Paragraph>Free returns can save more than money. They reduce the frustration of finding shipping supplies, printing labels, and making extra trips.</Paragraph>
-          <Paragraph>For older adults, caregivers, and busy households, the easiest return is usually a nearby drop-off where the associate scans a QR code and handles the rest.</Paragraph>
+          <Paragraph>In 2024, return shipping costs can quickly add up, sometimes reaching $5-$15 per package. When you’re already disappointed with a purchase, paying to send it back feels like adding insult to injury. Fortunately, Amazon has built an extensive network of free return options that save you money while making the process incredibly convenient.</Paragraph>
 
-          <ReturnMethod id="section-2" title="Method 1: Amazon Fresh and Whole Foods Drop-Offs">
-            <Paragraph>Some Amazon returns can be dropped off at Amazon Fresh or Whole Foods Market locations. When this option is available, Amazon typically gives you a QR code to show at the counter.</Paragraph>
-            <ProsCons
-              pros={['Often no box or printed label is needed.', 'Convenient if you already shop at the store.']}
-              cons={['Availability depends on your location.', 'Not every item qualifies for this method.']}
-            />
+          <ReturnMethod id="section-2" title="Method 1: Amazon Fresh and Whole Foods Drop-Off" bestFor="Quick, no-packaging-required returns" pros="No need to print labels or find boxes, instant confirmation, often located in convenient shopping areas" cons="Limited to areas with these stores, requires a trip during business hours">
+            <Paragraph>If you live near an Amazon Fresh or Whole Foods store, this might be your easiest option. Simply bring your item (you don’t even need to box it up), scan the QR code from your Amazon returns page, and hand it to the customer service desk. The staff will handle everything else.</Paragraph>
           </ReturnMethod>
 
-          <ReturnMethod id="section-3" title="Method 2: Kohl's Drop-Off" image="twainfo-2-683x1024.webp" imageAlt="Customer returning an Amazon package at Kohl's">
-            <Paragraph>Kohl's is one of the most popular Amazon return locations because many eligible items can be returned without a shipping box or label.</Paragraph>
-            <Paragraph>Start the return in your Amazon account, choose the Kohl's option if it appears, and bring the item with the QR code Amazon provides.</Paragraph>
-            <ProsCons
-              pros={['No-box returns are often available.', 'Many Kohl\'s stores have dedicated Amazon return counters.']}
-              cons={['Some items still require packaging.', 'The nearest Kohl\'s may not appear for every order.']}
-            />
+          <ReturnMethod id="section-3" title="Method 2: Kohl's Drop-Off" bestFor="Returns while running other errands" pros="No box or label needed, bonus discount coupon, convenient locations, extended hours" cons="May require waiting in line during busy times" image="twainfo-2-683x1024.webp" imageAlt="Kohl's Drop-off">
+            <Paragraph>Kohl’s has partnered with Amazon to accept returns at all their stores nationwide. This option is incredibly popular because Kohl’s stores are widespread and often located in shopping centers you’re already visiting. Plus, Kohl’s gives you a 25% discount coupon for your trouble, making it a win-win situation.</Paragraph>
+            <Paragraph>The process is simple: generate your return QR code in the Amazon app or website, take your unboxed item to any Kohl’s store (usually to the customer service area), and they’ll pack and ship it for you at no charge.</Paragraph>
           </ReturnMethod>
 
-          <ReturnMethod id="section-4" title="Method 3: UPS Store Drop-Off" image="twainfo3-683x1024.webp" imageAlt="The UPS Store Amazon Returns location">
-            <Paragraph>The UPS Store is another common free option. Amazon may allow you to show a QR code and leave the item with a store associate.</Paragraph>
-            <Paragraph>Read the instructions carefully because some UPS options are free while others may charge for pickup, packing, or label printing.</Paragraph>
-            <ProsCons
-              pros={['Many locations are easy to find.', 'Good option for returns that need shipping support.']}
-              cons={['Home pickup is usually not free.', 'Packaging rules vary by return type.']}
-            />
+          <ReturnMethod id="section-4" title="Method 3: UPS Store Drop-Off" bestFor="Those near UPS locations without nearby Kohl’s or Whole Foods" pros="Extensive network of locations, no packaging required, professional handling" cons="UPS Store hours may be limited compared to retailers" image="twainfo3-683x1024.webp" imageAlt="UPS Store Drop-off">
+            <Paragraph>UPS has thousands of locations across the country, making this one of the most accessible options. Select the UPS drop-off option when initiating your return, receive a QR code, and bring your item to any participating UPS store. They’ll scan your code, print the label, and box it up if needed.</Paragraph>
           </ReturnMethod>
 
-          <ReturnMethod id="section-5" title="Method 4: Amazon Hub Locker Returns">
-            <Paragraph>Amazon Hub Lockers let you drop off some returns without waiting in a store line. You follow Amazon's return instructions, place the item in the assigned locker, and close the door.</Paragraph>
-            <ProsCons
-              pros={['Fast drop-off for small eligible items.', 'Useful when you want a contact-light option.']}
-              cons={['Locker space is limited.', 'Large items usually do not qualify.']}
-            />
+          <ReturnMethod id="section-5" title="Method 4: Amazon Hub Locker Returns" bestFor="24/7 convenience seekers" pros="Available 24/7, super quick process, growing number of locations" cons="Must fit in locker compartments, not all lockers accept returns">
+            <Paragraph>Amazon Lockers aren’t just for receiving packages, many locations also accept returns. If there’s a locker near your home, work, or gym, you can drop off returns any time of day or night. Select a locker location when processing your return, bring your item and QR code, and follow the on-screen instructions at the locker.</Paragraph>
           </ReturnMethod>
 
-          <ReturnMethod id="section-6" title="Method 5: Amazon Pickup Location">
-            <Paragraph>Some Amazon pickup counters also accept returns. These locations may be inside partner stores, campus areas, or Amazon-operated pickup points.</Paragraph>
-            <ProsCons
-              pros={['Can be simple if a pickup point is nearby.', 'Amazon instructions are usually clear in the app.']}
-              cons={['Not available in every ZIP code.', 'Hours may be more limited than a carrier store.']}
-            />
+          <ReturnMethod id="section-6" title="Method 5: Amazon Pickup Locations" bestFor="Those who prefer local businesses" pros="Available 24/7, super quick process, growing number of locations" cons="Must fit in locker compartments, not all lockers accept returns">
+            <Paragraph>Amazon partners with various local businesses, pharmacies, and convenience stores as pickup and drop-off points. These locations offer the same QR code drop-off service during their regular business hours.</Paragraph>
           </ReturnMethod>
 
-          <SectionHeading id="section-7">How to Choose These Free Return Options</SectionHeading>
+          <SectionHeading id="section-7">How to Access These Free Return Options</SectionHeading>
           <BlogList>
-            <li>Open Amazon and go to Your Orders.</li>
-            <li>Select the item, then choose Return or Replace Items.</li>
-            <li>Pick the reason for the return.</li>
-            <li>Review every return method before selecting one.</li>
-            <li>Choose the option that says free and matches your preferred location.</li>
+            <li>Log into your Amazon account and go to “Returns & Orders”</li>
+            <li>Select the item you want to return and choose your reason</li>
+            <li>Amazon will show you available free return options based on your location</li>
+            <li>Choose your preferred method and receive a QR code or label</li>
+            <li>Drop off your item at the selected location</li>
           </BlogList>
 
           <SectionHeading id="section-8">Important Tips for Smooth Returns</SectionHeading>
-          <Paragraph>Before leaving home, check the return instructions one more time. Amazon may tell you whether to bring the item boxed, unboxed, labeled, or only with a QR code.</Paragraph>
           <BlogList>
-            <li>Keep the item, accessories, tags, manuals, and packaging together when possible.</li>
-            <li>Take a photo of the item before dropping it off.</li>
-            <li>Save the return receipt until the refund arrives.</li>
-            <li>Return items before the deadline shown in your Amazon account.</li>
+            <li><strong>Check your return window:</strong> Most items qualify for returns within 30 days, but some categories have different policies. Holiday purchases often get extended return windows.</li>
+            <li><strong>Read the return eligibility:</strong> While most items qualify for free returns, some heavy or oversized items may still incur fees. Amazon clearly marks these before you complete your return.</li>
+            <li><strong>Keep your QR code handy:</strong> Save it to your phone or email for easy access at the drop-off location.</li>
+            <li><strong>Don’t pay for return shipping:</strong> If Amazon only offers paid return options but the item was defective or incorrect, contact customer service. They can often arrange a free pickup or provide a prepaid label.</li>
+            <li><strong>Return promptly:</strong> Once you initiate a return, you typically have a few days to drop off the item before the return window expires.</li>
           </BlogList>
 
           <SectionHeading id="section-9">When You Might Not Get Free Returns</SectionHeading>
-          <Paragraph>Free returns are common, but they are not guaranteed for every purchase. The cost can depend on the seller, item category, return reason, item condition, and return window.</Paragraph>
-          <Paragraph>If Amazon only shows paid options, compare the fee with the item value before deciding whether to send it back.</Paragraph>
+          <Paragraph>There are a few scenarios where free returns aren’t available:</Paragraph>
+          <BlogList>
+            <li>Items marked as non-returnable (clearly noted on product pages)</li>
+            <li>Purchases from third-party sellers who don’t offer free returns</li>
+            <li>Items outside the return window</li>
+            <li>Some oversized or heavy items with special handling requirements</li>
+          </BlogList>
+          <Paragraph>In these cases, Amazon will clearly show the return fee before you confirm your return, so you’re never surprised.</Paragraph>
 
           <SectionHeading id="section-10">Frequently Asked Questions</SectionHeading>
-          <div className="mt-4 space-y-2">{faqs.map((question) => <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}><summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary><p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">It depends on the exact item and return option Amazon displays. Always follow the instructions shown for that order before dropping it off.</p></details>)}</div>
+          <div className="mt-4 space-y-2">
+            {faqs.map(([question, answer]) => (
+              <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
+                <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary>
+                <p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">{answer}</p>
+              </details>
+            ))}
+          </div>
 
-          <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6">
+          <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-11">
             <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
-            <Paragraph>The easiest free Amazon return is the one Amazon offers directly inside your order. Look for no-box, no-label drop-offs first, choose the closest convenient location, and keep your receipt until the refund is complete.</Paragraph>
-          </section>
-
-          <SocialDots />
-
-          <section className="mt-8 rounded-[10px] bg-white p-8 shadow-[0_14px_40px_rgba(0,0,0,0.05)]">
-            <h2 className="text-center text-[14px] font-black text-black">What do you think?</h2>
-            <div className="mt-6 border-b border-[#d8dde2] pb-6"><p className="font-manrope text-[11px] font-black text-black">Dora Phelps</p><p className="mt-2 font-manrope text-[11px] font-medium leading-5 text-[#303a42]">Kohl's has been the easiest option for me. The QR code saves a lot of time.</p><button className="mt-2 rounded-full bg-[#07364f] px-4 py-1 font-manrope text-[10px] font-black text-white">Reply</button></div>
-            <form className="mt-6 space-y-4" action="#"><label className="block"><span className="font-manrope text-[11px] font-black text-black">Comment *</span><textarea className="mt-2 min-h-[100px] w-full rounded-[4px] border border-black px-3 py-2 font-manrope text-[12px] outline-none" /></label><label className="block"><span className="font-manrope text-[11px] font-black text-black">Name *</span><input className="mt-2 h-8 w-full rounded-[4px] border border-black px-3 font-manrope text-[12px] outline-none" /></label><label className="block"><span className="font-manrope text-[11px] font-black text-black">Email *</span><input className="mt-2 h-8 w-full rounded-[4px] border border-black px-3 font-manrope text-[12px] outline-none" type="email" /></label><label className="flex items-center gap-2 font-manrope text-[10px] font-medium text-[#1f2930]"><input type="checkbox" /> Save my name, email, and website in this browser for the next time I comment.</label><button className="rounded-full bg-[#07364f] px-7 py-3 font-manrope text-[11px] font-black text-white" type="submit">Post Comment</button></form>
+            <Paragraph>Navigating Amazon returns doesn’t have to be complicated or costly. With five convenient free return methods at your fingertips, you can shop with confidence knowing that if something doesn’t work out, sending it back won’t drain your wallet. Whether you prefer the 24/7 convenience of Amazon Lockers, the bonus perks at Kohl’s, or the quick drop-off at Whole Foods, there’s a solution that fits your lifestyle.</Paragraph>
+            <Paragraph>The key takeaway? Always check for the “Free returns” badge before purchasing, familiarize yourself with nearby drop-off locations, and don’t hesitate to reach out to Amazon’s customer service if you encounter any issues. They’re often willing to work with you to find a solution, especially for defective or incorrectly shipped items.</Paragraph>
+            <Paragraph>Remember, these free return options are designed to make your shopping experience seamless and risk-free. Take advantage of them, and never let the fear of return hassles stop you from trying something new. Happy shopping, and returning, with peace of mind!</Paragraph>
           </section>
         </article>
-
-        <section className="mx-auto mt-16 w-full"><h2 className="font-manrope text-[13px] font-black text-black">Related Articles</h2><div className="mt-5 grid gap-6 md:grid-cols-3">{relatedArticles.map((article) => <article className="overflow-hidden rounded-[8px] border border-[#d8dde2] bg-white" key={article.title}><img className="h-40 w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" /><div className="p-5"><h3 className="text-[17px] font-black leading-tight text-[#172129]">{article.title}</h3><p className="mt-3 font-manrope text-[12px] font-medium leading-6 text-[#303a42]">{article.description}</p></div></article>)}</div></section>
       </main>
       <Newsletter />
       <Footer />
