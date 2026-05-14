@@ -4,12 +4,10 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
 
-
-
 const toc = [
   'Best Wearable Devices for Walker Users',
   'How to Choose a Medical Alert System for Your Lifestyle',
-  'Tips for Emergency Preparedness',
+  'Tips on Emergency Preparedness',
   'At-a-Glance Comparison of Top Medical Alert Devices',
   'Frequently Asked Questions',
   'Final Thoughts',
@@ -17,17 +15,17 @@ const toc = [
 ];
 
 const comparisonRows = [
-  ['Medical Guardian MGMove', 'Premium', 'GPS, fall detection, two-way talk', 'Outdoor-active seniors'],
-  ['Lively Mobile Plus', 'Budget-friendly', 'GPS, health checks, 24/7 monitoring', 'Tech-wary seniors'],
-  ['Apple Watch SE/Series', 'Premium', 'Fall detection, emergency call, health apps', 'Tech-friendly users'],
-  ['Bay Alarm GPS', 'Cost-effective', 'GPS, 24/7 monitoring, caregiver app', 'Walkers with routines'],
-  ['MobileHelp Solo', 'Moderate', 'GPS, cellular, optional fall detection', 'Solo at-home/outdoor users'],
+  ['Medical Guardian Mini', 'Pendant', 'GPS, fall detection, two-way talk', 'Outdoor active users'],
+  ['Apple Watch Series 9', 'Smartwatch', 'SOS, health metrics, fall detection', 'Tech-savvy seniors'],
+  ['LifeFone At-Home Plus', 'Pendant + Base', 'Landline, waterproof, wall buttons', 'Indoor-only users'],
+  ['Bay Alarm Clip', 'Clip-on device', 'Voice assist, caregiver app, mobile GPS', 'Walkers with baskets/clips'],
+  ['MobileHelp Solo', 'Pendant/Watch', 'Mobile GPS, caregiver tracking, SOS', 'Mixed indoor/outdoor use'],
 ];
 
 const relatedArticles = [
   {
-    image: 'blog.webp',
-    href: '/articles',
+    image: 'twa-blog11-1024x683.webp',
+    href: '/social-activities-for-older-adults',
     title: 'Social Activities for Older Adults: The Best Ways to Stay Connected, Active, and Happy',
     description: 'Loneliness in seniors is not just sad, it can affect health and confidence. Here are practical ways to stay active and connected.',
   },
@@ -38,14 +36,12 @@ const relatedArticles = [
     description: 'You might think falls are just about balance, but heart health can play a major role in sudden falls.',
   },
   {
-    image: 'blog2.webp',
-    href: '/articles',
+    image: 'blogg.webp',
+    href: '/3-foods-seniors-should-avoid',
     title: '3 Foods for Seniors to Avoid',
     description: 'Your body after 70 changes in important ways. These common foods can make daily health harder to manage.',
   },
 ];
-
-
 
 function Paragraph({ children }) {
   return <p className="mt-3 font-manrope text-[10px] font-medium leading-[1.85] text-[#1f2930]">{children}</p>;
@@ -69,14 +65,10 @@ function SocialDots() {
   );
 }
 
-
-
-
-
 function EmergencyPreparednessDetail() {
   useEffect(() => {
     const previousTitle = document.title;
-    document.title = 'Emergency Preparedness for Walker Users: Top Medical Alert Devices & Smart Tech - The Walker Advisor';
+    document.title = 'Emergency Preparedness for Walker Users: Top Medical Alert Devices & Smart Tech | The Walker Advisor';
     return () => { document.title = previousTitle; };
   }, []);
 
@@ -89,7 +81,7 @@ function EmergencyPreparednessDetail() {
           {/* Header */}
           <header className="pt-8 text-center">
             <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">
-              Emergency Preparedness for Walker Users: Top Medical Alert Devices & Smart Tech
+              Emergency Preparedness for Walker Users: Top Medical Alert Devices &amp; Smart Tech
             </h1>
             <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">
               Stay safe and independent with cutting-edge alert systems, GPS trackers, and wearable tech designed specifically for walker users.
@@ -103,18 +95,19 @@ function EmergencyPreparednessDetail() {
 
           {/* Author */}
           <div className="mt-6 flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">AA</div>
-            <p className="font-manrope text-[12px] font-black text-black">Amir Abbasi</p>
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">SA</div>
+            <p className="font-manrope text-[12px] font-black text-black">Syed Ali</p>
           </div>
 
           {/* Key Summary */}
           <section className="mt-5 rounded-[8px] bg-[#f3f3f3] p-5">
             <h2 className="text-[14px] font-black text-black">Key Summary</h2>
-            <Paragraph>Medical alert devices, GPS trackers, and wearable smart tech can provide walker users with faster access to help during falls, dizziness, wandering, or sudden health changes. The best option depends on lifestyle, comfort with technology, monitoring needs, and whether the senior spends more time indoors or outdoors.</Paragraph>
+            <Paragraph>Users of walkers, especially the elderly and those with limited mobility, are more vulnerable in emergencies. Smart safety technology and medical alert systems provide peace of mind by making it possible to get assistance quickly, whether indoors or out. Learn the importance of these systems, examine the top wearable options, choose the best one, and get more emergency advice in this in-depth guide. This blog serves as a guide to safer, more self-assured mobility for both users and caregivers.</Paragraph>
           </section>
 
-          <Paragraph>For seniors using walkers, safety is about more than avoiding falls. It also means having a reliable way to call for help if something unexpected happens. A medical alert system can bridge the gap between independence and emergency response.</Paragraph>
-          <Paragraph>Today’s devices are smaller, smarter, and easier to wear than older emergency buttons. Many now include fall detection, GPS location sharing, caregiver alerts, and two-way communication.</Paragraph>
+          <Paragraph>For seniors using walkers, even a small fall can turn into a serious emergency, especially when alone. Every year, millions of older adults experience falls, and often, walkers are part of the story due to balance issues or tricky surroundings.</Paragraph>
+          <Paragraph>That&#8217;s where medical alert systems come in. With just the push of a button worn around the neck or wrist, help is on the way. No need to reach for a phone or call out for someone. This quick action can be life-saving during strokes, heart issues, or unexpected tumbles.</Paragraph>
+          <Paragraph>Today&#8217;s systems are smarter, too. Features like GPS, fall detection, and instant caregiver alerts mean you&#8217;re covered whether you&#8217;re at home or out on a walk. If you use a heavy-duty walker or rollator, this extra layer of safety is more than peace of mind; it&#8217;s essential.</Paragraph>
 
           {/* TOC */}
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
@@ -129,70 +122,78 @@ function EmergencyPreparednessDetail() {
           </nav>
 
           <SectionHeading id="section-1">Best Wearable Devices for Walker Users</SectionHeading>
-          <Paragraph>There are several reliable wearable options for walker users. The right one should be easy to reach, comfortable to wear, and simple enough to use during a stressful moment.</Paragraph>
+          <Paragraph>These days, medical alert devices are not large, hospital-style devices. Contemporary options are stylish, wearable, and feature-rich, making them ideal for people who use walkers. Emergency situations present special difficulties for elderly people and those who use walkers. According to recent data, nearly 3.5 million older adults in the United States needed ER treatment for fall-related injuries in <a className="text-[#2361a1]" href="https://injuryfacts.nsc.org/home-and-community/safety-topics/older-adult-falls/" target="_blank" rel="noopener noreferrer">2023</a>, and 41,400 of them died as a result of avoidable falls.</Paragraph>
+          <Paragraph>Here&#8217;s a breakdown of the most popular wearable types:</Paragraph>
 
           <h3 className="mt-5 text-[12px] font-black text-black">1. Smartwatches</h3>
-          <Paragraph>Smartwatches are popular because they combine emergency calling, health tracking, and location sharing in one device. Many models include fall detection and can contact emergency services or caregivers directly.</Paragraph>
+          <Paragraph>Health tracking, fall detection, and emergency SOS functions are available on smartwatches such as the Samsung Galaxy Watch and Apple Watch Series 9. Seniors who are tech-savvy or who already own smartphones will love these.</Paragraph>
           <BlogList>
-            <li>Emergency SOS and two-way communication</li>
-            <li>Heart rate, movement, and activity tracking</li>
-            <li>GPS location sharing for outdoor walks</li>
+            <li><b>Advantages:</b> Stylish, multipurpose, with health monitoring and GPS</li>
+            <li><b>Cons:</b> Needs charging, and some seniors may find it complicated.</li>
           </BlogList>
+          <Paragraph>According to <a className="text-[#2361a1]" href="https://www.thieme-connect.com/products/ejournals/pdf/10.3766/jaaa.19056.pdf" target="_blank" rel="noopener noreferrer">recent research</a>, smartwatch-based fall detection systems are accurate; in lab tests, some of these systems have a sensitivity of over 96%.</Paragraph>
           <div className="mt-4 rounded-[8px] bg-[#f3f3f3] py-4">
             <img className="mx-auto h-[170px] w-auto rounded-[4px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa-26-2.webp`} alt="Smartwatch worn by a walker user" />
           </div>
 
           <h3 className="mt-5 text-[12px] font-black text-black">2. Medical Alert Pendants</h3>
-          <Paragraph>Pendants are simple, familiar, and easy for many seniors to understand. They usually connect to a monitoring center and can be worn around the neck or wrist.</Paragraph>
+          <Paragraph>Classic yet powerful, pendants such as those from Medical Guardian or LifeFone offer a simple press-and-call system, and many models now include automatic fall detection.</Paragraph>
           <BlogList>
-            <li>Ideal for home use and seniors who prefer simple devices</li>
-            <li>Large button for quick help during a fall</li>
-            <li>Some models include automatic fall detection</li>
+            <li><b>Pros:</b> Easy to use, discreet, long battery life</li>
+            <li><b>Cons:</b> Less tech-savvy features, may require a base station</li>
           </BlogList>
+          <Paragraph><a className="text-[#2361a1]" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4662041/" target="_blank" rel="noopener noreferrer">Wearable sensors</a> embedded in pendants have demonstrated up to 94% real-world fall recognition accuracy under clinical settings, though false alerts remain a challenge</Paragraph>
           <div className="mt-4 rounded-[8px] bg-[#f3f3f3] py-4">
             <img className="mx-auto h-[140px] w-auto rounded-[4px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa-26-3-768x403.webp`} alt="Medical alert button worn on the wrist" />
           </div>
 
           <h3 className="mt-5 text-[12px] font-black text-black">3. Wristband or Clip-On Devices</h3>
-          <Paragraph>Some walker users prefer wristbands, clip-on buttons, or small devices that attach to clothing or a walker bag. These can be easier for seniors who dislike necklaces or watches.</Paragraph>
+          <Paragraph>Devices that clip onto belts or walkers, such as the Bay Alarm Medical In-Home System, are small and easy to use. People with cognitive impairments also like wearing wristbands.</Paragraph>
+          <BlogList>
+            <li><b>Advantages:</b> Non-intrusive and frequently waterproof</li>
+            <li><b>Cons:</b> Few intelligent features</li>
+          </BlogList>
+          <Paragraph>GPS-enabled <a className="text-[#2361a1]" href="https://www.alert-1.com/content/gps-medical-alert-systems/1346" target="_blank" rel="noopener noreferrer">mobile medical alert systems</a> improve assistance response by allowing emergency personnel and caregivers to locate a user even when they are outside.</Paragraph>
           <div className="mt-4 rounded-[8px] bg-[#f3f3f3] py-4">
             <img className="mx-auto h-[140px] w-auto rounded-[4px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa-26-4.webp`} alt="Fitness style wristband with emergency features" />
           </div>
-          <Paragraph>If your senior forgets wearable devices, attach a backup alert button to the walker basket or frame. This should never replace a wearable device, but it can add another layer of safety.</Paragraph>
+          <Paragraph>Many of these systems integrate seamlessly with daily walker use. For individuals relying on rollators for balance, like those featured in our post on <a className="text-[#2361a1]" href="https://darkcyan-lion-250828.hostingersite.com/best-rollator-for-balance-problems-top-5-reliable-options/" target="_blank" rel="noopener noreferrer">Best Rollator for Balance Problems,</a> lightweight and wrist-based devices can ensure the alert button is always accessible without interfering with mobility aid usage.</Paragraph>
 
           <SectionHeading id="section-2">How to Choose a Medical Alert System for Your Lifestyle</SectionHeading>
-          <Paragraph>Before buying, compare systems using practical daily needs, not just feature lists. The best device is the one a senior will actually wear and keep charged.</Paragraph>
+          <Paragraph>Selecting the right alert system depends on your mobility patterns, tech preferences, and emergency risk factors. Consider the following when choosing:</Paragraph>
           <h3 className="mt-4 text-[12px] font-black text-black">1. Indoor vs. Outdoor Use</h3>
           <BlogList>
-            <li>If the senior stays mostly at home, an in-home monitored system with a base station may be enough.</li>
-            <li>If they walk outside, shop, or visit neighbors, choose GPS and cellular coverage.</li>
+            <li>If you&#8217;re mostly at home, a landline-connected system with a wall button (like Philips Lifeline) may suffice.</li>
+            <li>For active seniors who use walkers outside, GPS-enabled smart systems (like MobileHelp) are ideal.</li>
           </BlogList>
           <h3 className="mt-4 text-[12px] font-black text-black">2. Device Comfort and Accessibility</h3>
           <BlogList>
-            <li>Make sure buttons are large, visible, and easy to press.</li>
-            <li>Choose a style the senior is willing to wear every day.</li>
+            <li>For those using upright walkers with limited hand freedom, wearable devices should be light and wrist-mounted or voice-activated.</li>
+            <li>See our guide on <a className="text-[#2361a1]" href="https://darkcyan-lion-250828.hostingersite.com/5-best-upright-walkers-for-seniors-find-the-right-one/" target="_blank" rel="noopener noreferrer">5 Best Upright Walkers for Seniors</a> for options compatible with alert devices.</li>
           </BlogList>
-          <h3 className="mt-4 text-[12px] font-black text-black">3. Monitoring and Subscription Fees</h3>
+          <h3 className="mt-4 text-[12px] font-black text-black">3. Monitoring &amp; Subscription Fees</h3>
           <BlogList>
-            <li>Some systems charge monthly monitoring fees, while others only call family contacts.</li>
-            <li>Compare setup fees, cancellation rules, fall detection add-ons, and device replacement costs.</li>
+            <li>Some systems charge monthly; others are one-time purchases.</li>
+            <li>Look for 24/7 monitoring and features like two-way voice, caregiver apps, and automatic alerts.</li>
           </BlogList>
           <h3 className="mt-4 text-[12px] font-black text-black">4. Compatibility with Medical Needs</h3>
           <BlogList>
-            <li>For seniors with heart issues, choose a device that supports heart rate alerts or fast emergency calling.</li>
-            <li>For memory concerns, GPS location sharing and caregiver notifications can be especially useful.</li>
+            <li>If you&#8217;re a fall risk or have a chronic condition, ensure the system offers fall detection, heart rate monitoring, or medication reminders.</li>
           </BlogList>
+          <Paragraph>This is particularly important when selecting a walker, as explained in <a className="text-[#2361a1]" href="https://darkcyan-lion-250828.hostingersite.com/caregivers-guide-to-senior-walker-selection-and-usage/" target="_blank" rel="noopener noreferrer">How Caregivers Can Assist Seniors in Choosing and Using Walkers</a>. A smart medical device can enhance both the walker&#8217;s and the user&#8217;s effectiveness during daily mobility.</Paragraph>
 
-          <SectionHeading id="section-3">Tips for Emergency Preparedness</SectionHeading>
-          <Paragraph>Preparedness works best when the device is part of a simple routine. Use these steps to make emergency support easier for the senior and caregiver.</Paragraph>
+          <SectionHeading id="section-3">Tips on Emergency Preparedness</SectionHeading>
+          <Paragraph>Preparation goes beyond smart devices and includes consistent safety planning and lifestyle adjustments. Important advice for walker users and caregivers is as follows:</Paragraph>
           <BlogList>
-            <li>Keep the device charged and place the charger somewhere visible.</li>
-            <li>Test the alert button monthly so the senior feels confident using it.</li>
-            <li>Store emergency contacts in the device app and update them when needed.</li>
-            <li>Keep a written medication list, allergy list, and doctor information in the walker bag.</li>
-            <li>Use night lights and clear walking paths so the senior can reach the walker safely.</li>
-            <li>Share walking routines with caregivers so unusual delays are noticed quickly.</li>
+            <li>Install grab bars in restrooms and stairwells to reduce the chance of falls.</li>
+            <li>Keep essentials like water, a phone charger, and a flashlight in the walker baskets.</li>
+            <li>Enroll in a local emergency alert program, like FEMA&#8217;s Integrated Public Alert &amp; Warning System.</li>
+            <li>Practice &#8220;emergency drills&#8221; to make sure users are aware of what to do in case of an incident or fall.</li>
+            <li>Update the emergency contact details on all smart devices and walkers.</li>
+            <li>Keep the medical ID tag on the walker laminated.</li>
+            <li>Know how to switch to lighter walkers or quad canes if evacuation is needed, as described in <a className="text-[#2361a1]" href="https://darkcyan-lion-250828.hostingersite.com/types-of-medical-walkers-and-rollators-a-comprehensive-guide/" target="_blank" rel="noopener noreferrer">Types of Medical Walkers and Rollators</a></li>
           </BlogList>
+          <Paragraph>For those who rely on walkers covered through Medicare, understanding the insurance coverage can also help in selecting appropriate emergency equipment. See: <a className="text-[#2361a1]" href="https://darkcyan-lion-250828.hostingersite.com/does-medicare-pay-for-walkers-for-seniors/" target="_blank" rel="noopener noreferrer">Does Medicare Pay for Walkers for Seniors?</a></Paragraph>
 
           <SectionHeading id="section-4">At-a-Glance Comparison of Top Medical Alert Devices</SectionHeading>
           <div className="mt-4 overflow-hidden rounded-[6px] border border-[#d8dde2]">
@@ -213,11 +214,11 @@ function EmergencyPreparednessDetail() {
           <SectionHeading id="section-5">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
             {[
-              ['What is the best medical alert device for a senior who uses a walker?', 'For home use, a PERS pendant with fall detection is the most reliable option. For seniors who walk outdoors frequently, a GPS-enabled smartwatch or wearable tracker adds location safety.'],
-              ['Does fall detection work reliably?', 'Fall detection has improved significantly but is not 100% accurate. It may occasionally miss very slow falls or produce false alerts from sudden movements like sitting down hard. It is best used as a backup to a manual button.'],
-              ['How much do medical alert systems cost?', 'Basic PERS systems start at around $20 to $30 per month. GPS-enabled and smartwatch options typically range from $40 to $60 per month, plus the cost of the device hardware.'],
-              ['Can a GPS tracker be attached to a walker?', 'Yes. Small GPS trackers like the Jiobit can be clipped to a walker bag or frame. This allows the tracker to travel with the senior even if they are not wearing it.'],
-              ['What should a senior do if their alert device battery dies during a walk?', "Always carry a charged mobile phone as a backup. A written emergency card in the walker bag or pocket ensures first responders have key information even without a working device."],
+              ['Do medical alert devices work outdoors?', 'Yes, many modern devices like MobileHelp and Apple Watch Series 9 have built-in GPS and cellular functionality, allowing them to work anywhere with coverage.'],
+              ['Can walkers carry emergency devices?', 'Yes, many walkers, especially rollators with baskets or pouches, can carry clip-on or pendant-style alert devices.'],
+              ['What if a senior forgets to wear their alert device?', 'Some systems offer auto-activation features or can be worn 24/7, including during showers. Others allow caregivers to receive inactivity alerts.'],
+              ['Are fall detection devices accurate?', 'While not perfect, fall detection has improved with AI-powered sensors and can detect most sudden movements. Look for models with high user ratings and FDA clearance.'],
+              ['How do caregivers monitor walker users remotely?', 'Many systems offer caregiver apps, allowing real-time tracking, emergency alerts, and health data sharing, especially valuable for long-distance families.'],
             ].map(([question, answer]) => (
               <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
                 <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary>
@@ -229,19 +230,19 @@ function EmergencyPreparednessDetail() {
           {/* Final Thoughts */}
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-6">
             <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
-            <Paragraph>Emergency preparedness is one of the most valuable investments a senior or caregiver can make. A single well-chosen medical alert device, combined with a clear emergency plan, can dramatically reduce the risk of a fall turning into a prolonged injury.</Paragraph>
-            <Paragraph>Start with one reliable device that the senior will actually wear consistently, build a simple emergency plan around it, and test it regularly. Technology is most effective when it becomes a trusted habit rather than an afterthought.</Paragraph>
+            <Paragraph>Being empowered is another facet of emergency preparedness, in addition to being equipped. For walkers, especially older adults with strength or balance problems, medical alert systems are a lifeline that can mean the difference between safety and disaster. With options to fit every lifestyle, whether you&#8217;re at home or taking a walk in the park, there&#8217;s no reason to go unprotected.</Paragraph>
+            <Paragraph>As your mobility changes, so should your support systems. Combining modern smart technology with your walker and following common sense safety precautions can help you or your loved one regain confidence, reduce anxiety, and move through life more freely. Are you ready to always feel safer? Choose the best system for your needs and start preparing now.</Paragraph>
           </section>
 
           {/* References */}
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-7">
             <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
-              <li>Real-World Accuracy and Use of a Wearable Fall Detection Device by Older Adults. https://pmc.ncbi.nlm.nih.gov/articles/PMC4662041/</li>
-              <li>Preliminary Examination of the Accuracy of a Fall Detection Device Embedded into Hearing Instruments. https://www.tinnitus-connect.com/products/journals/pdf/10.3766/jaaa19056.pdf</li>
-              <li>GPS Technology in Medical Alert Devices. https://www.alert-1.com/content/gps-medical-alert-systems/1346</li>
-              <li>Apple. Fall Detection on Apple Watch. https://support.apple.com/en-us/HT208944</li>
-              <li>Older Adult Falls. https://injuryfacts.nsc.org/home-and-community/safety-topics/older-adult-falls/</li>
+              <li>Real-World Accuracy and Use of a Wearable Fall Detection Device by Older Adults. <a className="text-[#2361a1]" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4662041/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC4662041/</a></li>
+              <li>Preliminary Examination of the Accuracy of a Fall Detection Device Embedded into Hearing Instruments. <a className="text-[#2361a1]" href="https://www.thieme-connect.com/products/ejournals/pdf/10.3766/jaaa.19056.pdf" target="_blank" rel="noopener noreferrer">https://www.thieme-connect.com/products/ejournals/pdf/10.3766/jaaa.19056.pdf</a></li>
+              <li>GPS Technology in Medical Alert Devices. <a className="text-[#2361a1]" href="https://www.alert-1.com/content/gps-medical-alert-systems/1346" target="_blank" rel="noopener noreferrer">https://www.alert-1.com/content/gps-medical-alert-systems/1346</a></li>
+              <li>Apple. <em>Fall Detection on Apple Watch</em>. <a className="text-[#2361a1]" href="https://support.apple.com/en-us/HT208944" target="_blank" rel="noopener noreferrer">https://support.apple.com/en-us/HT208944</a></li>
+              <li>Older Adult Falls. <a className="text-[#2361a1]" href="https://injuryfacts.nsc.org/home-and-community/safety-topics/older-adult-falls/" target="_blank" rel="noopener noreferrer">https://injuryfacts.nsc.org/home-and-community/safety-topics/older-adult-falls/</a></li>
             </ol>
           </section>
 
@@ -250,11 +251,6 @@ function EmergencyPreparednessDetail() {
           {/* Comments */}
           <section className="mt-8 rounded-[10px] bg-white p-8 shadow-[0_14px_40px_rgba(0,0,0,0.05)]">
             <h2 className="text-center text-[14px] font-black text-black">What do you think?</h2>
-            <div className="mt-6 border-b border-[#d8dde2] pb-6">
-              <p className="font-manrope text-[11px] font-black text-black">James R.</p>
-              <p className="mt-2 font-manrope text-[11px] font-medium leading-5 text-[#303a42]">We got the Medical Guardian watch for my dad and it gave our whole family peace of mind. He had a minor fall last month and the alert worked perfectly. Highly recommend.</p>
-              <button className="mt-2 rounded-full bg-[#07364f] px-4 py-1 font-manrope text-[10px] font-black text-white">Reply</button>
-            </div>
             <form className="mt-6 space-y-4" action="#">
               <label className="block">
                 <span className="font-manrope text-[11px] font-black text-black">Comment *</span>
