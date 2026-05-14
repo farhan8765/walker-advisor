@@ -18,16 +18,16 @@ const toc = [
 ];
 
 const heightRows = [
-  ['4\'10"-5\'0"', '30-32 inches'],
-  ['5\'1"-5\'4"', '32-34 inches'],
-  ['5\'5"-5\'8"', '34-36 inches'],
-  ['5\'9"-6\'2"', '36-39 inches'],
+  ["4'6–5'1\"", '28–31 inches'],
+  ["5'2–5'7\"", '32–35 inches'],
+  ["5'8–6'1\"", '36–39 inches'],
+  ["6'2–6'6\"", '40–43 inches'],
 ];
 
 const relatedArticles = [
   {
-    image: 'blog.webp',
-    href: '/articles',
+    image: 'twa-blog11-1024x683.webp',
+    href: '/social-activities-for-older-adults',
     title: 'Social Activities for Older Adults: The Best Ways to Stay Connected, Active, and Happy',
     description: 'Loneliness in seniors is not just sad, it can affect health and confidence. Here are practical ways to stay connected.',
   },
@@ -38,8 +38,8 @@ const relatedArticles = [
     description: 'You might think falls are just about balance, but heart health can play a major role in sudden falls.',
   },
   {
-    image: 'blog2.webp',
-    href: '/articles',
+    image: 'blogg.webp',
+    href: '/3-foods-seniors-should-avoid',
     title: '3 Foods for Seniors to Avoid',
     description: 'Your body after 70 changes in important ways. These common foods can make daily health harder to manage.',
   },
@@ -55,10 +55,6 @@ function SectionHeading({ children, id }) {
   return <h2 className="mt-8 text-[15px] font-black leading-tight text-black" id={id}>{children}</h2>;
 }
 
-function BlogList({ children }) {
-  return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
-}
-
 function SocialDots() {
   return (
     <div className="mt-9 flex items-center justify-center gap-2" aria-label="Share article">
@@ -71,12 +67,10 @@ function SocialDots() {
 
 
 
-
-
 function AdjustWalkerHeightDetail() {
   useEffect(() => {
     const previousTitle = document.title;
-    document.title = 'How to Adjust a Walker to the Correct Height: A Safety Checklist - The Walker Advisor';
+    document.title = 'How to Adjust a Walker to the Correct Height: A Safety Checklist | The Walker Advisor';
     return () => { document.title = previousTitle; };
   }, []);
 
@@ -92,7 +86,7 @@ function AdjustWalkerHeightDetail() {
               How to Adjust a Walker to the Correct Height: A Safety Checklist
             </h1>
             <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">
-              The right walker height is not just about comfort — it is your first step toward safer, steadier movement every single day.
+              The right walker height isn't just comfort; it's your first step toward safer, steadier movement.
             </p>
             <img
               className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover"
@@ -110,11 +104,10 @@ function AdjustWalkerHeightDetail() {
           {/* Key Summary */}
           <section className="mt-5 rounded-[8px] bg-[#f3f3f3] p-5">
             <h2 className="text-[14px] font-black text-black">Key Summary</h2>
-            <Paragraph>Finding the right height for your walker might not feel urgent at first, but it has a direct effect on posture, balance, and daily comfort. A walker that is too high can strain the shoulders, while a walker that is too low can cause bending, back pain, and unsafe walking habits.</Paragraph>
+            <Paragraph>Getting the height of your walker right isn't just about comfort; it's crucial for your posture, safety, and ability to walk independently. A walker set too high or too low can lead to slouching, fatigue, poor balance, and even dangerous falls. This guide provides a detailed, expert-backed checklist to help you measure and adjust your walker height, avoid common mistakes, and know when to seek professional assistance. We've also included a helpful table, image suggestions, and expert tips on walker safety and usage.</Paragraph>
           </section>
 
-          <Paragraph>A properly adjusted height is one of the easiest ways to make walker use safer. When the handles sit at the right level, your arms can support your weight naturally, your shoulders stay relaxed, and your steps feel more controlled.</Paragraph>
-          <Paragraph>This guide walks through simple measurement steps, common mistakes, and when to ask a professional for help so the walker supports the body instead of working against it.</Paragraph>
+          <Paragraph>A proper walker height is essential for preserving good posture and preventing falls. Users frequently hunch forward when a walker is set too low, which can put strain on the neck and back over time. However, users may elevate their shoulders unnaturally if it is set too high, which can cause instability and discomfort. A natural arm position with a small elbow bend is ensured by proper height alignment, which improves walking stability. This is particularly crucial for people who need better posture control and depend on heavier models, like bariatric or <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/best-heavy-duty-walkers-for-seniors/" target="_blank" rel="noopener noreferrer">heavy-duty walkers for seniors.</a> Only when the walker is properly adjusted can it become an efficient extension of your body, lowering your need for upper-body strength and promoting a more fluid gait. It's also a crucial safety component, particularly in light of the various <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/important-safety-features-walkers-for-seniors/" target="_blank" rel="noopener noreferrer">safety features that senior walkers usually have</a>, which only work at their best when the walker is fitted correctly.</Paragraph>
 
           {/* TOC */}
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
@@ -130,49 +123,49 @@ function AdjustWalkerHeightDetail() {
 
           <SectionHeading id="section-1">Easy Ways to Determine and Modify Your Walker Height</SectionHeading>
           <h3 className="mt-4 text-[12px] font-black text-black">Step 1: Put on Your Regular Shoes</h3>
-          <Paragraph>Always use the shoes you normally wear while walking. Shoe sole thickness changes your body height and can make the walker too high or too low if you measure barefoot or in slippers.</Paragraph>
-          <h3 className="mt-4 text-[12px] font-black text-black">Step 2: Take a Straight stance and relax your arms</h3>
-          <Paragraph>Stand as tall as you comfortably can, with your shoulders relaxed and your arms hanging naturally at your sides. Avoid leaning into the walker while you measure.</Paragraph>
+          <Paragraph>Always start the adjustment process in your normal walking shoes. The additional height provided by footwear, whether it be orthopedic, non-slip, or regular sneakers, can affect how a walker aligns. Ignoring this step frequently leads to poor calculations and, later, shoulder or back pain.</Paragraph>
+          <h3 className="mt-4 text-[12px] font-black text-black">Step 2: Take a straight stance and relax your arms.</h3>
+          <Paragraph>With both feet flat on the floor and arms at their sides, the user should assume a tall stance. Make sure all four tips (or wheels) of the walker are level with the floor when you place it directly in front of them. Leaning forward or slouching is not recommended; this natural posture aids in determining the ideal handle height.</Paragraph>
           <h3 className="mt-4 text-[12px] font-black text-black">Step 3: Adjust the Handle Height to the Wrist Crease</h3>
-          <Paragraph>The top of each walker handle should line up with the crease of your wrist when your arms hang naturally. This position usually creates the safest hand and elbow position for walking.</Paragraph>
-          <h3 className="mt-4 text-[12px] font-black text-black">Step 4: Press the Button for Adjustment</h3>
-          <Paragraph>Press the small adjustment button on each leg and slide the leg until the pin clicks firmly into the correct hole. Make sure all legs are locked before placing weight on the walker.</Paragraph>
+          <Paragraph>When the arms are relaxed, the walker's handgrips should be in line with the user's wrist crease, which is the area where the palm and forearm meet. When walking, this position guarantees that the elbows bend at a comfortable 15 to 20 degrees. An elbow angle that is more acute or extended may indicate that the walker is either too tall or too short.</Paragraph>
+          <h3 className="mt-4 text-[12px] font-black text-black">Step 4: Press the Buttons for Adjustment</h3>
+          <Paragraph>The majority of contemporary walkers come with movable legs that can be locked or twisted using push buttons. Make sure all four legs are at the same height by adjusting each one separately. Particularly on hard flooring, uneven legs can cause the walker to become unstable and increase the chance of tipping.</Paragraph>
           <h3 className="mt-4 text-[12px] font-black text-black">Step 5: Take a Walk to Check the Fit</h3>
-          <Paragraph>Grip the handles and take a few slow steps. Your elbows should bend slightly, your shoulders should stay relaxed, and your body should remain upright.</Paragraph>
+          <Paragraph>Go for a quick stroll on level terrain. The user shouldn't pull the walker toward themselves or lean forward; instead, they should feel balanced. Readjust and try again if they feel like they're hunching over or their shoulders are lifting. Comfort and control while moving are crucial for people using more sophisticated models, such as rollators or senior <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/best-stand-up-walkers-for-seniors-2025/" target="_blank" rel="noopener noreferrer">stand-up walkers.</a></Paragraph>
+          <Paragraph>You can learn more about how to handle different walker types in our blog on <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/tips-for-choosing-and-using-walkers-a-comprehensive-guide-2/" target="_blank" rel="noopener noreferrer">Tips for Choosing and Using Walkers: A Comprehensive Guide.</a></Paragraph>
           <div className="mt-5 rounded-[8px] bg-[#f3f3f3] py-4">
             <img className="mx-auto h-[230px] w-auto rounded-[4px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA-blog25-1-683x1024.webp`} alt="Correct walker height adjustment sequence" />
           </div>
 
           <SectionHeading id="section-2">Walker Height Adjustment Safety Checklist</SectionHeading>
-          <Paragraph>For a safe adjustment, follow this checklist before each use, especially after changing shoes or after someone else has used the walker.</Paragraph>
-          <BlogList>
-            <li>All four legs are set to the same height notch unless a clinician has advised otherwise.</li>
-            <li>Push-button pins are fully visible through the holes and locked in place.</li>
-            <li>The walker stands level and does not wobble when placed on the floor.</li>
-            <li>Shoulders stay relaxed when both hands rest on the grips.</li>
-            <li>Elbows bend slightly, usually around 15 to 20 degrees.</li>
-            <li>Wrists remain straight instead of bending sharply up or down.</li>
-            <li>The walker feels close enough to support you without forcing you to lean forward.</li>
-          </BlogList>
+          <Paragraph>For a safe experience, these are the few checkpoints to make sure the walker is correctly set up and ready to go:</Paragraph>
+          <Paragraph>✔️Put on your normal walking shoes and walk for a while before the measurement.</Paragraph>
+          <Paragraph>✔️ Stand with the soles of your feet firmly on the ground, arms hanging down at your sides.</Paragraph>
+          <Paragraph>✔️ Stand the walker up in front of you so that all the feet or wheels are flat on the floor.</Paragraph>
+          <Paragraph>✔️ Confirm that the handgrips are straight with your wrist crease when your arms are hanging loose.</Paragraph>
+          <Paragraph>✔️ Extend each leg evenly with push-button and twist-lock adjustment.</Paragraph>
+          <Paragraph>✔️ Make sure elbows are bent to 15-20 degrees when holding the handles.</Paragraph>
+          <Paragraph>✔️ Try the walker out on a smooth surface to ensure it feels level and sturdy.</Paragraph>
+          <Paragraph>✔️ Is there any indication of poor alignment, shoulder tension, stooping, or arm fatigue?</Paragraph>
+          <Paragraph>✔️ Periodically recheck height, especially after new shoes or new health issues.</Paragraph>
 
           <SectionHeading id="section-3">Typical Errors When Determining Walker Height</SectionHeading>
-          <Paragraph>Many walker problems begin with a small setup mistake. A walker that is too high can raise the shoulders and make each step feel tense. A walker that is too low can pull the body forward and create back or neck discomfort.</Paragraph>
-          <Paragraph>Another common mistake is adjusting the walker while wearing different shoes than the ones used every day. Even a small change in shoe height can alter the fit.</Paragraph>
-          <Paragraph>Some users also forget to check that all legs are set evenly. If one leg is shorter or longer, the walker may tilt or wobble, which can make balance worse instead of better.</Paragraph>
+          <Paragraph>Unknowingly, a lot of users set their walker height based more on guesswork than on measurement. Setting the walker too high in the belief that it provides more support is a common mistake. In practice, this results in unsteady, uncomfortable walking patterns and shoulder fatigue. Similarly, lowering it too much makes one bend over, which raises the risk of falls and chronic back pain. Our blog post on how <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/what-is-the-proper-way-to-use-a-walker/" target="_blank" rel="noopener noreferrer">to use a Walker correctly</a> addresses these posture-related mistakes.</Paragraph>
+          <Paragraph>Not adjusting the walker after switching to a new model is another error. For example, a completely different alignment strategy is needed when switching from a 4-wheel rollator to a bariatric heavy-duty walker. Users must constantly check the settings because different walker types have different handle heights, base widths, and centers of gravity.</Paragraph>
+          <Paragraph>Furthermore, a lot of people fail to take environmental changes into consideration. Your walker should be reassessed if you start going outside more often or if you wear shoes with thicker soles. Last but not least, some users neglect to check for even leg adjustment, which can lead to imbalance or tipping on wooden or tiled floors. Examine the <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/safest-walkers-for-seniors-top-5-choices/" target="_blank" rel="noopener noreferrer">safest walkers for seniors</a> for a more secure and safe experience. These walkers typically have ergonomic handles and anti-tip features, but they still require the right height settings to function properly.</Paragraph>
           <div className="mt-5 rounded-[8px] bg-[#f3f3f3] py-4">
             <img className="mx-auto h-[210px] w-auto rounded-[4px] object-contain" src={`${process.env.PUBLIC_URL}/images/twa-blog25-2-683x1024.webp`} alt="Common walker height mistakes" />
           </div>
 
           <SectionHeading id="section-4">When to Seek Expert Assistance</SectionHeading>
-          <Paragraph>Most walker height changes are simple, but some situations require help from a doctor, physical therapist, or occupational therapist. Ask for expert assistance if the user still leans, feels unstable, or has shoulder, wrist, or back pain after the walker is adjusted.</Paragraph>
-          <Paragraph>Professional fitting is especially useful after surgery, stroke, injury, or a new diagnosis that affects strength or balance. A therapist can watch the user walk, correct posture, and confirm the walker type and height are appropriate.</Paragraph>
-          <Paragraph>Caregivers should also seek help if the walker user cannot safely stand still during adjustment, cannot press the adjustment pins, or becomes confused about how to use the walker.</Paragraph>
+          <Paragraph>Walker height can be changed at home, but in some circumstances, a healthcare provider should be consulted. People who have arthritis, are recuperating from surgery, or have one-sided weakness may have special postural requirements that aren't apparent to the typical user. To find the safest setup for your particular requirements, a mobility assessment can be performed by a physical therapist or occupational therapist.</Paragraph>
+          <Paragraph>Depending on your body mechanics, they might also advise switching from a standard walker to a more sophisticated or posture-supporting model, like a stand-up walker. Additionally, when utilizing mobility aids or adjusting them, people with dementia or cognitive impairment might need constant supervision. In these situations, carers ought to receive training on how to routinely check the walker settings. Seeing a professional once can help you avoid years of pain or injury, even if you are confident in your ability to adjust. Visit our blog to learn more about walker models that come with extra safety features: <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/important-safety-features-walkers-for-seniors/" target="_blank" rel="noopener noreferrer">What Safety Features Are Common in Senior Walkers?</a></Paragraph>
 
           <SectionHeading id="section-5">Walker Height Adjustment Table</SectionHeading>
           <div className="mt-4 overflow-hidden rounded-[6px] border border-[#d8dde2]">
             <div className="grid grid-cols-2 bg-[#ffc400] font-manrope text-[9px] font-black text-black">
-              <div className="border-r border-black/10 px-3 py-2">User Height</div>
-              <div className="px-3 py-2">Approximate Handle Height</div>
+              <div className="border-r border-black/10 px-3 py-2">User Height (Feet)</div>
+              <div className="px-3 py-2">Recommended Walker Height (Inches)</div>
             </div>
             {heightRows.map(([height, handle]) => (
               <div className="grid grid-cols-2 border-t border-[#d8dde2] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]" key={height}>
@@ -181,16 +174,16 @@ function AdjustWalkerHeightDetail() {
               </div>
             ))}
           </div>
-          <Paragraph>Use this table only as an estimate. Always confirm with wrist-crease alignment and a short walking test.</Paragraph>
+          <Paragraph><strong>Note:</strong> These ranges are estimates. Always perform a physical test using wrist alignment to confirm the best fit.</Paragraph>
 
           <SectionHeading id="section-6">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
             {[
-              ['Can I adjust my walker on my own?', 'Many walkers can be adjusted at home, but ask for help if you have balance problems, trouble pressing the pins, or uncertainty about the correct height.'],
-              ['How frequently should I check the height of my walker again?', 'Check it whenever shoes change, after travel, after someone else uses the walker, or anytime posture or comfort feels different.'],
-              ['What if the walker is only one notch off?', 'Even one notch can affect shoulder position, elbow bend, and balance. Use the wrist crease and walking test to confirm the fit.'],
-              ['Do I need a therapist to set a walker height?', 'Not always, but professional help is recommended after surgery, injury, stroke, or repeated falls.'],
-              ['Do users need all wheels set to the same height?', 'Yes. Uneven leg settings can make the walker rock, tilt, or feel unstable during movement.'],
+              ['Can health problems arise from improper walker height?', 'Indeed. Using a walker that is not properly adjusted over time can result in falls, joint pain, and strained muscles.'],
+              ['How frequently should I check the height of the walker again?', 'Every time you switch to a new walker model, change your shoes, or change your health, reevaluate.'],
+              ['What if the lengths of my arms differ?', 'A therapist can suggest a model with ergonomic grip positions or assist you in customizing your walker.'],
+              ['Do the ideal heights for various walker types vary?', 'Yes, particularly when comparing bariatric, rollator, and standard walkers. After switching, always measure.'],
+              ['Do carers need to be trained in walker adjustment?', 'Of course. Particularly for elderly people with dementia or vision problems, carers should be trained to check the height of walkers.'],
             ].map(([question, answer]) => (
               <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
                 <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary>
@@ -202,16 +195,15 @@ function AdjustWalkerHeightDetail() {
           {/* Final Thoughts */}
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-7">
             <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
-            <Paragraph>Adjusting a walker height is one of the simplest ways to improve comfort, confidence, and safety. A few careful checks can reduce unnecessary strain and make daily walking feel more natural.</Paragraph>
-            <Paragraph>Use the wrist crease method, test the fit while wearing regular shoes, and ask a professional for help if pain, posture problems, or balance concerns continue.</Paragraph>
+            <Paragraph>Although it might seem like a minor detail, posture, safety, and mobility are all greatly impacted by properly height-adjusting a walker. A properly calibrated walker lowers the risk of falls, increases walking confidence, and lessens strain. The majority of adjustments can be made at home, but when in doubt, don't be afraid to get expert advice. Your mobility will be safer and more efficient the more your equipment fits your body.</Paragraph>
           </section>
 
           {/* References */}
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
             <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
-              <li>MedlinePlus. (2024). Walker safety tips. Medline Resource: https://medlineplus.gov/ency/patientinstructions/000342.htm</li>
-              <li>American Physical Therapy Association. (2025). Choosing the right assistive device. APTA https://www.choosept.com/</li>
+              <li>MedlinePlus. (2024). <em>Walker safety tips.</em> Medline Resource: <a className="text-[#2361a1] underline" href="https://medlineplus.gov/ency/patientinstructions/000342.htm" target="_blank" rel="noopener noreferrer">https://medlineplus.gov/ency/patientinstructions/000342.htm</a></li>
+              <li>American Physical Therapy Association. (2023). <em>Choosing the right assistive device.</em> APTA <a className="text-[#2361a1] underline" href="https://www.choosept.com/" target="_blank" rel="noopener noreferrer">https://www.choosept.com/</a></li>
             </ol>
           </section>
 
@@ -220,11 +212,6 @@ function AdjustWalkerHeightDetail() {
           {/* Comments */}
           <section className="mt-8 rounded-[10px] bg-white p-8 shadow-[0_14px_40px_rgba(0,0,0,0.05)]">
             <h2 className="text-center text-[14px] font-black text-black">What do you think?</h2>
-            <div className="mt-6 border-b border-[#d8dde2] pb-6">
-              <p className="font-manrope text-[11px] font-black text-black">George B. Quinn</p>
-              <p className="mt-2 font-manrope text-[11px] font-medium leading-5 text-[#303a42]">This helped. Thanks!</p>
-              <button className="mt-2 rounded-full bg-[#07364f] px-4 py-1 font-manrope text-[10px] font-black text-white">Reply</button>
-            </div>
             <form className="mt-6 space-y-4" action="#">
               <label className="block">
                 <span className="font-manrope text-[11px] font-black text-black">Comment *</span>
