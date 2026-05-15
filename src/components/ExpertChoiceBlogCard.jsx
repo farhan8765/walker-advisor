@@ -1,4 +1,4 @@
-function ExpertChoiceBlogCard({ image, alt, title, description, href }) {
+unction ExpertChoiceBlogCard({ image, alt, title, description, href }) {
   const imageSrc = `${process.env.PUBLIC_URL}/images/${image}`;
 
   return (
