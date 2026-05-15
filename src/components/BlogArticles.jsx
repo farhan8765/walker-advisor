@@ -25,7 +25,10 @@ function BlogArticles() {
     >
       <div className="mx-auto w-full max-w-[1120px]">
         <div className="mx-auto w-full max-w-[840px] text-center">
-          <h1 className="font-manrope text-[32px] font-bold leading-tight tracking-normal text-black md:text-[40px] lg:text-[48px]">
+          <h1
+            className="break-words text-center text-[60px] font-normal uppercase leading-[100%] tracking-[0] text-[#172129]"
+            style={{ fontFamily: 'Anton, sans-serif' }}
+          >
             Guide to helpful resources
           </h1>
           <p className="mt-4 font-manrope text-base font-medium leading-7 text-[#66737c] md:mt-6 md:text-lg">

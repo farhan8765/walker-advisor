@@ -6,7 +6,7 @@ const authorSlides = [
   {
     id: 'amir',
     image: 'Amir.png',
-    name: 'Amir Murtaza',
+    name: 'Amir Abbasi',
     bio: "Amir Abbasi is an experienced IT professional whose journey has grown far beyond technology. Since 2012, he has also served as a devoted caregiver for his parents, an experience that has given him unique insight into the everyday realities of aging. Through this personal role, Amir came to understand how the right products, resources, and support can make a profound difference in the lives of seniors and their families.",
   },
   {
@@ -61,15 +61,17 @@ function PerformanceHighlight() {
   return (
     <section className="w-full overflow-x-hidden px-4 py-16 md:px-8 lg:px-14 lg:py-24">
       <div className="mx-auto w-full max-w-[1280px]">
-        <h2
-          className="text-center font-heading text-[40px] font-normal uppercase leading-[100%] tracking-normal text-black md:text-[48px]"
-          style={{ fontFamily: 'Anton, sans-serif' }}
-        >
-          Our Authors
-        </h2>
-        <p className="mt-4 text-center font-manrope text-base font-black leading-6 text-[#132027] md:mt-5 md:text-lg">
-          Tools designed to boost your performance and comfort.
-        </p>
+        <div className="mx-auto w-full max-w-[850px] text-center">
+          <h2
+            className="mx-auto h-auto w-full text-center text-[36px] font-normal uppercase leading-[100%] tracking-[0%] text-black md:text-[48px] lg:h-[60px] lg:w-[840px] lg:text-[60px]"
+            style={{ fontFamily: 'Anton, sans-serif' }}
+          >
+            Our Authors
+          </h2>
+          <p className="mt-5 font-manrope text-base font-medium leading-7 text-[#66737c] md:text-lg">
+            Meet the experts behind every review and recommendation
+          </p>
+        </div>
 
         <div className="mt-20 min-w-0 max-w-full rounded-lg bg-[#ffc400] px-4 py-8 sm:px-8 md:px-10 lg:px-8">
           <div className="min-w-0 max-w-full overflow-hidden">
