@@ -114,13 +114,13 @@ function BlogList({ children }) {
 function ProductTable({ product }) {
   return (
     <div className="mt-3 overflow-hidden border border-black">
-      <div className="grid grid-cols-[70px_1fr_1fr_74px] bg-[#ffc400] font-manrope text-[8px] font-black text-black">
+      <div className="grid grid-cols-[70px_1fr_1fr_74px] bg-[#ffc400] font-manrope text-base font-black text-black">
         <div className="border-r border-black px-2 py-2">Price</div>
         <div className="border-r border-black px-2 py-2">Why It's Great</div>
         <div className="border-r border-black px-2 py-2">Best For</div>
         <div className="px-2 py-2 text-center">Buy</div>
       </div>
-      <div className="grid grid-cols-[70px_1fr_1fr_74px] font-manrope text-[8px] font-semibold leading-4 text-[#1f2930]">
+      <div className="grid grid-cols-[70px_1fr_1fr_74px] font-manrope text-base font-semibold leading-4 text-[#1f2930]">
         <div className="border-r border-black px-2 py-3">{product.price}</div>
         <div className="border-r border-black px-2 py-3">{product.why}</div>
         <div className="border-r border-black px-2 py-3">{product.bestFor}</div>
@@ -150,8 +150,8 @@ function ReplacementWalkerHandGripsDetail() {
         <article className="blog-detail-article w-full">
           <header className="pt-8 text-center">
             <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">Replacement Walker Hand Grips for All Kinds of Walkers</h1>
-            <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">Sore hands or slippery grips? Replacement walker hand grips add comfort, support, and style, making every walk easier and safer.</p>
-            <img className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa-fi.webp`} alt="Group of people holding canes and walkers outdoors" />
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">Sore hands or slippery grips? Replacement walker hand grips add comfort, support, and style, making every walk easier and safer.</p>
+            <img className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[7px] object-contain" src={`${process.env.PUBLIC_URL}/images/twa-fi.webp`} alt="Group of people holding canes and walkers outdoors" />
           </header>
 
           <div className="mt-6 flex items-center gap-3"><div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">AA</div><p className="font-manrope text-[12px] font-black text-black">Amir Abbasi</p></div>

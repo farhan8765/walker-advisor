@@ -70,13 +70,13 @@ function BlogList({ children }) {
 function SimpleTable({ headers, rows }) {
   return (
     <div className="mt-5 overflow-hidden border border-black font-manrope">
-      <div className="grid grid-cols-3 bg-[#ffc400] text-[8px] font-black leading-4 text-black">
+      <div className="grid grid-cols-3 bg-[#ffc400] text-base font-black leading-4 text-black">
         {headers.map((header, index) => (
           <div className={`${index < headers.length - 1 ? 'border-r' : ''} border-black px-3 py-2`} key={header}>{header}</div>
         ))}
       </div>
       {rows.map((row) => (
-        <div className="grid grid-cols-3 text-[8px] font-semibold leading-4 text-[#1f2930]" key={row[0]}>
+        <div className="grid grid-cols-3 text-base font-semibold leading-4 text-[#1f2930]" key={row[0]}>
           {row.map((cell, index) => (
             <div className={`${index < row.length - 1 ? 'border-r' : ''} border-t border-black px-3 py-2`} key={cell}>{cell}</div>
           ))}
@@ -114,14 +114,14 @@ function WalkerSafetyFeaturesDetail() {
         <article className="blog-detail-article w-full">
           <header className="pt-8 text-center">
             <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">The Must-Have Walker Safety Features Every Senior Should Know About</h1>
-            <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">Not all walkers keep you equally safe. Here are the essential safety features that can prevent falls and give seniors more confidence.</p>
-            <img className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/TWA-BLOG8-1024x682.webp`} alt="Caregiver helping a senior hold a walker handle safely" />
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">Not all walkers keep you equally safe. Here are the essential safety features that can prevent falls and give seniors more confidence.</p>
+            <img className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[7px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA-BLOG8-1024x682.webp`} alt="Caregiver helping a senior hold a walker handle safely" />
           </header>
 
           <div className="mt-6 flex items-center gap-3">
             <img
               className="h-8 w-8 rounded-full object-cover"
-              src={`${process.env.PUBLIC_URL}/images/amir-abbasi_avatar-300x300.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/amir.webp`}
               alt="Amir Abbasi"
             />
             <p className="font-manrope text-[12px] font-black text-black">Amir Abbasi</p>
@@ -239,7 +239,7 @@ function WalkerSafetyFeaturesDetail() {
             {howToChoose.map(([title, desc]) => (
               <div className="rounded-[8px] border border-[#d8dde2] p-4" key={title}>
                 <p className="font-manrope text-[10px] font-black text-black">{title}</p>
-                <p className="mt-2 font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">{desc}</p>
+                <p className="mt-2 font-manrope text-[10px] font-medium leading-4 text-[#1f2930]">{desc}</p>
               </div>
             ))}
           </div>

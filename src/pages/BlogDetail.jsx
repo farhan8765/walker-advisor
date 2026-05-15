@@ -105,12 +105,12 @@ function BlogDetail() {
             <h1 className="mx-auto max-w-[min(100%,56rem)] text-black">
               Can Heart Issues Increase Fall Risk in Seniors?
             </h1>
-            <p className="mt-3 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">
               You might think falls are just about balance, but what if your heart is the real culprit? Discover the hidden connection between heart issues and sudden falls in seniors before it is too late.
             </p>
 
             <img
-              className="mt-5 h-auto w-full rounded-[8px] object-cover"
+              className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[8px] object-contain"
               src={`${process.env.PUBLIC_URL}/images/image-2-1.webp`}
               alt="Senior man with chest discomfort being supported by a caregiver"
             />
@@ -118,7 +118,7 @@ function BlogDetail() {
             <div className="mt-6 flex items-center gap-3">
               <img
                 className="h-8 w-8 rounded-full object-cover"
-                src={`${process.env.PUBLIC_URL}/images/amir-abbasi_avatar-300x300.jpg`}
+                src={`${process.env.PUBLIC_URL}/images/amir.webp`}
                 alt="Amir Abbasi"
               />
               <p className="font-manrope text-[12px] font-black text-black">Amir Abbasi</p>
@@ -192,7 +192,7 @@ function BlogDetail() {
 
           <img
             className="mx-auto mt-7 h-auto w-full max-w-[520px] rounded-[10px] object-cover"
-            src={`${process.env.PUBLIC_URL}/images/pump.png`}
+            src={`${process.env.PUBLIC_URL}/images/pump.webp`}
             alt="Diagram showing how the heart pumps blood and affects balance"
           />
 
@@ -270,7 +270,7 @@ function BlogDetail() {
 
           <img
             className="mx-auto mt-8 h-auto w-full max-w-[520px] rounded-[10px] object-cover"
-            src={`${process.env.PUBLIC_URL}/images/blog1.png`}
+            src={`${process.env.PUBLIC_URL}/images/blog1.webp`}
             alt="Senior woman near a walker monitoring her health"
           />
 

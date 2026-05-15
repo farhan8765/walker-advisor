@@ -87,16 +87,16 @@ function BlogList({ children }) {
 function CompactTable({ headers, rows }) {
   return (
     <div className="mt-5 overflow-x-auto rounded-[8px] border border-[#d7dbe0]">
-      <table className="w-full border-collapse font-manrope text-[9px]">
+      <table className="w-full border-collapse font-manrope">
         <thead>
           <tr className="bg-[#ffc400] text-left text-black">
-            {headers.map((header) => <th className="px-3 py-2 font-black" key={header}>{header}</th>)}
+            {headers.map((header) => <th className="px-3 py-2 text-[10px] font-black" key={header}>{header}</th>)}
           </tr>
         </thead>
         <tbody>
           {rows.map((row) => (
             <tr className="border-t border-[#d7dbe0] odd:bg-white even:bg-[#f7f7f7]" key={row[0]}>
-              {row.map((cell) => <td className="px-3 py-2 align-top font-semibold leading-4 text-[#1f2930]" key={cell}>{cell}</td>)}
+              {row.map((cell) => <td className="px-3 py-2 text-[10px] align-top font-semibold leading-4 text-[#1f2930]" key={cell}>{cell}</td>)}
             </tr>
           ))}
         </tbody>
@@ -119,12 +119,12 @@ function HolidayWalkerSafetyDetail() {
         <article className="blog-detail-article w-full">
           <header className="pt-8 text-center">
             <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">The Side Effects Of Using A Cane</h1>
-            <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">Think your cane is helping you walk better? Think again. Discover the hidden side effects most users overlook, and the safer alternatives experts actually recommend!</p>
-            <img className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa28-1.webp`} alt="Senior holding a cane" />
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">Think your cane is helping you walk better? Think again. Discover the hidden side effects most users overlook, and the safer alternatives experts actually recommend!</p>
+            <img className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[7px] object-contain" src={`${process.env.PUBLIC_URL}/images/twa28-1.webp`} alt="Senior holding a cane" />
           </header>
 
           <div className="mt-6 flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">RD</div>
+            <img className="h-8 w-8 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/robin-dolan_avatar-154x216.webp`} alt="Robin Dolan" />
             <p className="font-manrope text-[12px] font-black text-black">Robin Dolan</p>
           </div>
 

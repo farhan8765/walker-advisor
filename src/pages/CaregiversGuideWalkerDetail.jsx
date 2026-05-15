@@ -87,19 +87,19 @@ function CaregiversGuideWalkerDetail() {
             <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">
               {"Caregivers' Guide to Helping Seniors Pick and Use the Perfect Walker"}
             </h1>
-            <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">
               {"The right guidance can make all the difference, here's how caregivers can ensure seniors get the best walker for their needs."}
             </p>
             <img
-              className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover"
-              src={`${process.env.PUBLIC_URL}/images/twa-blog11.jpg`}
+              className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[7px] object-contain"
+              src={`${process.env.PUBLIC_URL}/images/twa-blog11-1024x683.webp`}
               alt="Caregiver assisting senior woman with walking support in a home environment"
             />
           </header>
 
           {/* Author */}
           <div className="mt-6 flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">SA</div>
+            <img className="h-8 w-8 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/syed-ali_avatar-300x300.webp`} alt="Syed Ali" />
             <p className="font-manrope text-[12px] font-black text-black">Syed Ali</p>
           </div>
 
@@ -136,13 +136,13 @@ function CaregiversGuideWalkerDetail() {
           {/* Section 2 */}
           <SectionHeading id="section-2">Walker Varieties and How Caregivers Can Assist in Selection</SectionHeading>
           <div className="mt-4 overflow-hidden rounded-[6px] border border-[#d8dde2]">
-            <div className="grid grid-cols-3 bg-[#ffc400] font-manrope text-[8.5px] font-black text-black">
+            <div className="grid grid-cols-3 bg-[#ffc400] font-manrope text-base font-black text-black">
               {['Walker Type', 'Best for', "Caregiver's role in selection"].map((heading) => (
                 <div className="border-r border-black/10 px-2 py-2 last:border-r-0" key={heading}>{heading}</div>
               ))}
             </div>
             {walkerRows.map((row) => (
-              <div className="grid grid-cols-3 border-t border-[#d8dde2] font-manrope text-[8.5px] font-medium leading-4 text-[#1f2930]" key={row[0]}>
+              <div className="grid grid-cols-3 border-t border-[#d8dde2] font-manrope text-base font-medium leading-4 text-[#1f2930]" key={row[0]}>
                 {row.map((cell, i) => (
                   <div className="border-r border-[#d8dde2] px-2 py-2 last:border-r-0" key={i}>{cell}</div>
                 ))}

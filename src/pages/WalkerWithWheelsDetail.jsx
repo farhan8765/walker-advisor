@@ -87,12 +87,12 @@ function WalkerWithWheelsDetail() {
         <article className="blog-detail-article w-full">
           <header className="pt-9 text-center">
             <h1 className="mx-auto max-w-[560px] text-[25px] font-black leading-tight text-black md:text-[28px]">How To Use A Walker With Wheels: A Complete Guide for Safe Mobility</h1>
-            <p className="mx-auto mt-3 max-w-[600px] font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">A walker with wheels can greatly improve balance, mobility, and independence, but safe use depends on setup, positioning, and control.</p>
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">A walker with wheels can greatly improve balance, mobility, and independence, but safe use depends on setup, positioning, and control.</p>
             <img className="mx-auto mt-5 h-auto w-full max-w-[420px] rounded-[8px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa-36-1-3.webp`} alt="Person using a wheeled walker at home" />
           </header>
 
           <div className="mt-6 flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">SA</div>
+            <img className="h-8 w-8 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/syed-ali_avatar-300x300.webp`} alt="Syed Ali" />
             <p className="font-manrope text-[12px] font-black text-black">Syed Ali</p>
           </div>
 

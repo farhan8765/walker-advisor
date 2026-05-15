@@ -59,8 +59,8 @@ function HolidaySafetySeniorsDetail() {
         <article className="blog-detail-article w-full">
           <header className="pt-9 text-center">
             <h1 className="mx-auto max-w-[560px] text-[25px] font-black leading-tight text-black md:text-[28px]">Holiday Safety Tips for Seniors: Prevent Falls, Fires & Seasonal Risks</h1>
-            <p className="mx-auto mt-3 max-w-[600px] font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">The holidays can hide serious dangers for seniors, from slippery floors to fire hazards. Discover the must-know safety tips that families are using to protect their loved ones.</p>
-            <img className="mt-5 h-auto w-full rounded-[8px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa33-1.webp`} alt="Safety Tips for seniors" />
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">The holidays can hide serious dangers for seniors, from slippery floors to fire hazards. Discover the must-know safety tips that families are using to protect their loved ones.</p>
+            <img className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[8px] object-contain" src={`${process.env.PUBLIC_URL}/images/twa33-1.webp`} alt="Safety Tips for seniors" />
           </header>
 
           <div className="mt-6 flex items-center gap-3">

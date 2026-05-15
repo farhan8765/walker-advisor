@@ -61,8 +61,8 @@ function OsteoarthritisFallsDetail() {
         <article className="blog-detail-article w-full">
           <header className="pt-9 text-center">
             <h1 className="mx-auto max-w-[560px] text-[25px] font-black leading-tight text-black md:text-[28px]">Can Osteoarthritis Lead to More Falls in Seniors?</h1>
-            <p className="mx-auto mt-3 max-w-[600px] font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">Osteoarthritis can quietly increase fall risk in seniors by affecting balance, strength, and mobility, often before warning signs appear.</p>
-            <img className="mt-5 h-auto w-full rounded-[8px] object-cover" src={`${process.env.PUBLIC_URL}/images/twaa-1.webp`} alt="Senior woman sitting beside a walker with knee pain" />
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">Osteoarthritis can quietly increase fall risk in seniors by affecting balance, strength, and mobility, often before warning signs appear.</p>
+            <img className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[8px] object-contain" src={`${process.env.PUBLIC_URL}/images/twaa-1.webp`} alt="Senior woman sitting beside a walker with knee pain" />
           </header>
 
           <div className="mt-6 flex items-center gap-3">

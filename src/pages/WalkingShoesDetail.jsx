@@ -86,8 +86,8 @@ function WalkingShoesDetail() {
         <article className="blog-detail-article w-full">
           <header className="pt-9 text-center">
             <h1 className="mx-auto max-w-[540px] text-[25px] font-black leading-tight text-black md:text-[28px]">How to Choose Walking Shoes for Balance and Stability</h1>
-            <p className="mx-auto mt-3 max-w-[600px] font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">The right shoes can improve comfort, confidence, and everyday stability. Learn what to look for before your next walk.</p>
-            <img className="mt-5 h-auto w-full rounded-[8px] object-cover" src={`${process.env.PUBLIC_URL}/images/image.webp`} alt="How to choose walking shoes for balance and stability" />
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">The right shoes can improve comfort, confidence, and everyday stability. Learn what to look for before your next walk.</p>
+            <img className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[8px] object-contain" src={`${process.env.PUBLIC_URL}/images/image.webp`} alt="How to choose walking shoes for balance and stability" />
           </header>
 
           <div className="mt-6 flex items-center gap-3">

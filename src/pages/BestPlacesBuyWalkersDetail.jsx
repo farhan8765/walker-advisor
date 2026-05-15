@@ -97,8 +97,8 @@ function BestPlacesBuyWalkersDetail() {
         <article className="blog-detail-article w-full">
           <header className="pt-8 text-center">
             <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">The 7 Best Places to Buy Walkers for Seniors</h1>
-            <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">Don't waste money on the wrong store. Our expert picks reveal where to get the best walkers, at prices you'll love.</p>
-            <img className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/improving-mobility-impairment-one-step-time-shot-nurse-helping-senior-man-with-walker.webp`} alt="Physical therapist helping a senior man use a rollator walker" />
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">Don't waste money on the wrong store. Our expert picks reveal where to get the best walkers, at prices you'll love.</p>
+            <img className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[7px] object-contain" src={`${process.env.PUBLIC_URL}/images/improving-mobility-impairment-one-step-time-shot-nurse-helping-senior-man-with-walker.webp`} alt="Physical therapist helping a senior man use a rollator walker" />
           </header>
 
           <div className="mt-6 flex items-center gap-3">

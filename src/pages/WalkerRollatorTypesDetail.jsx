@@ -61,13 +61,13 @@ function BlogList({ children }) {
 function ComparisonTable() {
   return (
     <div className="mt-5 overflow-hidden border border-black font-manrope">
-      <div className="grid grid-cols-[0.9fr_1.15fr_1.15fr] bg-[#ffc400] text-[8px] font-black leading-4 text-black">
+      <div className="grid grid-cols-[0.9fr_1.15fr_1.15fr] bg-[#ffc400] text-base font-black leading-4 text-black">
         <div className="border-r border-black px-3 py-2">Factor</div>
         <div className="border-r border-black px-3 py-2">Walker</div>
         <div className="px-3 py-2">Rollator</div>
       </div>
       {comparisonRows.map(([factor, walker, rollator]) => (
-        <div className="grid grid-cols-[0.9fr_1.15fr_1.15fr] text-[8px] font-semibold leading-4 text-[#1f2930]" key={factor}>
+        <div className="grid grid-cols-[0.9fr_1.15fr_1.15fr] text-base font-semibold leading-4 text-[#1f2930]" key={factor}>
           <div className="border-r border-t border-black px-3 py-2">{factor}</div>
           <div className="border-r border-t border-black px-3 py-2">{walker}</div>
           <div className="border-t border-black px-3 py-2">{rollator}</div>
@@ -105,12 +105,12 @@ function WalkerRollatorTypesDetail() {
         <article className="blog-detail-article w-full">
           <header className="pt-8 text-center">
             <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">The Complete Guide to Walker & Rollator Types, Which One Fits You Best?</h1>
-            <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">From basic frames to deluxe rollators, here's how to choose the mobility aid that matches your lifestyle.</p>
-            <img className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa-blog5.jpg`} alt="Clinician helping a senior compare walker and rollator options" />
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">From basic frames to deluxe rollators, here's how to choose the mobility aid that matches your lifestyle.</p>
+            <img className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[7px] object-contain" src={`${process.env.PUBLIC_URL}/images/twa-blog5.webp`} alt="Clinician helping a senior compare walker and rollator options" />
           </header>
 
           <div className="mt-6 flex items-center gap-3">
-            <img className="h-8 w-8 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/amir-abbasi_avatar-300x300.jpg`} alt="Amir Abbasi" />
+            <img className="h-8 w-8 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/amir.webp`} alt="Amir Abbasi" />
             <p className="font-manrope text-[12px] font-black text-black">Amir Abbasi</p>
           </div>
 

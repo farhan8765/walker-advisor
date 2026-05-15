@@ -62,12 +62,12 @@ function BlogList({ children }) {
 function CoverageTable() {
   return (
     <div className="mt-5 overflow-hidden border border-black font-manrope">
-      <div className="grid grid-cols-[0.9fr_1.8fr] bg-[#ffc400] text-[8px] font-black leading-4 text-black">
+      <div className="grid grid-cols-[0.9fr_1.8fr] bg-[#ffc400] text-base font-black leading-4 text-black">
         <div className="border-r border-black px-3 py-2">Aspect</div>
         <div className="px-3 py-2">Details</div>
       </div>
       {coverageRows.map(([topic, details]) => (
-        <div className="grid grid-cols-[0.9fr_1.8fr] text-[8px] font-semibold leading-4 text-[#1f2930]" key={topic}>
+        <div className="grid grid-cols-[0.9fr_1.8fr] text-base font-semibold leading-4 text-[#1f2930]" key={topic}>
           <div className="border-r border-t border-black px-3 py-2">{topic}</div>
           <div className="border-t border-black px-3 py-2">{details}</div>
         </div>
@@ -104,12 +104,12 @@ function MedicareWalkerCoverageDetail() {
         <article className="blog-detail-article w-full">
           <header className="pt-8 text-center">
             <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">Will Medicare Really Pay for Your Walker? The Truth Every Senior Should Know</h1>
-            <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">Many seniors miss out on walker coverage simply because they don't know the rules. Here's what Medicare actually covers, and how to qualify.</p>
-            <img className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/doctor-talking-senior-man-indoors.jpg`} alt="Doctor speaking with a senior man using a walker" />
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">Many seniors miss out on walker coverage simply because they don't know the rules. Here's what Medicare actually covers, and how to qualify.</p>
+            <img className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[7px] object-contain" src={`${process.env.PUBLIC_URL}/images/doctor-talking-senior-man-indoors.webp`} alt="Doctor speaking with a senior man using a walker" />
           </header>
 
           <div className="mt-6 flex items-center gap-3">
-            <img className="h-8 w-8 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/amir-abbasi_avatar-300x300.jpg`} alt="Amir Abbasi" />
+            <img className="h-8 w-8 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/amir.webp`} alt="Amir Abbasi" />
             <p className="font-manrope text-[12px] font-black text-black">Amir Abbasi</p>
           </div>
 

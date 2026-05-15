@@ -92,8 +92,8 @@ function SmallHomeWalkerDetail() {
         <article className="blog-detail-article w-full">
           <header className="pt-8 text-center">
             <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">Struggling with a Walker in a Small Home? Try These Space-Saving Hacks</h1>
-            <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">Tight spaces don't have to limit your mobility. These smart tips make using a walker in small homes safer and easier.</p>
-            <img className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa-blogg.webp`} alt="Senior woman holding a walker in a small home" />
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">Tight spaces don't have to limit your mobility. These smart tips make using a walker in small homes safer and easier.</p>
+            <img className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[7px] object-contain" src={`${process.env.PUBLIC_URL}/images/twa-blogg.webp`} alt="Senior woman holding a walker in a small home" />
           </header>
 
           <div className="mt-6 flex items-center gap-3">

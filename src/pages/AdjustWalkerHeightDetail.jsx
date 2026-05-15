@@ -85,11 +85,11 @@ function AdjustWalkerHeightDetail() {
             <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">
               How to Adjust a Walker to the Correct Height: A Safety Checklist
             </h1>
-            <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">
               The right walker height isn't just comfort; it's your first step toward safer, steadier movement.
             </p>
             <img
-              className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover"
+              className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[7px] object-contain"
               src={`${process.env.PUBLIC_URL}/images/twa-featured-image.webp`}
               alt="Caregiver helping elderly man use a walker in a care facility"
             />
@@ -97,7 +97,7 @@ function AdjustWalkerHeightDetail() {
 
           {/* Author */}
           <div className="mt-6 flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">RD</div>
+            <img className="h-8 w-8 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/robin-dolan_avatar-154x216.webp`} alt="Robin Dolan" />
             <p className="font-manrope text-[12px] font-black text-black">Robin Dolan</p>
           </div>
 
@@ -163,12 +163,12 @@ function AdjustWalkerHeightDetail() {
 
           <SectionHeading id="section-5">Walker Height Adjustment Table</SectionHeading>
           <div className="mt-4 overflow-hidden rounded-[6px] border border-[#d8dde2]">
-            <div className="grid grid-cols-2 bg-[#ffc400] font-manrope text-[9px] font-black text-black">
+            <div className="grid grid-cols-2 bg-[#ffc400] font-manrope text-base font-black text-black">
               <div className="border-r border-black/10 px-3 py-2">User Height (Feet)</div>
               <div className="px-3 py-2">Recommended Walker Height (Inches)</div>
             </div>
             {heightRows.map(([height, handle]) => (
-              <div className="grid grid-cols-2 border-t border-[#d8dde2] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]" key={height}>
+              <div className="grid grid-cols-2 border-t border-[#d8dde2] font-manrope text-base font-medium leading-4 text-[#1f2930]" key={height}>
                 <div className="border-r border-[#d8dde2] px-3 py-2">{height}</div>
                 <div className="px-3 py-2">{handle}</div>
               </div>

@@ -89,12 +89,12 @@ function ProperWalkingShoesDetail() {
         <article className="blog-detail-article w-full">
           <header className="pt-9 text-center">
             <h1 className="mx-auto max-w-[540px] text-[25px] font-black leading-tight text-black md:text-[28px]">Why Seniors Need Proper Walking Shoes</h1>
-            <p className="mx-auto mt-3 max-w-[600px] font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">Aging changes balance, joints, muscles, and feet. The right walking shoes can help seniors move with more comfort and confidence.</p>
-            <img className="mt-5 h-auto w-full rounded-[8px] object-cover" src={`${process.env.PUBLIC_URL}/images/info-blog-twa-38.webp`} alt="Why seniors need proper walking shoes infographic" />
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">Aging changes balance, joints, muscles, and feet. The right walking shoes can help seniors move with more comfort and confidence.</p>
+            <img className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[8px] object-contain" src={`${process.env.PUBLIC_URL}/images/info-blog-twa-38.webp`} alt="Why seniors need proper walking shoes infographic" />
           </header>
 
           <div className="mt-6 flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">RD</div>
+            <img className="h-8 w-8 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/robin-dolan_avatar-154x216.webp`} alt="Robin Dolan" />
             <p className="font-manrope text-[12px] font-black text-black">Robin Dolan</p>
           </div>
 

@@ -134,16 +134,16 @@ function FitScenarioTable() {
   const headers = ['Type of Walker', 'Best For', 'Key Benefit'];
   return (
     <div className="mt-5 overflow-x-auto">
-      <div className="min-w-[620px] overflow-hidden rounded-[8px] border border-[#d8dde2] font-manrope text-[9px] font-medium text-[#1f2930]">
+      <div className="min-w-[620px] overflow-hidden rounded-[8px] border border-[#d8dde2] font-manrope text-[#1f2930]">
         <div className="grid grid-cols-3 bg-[#ffc400]">
           {headers.map((header, index) => (
-            <div className={`px-3 py-2 font-black text-black${index > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={header}>{header}</div>
+            <div className={`px-3 py-2 text-base font-black text-black${index > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={header}>{header}</div>
           ))}
         </div>
         {fitRows.map((row, rowIndex) => (
           <div className={`grid grid-cols-3${rowIndex % 2 === 0 ? ' bg-white' : ' bg-[#f9f9f9]'}`} key={row[0]}>
             {row.map((cell, cellIndex) => (
-              <div className={`border-t border-[#d8dde2] px-3 py-2${cellIndex > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={`${row[0]}-${cell}`}>{cell}</div>
+              <div className={`border-t border-[#d8dde2] px-3 py-2 text-base font-medium${cellIndex > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={`${row[0]}-${cell}`}>{cell}</div>
             ))}
           </div>
         ))}
@@ -174,11 +174,11 @@ function FittingWalkerDetail() {
             <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">
               Stop the Struggle: The Ultimate Easy Guide to Fitting a Walker for Seniors Safely
             </h1>
-            <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">
               Struggling to find the right walker fit? Discover this easy step-by-step guide for seniors on choosing, adjusting, and maintaining walkers for maximum comfort and safety.
             </p>
             <img
-              className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover"
+              className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[7px] object-contain"
               src={`${process.env.PUBLIC_URL}/images/twa-blog26-1-1.webp`}
               alt="Senior man adjusting an upright walker"
             />
@@ -186,7 +186,7 @@ function FittingWalkerDetail() {
 
           {/* Author */}
           <div className="mt-6 flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">RD</div>
+            <img className="h-8 w-8 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/robin-dolan_avatar-154x216.webp`} alt="Robin Dolan" />
             <p className="font-manrope text-[12px] font-black text-black">Robin Dolan</p>
           </div>
 
@@ -262,13 +262,13 @@ function FittingWalkerDetail() {
           {/* Section 4 */}
           <SectionHeading id="section-4">Common Mistakes to Avoid</SectionHeading>
           <Paragraph>Even minor fitting errors can create hazards:</Paragraph>
-          <div className="mt-5 grid grid-cols-2 border-y border-[#d8dde2] font-manrope text-[9px] text-[#1f2930]">
-            <div className="px-3 py-3 font-black">Mistake</div>
-            <div className="border-l border-[#d8dde2] px-3 py-3 font-black">Why It Matters</div>
+          <div className="mt-5 grid grid-cols-2 border-y border-[#d8dde2] font-manrope text-[#1f2930]">
+            <div className="px-3 py-3 text-base font-black">Mistake</div>
+            <div className="border-l border-[#d8dde2] px-3 py-3 text-base font-black">Why It Matters</div>
             {mistakes.map(([mistake, reason]) => (
               <div className="contents" key={mistake}>
-                <div className="px-3 py-3 font-medium">{mistake}</div>
-                <div className="border-l border-[#d8dde2] px-3 py-3 font-medium">{reason}</div>
+                <div className="px-3 py-3 text-base font-medium">{mistake}</div>
+                <div className="border-l border-[#d8dde2] px-3 py-3 text-base font-medium">{reason}</div>
               </div>
             ))}
           </div>

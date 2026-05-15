@@ -84,7 +84,7 @@ function WalkerMistakesDetail() {
               <HeadingDescription className="mx-auto mt-10 max-w-[min(100%,56rem)]">
                 Using a walker seems simple, until you realize most people do it incorrectly. Learn the right way before it affects your safety.
               </HeadingDescription>
-              <img className="mx-auto mt-14 h-auto w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/injured-man-doing-physiotherapy-exercises-walking-1-scaled.webp`} alt="Person using a walker in a rehabilitation room" />
+              <img className="mx-auto mt-14 h-auto w-full max-w-[700px] rounded-[7px] object-contain" src={`${process.env.PUBLIC_URL}/images/injured-man-doing-physiotherapy-exercises-walking-1-scaled.webp`} alt="Person using a walker in a rehabilitation room" />
             </header>
 
           <div className="mt-8 flex items-center gap-6">

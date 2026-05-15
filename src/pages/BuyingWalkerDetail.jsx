@@ -73,16 +73,16 @@ function ComparisonTable() {
   const headers = ['Feature', 'Standard', 'Rollator', 'Bariatric', 'Folding'];
   return (
     <div className="mt-5 overflow-x-auto">
-      <div className="min-w-[520px] overflow-hidden rounded-[8px] border border-[#d8dde2] font-manrope text-[9px] font-medium text-[#1f2930]">
+      <div className="min-w-[520px] overflow-hidden rounded-[8px] border border-[#d8dde2] font-manrope text-[#1f2930]">
         <div className="grid grid-cols-5 bg-[#ffc400]">
           {headers.map((h, i) => (
-            <div className={`px-3 py-2 font-black text-black${i > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={h}>{h}</div>
+            <div className={`px-3 py-2 text-base font-black text-black${i > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={h}>{h}</div>
           ))}
         </div>
         {comparisonRows.map((row, ri) => (
           <div className={`grid grid-cols-5${ri % 2 === 0 ? ' bg-white' : ' bg-[#f9f9f9]'}`} key={row[0]}>
             {row.map((cell, ci) => (
-              <div className={`px-3 py-2 border-t border-[#d8dde2]${ci > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={`${ri}-${ci}`}>{cell}</div>
+              <div className={`px-3 py-2 text-base font-medium border-t border-[#d8dde2]${ci > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={`${ri}-${ci}`}>{cell}</div>
             ))}
           </div>
         ))}
@@ -119,12 +119,12 @@ function BuyingWalkerDetail() {
         <article className="blog-detail-article w-full">
           <header className="pt-8 text-center">
             <h1 className="mx-auto max-w-[410px] text-[19px] font-black leading-tight text-black md:text-[21px]">Buying a Walker? Don't Make a Move Until You Read This!</h1>
-            <p className="mx-auto mt-2 max-w-[410px] font-manrope text-[9px] font-medium leading-4 text-[#1f2930]">Picking the wrong walker can cost you comfort, safety, and money. Our guide shows you how to get it right.</p>
-            <img className="mx-auto mt-5 h-auto w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa-blog4.webp`} alt="Buying a Walker? Don't Make a Move Until You Read This!" />
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">Picking the wrong walker can cost you comfort, safety, and money. Our guide shows you how to get it right.</p>
+            <img className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[7px] object-contain" src={`${process.env.PUBLIC_URL}/images/twa-blog4.webp`} alt="Buying a Walker? Don't Make a Move Until You Read This!" />
           </header>
 
           <div className="mt-6 flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">RD</div>
+            <img className="h-8 w-8 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/robin-dolan_avatar-154x216.webp`} alt="Robin Dolan" />
             <p className="font-manrope text-[12px] font-black text-black">Robin Dolan</p>
           </div>
 
