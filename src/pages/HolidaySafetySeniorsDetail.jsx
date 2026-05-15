@@ -1,4 +1,4 @@
-mport { useEffect } from 'react';
+import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
