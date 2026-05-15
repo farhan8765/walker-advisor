@@ -70,6 +70,40 @@ const relatedArticles = [
     description: 'The wrong food choices can affect energy, inflammation, and mobility comfort.',
   },
 ];
+
+function ExerciseBox() {
+  return (
+    <div className="mt-4 overflow-hidden rounded-[10px] border-2 border-[#aaa4a1] font-manrope text-[#35373a] sm:grid sm:grid-cols-2">
+      <div className="px-5 py-5 sm:border-r sm:border-[#e2e2e2] sm:px-7">
+        <h4 className="text-[13px] font-black leading-6">💪 Leg Strengthening Exercises:</h4>
+        <p className="mt-1 text-[12px] font-medium leading-6">
+          ✔️ <strong>Seated Marches</strong> - Lift your knees while sitting to improve mobility.
+        </p>
+        <p className="text-[12px] font-medium leading-6">
+          ✔️ <strong>Heel-to-Toe Walks</strong> - Helps with balance and coordination.
+        </p>
+      </div>
+      <div className="border-t border-[#e2e2e2] px-5 py-5 sm:border-t-0 sm:px-7">
+        <h4 className="text-[13px] font-black leading-6">💪 Arm &amp; Grip Strengthening:</h4>
+        <p className="mt-1 text-[12px] font-medium leading-6">
+          ✔️ <strong>Hand Squeeze Exercises</strong> - Improves walker grip strength.
+        </p>
+        <p className="text-[12px] font-medium leading-6">
+          ✔️ <strong>Wall Push-Ups</strong> strengthen arms for better support.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function TipBox({ children }) {
+  return (
+    <div className="mt-4 rounded-[12px] bg-[#ffebc4] px-5 py-4 font-manrope text-[12px] font-medium leading-6 text-[#262b35] sm:px-6">
+      {children}
+    </div>
+  );
+}
+
 function LargeWheelWalkerTipsDetail() {
   useEffect(() => {
     const previousTitle = document.title;
@@ -128,7 +162,7 @@ function LargeWheelWalkerTipsDetail() {
             <li><strong>Weight Capacity</strong> – Ensure the walker can support your weight comfortably.</li>
             <li><strong>Brakes (if using a rollator)</strong> – Look for easy-to-use hand brakes for safety.</li>
           </BlogList>
-          <Paragraph><strong>Pro Tip:</strong> Test different models at a medical supply store to find the most comfortable fit!</Paragraph>
+          <TipBox><strong>Pro Tip:</strong> Test different models at a medical supply store to find the most comfortable fit!</TipBox>
           <Paragraph>According to <ArticleLink href="https://www.physio-pedia.com/Walkers">Physio-Pedia</ArticleLink>, incorrect height settings can lead to discomfort or strain.</Paragraph>
 
           <SubHeading>2. Adjust the Walker Properly</SubHeading>
@@ -141,7 +175,7 @@ function LargeWheelWalkerTipsDetail() {
           <Paragraph>As you hold onto your walker, pay attention to your hands. Do they feel sore or uncomfortable after a few minutes? If so, it’s time for an upgrade! Padded or contoured grips can make a world of difference, especially if you have arthritis or weak hands. A secure, comfortable grip means less strain and more confidence with every step. For more information, read about <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/how-do-supportive-grips-on-walkers-help-seniors-with-mobility/">how supportive grips on walkers help seniors.</ArticleLink></Paragraph>
           <SubHeading>Step 4 – Test for Stability</SubHeading>
           <Paragraph>Before heading out, take a moment to test your walker. If you have a rollator, squeeze the brakes to make sure they engage properly. Try them on different surfaces—smooth floors, rugs, or even the driveway. Give the wheels a quick check, ensuring they roll smoothly and aren’t loose. A stable walker isn’t just a tool; it’s your trusted companion for safe and steady movement.</Paragraph>
-          <Paragraph><strong>Quick Fix:</strong> If you have back pain, adjust the walker’s height slightly higher to reduce strain.</Paragraph>
+          <TipBox><strong>Quick Fix:</strong> If you have back pain, adjust the walker’s height slightly higher to reduce strain.</TipBox>
 
           <SubHeading>3. Practice Proper Walking Techniques</SubHeading>
           <Paragraph>Using a walker incorrectly can increase the risk of tripping or falling. Here’s how to walk safely:</Paragraph>
@@ -172,7 +206,7 @@ function LargeWheelWalkerTipsDetail() {
             <li><strong>Curbs & Steps:</strong> Step close to the edge, lift the front wheels, then step up.</li>
             <li><strong>Gravel & Grass:</strong> Use larger wheels (8-10 inches) for better traction.</li>
           </BlogList>
-          <Paragraph><strong>Bonus Tip:</strong> Use walker skis or glide caps to improve movement on rough terrain!</Paragraph>
+          <TipBox><strong>Bonus Tip:</strong> Use walker skis or glide caps to improve movement on rough terrain!</TipBox>
 
           <SubHeading>5. Learn How to Sit and Stand Safely</SubHeading>
           <Paragraph>Many falls happen when sitting down or standing up. Follow these steps:</Paragraph>
@@ -189,20 +223,17 @@ function LargeWheelWalkerTipsDetail() {
             <li>Grab the walker handles after you’re balanced.</li>
             <li>Take your first step only when steady.</li>
           </BlogList>
-          <Paragraph><strong>Never Pull on the Walker to Stand!</strong> It can tip over, causing a fall.</Paragraph>
+          <TipBox><strong>Never Pull on the Walker to Stand!</strong> It can tip over, causing a fall.</TipBox>
 
           <SubHeading>6. Use Accessories for Comfort & Convenience</SubHeading>
           <Paragraph>Enhancing your walker with the right accessories can make daily movement more convenient and comfortable. A walker basket or pouch allows you to carry small essentials like your phone, keys, or a water bottle without needing to juggle them in your hands. If you find yourself walking in dimly lit areas, LED lights or reflectors can improve visibility, keeping you safer during early morning strolls or evening outings.</Paragraph>
           <Paragraph>For those using a rollator, <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/top-4-walkers-with-seats-for-seniors-find-your-perfect-fit/">brakes and seat</ArticleLink> cushions are valuable additions—ensuring you have a secure way to stop and a comfortable place to rest when needed. Lastly, if your walker tends to drag or catch on the floor, consider walker glides or tennis balls on the legs. These help reduce friction, making each step feel smoother and requiring less effort as you move. With these simple yet effective add-ons, your walker can become an even more supportive and user-friendly mobility aid.</Paragraph>
-          <Paragraph><strong>Pro Tip:</strong> Avoid hanging heavy bags on the walker—it can make it unstable!</Paragraph>
+          <TipBox><strong>Pro Tip:</strong> Avoid hanging heavy bags on the walker—it can make it unstable!</TipBox>
 
           <SubHeading>7. Strengthen Your Muscles for Better Stability</SubHeading>
           <Paragraph>Regular leg and core exercises improve balance and make walker use easier. Try these:</Paragraph>
-          <BlogList>
-            <li><strong>Leg Strengthening Exercises:</strong> Seated Marches – Lift your knees while sitting to improve mobility. Heel-to-Toe Walks – Helps with balance and coordination.</li>
-            <li><strong>Arm & Grip Strengthening:</strong> Hand Squeeze Exercises – Improves walker grip strength. Wall Push-Ups strengthen arms for better support.</li>
-          </BlogList>
-          <Paragraph><strong>Daily Goal:</strong> Try 10-15 minutes of simple exercises to build strength!</Paragraph>
+          <ExerciseBox />
+          <TipBox><strong>Daily Goal:</strong> Try 10-15 minutes of simple exercises to build strength!</TipBox>
 
           <SubHeading>8. Keep Your Walker in Good Condition</SubHeading>
           <Paragraph>Regular maintenance prevents accidents and extends the walker’s lifespan.</Paragraph>
@@ -213,7 +244,7 @@ function LargeWheelWalkerTipsDetail() {
             <li>Test brakes (if applicable) – Adjust if they feel loose.</li>
             <li>Inspect rubber tips – Replace if they look worn or uneven.</li>
           </BlogList>
-          <Paragraph><strong>Pro Tip:</strong> Store the walker indoors to prevent rust or damage.</Paragraph>
+          <TipBox><strong>Pro Tip:</strong> Store the walker indoors to prevent rust or damage.</TipBox>
           <Paragraph>A study by the <ArticleLink href="https://www.cs.cmu.edu/~flo/course-spring03/Swedish_report_on_Walker.pdf">Swedish Handicap Institute</ArticleLink> found that the consistent use of 4-wheeled walkers significantly improved mobility and reduced the need for additional home care among elderly women, emphasizing the importance of regular practice and maintenance.</Paragraph>
 
           <SectionHeading id="section-3">Common Mistakes to Avoid While Using a Walker with Larger Wheels</SectionHeading>
@@ -226,7 +257,7 @@ function LargeWheelWalkerTipsDetail() {
             <li><strong>Holding the Handles Too Tightly or Too Loosely</strong> – Gripping too tightly can strain your wrists, while holding too loosely can make the walker harder to control. How to avoid it: Maintain a firm but relaxed grip, using padded grips if necessary for extra comfort.</li>
             <li><strong>Relying Too Much on the Walker for Support</strong> – Walkers provide stability, but they shouldn’t bear all your weight like a crutch. How to avoid it: Focus on using your legs to walk while the walker provides balance, and consider physical therapy if you need help strengthening your muscles.</li>
           </BlogList>
-          <Paragraph>Before purchasing a walker, it’s important to understand if you’re eligible for financial assistance. Read our guide to find out. <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/does-medicare-pay-for-walkers-for-seniors/">Does Medicare Pay For Walkers For Seniors?</ArticleLink></Paragraph>
+          <TipBox>Before purchasing a walker, it’s important to understand if you’re eligible for financial assistance. Read our guide to find out. <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/does-medicare-pay-for-walkers-for-seniors/">Does Medicare Pay For Walkers For Seniors?</ArticleLink></TipBox>
           <Paragraph>Research published in <ArticleLink href="https://pubmed.ncbi.nlm.nih.gov/34464511/">PubMed</ArticleLink> indicates that using a 4-wheeled walker can initially result in a slower and more inconsistent gait pattern. This highlights the importance of gradual adaptation and clinical follow-up during the initial stages of use.</Paragraph>
 
           <SectionHeading id="section-4">Frequently Asked Questions</SectionHeading>
