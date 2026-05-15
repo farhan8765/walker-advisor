@@ -105,6 +105,24 @@ function CompactTable({ headers, rows }) {
   );
 }
 
+const relatedArticles = [
+  {
+    image: 'twa-blog11-1024x683.webp',
+    title: 'Social Activities for Older Adults: The Best Ways to Stay Connected, Active, and Happy',
+    description: 'A stronger social routine can support confidence, movement, and daily independence.',
+  },
+  {
+    image: 'image-2-1.webp',
+    title: 'Can Heart Issues Increase Fall Risk in Seniors?',
+    description: 'Your heart, blood flow, and medications can quietly affect balance and fall risk.',
+  },
+  {
+    image: 'blogg.webp',
+    title: '3 Foods for Seniors to Avoid',
+    description: 'The wrong food choices can affect energy, inflammation, and mobility comfort.',
+  },
+];
+
 function HolidayWalkerSafetyDetail() {
   useEffect(() => {
     const previousTitle = document.title;
