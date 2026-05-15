@@ -236,7 +236,7 @@ function AdjustWalkerHeightDetail() {
         {/* Related Articles */}
         <section className="mx-auto mt-16 w-full">
           <h2 className="font-manrope text-[13px] font-black text-black">Related Articles</h2>
-          <div className="mt-5 grid gap-6 md:grid-cols-3">
+          <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <a className="overflow-hidden rounded-[8px] border border-[#d8dde2] bg-white no-underline" href={article.href} key={article.title}>
                 <img className="h-32 w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />

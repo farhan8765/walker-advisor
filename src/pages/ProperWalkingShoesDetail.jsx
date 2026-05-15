@@ -311,11 +311,12 @@ function ProperWalkingShoesDetail() {
 
         <section className="mx-auto mt-16 w-full">
           <h2 className="font-manrope text-[13px] font-black text-black">Related Articles</h2>
-          <div className="mt-5 grid gap-6 md:grid-cols-3">
+          <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
-              <article className="overflow-hidden rounded-[8px] border border-[#d8dde2] bg-white" key={article.title}>
-                <img className="h-40 w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
-                <div className="p-5"><h3 className="text-[17px] font-black leading-tight text-[#172129]">{article.title}</h3><p className="mt-3 font-manrope text-[12px] font-medium leading-6 text-[#303a42]">{article.description}</p></div>
+              <article className="font-manrope" key={article.title}>
+                <img className="block min-h-[260px] w-full rounded-lg object-cover md:min-h-[310px] lg:min-h-[340px]" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <h3 className="line-clamp-2 mt-8 min-h-0 w-full max-w-[420px] overflow-hidden text-[24px] font-bold leading-[32px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
+                <p className="line-clamp-2 mt-4 overflow-hidden text-base font-medium leading-7 text-[#66737c] md:text-lg">{article.description}</p>
               </article>
             ))}
           </div>

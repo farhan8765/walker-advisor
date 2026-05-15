@@ -311,7 +311,7 @@ function SupportiveGripsDetail() {
         {/* Related Articles */}
         <section className="mx-auto mt-16 max-w-[1120px]">
           <h2 className="font-manrope text-[13px] font-black text-black">Related Articles</h2>
-          <div className="mt-5 grid gap-6 md:grid-cols-3">
+          <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <a className="overflow-hidden bg-white no-underline" href={article.href} key={article.title}>
                 <img className="h-56 w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
