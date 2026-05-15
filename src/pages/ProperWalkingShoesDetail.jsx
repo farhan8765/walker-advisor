@@ -9,10 +9,10 @@ import Newsletter from '../components/Newsletter';
 const tableOfContents = [
   'Balance Changes With Age - Shoes Must Compensate',
   'Joint Protection Becomes Critical After 60',
-  'Poor Footwear Can Increase Fall Risk',
+  'Fall Prevention Starts From the Ground Up',
   'Proper Shoes Improve Posture and Alignment',
   'Foot Conditions Become More Common With Age',
-  'Why Specialized Walking Shoes Matter More Than Regular Shoes',
+  'What Happens When Seniors Wear the Wrong Shoes?',
   'Walking Shoes vs. Regular Sneakers',
   'Frequently Asked Questions',
   'Final Thoughts',
@@ -20,11 +20,14 @@ const tableOfContents = [
 ];
 
 const shoeComparison = [
-  ['Designed for regular casual wear', 'Engineered for support and stability'],
-  ['Often narrow or fashion focused', 'Offers wider toe box and better fit'],
-  ['Limited arch support', 'Built-in arch and heel support'],
-  ['May have slippery or flat soles', 'Non-slip outsole for safer walking'],
-  ['Can increase fatigue during long walks', 'Reduces fatigue and joint strain'],
+  ['Specifically engineered for repetitive heel-to-toe walking motion', 'Designed for general wear, fashion, or multi-purpose activities'],
+  ['Firm, structured midsoles for stability and motion control', 'Cushioning varies; it may be too soft or lack structural support'],
+  ['Strong heel counter for rearfoot stability', 'Heel support may be softer or minimally reinforced'],
+  ['Flexes mainly at the ball of the foot for a natural stride', 'May bend in the middle or multiple areas'],
+  ['Enhanced shock absorption for long-distance walking', 'Shock absorption depends on style; not always optimized'],
+  ['Slip-resistant outsole designed for pavement and indoor floors', 'Traction varies; some prioritize style over grip'],
+  ['Lightweight to reduce fatigue during extended wear', 'Can be heavier, especially lifestyle or bulky designs'],
+  ['Focused on biomechanics, balance, and joint protection', 'Often prioritize appearance and trend over foot mechanics'],
 ];
 
 const relatedArticles = [
@@ -51,8 +54,24 @@ function SectionHeading({ children, id }) {
   return <h2 className="mt-9 text-[18px] font-black leading-tight text-black" id={id}>{children}</h2>;
 }
 
+function ArticleLink({ children, href }) {
+  return (
+    <a className="font-black text-[#0b61a4] no-underline hover:underline" href={href} target="_blank" rel="noopener noreferrer">
+      {children}
+    </a>
+  );
+}
+
 function Paragraph({ children }) {
   return <p className="mt-3 font-manrope text-[12px] font-medium leading-[1.85] text-[#1f2930]">{children}</p>;
+}
+
+function SubHeading({ children }) {
+  return <h3 className="mt-5 text-[14px] font-black leading-tight text-black">{children}</h3>;
+}
+
+function BlogList({ children }) {
+  return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">{children}</ul>;
 }
 
 function BlogImage({ src, alt }) {
@@ -94,17 +113,24 @@ function ProperWalkingShoesDetail() {
           </header>
 
           <div className="mt-6 flex items-center gap-3">
-            <img className="h-8 w-8 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/robin-dolan_avatar-154x216.webp`} alt="Robin Dolan" />
-            <p className="font-manrope text-[12px] font-black text-black">Robin Dolan</p>
+            <img className="h-8 w-8 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/syed-ali_avatar-300x300.webp`} alt="Syed Ali" />
+            <p className="font-manrope text-[12px] font-black text-black">Syed Ali</p>
           </div>
 
           <section className="mt-5 rounded-[8px] bg-[#f3f3f3] p-5">
             <h2 className="text-[16px] font-black text-black">Key Summary</h2>
-            <Paragraph>Proper walking shoes help seniors stay stable, reduce foot strain, and avoid unnecessary fall risks. They support the arches, cushion joints, improve grip, and make daily walking easier.</Paragraph>
+            <Paragraph>Proper walking shoes are essential for seniors because they directly impact balance, joint protection, posture, and fall prevention. Age-related changes in muscle strength, foot structure, and coordination make supportive footwear a necessity rather than a preference.</Paragraph>
+            <Paragraph>Shoes designed for stability, cushioning, and proper alignment can significantly reduce injury risk while preserving mobility and independence.</Paragraph>
           </section>
 
-          <Paragraph>As we age, our feet and lower body change. Muscles weaken, balance becomes less reliable, and small footwear problems can turn into major mobility issues.</Paragraph>
-          <Paragraph>Proper shoes are not just about comfort. They are an important safety tool for seniors who want to stay active, independent, and confident.</Paragraph>
+          <BlogList>
+            <li>A simple walk to the mailbox.</li>
+            <li>A stroll in the park.</li>
+            <li>Moving from the bedroom to the kitchen.</li>
+          </BlogList>
+          <Paragraph>For many older adults, these everyday movements carry more risk than most people realize. Falls remain one of the leading causes of injury among seniors, and while we often blame poor balance or weak muscles, one overlooked factor sits right at ground level: footwear.</Paragraph>
+          <Paragraph>The wrong shoes can quietly contribute to instability, knee pain, back strain, and even long-term declines in mobility. On the other hand, supportive, well-designed walking shoes can dramatically improve comfort, posture, and confidence.</Paragraph>
+          <Paragraph>This guide explains exactly why seniors need proper walking shoes, what happens when they don't have them, and how to choose footwear that supports long-term mobility and independence.</Paragraph>
 
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
             <h2 className="bg-[#ffc400] px-5 py-3 text-[17px] font-black leading-none text-black">Table of Contents</h2>
@@ -114,35 +140,115 @@ function ProperWalkingShoesDetail() {
           </nav>
 
           <SectionHeading id="section-1">Balance Changes With Age - Shoes Must Compensate</SectionHeading>
-          <Paragraph>Balance naturally becomes harder with age. Muscle weakness, reduced ankle mobility, and slower reaction time all affect walking confidence.</Paragraph>
-          <Paragraph>Supportive shoes compensate for these changes by improving foot alignment, traction, and sensory feedback from the ground.</Paragraph>
+          <Paragraph>As we age, several physiological changes affect stability:</Paragraph>
+          <BlogList>
+            <li>Reduced muscle strength in the lower body</li>
+            <li>Slower reflexes</li>
+            <li>Decreased ankle mobility</li>
+            <li>Loss of fat padding under the feet</li>
+            <li>Changes in proprioception (body awareness)</li>
+          </BlogList>
+          <Paragraph>These factors increase fall risk. Shoes that lack structure or cushioning can make the problem worse.</Paragraph>
+          <SubHeading>What Proper Walking Shoes Do:</SubHeading>
+          <BlogList>
+            <li>Provide a stable, wide base of support</li>
+            <li>Offer firm heel counters to prevent wobbling</li>
+            <li>Reduce foot fatigue that compromises balance</li>
+            <li>Improve ground contact awareness</li>
+          </BlogList>
+          <Paragraph>When footwear supports alignment and stability, the body doesn't need to overcompensate with strained muscles and awkward posture.</Paragraph>
           <BlogImage src="img38-1.webp" alt="The vital role of proper footwear in managing lower body deficits" />
 
           <SectionHeading id="section-2">Joint Protection Becomes Critical After 60</SectionHeading>
-          <Paragraph>Walking places repeated impact on the ankles, knees, hips, and lower back. Without adequate cushioning, seniors may feel more pain and fatigue during daily movement.</Paragraph>
-          <Paragraph>Proper walking shoes absorb shock and reduce pressure on joints, helping seniors walk longer with less discomfort.</Paragraph>
+          <Paragraph>Cartilage naturally wears down over time. Many seniors experience:</Paragraph>
+          <BlogList>
+            <li>Osteoarthritis</li>
+            <li>Knee pain</li>
+            <li>Hip discomfort</li>
+            <li>Lower back stiffness</li>
+            <li>Plantar fasciitis</li>
+          </BlogList>
+          <Paragraph>Walking without proper shock absorption increases stress on these joints. Each step sends impact force upward through the ankle, knee, hip, and spine.</Paragraph>
+          <SubHeading>Why Cushioning Matters</SubHeading>
+          <Paragraph>High-quality walking shoes absorb and disperse impact energy. This reduces:</Paragraph>
+          <BlogList>
+            <li>Micro-trauma to joints</li>
+            <li>Inflammation</li>
+            <li>Long-term wear on cartilage</li>
+          </BlogList>
+          <Paragraph>If you've explored options in the <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-walking-shoes-for-seniors-2026/">best walking shoes for seniors</ArticleLink> category, you'll notice that top-rated pairs emphasize cushioning, arch support, and midsole technology specifically designed to reduce joint strain.</Paragraph>
 
-          <SectionHeading id="section-3">Poor Footwear Can Increase Fall Risk</SectionHeading>
-          <Paragraph>Worn-out shoes, smooth soles, loose heels, and collapsed midsoles can all increase fall risk. Shoes should offer traction, support, and a secure fit.</Paragraph>
-          <BlogImage src="img38-2.webp" alt="Footwear comparison safety and protection versus high slip risk" />
+          <SectionHeading id="section-3">Fall Prevention Starts From the Ground Up</SectionHeading>
+          <Paragraph>According to global health data, falls are among the most common causes of injury-related hospitalizations in older adults. Many of these falls are preventable.</Paragraph>
+          <SubHeading>Common Footwear Mistakes That Increase Fall Risk:</SubHeading>
+          <BlogList>
+            <li>Smooth, slippery soles</li>
+            <li>Worn-out tread</li>
+            <li>Loose slip-on shoes</li>
+            <li>High heels or elevated platforms</li>
+            <li>Shoes that are too tight or too loose</li>
+          </BlogList>
+          <SubHeading>Features That Reduce Fall Risk:</SubHeading>
+          <BlogList>
+            <li>Non-slip rubber outsoles</li>
+            <li>Wide toe box for natural toe splay</li>
+            <li>Low heel-to-toe drop</li>
+            <li>Secure lacing or adjustable straps</li>
+            <li>Firm but flexible sole</li>
+          </BlogList>
 
           <SectionHeading id="section-4">Proper Shoes Improve Posture and Alignment</SectionHeading>
-          <Paragraph>Good walking shoes help align the foot, ankle, knee, and hip. Better alignment reduces strain and may improve walking posture over time.</Paragraph>
-          <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">
-            <li>Arch support reduces foot collapse.</li>
-            <li>Wide toe boxes allow natural toe movement.</li>
-            <li>Firm heel counters reduce side-to-side movement.</li>
-            <li>Shock absorption reduces joint stress.</li>
-          </ul>
-          <BlogImage src="img-38-3.webp" alt="Key features seniors should look for when choosing walking shoes" />
+          <Paragraph>Footwear affects the entire kinetic chain, from the ground to the spine.</Paragraph>
+          <Paragraph>When shoes lack arch support or have collapsed midsoles, they can cause:</Paragraph>
+          <BlogList>
+            <li>Overpronation (feet rolling inward)</li>
+            <li>Uneven weight distribution</li>
+            <li>Knee misalignment</li>
+            <li>Hip rotation</li>
+            <li>Lower back strain</li>
+          </BlogList>
+          <Paragraph>Over time, poor alignment leads to chronic discomfort.</Paragraph>
+          <Paragraph>Walking shoes built with structured arch support and a stable heel platform promote neutral alignment. This helps maintain:</Paragraph>
+          <BlogList>
+            <li>Better posture</li>
+            <li>Reduced back pain</li>
+            <li>Even pressure distribution</li>
+            <li>Improved walking efficiency</li>
+          </BlogList>
+          <Paragraph>For seniors who already experience back or hip pain, the right footwear can make a noticeable difference within days.</Paragraph>
+          <BlogImage src="img38-2.webp" alt="Footwear comparison safety and protection versus high slip risk" />
 
           <SectionHeading id="section-5">Foot Conditions Become More Common With Age</SectionHeading>
-          <Paragraph>Many seniors deal with bunions, arthritis, swelling, heel pain, flat feet, or neuropathy. Poor shoe choices can make these conditions worse.</Paragraph>
-          <Paragraph>Proper walking shoes provide space, cushioning, and structure so sensitive feet remain protected throughout the day.</Paragraph>
+          <Paragraph>Aging feet undergo structural changes. Seniors are more likely to develop:</Paragraph>
+          <BlogList>
+            <li>Bunions</li>
+            <li>Hammertoes</li>
+            <li>Corns and calluses</li>
+            <li>Swelling (edema)</li>
+            <li>Diabetic neuropathy</li>
+          </BlogList>
+          <Paragraph>Improper shoes can aggravate these conditions.</Paragraph>
+          <SubHeading>Why Specialized Walking Shoes Help:</SubHeading>
+          <BlogList>
+            <li>Extra depth prevents pressure on deformities</li>
+            <li>Soft linings reduce friction</li>
+            <li>Wide widths accommodate swelling</li>
+            <li>Breathable materials prevent moisture buildup</li>
+            <li>Shock-absorbing midsoles reduce nerve stress</li>
+          </BlogList>
 
-          <SectionHeading id="section-6">Why Specialized Walking Shoes Matter More Than Regular Shoes</SectionHeading>
-          <Paragraph>Regular sneakers may look comfortable, but they are not always designed for senior balance, joint support, or long-term walking safety.</Paragraph>
-          <Paragraph>Specialized walking shoes focus on grip, stability, heel control, cushioning, and proper fit.</Paragraph>
+          <SectionHeading id="section-6">What Happens When Seniors Wear the Wrong Shoes?</SectionHeading>
+          <Paragraph>The consequences are gradual but serious:</Paragraph>
+          <BlogList>
+            <li>Increased fall risk</li>
+            <li>Faster joint degeneration</li>
+            <li>Worsening foot deformities</li>
+            <li>Chronic lower back pain</li>
+            <li>Reduced walking endurance</li>
+          </BlogList>
+          <Paragraph>Many seniors unknowingly wear outdated athletic shoes with worn-out cushioning. Most walking shoes lose structural integrity long before they look damaged.</Paragraph>
+          <Paragraph>Experts generally recommend replacing walking shoes every 300-500 miles or when cushioning feels compressed.</Paragraph>
+          <BlogImage src="img-38-3.webp" alt="Key features seniors should look for when choosing walking shoes" />
 
           <SectionHeading id="section-7">Walking Shoes vs. Regular Sneakers</SectionHeading>
           <div className="mt-5 grid grid-cols-2 border-y border-[#d8dde2] font-manrope text-[11px] text-[#1f2930]">
@@ -159,32 +265,34 @@ function ProperWalkingShoesDetail() {
           <SectionHeading id="section-8">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
             {[
-              'Why do seniors need proper walking shoes?',
-              'Can shoes reduce fall risk?',
-              'Are slip-on shoes safe for seniors?',
-              'What shoe features are most important?',
-            ].map((question) => (
+              ['Do seniors really need special walking shoes?', 'Yes. Aging feet and joints require enhanced support, cushioning, and stability that regular sneakers often don\'t provide.'],
+              ['Can proper walking shoes reduce knee pain?', 'Yes. Shock-absorbing midsoles and proper alignment reduce stress on the knees and hips.'],
+              ['Are slip-on shoes safe for seniors?', 'Only if they provide a secure fit and traction. Loose slip-ons without grip increase fall risk.'],
+              ['How tight should walking shoes be?', 'They should feel snug but not tight. There should be about a thumb\'s width of space at the front of the toe box.'],
+            ].map(([question, answer]) => (
               <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
                 <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary>
-                <p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">Seniors should prioritize arch support, non-slip soles, cushioning, a secure heel, and enough room in the toe box.</p>
+                <p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">{answer}</p>
               </details>
             ))}
           </div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-9">
             <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
-            <Paragraph>Proper walking shoes are one of the easiest ways seniors can improve comfort, stability, and confidence. Shoes should support the whole body, not just cover the feet.</Paragraph>
-            <Paragraph>If shoes are worn out, slippery, too narrow, or painful, replacing them is a practical step toward safer daily movement.</Paragraph>
+            <Paragraph>Proper walking shoes are not a luxury for seniors; they are a necessity.</Paragraph>
+            <Paragraph>They protect joints.<br />They prevent falls.<br />They improve posture.<br />They reduce pain.<br />They preserve independence.</Paragraph>
+            <Paragraph>As the body changes with age, footwear must evolve accordingly. Investing in supportive walking shoes is one of the simplest yet most impactful decisions an older adult can make for long-term mobility and safety.</Paragraph>
           </section>
 
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-10">
             <ArticleIconHeading type="references">References</ArticleIconHeading>
-            <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
-              <li>American Podiatric Medical Association. Senior Foot Health.</li>
-              <li>National Institute on Aging. Falls and Older Adults.</li>
-              <li>CDC. Preventing Older Adult Falls.</li>
-              <li>Mayo Clinic. Footwear and Joint Pain Guidance.</li>
-            </ol>
+            <ul className="mt-4 list-disc space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
+              <li>Centers for Disease Control and Prevention - Data on falls as a leading cause of injury among older adults</li>
+              <li>National Institute on Aging - Research on mobility decline and aging-related balance changes</li>
+              <li>American Podiatric Medical Association - Clinical guidance on supportive footwear and foot health</li>
+              <li>American Academy of Orthopaedic Surgeons - Information on joint stress, biomechanics, and walking mechanics</li>
+              <li>World Health Organization - Global statistics on fall-related injuries in older populations</li>
+            </ul>
           </section>
 
           <SocialDots />
