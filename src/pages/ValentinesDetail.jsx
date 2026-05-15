@@ -18,6 +18,14 @@ const tableOfContents = [
   'References',
 ];
 
+const faqs = [
+  ["What are simple Valentine's Day gifts for seniors?", 'Simple gifts include handwritten notes, small treats like chocolates or tea, cozy scarves, potted plants, or photo keepsakes. Thoughtfulness matters more than cost.'],
+  ["How can seniors celebrate Valentine's Day without going out?", 'Seniors can enjoy quiet at-home celebrations like a cozy breakfast together, listening to old favorite songs, indoor picnics, or a slow living-room dance.'],
+  ['Are homemade gifts good for senior couples?', 'Absolutely! Handmade cards, "love coupons," playlists, or memory scrapbooks show care and are often more cherished than expensive gifts.'],
+  ['Can seniors give each other non-material gifts?', 'Yes, acts of service, shared time, pampering, or creating meaningful memories are all powerful non-material gifts that deepen connection.'],
+  ["How do I make Valentine's Day special for my long-married partner?", 'Focus on nostalgia, small gestures of love, and quality time together. Revisiting memories, reading love notes, and enjoying quiet, shared moments make the day memorable.'],
+];
+
 const relatedArticles = [
   {
     image: 'image-9-1.webp',
@@ -87,11 +95,11 @@ function ValentinesDetail() {
 
           <section className="mt-5 rounded-[8px] bg-[#f3f3f3] p-5">
             <h2 className="text-[16px] font-black text-black">Key Summary</h2>
-            <Paragraph>This guide offers seniors simple, thoughtful ways to celebrate Valentine's Day. From handwritten notes to cozy shared moments, it focuses on meaningful gestures that express enduring love.</Paragraph>
+            <Paragraph>This guide offers seniors simple, thoughtful ways to celebrate Valentine's Day. From handwritten notes to cozy shared moments, discover meaningful gestures that express enduring love.</Paragraph>
           </section>
 
-          <Paragraph>Valentine's Day is a sweet reminder that love only gets better with time. For senior couples who have shared decades of life, the most meaningful gifts are often simple, heartfelt, and focused on closeness rather than extravagance.</Paragraph>
-          <Paragraph>These ideas are low-cost, personal, and easy to adapt for different energy levels, health needs, and living situations.</Paragraph>
+          <Paragraph>Valentine's Day is a sweet reminder that love only gets better with time. For senior couples who have shared decades of life, the most meaningful gestures are often simple, heartfelt, and focused on closeness rather than extravagance. These ideas let partners surprise and cherish one another in gentle, comfortable ways, no big spending or complicated plans required.</Paragraph>
+          <Paragraph>Here are some wonderful, low-effort ideas that seniors can give to each other this Valentine's Day.</Paragraph>
 
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
             <h2 className="bg-[#ffc400] px-5 py-3 text-[17px] font-black leading-none text-black">Table of Contents</h2>
@@ -101,76 +109,69 @@ function ValentinesDetail() {
           </nav>
 
           <SectionHeading id="section-1">A Handwritten Love Note or Card</SectionHeading>
-          <Paragraph>One of the most powerful gifts is words from the heart. Sit down with pen and paper, or even a pretty card, and write a short note about what you still love most after all these years.</Paragraph>
-          <Paragraph>Read it aloud to each other over tea or before bed. Many long-married couples say these moments become treasured keepsakes.</Paragraph>
+          <Paragraph>One of the most powerful gifts is words from the heart. Sit down with pen and paper (or even a pretty card from the store) and write a short note about what you still love most after all these years, a specific memory, a trait that still makes your heart skip, or simply “I'm grateful you're here with me.”</Paragraph>
+          <Paragraph>Read it aloud to each other over tea or before bed. Many long-married couples say these notes become treasured keepsakes they reread often.</Paragraph>
 
           <SectionHeading id="section-2">A Small, Thoughtful Gift Wrapped with Love</SectionHeading>
           <Paragraph>Pick something personal and easy to enjoy:</Paragraph>
           <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">
-            <li>A single favorite flower or a small potted plant</li>
-            <li>Their preferred chocolate, cookies, or special tea blend</li>
-            <li>A cozy item like warm socks, a soft scarf, or a new throw blanket</li>
+            <li>A single favorite flower or a small potted plant that reminds you of them</li>
+            <li>Their preferred chocolates, cookies, or a special tea blend</li>
+            <li>A cozy item like warm socks, a soft scarf, or a new throw blanket for snuggling</li>
           </ul>
-          <Paragraph>Wrap it simply, give it with a smile, and say why it made you think of them.</Paragraph>
+          <Paragraph>Wrap it simply (even in pretty tissue paper) and present it with a hug. The surprise and the thought behind it mean everything.</Paragraph>
 
           <SectionHeading id="section-3">The Gift of Time: A Cozy Shared Moment</SectionHeading>
           <Paragraph>Plan a quiet activity just for the two of you:</Paragraph>
           <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">
             <li>Prepare a simple breakfast or afternoon tea together</li>
-            <li>Sit up and talk while listening to your favorite old songs</li>
-            <li>Watch a favorite movie with snacks nearby</li>
-            <li>Look through old photos and remember happy moments</li>
+            <li>Set up a mini picnic on the living room floor or balcony with your favorite snacks</li>
+            <li>Play your old favorite songs and enjoy a slow dance in the living room, gentle swaying, no fancy steps needed</li>
           </ul>
 
           <SectionHeading id="section-4">A “Memory Revival” Surprise</SectionHeading>
-          <Paragraph>Bring back an old photo, love letter, wedding invitation, or keepsake from early days together. Present it with a note like: “Remember when...?”</Paragraph>
-          <Paragraph>You can also create a short playlist of “your songs” on a phone or tablet and enjoy it together.</Paragraph>
+          <Paragraph>Dig out an old photo, your wedding invitation, or a memento from early days together. Present it with a note like: “Remember when...? I still feel the same way today.”</Paragraph>
+          <Paragraph>Or create a short playlist of “your songs” on a phone or tablet, easy to play during dinner or relaxation time.</Paragraph>
 
           <SectionHeading id="section-5">Gentle Pampering for Each Other</SectionHeading>
           <Paragraph>Offer something soothing and caring:</Paragraph>
           <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">
             <li>A warm foot soak or hand massage with lotion</li>
-            <li>Help brushing hair, applying cream, or choosing a comfortable outfit</li>
-            <li>A promise to handle a small chore they usually do</li>
+            <li>Help brushing hair, applying cream, or just sitting close while sharing a quiet conversation</li>
+            <li>A promise to handle a small chore they usually do (like making the bed or watering plants) so they can rest</li>
           </ul>
 
           <SectionHeading id="section-6">A Promise or “Love Coupon” Book</SectionHeading>
           <Paragraph>Make a few homemade coupons for things like:</Paragraph>
           <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">
-            <li>“One slow dance whenever you want”</li>
-            <li>“Breakfast in bed on a lazy morning”</li>
-            <li>“A no-rush listening session, no interruptions”</li>
-            <li>“A favorite story retold just for you”</li>
+            <li>“One slow dance whenever you want.”</li>
+            <li>“Breakfast in bed (or at the table!).”</li>
+            <li>“A long listening session, no interruptions”</li>
+            <li>“A favorite story retold just for you.”</li>
           </ul>
 
           <SectionHeading id="section-7">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
-            {[
-              'What are simple Valentine’s Day gifts for seniors?',
-              'How can seniors celebrate Valentine’s Day without going out?',
-              'Are homemade gifts good for senior couples?',
-              'Can seniors give each other non-material gifts?',
-              'How do I make Valentine’s Day special for my long-married partner?',
-            ].map((question) => (
+            {faqs.map(([question, answer]) => (
               <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
                 <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary>
-                <p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">Choose something personal, simple, and meaningful, such as a handwritten note, shared meal, photo memory, or small comfort gift.</p>
+                <p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">{answer}</p>
               </details>
             ))}
           </div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
             <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
-            <Paragraph>The best gifts seniors give each other are not about perfection. They are about presence, appreciation, and reminding one another that the love is still strong and valued.</Paragraph>
-            <Paragraph>Celebrate gently, creatively, and joyfully. Even a small gesture can become a beautiful memory.</Paragraph>
+            <Paragraph>The best gifts seniors give each other aren't about perfection; they're about presence, appreciation, and reminding one another that the love is still strong and vibrant. Whether it's a note, a small treat, or simply holding hands a little longer, these gestures say “After all this time, you're still my Valentine.”</Paragraph>
+            <Paragraph>Celebrate quietly, celebrate fully, and enjoy every sweet moment together. Happy Valentine's Day to all the beautiful senior couples out there. Your love inspires us all.</Paragraph>
           </section>
 
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-9">
             <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
-              <li>Love For Our Elders. Senior Love Notes and Meaningful Gestures.</li>
-              <li>The Daily Heartbeat. Valentine’s Day Ideas for Senior Couples.</li>
-              <li>Connections Matter. Couples Bonding Ideas and Memory Activities.</li>
+              <li>Love for Our Elders. <em>Senior Love Notes and Meaningful Gestures</em>. https://loveforourelders.org</li>
+              <li>Elite Daily. <em>Heartfelt Valentine's Day Ideas for Senior Couples</em>. https://www.elitedaily.com</li>
+              <li>Dreamstime. <em>Senior Couple Smiling Flowers Gift Cozy Home Setting Stock Photos</em>. https://www.dreamstime.com</li>
             </ol>
           </section>
 
