@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
+        sans: ['Manrope', 'sans-serif'],
         heading: ['Anton', 'sans-serif'],
         raleway: ['Raleway', 'sans-serif'],
         manrope: ['Manrope', 'sans-serif'],

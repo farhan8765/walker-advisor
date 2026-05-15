@@ -6,7 +6,7 @@ function MobilityGuide() {
       <div className="mx-auto grid w-full max-w-[1280px] min-w-0 items-center gap-10 lg:grid-cols-[minmax(360px,_478px)_minmax(0,_1fr)] lg:gap-36">
         <img
           className="h-auto max-h-[420px] w-full rounded-lg object-cover object-center md:h-[560px] md:max-h-none lg:h-[740px]"
-          src={`${imagePath}/image-9-1.webp`}
+          src={`${imagePath}/change.png`}
           alt="Senior woman walking outdoors with a rollator walker"
         />
 

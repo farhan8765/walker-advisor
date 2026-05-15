@@ -7,8 +7,17 @@ function HomeHero() {
           {/* Left — text content */}
           <div className="flex w-full min-w-0 flex-1 flex-col pb-8 lg:pb-16">
             {/* Star badge */}
-            <div className="inline-flex max-w-full flex-wrap items-center gap-2 rounded-full bg-[#ffc400] px-3 py-2 sm:px-4">
-              <span className="text-xs leading-none sm:text-sm">⭐⭐⭐⭐⭐</span>
+            <div className="inline-flex w-fit max-w-full shrink-0 items-center gap-2 self-start rounded-full bg-[#ffc400] px-3 py-2 sm:px-4">
+              <span className="inline-flex shrink-0 items-center gap-0.5" aria-hidden>
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <img
+                    key={i}
+                    src={`${process.env.PUBLIC_URL}/images/Star.png`}
+                    alt=""
+                    className="h-4 w-4 object-contain sm:h-5 sm:w-5"
+                  />
+                ))}
+              </span>
               <span className="font-manrope text-xs font-semibold leading-snug text-black sm:text-sm">
                 5-Star Reviews and Resources
               </span>

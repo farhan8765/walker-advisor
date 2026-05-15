@@ -56,7 +56,7 @@ import Newsletter from "./components/Newsletter";
 import PerformanceHighlight from "./components/PerformanceHighlight";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import SmallHomeWalkerDetail from "./pages/SmallHomeWalkerDetail";
-import ToolShowcase from "./components/ToolShowcase";
+// import ToolShowcase from "./components/ToolShowcase";
 import WalkerChoices from "./components/WalkerChoices";
 import WalkerInsightsPromo from "./components/WalkerInsightsPromo";
 import { applyHomePageDocumentSeo, setCanonicalToCurrentPath } from "./seo/siteDocument";
@@ -74,7 +74,7 @@ function Home() {
       <HomeFeatures />
       <ExpertsChoice />
       <MobilityGuide />
-      <ToolShowcase />
+      {/* <ToolShowcase /> */}
       <NewWalkerCta />
       <WalkerChoices />
       <WalkerInsightsPromo />
