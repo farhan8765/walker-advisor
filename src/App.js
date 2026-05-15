@@ -8,6 +8,8 @@ import AmazonReturnsDetail from "./pages/AmazonReturnsDetail";
 import AmazonShoppingHackDetail from "./pages/AmazonShoppingHackDetail";
 import Articles from "./pages/Articles";
 import BestPlacesBuyWalkersDetail from "./pages/BestPlacesBuyWalkersDetail";
+import BestWalkingShoesSeniorsDetail from "./pages/BestWalkingShoesSeniorsDetail";
+import BestUprightWalkersOutdoorDetail from "./pages/BestUprightWalkersOutdoorDetail";
 import BlogDetail from "./pages/BlogDetail";
 import BuyingWalkerDetail from "./pages/BuyingWalkerDetail";
 import CaregiversCorner from "./pages/CaregiversCorner";
@@ -23,6 +25,8 @@ import AdjustWalkerHeightDetail from "./pages/AdjustWalkerHeightDetail";
 import CaregiversGuideWalkerDetail from "./pages/CaregiversGuideWalkerDetail";
 import EmergencyPreparednessDetail from "./pages/EmergencyPreparednessDetail";
 import FittingWalkerDetail from "./pages/FittingWalkerDetail";
+import FoodsSeniorsAvoidDetail from "./pages/FoodsSeniorsAvoidDetail";
+import GiftsForSeniorsUnder20Detail from "./pages/GiftsForSeniorsUnder20Detail";
 import MustHaveWalkerAccessoriesDetail from "./pages/MustHaveWalkerAccessoriesDetail";
 import SupportiveGripsDetail from "./pages/SupportiveGripsDetail";
 import TransitionWalkerIndependentDetail from "./pages/TransitionWalkerIndependentDetail";
@@ -42,6 +46,12 @@ import Footer from "./components/Footer";
 import HelpfulResources from "./components/HelpfulResources";
 import HolidaySafetySeniorsDetail from "./pages/HolidaySafetySeniorsDetail";
 import HolidayWalkerSafetyDetail from "./pages/HolidayWalkerSafetyDetail";
+import HolidayGiftsSeniorsDetail from "./pages/HolidayGiftsSeniorsDetail";
+import HeavyDutyObeseWalkersDetail from "./pages/HeavyDutyObeseWalkersDetail";
+import HeavyDutyTallWalkersDetail from "./pages/HeavyDutyTallWalkersDetail";
+import CompactWalkersDetail from "./pages/CompactWalkersDetail";
+import ChristmasGiftsElderlyLadiesDetail from "./pages/ChristmasGiftsElderlyLadiesDetail";
+import ValentinesGiftIdeasDetail from "./pages/ValentinesGiftIdeasDetail";
 import HomeFeatures from "./components/HomeFeatures";
 import HomeHero from "./components/HomeHero";
 import LargeWheelWalkerTipsDetail from "./pages/LargeWheelWalkerTipsDetail";
@@ -57,6 +67,7 @@ import PerformanceHighlight from "./components/PerformanceHighlight";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import SmallHomeWalkerDetail from "./pages/SmallHomeWalkerDetail";
 // import ToolShowcase from "./components/ToolShowcase";
+import SocialActivitiesOlderAdultsDetail from "./pages/SocialActivitiesOlderAdultsDetail";
 import WalkerChoices from "./components/WalkerChoices";
 import WalkerInsightsPromo from "./components/WalkerInsightsPromo";
 import { applyHomePageDocumentSeo, setCanonicalToCurrentPath } from "./seo/siteDocument";
@@ -104,6 +115,17 @@ const routes = {
   "/can-osteoarthritis-lead-to-more-falls-in-seniors": OsteoarthritisFallsDetail,
   "/holiday-safety-tips-for-seniors-prevent-falls-fires-seasonal-risks": HolidaySafetySeniorsDetail,
   "/holiday-safety-tips-for-seniors-using-walkers": HolidayWalkerSafetyDetail,
+  "/the-best-holiday-gifts-for-seniors-who-have-everything": HolidayGiftsSeniorsDetail,
+  "/best-walking-shoes-for-seniors-in-2026": BestWalkingShoesSeniorsDetail,
+  "/best-upright-walkers-for-outdoor-use-top-5-picks-from-amazon-2026-edition": BestUprightWalkersOutdoorDetail,
+  "/best-heavy-duty-walkers-for-obese-seniors-top-5-picks-for-2026": HeavyDutyObeseWalkersDetail,
+  "/heavy-duty-walkers-for-tall-people-top-picks": HeavyDutyTallWalkersDetail,
+  "/compact-walkers-for-seniors-a-comprehensive-guide": CompactWalkersDetail,
+  "/christmas-gift-ideas-for-elderly-ladies-this-december-2026": ChristmasGiftsElderlyLadiesDetail,
+  "/20-thoughtful-inexpensive-christmas-gift-ideas-for-senior-citizens-under-20": GiftsForSeniorsUnder20Detail,
+  "/3-foods-for-seniors-to-avoid": FoodsSeniorsAvoidDetail,
+  "/social-activities-for-older-adults-the-best-ways-to-stay-connected-active-and-happy": SocialActivitiesOlderAdultsDetail,
+  "/valentines-day-gift-ideas-for-seniors-to-give-to-each-other": ValentinesGiftIdeasDetail,
   "/the-side-effects-of-using-a-cane": CaneSideEffectsDetail,
   "/senior-safety-how-to-use-a-walker-on-stairs": WalkerStairsSafetyDetail,
   "/understanding-upright-walkers-how-they-improve-senior-posture": UprightWalkersDetail,

@@ -11,7 +11,7 @@ export const articles = [
   },
   {
     id: 2,
-    category: 'Comparison',
+    category: 'Informational',
     image: 'image-9-1.webp',
     href: '/understanding-upright-walkers-how-they-improve-senior-posture',
     alt: 'Senior woman walking outdoors with an upright walker',
@@ -21,7 +21,7 @@ export const articles = [
   },
   {
     id: 3,
-    category: 'Comparison',
+    category: 'Informational',
     image: 'image.webp',
     href: '/how-to-choose-walking-shoes-for-balance-and-stability',
     alt: 'Walking shoes for balance and stability',
@@ -41,7 +41,7 @@ export const articles = [
   },
   {
     id: 5,
-    category: "Caregiver's Corner",
+    category: 'Informational',
     image: 'info-twa-38.webp',
     href: '/mental-health-in-old-age-a-complete-guide-for-seniors-caregivers',
     alt: 'Caregiver smiling with an older adult using a walker',
@@ -51,7 +51,7 @@ export const articles = [
   },
   {
     id: 6,
-    category: "Caregiver's Corner",
+    category: 'Informational',
     image: 'valentines.webp',
     href: '/valentines-day-ideas-what-seniors-can-give-each-other',
     alt: "Valentine's Day ideas for seniors",
@@ -71,7 +71,7 @@ export const articles = [
   },
   {
     id: 8,
-    category: 'Comparison',
+    category: 'Informational',
     image: 'blog35-1-1.webp',
     href: '/best-mobility-devices-for-seniors',
     alt: 'Mobility devices for seniors including wheelchair, scooter, cane, and walker',
@@ -91,7 +91,7 @@ export const articles = [
   },
   {
     id: 10,
-    category: "Caregiver's Corner",
+    category: 'Informational',
     image: 'twa33-1.webp',
     href: '/holiday-safety-tips-for-seniors-prevent-falls-fires-seasonal-risks',
     alt: 'Holiday safety tips for seniors',
@@ -121,7 +121,7 @@ export const articles = [
   },
   {
     id: 13,
-    category: 'Comparison',
+    category: 'Informational',
     image: 'twainfo-1.webp',
     href: '/every-way-to-return-amazon-orders-for-free',
     alt: 'Amazon packages stacked near a front door',
@@ -131,7 +131,7 @@ export const articles = [
   },
   {
     id: 14,
-    category: 'Comparison',
+    category: 'Informational',
     image: 'twa-1-1.webp',
     href: '/the-secret-amazon-shopping-hack-to-get-a-deal-on-just-about-anything',
     alt: 'Hands holding Amazon delivery boxes',
@@ -221,7 +221,7 @@ export const articles = [
   },
   {
     id: 24,
-    category: "Caregiver's Corner",
+    category: 'Informational',
     image: 'twa-blog11-1024x683.webp',
     href: '/caregivers-guide-to-helping-seniors-pick-and-use-the-perfect-walker',
     alt: 'Caregiver assisting senior woman with walking support in a home environment',
@@ -251,7 +251,7 @@ export const articles = [
   },
   {
     id: 27,
-    category: 'Comparison',
+    category: 'Informational',
     image: 'twa-blog4.webp',
     href: '/buying-a-walker-dont-make-a-move-until-you-read-this',
     alt: 'Senior woman using a walker outdoors on a paved path',
@@ -261,7 +261,7 @@ export const articles = [
   },
   {
     id: 28,
-    category: 'Comparison',
+    category: 'Informational',
     image: 'twa-blog5.webp',
     href: '/the-complete-guide-to-walker-and-rollator-types-which-one-fits-you-best',
     alt: 'Clinician helping a senior compare walker and rollator options',
@@ -328,6 +328,115 @@ export const articles = [
     title: 'Most People Use Walkers Wrong. Are You Making These Mistakes?',
     description:
       'Using a walker seems simple, until you realize most people do it incorrectly. Learn the right way before it affects your safety.',
+  },
+  {
+    id: 35,
+    category: 'Comparison',
+    image: 'TWA-Blog-imgs.webp',
+    href: '/best-walking-shoes-for-seniors-in-2026',
+    alt: 'Best walking shoes for seniors in 2026',
+    title: 'Best Walking Shoes for Seniors in 2026',
+    description:
+      'Choosing the right walking shoes is especially important for seniors dealing with balance issues, arthritis, or foot conditions such as bunions or plantar fasciitis.',
+  },
+  {
+    id: 36,
+    category: 'Comparison',
+    image: 'TWA-Blog-imgs (1).webp',
+    href: '/valentines-day-gift-ideas-for-seniors-to-give-to-each-other',
+    alt: "Valentine's Day gift ideas for seniors",
+    title: 'Valentine’s Day Gift Ideas for Seniors to Give to Each Other',
+    description:
+      'These heartwarming Valentine’s Day gifts for seniors will make you believe in lifelong love all over again.',
+  },
+  {
+    id: 37,
+    category: 'Comparison',
+    image: 'WhatsApp-Image-2026-01-20-at-12.44.47-PM.webp',
+    href: '/compact-walkers-for-seniors-a-comprehensive-guide',
+    alt: 'Caregiver helping a senior use a compact walker',
+    title: 'Compact Walkers for Seniors: A Comprehensive Guide',
+    description:
+      'Shocking! These Tiny Walkers Are Revolutionizing Senior Mobility – You Won’t Believe How Easy Independence Can Be!',
+  },
+  {
+    id: 38,
+    category: 'Comparison',
+    image: 'WhatsApp-Image-2026-01-08-at-2.57.24-PM.webp',
+    href: '/heavy-duty-walkers-for-tall-people-top-picks',
+    alt: 'Tall man using a heavy duty walker outdoors',
+    title: 'Heavy Duty Walkers for Tall People: Top Picks',
+    description:
+      'Tall and tired of walkers that force you to hunch? Discover the best heavy-duty walkers built specifically for tall people, with higher handles, stronger frames,',
+  },
+  {
+    id: 39,
+    category: 'Comparison',
+    image: 'image_141703db.webp',
+    href: '/best-heavy-duty-walkers-for-obese-seniors-top-5-picks-for-2026',
+    alt: 'Heavy duty walker for obese seniors',
+    title: 'Best Heavy-Duty Walkers for Obese Seniors: Top 5 Picks for 2026',
+    description:
+      'Struggling to find a walker that truly supports heavier weights without wobbling? These 5 heavy-duty walkers for obese seniors in 2026 are shockingly strong, stable,',
+  },
+  {
+    id: 40,
+    category: 'Comparison',
+    image: 'twa-1-3.webp',
+    href: '/the-best-holiday-gifts-for-seniors-who-have-everything',
+    alt: 'Holiday gift ideas for seniors who have everything',
+    title: 'The Best Holiday Gifts for Seniors Who Have Everything',
+    description: 'Thoughtful Ideas That Go Beyond Material Possessions',
+  },
+  {
+    id: 41,
+    category: 'Comparison',
+    image: 'twa-22-1.webp',
+    href: '/best-upright-walkers-for-outdoor-use-top-5-picks-from-amazon-2026-edition',
+    alt: 'Senior woman using an upright walker outdoors',
+    title: 'Best Upright Walkers for Outdoor Use: Top 5 Picks from Amazon (2026 Edition)',
+    description:
+      'Ready to enjoy the outdoors again? These 5 upright walkers are absolute game-changers, with bigger wheels, better stability, smoother rides, and Amazon-verified comfort.',
+  },
+  {
+    id: 42,
+    category: 'Comparison',
+    image: 'twa-1-2.webp',
+    href: '/20-thoughtful-inexpensive-christmas-gift-ideas-for-senior-citizens-under-20',
+    alt: 'Christmas gifts arranged in a festive row',
+    title: '20 Thoughtful & Inexpensive Christmas Gift Ideas for Senior Citizens Under $20',
+    description:
+      'Don’t overspend this holiday! These 20 thoughtful Christmas gifts for seniors under $20 are guaranteed to make them smile',
+  },
+  {
+    id: 43,
+    category: 'Comparison',
+    image: 'twa-00.webp',
+    href: '/christmas-gift-ideas-for-elderly-ladies-this-december-2026',
+    alt: 'Elderly woman receiving a Christmas gift',
+    title: 'Christmas Gift Ideas for Elderly Ladies this December 2026',
+    description:
+      'Looking for the perfect Christmas gift for elderly ladies this December 2026? Check out these 10 heartwarming ideas that will make her smile from ear',
+  },
+  {
+    id: 44,
+    category: "Caregiver's Corner",
+    image: 'blog.webp',
+    href: '/social-activities-for-older-adults-the-best-ways-to-stay-connected-active-and-happy',
+    alt: 'Older adults enjoying a social activity together',
+    title: 'Social Activities for Older Adults: The Best Ways to Stay Connected, Active, and Happy',
+    description:
+      'Loneliness in seniors is not just sad, it is as dangerous to health as smoking 15 cigarettes a day. Here are the best ways older adults can stay connected and thrive.',
+  },
+  {
+    id: 45,
+    category: "Caregiver's Corner",
+    image: 'blog2.webp',
+    href: '/3-foods-for-seniors-to-avoid',
+    alt: 'Three foods for seniors to avoid',
+    title: '3 Foods for Seniors to Avoid',
+    description:
+      'Your body after 60 is a different machine entirely. Metabolism slows. The immune system becomes more reactive. Kidneys filter less efficiently, and the gut microbiome shifts dramatically.',
   },
 ];
 
