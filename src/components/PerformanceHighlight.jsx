@@ -7,18 +7,21 @@ const authorSlides = [
     id: 'amir',
     image: 'Amir.png',
     name: 'Amir Abbasi',
+    href: '/amir-abbasi',
     bio: "Amir Abbasi is an experienced IT professional whose journey has grown far beyond technology. Since 2012, he has also served as a devoted caregiver for his parents, an experience that has given him unique insight into the everyday realities of aging. Through this personal role, Amir came to understand how the right products, resources, and support can make a profound difference in the lives of seniors and their families.",
   },
   {
     id: 'robin',
     image: 'Robin.png',
-    name: 'Robin',
+    name: 'Robin Dolan',
+    href: '/robin-dolan',
     bio: 'Robin Dolan, LVN (Licensed Vocational Nurse), has been serving in the nursing profession since 2024, dedicating her career to geriatric and rehabilitative care. She began her journey at Scripps Home in Altadena, California, a multilevel facility supporting low-income seniors. Over the years, she has gained extensive experience working in skilled nursing, rehabilitation centers, and assisted living facilities, where she witnessed the unique challenges seniors and their families face in accessing quality healthcare.',
   },
   {
     id: 'editorial',
     image: 'Ali.png',
     name: 'Syed Ali',
+    href: '/syed-ali',
     bio: 'Syed brings a wealth of hands-on experience to the advisor site for mobility devices. As a dedicated caregiver for aging relatives facing Parkinson’s, stroke rehabilitation, diabetes, and other long-term conditions, Syed has personally navigated the wide spectrum of mobility and senior products. His practical expertise covers everything from canes and walkers to emergency assistive devices, grab bars, and specialized bathroom safety equipment, always with the goal of enhancing comfort and safety.',
   },
 ];
@@ -57,6 +60,7 @@ function PerformanceHighlight() {
   }, []);
 
   const translatePct = (activeIndex * 100) / slideCount;
+  const activeSlide = authorSlides[activeIndex];
 
   return (
     <section className="w-full overflow-x-hidden px-4 py-16 md:px-8 lg:px-14 lg:py-24">
@@ -73,17 +77,29 @@ function PerformanceHighlight() {
           </p>
         </div>
 
-        <div className="mt-20 min-w-0 max-w-full rounded-lg bg-[#ffc400] px-4 py-8 sm:px-8 md:px-10 lg:px-8">
-          <div className="min-w-0 max-w-full overflow-hidden">
+        <div className="mt-20 min-w-0 max-w-full rounded-lg bg-[#ffc400] px-4 py-6 sm:px-8 md:px-10 lg:grid lg:grid-cols-[466px_minmax(0,_1fr)] lg:grid-rows-[1fr_auto] lg:gap-x-24 lg:gap-y-6 lg:px-8 lg:py-8">
+          <div className="hidden lg:flex lg:row-span-2 lg:items-center lg:justify-center lg:self-stretch lg:py-4">
+            <div className="w-full max-w-[466px] overflow-hidden rounded-md">
+              <div className="h-[300px] w-full lg:h-[340px]">
+                <img
+                  className="h-full w-full object-cover object-center"
+                  src={`${base}/${activeSlide.image}`}
+                  alt={activeSlide.name}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="min-w-0 max-w-full overflow-hidden lg:col-start-2 lg:row-start-1 lg:min-h-[340px]">
             <div
-              className="flex w-[300%] transition-transform duration-500 ease-out"
+              className="flex h-full w-[300%] transition-transform duration-500 ease-out lg:min-h-[340px]"
               style={{ transform: `translateX(-${translatePct}%)` }}
             >
               {authorSlides.map((slide) => (
-                <div className="w-1/3 min-w-0 shrink-0" key={slide.id}>
-                  <div className="grid min-w-0 items-center gap-8 pr-0 lg:grid-cols-[466px_minmax(0,_1fr)] lg:gap-24">
-                    <div className="w-full max-w-[466px] shrink-0 overflow-hidden rounded-md lg:w-[466px]">
-                      <div className="h-[260px] w-full md:h-[314px]">
+                <div className="w-1/3 min-w-0 shrink-0 lg:h-full" key={slide.id}>
+                  <div className="min-w-0 lg:h-full">
+                    <div className="w-full max-w-[466px] shrink-0 overflow-hidden rounded-md lg:hidden">
+                      <div className="h-[260px] w-full md:h-[300px]">
                         <img
                           className="h-full w-full object-cover object-center"
                           src={`${base}/${slide.image}`}
@@ -92,13 +108,19 @@ function PerformanceHighlight() {
                       </div>
                     </div>
 
-                    <div className="min-w-0">
+                    <div className="flex min-w-0 flex-col gap-5 lg:h-full lg:justify-evenly lg:gap-0">
                       <h3 className="font-manrope text-[28px] font-black leading-tight text-[#172129] md:text-[36px] lg:text-[40px]">
                         {slide.name}
                       </h3>
-                      <p className="mt-5 max-w-[650px] font-manrope text-base font-medium leading-7 text-black md:text-lg">
+                      <p className="max-w-[650px] font-manrope text-base font-medium leading-7 text-black md:text-lg">
                         {slide.bio}
                       </p>
+                      <a
+                        className="inline-flex h-10 w-fit items-center justify-center gap-3 rounded-full bg-[#17262d] px-5 font-manrope text-base font-medium text-white no-underline transition-colors hover:bg-[#223841] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#172129]"
+                        href={slide.href}
+                      >
+                        Learn More <span aria-hidden="true">-&gt;</span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -106,53 +128,50 @@ function PerformanceHighlight() {
             </div>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-8 sm:mt-12 lg:mt-10 lg:grid-cols-[466px_minmax(0,_1fr)] lg:gap-24">
-            <div className="hidden lg:block" aria-hidden="true" />
-            <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between lg:col-start-2">
-              <div
-                className="flex items-center gap-2"
-                role="tablist"
-                aria-label="Author slides"
-              >
-                {authorSlides.map((slide, dotIndex) => (
-                  <button
-                    key={slide.id}
-                    type="button"
-                    role="tab"
-                    aria-selected={dotIndex === activeIndex}
-                    aria-label={`Show ${slide.name}`}
-                    className={
-                      dotIndex === activeIndex
-                        ? 'h-2 w-12 rounded-full bg-[#172129] transition-[width] duration-300'
-                        : 'h-2 w-2 rounded-full bg-white transition-transform duration-300 hover:scale-110'
-                    }
-                    onClick={() => setActiveIndex(dotIndex)}
-                  />
-                ))}
-              </div>
-
-              <div className="flex items-center gap-3">
+          <div className="mt-6 flex flex-col gap-6 sm:mt-8 sm:flex-row sm:items-center sm:justify-between lg:col-start-2 lg:row-start-2 lg:mt-0">
+            <div
+              className="flex items-center gap-2"
+              role="tablist"
+              aria-label="Author slides"
+            >
+              {authorSlides.map((slide, dotIndex) => (
                 <button
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#33341d] text-white transition-colors hover:bg-[#222314] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                  key={slide.id}
                   type="button"
-                  aria-label="Previous author"
-                  onClick={goPrev}
-                >
-                  <ArrowIcon direction="left" />
-                </button>
-                <button
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#33341d] text-white transition-colors hover:bg-[#222314] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                  type="button"
-                  aria-label="Next author"
-                  onClick={goNext}
-                >
-                  <ArrowIcon />
-                </button>
-              </div>
+                  role="tab"
+                  aria-selected={dotIndex === activeIndex}
+                  aria-label={`Show ${slide.name}`}
+                  className={
+                    dotIndex === activeIndex
+                      ? 'h-2 w-12 rounded-full bg-[#172129] transition-[width] duration-300'
+                      : 'h-2 w-2 rounded-full bg-white transition-transform duration-300 hover:scale-110'
+                  }
+                  onClick={() => setActiveIndex(dotIndex)}
+                />
+              ))}
             </div>
+
+            <div className="flex items-center gap-3">
+              <button
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#33341d] text-white transition-colors hover:bg-[#222314] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                type="button"
+                aria-label="Previous author"
+                onClick={goPrev}
+              >
+                <ArrowIcon direction="left" />
+              </button>
+              <button
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#33341d] text-white transition-colors hover:bg-[#222314] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                type="button"
+                aria-label="Next author"
+                onClick={goNext}
+              >
+                <ArrowIcon />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
     </section>
   );
 }

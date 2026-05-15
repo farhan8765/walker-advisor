@@ -2,11 +2,26 @@ import { useMemo, useState } from 'react';
 import { articles } from '../data/blogArticles';
 
 const sideLinks = [
-  'Best Rollator Walkers for Seniors',
-  'How to Choose a Walker for Stability',
-  'Walker Safety Tips for Daily Use',
-  'Mobility Aids That Support Independence',
-  'Caregiver Tips for Fall Prevention',
+  {
+    label: 'Best Rollator Walkers for Seniors',
+    href: '/the-complete-guide-to-walker-and-rollator-types-which-one-fits-you-best',
+  },
+  {
+    label: 'How to Choose a Walker for Stability',
+    href: '/stop-the-struggle-the-ultimate-easy-guide-to-fitting-a-walker-for-seniors',
+  },
+  {
+    label: 'Walker Safety Tips for Daily Use',
+    href: '/the-must-have-walker-safety-features-every-senior-should-know-about',
+  },
+  {
+    label: 'Mobility Aids That Support Independence',
+    href: '/best-mobility-devices-for-seniors',
+  },
+  {
+    label: 'Caregiver Tips for Fall Prevention',
+    href: '/holiday-safety-tips-for-seniors-prevent-falls-fires-seasonal-risks',
+  },
 ];
 
 const categoryFilters = ['All', "Caregiver's Corner", 'Informational', 'Comparison'];
@@ -30,31 +45,30 @@ function HomeFeatures() {
       <div className="mx-auto w-full max-w-[1280px]">
         <div className="mx-auto w-full max-w-[840px] text-center">
           <h2
-            className="mx-auto h-auto w-full text-center text-[36px] font-normal uppercase leading-[100%] tracking-[0%] text-black md:text-[48px] lg:h-[120px] lg:w-[840px] lg:text-[60px]"
+            className="mx-auto h-auto w-full text-center text-[36px] font-normal uppercase leading-[100%] tracking-[0%] text-black md:text-[48px] lg:h-[80px] lg:w-[840px] lg:text-[60px]"
             style={{ fontFamily: 'Anton, sans-serif' }}
           >
           Top Pick Seniors 
-          <br />
           Actually Love
           </h2>
           <p
-            className="mx-auto mt-6 flex w-full items-center justify-center text-center text-[15px] font-normal leading-[28px] tracking-[0.5%] text-[#5A666E] lg:h-[28px] lg:w-[840px] lg:text-[18px]"
+            className="mx-auto mt-2 flex w-full items-center justify-center text-center text-[15px] font-normal leading-[28px] tracking-[0.5%] text-[#5A666E] lg:h-[28px] lg:w-[840px] lg:text-[18px]"
             style={{ fontFamily: 'Manrope, sans-serif' }}
           >
-          Track your growth with smart insights from every ride.
+          Handpicked by our experts based on real user feedback and rigorous testing
           </p>
         </div>
 
         <div className="mt-14 flex flex-col gap-8 lg:mt-16">
-          <div className="flex flex-col gap-6 lg:flex-row lg:flex-nowrap lg:items-center lg:justify-between">
+          <div className="flex flex-col gap-4 sm:flex-row sm:flex-nowrap sm:items-center sm:gap-6 lg:gap-8">
             <h3
-              className="h-auto w-full shrink-0 text-[28px] font-normal uppercase leading-[100%] tracking-[0%] text-[#172129] md:text-[32px] lg:h-[40px] lg:w-[683px] lg:text-[40px]"
+              className="w-fit shrink-0 whitespace-nowrap text-[28px] font-normal uppercase leading-[100%] tracking-[0%] text-[#172129] md:text-[32px] lg:text-[40px]"
               style={{ fontFamily: 'Anton, sans-serif' }}
             >
               Top Categories
             </h3>
 
-            <div className="flex flex-wrap items-center gap-2 md:gap-4">
+            <div className="flex min-w-0 flex-1 flex-nowrap items-center justify-end gap-2 overflow-x-auto md:gap-3 lg:gap-4">
               {categoryFilters.map((category) => (
                 <button
                   className={`h-12 whitespace-nowrap rounded-full px-4 font-manrope text-base font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] md:text-[17px] ${
@@ -88,10 +102,10 @@ function HomeFeatures() {
                 {sideLinks.map((link) => (
                   <a
                     className="border-b border-dashed border-[#fff3b9]/70 py-5 font-manrope text-base font-medium leading-6 text-[#fff3b9] no-underline transition-colors hover:text-white"
-                    href="#featured-articles"
-                    key={link}
+                    href={link.href}
+                    key={link.label}
                   >
-                    {link}
+                    {link.label}
                   </a>
                 ))}
               </div>

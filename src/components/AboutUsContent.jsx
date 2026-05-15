@@ -4,21 +4,21 @@ import Newsletter from './Newsletter';
 
 function AboutUsContent() {
   return (
-    <main className="min-h-screen bg-[#fbf6e6] pb-12 pt-12 md:pb-16 md:pt-16">
+    <main className="min-h-screen bg-[#fbf6e6] pb-4 pt-12 md:pb-16 md:pt-16">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-[114px]">
         <section className="text-center">
           <h1 className="text-4xl uppercase leading-none text-black sm:text-5xl md:text-[92px]">
             About Us
           </h1>
-          <p className="mt-4 font-['Manrope',sans-serif] text-base font-medium leading-6 tracking-[0.5%] text-[#5A666E] md:mt-6">
-            tagline comes here
+          <p className="mt-4 font-['Manrope',sans-serif] text-base font-medium leading-6 tracking-[0.5%] text-[#5A666E] md:mt-5">
+            Independent reviews, real expertise, and one mission, better mobility for every senior.
           </p>
         </section>
 
-        <section className="mt-4 grid items-center gap-8 md:mt-10 md:gap-10 lg:grid-cols-[0.95fr_1fr] lg:gap-[100px]">
+        <section className="mt-6 grid items-start gap-8 pb-16 md:mt-10 md:gap-10 lg:grid-cols-[0.95fr_1fr] lg:gap-[100px]">
           <div className="overflow-hidden rounded-lg">
             <img
-              className="h-[240px] w-full object-contain sm:h-[360px] md:h-[790px]"
+              className="h-auto w-full max-h-[240px] object-contain object-top sm:max-h-[320px] md:max-h-[480px] lg:max-h-[520px]"
               src={`${process.env.PUBLIC_URL}/images/about1.png`}
               alt="Person using a walker"
             />
@@ -54,7 +54,7 @@ function AboutUsContent() {
               our{' '}
               <a
                 className="text-inherit underline decoration-solid underline-offset-0 decoration-auto decoration-skip-ink-auto"
-                href="#disclaimer"
+                href="/disclaimer"
               >
                 Disclaimer
               </a>

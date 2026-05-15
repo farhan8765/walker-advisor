@@ -1,4 +1,6 @@
-const resources = [
+import { articles } from '../data/blogArticles';
+
+const resourceTitles = [
   'Understanding Upright Walkers: How They Improve Senior Posture',
   'How to Choose Walking Shoes for Balance and Stability',
   'Mental Health in Old Age: A Complete Guide for Seniors & Caregivers',
@@ -6,6 +8,19 @@ const resources = [
   'Can Heart Issues Increase Fall Risk in Seniors?',
   'Best Walking Shoes for Seniors in 2026',
 ];
+
+const resourceHrefOverrides = {
+  'Best Walking Shoes for Seniors in 2026':
+    '/how-to-choose-walking-shoes-for-balance-and-stability',
+};
+
+const resources = resourceTitles.map((title) => {
+  const article = articles.find((item) => item.title === title);
+  return {
+    title,
+    href: article?.href ?? resourceHrefOverrides[title],
+  };
+});
 
 function ResourceIcon() {
   return (
@@ -41,18 +56,30 @@ function HelpfulResources() {
         </div>
 
         <div className="mt-12 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-          {resources.map((resource) => (
-            <a
-              className="rounded-lg border border-black/10 bg-white px-5 py-5 text-[#3f351d] no-underline shadow-[0_2px_0_rgba(0,0,0,0.08)] transition-transform hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"
-              href="/articles"
-              key={resource}
-            >
-              <ResourceIcon />
-              <h3 className="mt-5 font-manrope text-base font-black leading-6">
-                {resource}
-              </h3>
-            </a>
-          ))}
+          {resources.map((resource) =>
+            resource.href ? (
+              <a
+                className="rounded-lg border border-black/10 bg-white px-5 py-5 text-[#3f351d] no-underline shadow-[0_2px_0_rgba(0,0,0,0.08)] transition-transform hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"
+                href={resource.href}
+                key={resource.title}
+              >
+                <ResourceIcon />
+                <h3 className="mt-5 font-manrope text-base font-black leading-6">
+                  {resource.title}
+                </h3>
+              </a>
+            ) : (
+              <div
+                className="rounded-lg border border-black/10 bg-white px-5 py-5 text-[#3f351d] shadow-[0_2px_0_rgba(0,0,0,0.08)]"
+                key={resource.title}
+              >
+                <ResourceIcon />
+                <h3 className="mt-5 font-manrope text-base font-black leading-6">
+                  {resource.title}
+                </h3>
+              </div>
+            )
+          )}
         </div>
 
         <div className="mt-16 flex justify-center">

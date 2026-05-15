@@ -48,15 +48,10 @@ function WalkerChoices() {
             className="h-auto w-full text-[36px] font-normal uppercase leading-[100%] tracking-[0%] text-black md:text-[48px] lg:h-[120px] lg:w-[592px] lg:text-[60px]"
             style={{ fontFamily: 'Anton, sans-serif' }}
           >
-            Struggling with walker choices?
+            Everything You Need to Pick the Right Walker
           </h2>
           <p className="mt-10 max-w-[590px] font-manrope text-base font-medium leading-7 text-[#172129] md:text-lg">
-            We will help a client's problems to develop the products they have
-            with high quality Develop a website by finding a product identity
-            that has value and branding to become a characteristic of a company.
-            We will also facilitate the business marketing of these products
-            with our SEO experts so that they become a ready-to-use website and
-            help sell a product from the company
+          From in-depth research and focused comparisons to real user experiences and unbiased reviews,  we give you every tool to choose with total confidence
           </p>
         </div>
 
