@@ -21,12 +21,17 @@ function BlogArticles() {
   return (
     <section
       id="articles"
-      className="w-full px-4 pb-20 pt-36 md:px-8 md:pt-44 lg:px-0 lg:pb-24"
+      className="w-full overflow-x-hidden bg-[#fbf6e6] px-4 pb-20 pt-14 md:px-8 md:pt-16 lg:px-0 lg:pb-24 lg:pt-20"
     >
-      <div className="mx-auto max-w-[1120px]">
-        <div className="mx-auto max-w-[840px] text-center">
-          <p className="text-base font-semibold leading-7 text-[#66737c] md:text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      <div className="mx-auto w-full max-w-[1120px]">
+        <div className="mx-auto w-full max-w-[840px] text-center">
+          <h1 className="font-manrope text-[32px] font-bold leading-tight tracking-normal text-black md:text-[40px] lg:text-[48px]">
+            Guide to helpful resources
+          </h1>
+          <p className="mt-4 font-manrope text-base font-medium leading-7 text-[#66737c] md:mt-6 md:text-lg">
+            Discover valuable insights with The Walker Advisor&apos;s expert guides and
+            genuine reviews, designed to support you in finding the perfect mobility aid
+            for your lifestyle.
           </p>
         </div>
 
