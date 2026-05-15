@@ -106,7 +106,7 @@ function BlogDetail() {
               Can Heart Issues Increase Fall Risk in Seniors?
             </h1>
             <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">
-              You might think falls are just about balance, but what if your heart is the real culprit? Discover the hidden connection between heart issues and sudden falls in seniors before it is too late.
+              You might think falls are just about balance, but what if your heart is the real culprit? Discover the hidden connection between heart issues and sudden falls in seniors before it’s too late.
             </p>
 
             <img
@@ -127,16 +127,19 @@ function BlogDetail() {
 
           <div className="mt-5">
             <Paragraph>
-              Falls are one of the leading causes of injury among older adults, but many people do not realize that the heart plays a major role in fall risk. When the heart is not functioning at its best, it affects blood flow, blood pressure, energy levels, and balance.
+              Falls are one of the leading causes of injury among older adults, but what many people don't realize is that the heart plays a major role in fall risk. When the heart isn't functioning at its best, it affects blood flow, blood pressure, energy levels, and balance.
             </Paragraph>
             <Paragraph>
               For seniors already managing heart conditions, understanding this connection can be life-changing and potentially life-saving.
             </Paragraph>
             <p className="mt-3 font-manrope text-[12px] font-medium leading-[1.85] text-[#1f2930]">
               Having the right mobility support in place is one of the most practical steps a senior with heart issues can take. Our guide on{' '}
-              <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/best-walkers-for-seniors-with-balance-problems" target="_blank" rel="noopener noreferrer">Best Walkers for Seniors with Balance Problems</a>
+              <a className="text-[#0b61a4] no-underline hover:underline" href="https://darkcyan-lion-250828.hostingersite.com/best-walkers-for-seniors-with-balance-problems" target="_blank" rel="noopener noreferrer">Best Walkers for Seniors with Balance Problems</a>
               {' '}is a great place to start when looking for the right stability aid.
             </p>
+            <Paragraph>
+              Whether you walk daily for fitness, spend long hours standing at work, or simply want safer movement, understanding shoe structure will help you make an informed choice.
+            </Paragraph>
           </div>
 
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
@@ -171,25 +174,6 @@ function BlogDetail() {
             This condition is frequently linked to heart disease, dehydration, and certain medications.
           </Paragraph>
 
-          <div className="mx-auto mt-7 max-w-[500px] rounded-[10px] bg-[#f3f3f3] p-4">
-            <h3 className="text-center text-[13px] font-black uppercase text-[#1f2930]">
-              The Heart-Balance Connection: A Simple Overview
-            </h3>
-            <div className="mt-4 grid gap-3 md:grid-cols-2">
-              {[
-                ['1. Heart', 'Heart rate and cardiac output'],
-                ['2. Brain', 'Needs steady blood flow'],
-                ['3. Blood Pressure', 'Ensures cerebral perfusion'],
-                ['4. Balance System', 'Effect on posture'],
-              ].map(([title, text]) => (
-                <div className="rounded-[8px] bg-white p-3" key={title}>
-                  <p className="font-manrope text-[11px] font-black uppercase text-[#07364f]">{title}</p>
-                  <p className="mt-1 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">{text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
           <img
             className="mx-auto mt-7 h-auto w-full max-w-[520px] rounded-[10px] object-cover"
             src={`${process.env.PUBLIC_URL}/images/pump.webp`}
@@ -206,11 +190,11 @@ function BlogDetail() {
 
           <h3 className="mt-7 text-[14px] font-black text-black">3. Heart Failure</h3>
           <Paragraph>
-            Heart failure does not mean the heart has stopped. It means the heart is not pumping as efficiently as it should. This leads to fatigue, fluid buildup in the legs, and reduced oxygen delivery to muscles and the brain.
+            Heart failure doesn't mean the heart has stopped; it means the heart is not pumping as efficiently as it should. This leads to fatigue, fluid buildup in the legs, and reduced oxygen delivery to muscles and the brain. Seniors with heart failure often experience leg weakness and breathlessness, making it much harder to stay steady on their feet.
           </Paragraph>
           <p className="mt-3 font-manrope text-[12px] font-medium leading-[1.85] text-[#1f2930]">
-            Seniors with heart failure often experience leg weakness and breathlessness, making it much harder to stay steady on their feet. A sturdy walker can provide critical support in these moments. See our{' '}
-            <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/safest-walkers-for-seniors" target="_blank" rel="noopener noreferrer">Safest Walkers for Seniors: Top 5 Secure and Sturdy Choices</a>
+            A sturdy walker can provide critical support in these moments. See our{' '}
+            <a className="text-[#0b61a4] no-underline hover:underline" href="https://darkcyan-lion-250828.hostingersite.com/safest-walkers-for-seniors" target="_blank" rel="noopener noreferrer">Safest Walkers for Seniors: Top 5 Secure and Sturdy Choices</a>
             {' '}for reliable options.
           </p>
 
@@ -233,7 +217,7 @@ function BlogDetail() {
           </Paragraph>
           <p className="mt-3 font-manrope text-[12px] font-medium leading-[1.85] text-[#1f2930]">
             Proper footwear also plays a role in reducing fall risk. Read our guide on{' '}
-            <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/why-seniors-need-proper-walking-shoes" target="_blank" rel="noopener noreferrer">Why Seniors Need Proper Walking Shoes</a>
+              <a className="text-[#0b61a4] no-underline hover:underline" href="https://darkcyan-lion-250828.hostingersite.com/why-seniors-need-proper-walking-shoes" target="_blank" rel="noopener noreferrer">Why Seniors Need Proper Walking Shoes</a>
             {' '}for practical recommendations.
           </p>
 
@@ -257,13 +241,13 @@ function BlogDetail() {
             <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[11px] font-semibold leading-6 text-[#1f2930]">
               <li>Sudden dizziness or lightheadedness, especially when standing up</li>
               <li>Unexplained fatigue or weakness in the legs</li>
-              <li>Heart palpitations or racing heartbeat before or during activity</li>
+              <li>Heart palpitations or a racing heartbeat before or during activity</li>
               <li>Shortness of breath during light activity or walking</li>
               <li>Brief episodes of confusion or disorientation</li>
             </ul>
             <p className="mt-3 font-manrope text-[11px] font-semibold leading-6 text-[#1f2930]">
               These symptoms should always be reported to a doctor immediately. In the meantime, having a reliable mobility aid on hand can provide critical support. Our guide on{' '}
-              <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/best-mobility-devices-for-seniors" target="_blank" rel="noopener noreferrer">Best Mobility Devices for Seniors</a>
+              <a className="text-[#0b61a4] no-underline hover:underline" href="https://darkcyan-lion-250828.hostingersite.com/best-mobility-devices-for-seniors" target="_blank" rel="noopener noreferrer">Best Mobility Devices for Seniors</a>
               {' '}covers a wide range of options to suit different needs.
             </p>
           </div>
@@ -283,7 +267,7 @@ function BlogDetail() {
             <li>Encourage slow position changes: Help seniors stand up gradually to prevent orthostatic hypotension.</li>
             <li>Review medications regularly: Work with the senior's doctor to identify any drugs that may increase fall risk.</li>
             <li>Choose the right mobility aid: A rollator or upright walker can provide stability during dizzy spells.</li>
-            <li>Have an emergency plan: Learn what to do in a fall situation.</li>
+            <li>Have an emergency plan: Learn what to do in a fall situation</li>
           </ul>
 
           <SectionHeading id="section-7">Frequently Asked Questions</SectionHeading>
