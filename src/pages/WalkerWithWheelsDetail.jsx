@@ -18,11 +18,18 @@ const tableOfContents = [
 ];
 
 const benefits = [
-  ['Lifting Required', 'Yes', 'No, just push forward'],
-  ['Stability', 'High', 'High with brakes'],
+  ['Lifting Required', 'Yes', 'No (glides forward)'],
+  ['Stability', 'High', 'High (with brakes)'],
   ['Ease of Use', 'Moderate', 'Easy'],
   ['Indoor/Outdoor Use', 'Indoor only', 'Both'],
-  ['Comfort & Energy Availability', 'Low', 'Common'],
+  ['Seat & Storage Availability', 'Rare', 'Common'],
+];
+
+const faqs = [
+  ['Can I use a wheeled walker outdoors?', 'Yes, choose a walker with larger wheels and brakes for outdoor use on uneven surfaces.'],
+  ['How do I prevent falls while using a walker with wheels?', 'Maintain proper posture, use brakes when needed, move slowly, and avoid obstacles.'],
+  ['How often should I adjust my walker?', 'Check handle height and wheel condition every few months or after a healthcare professional’s evaluation.'],
+  ['Can I use a walker with wheels if I have weak upper body strength?', 'Yes, opt for a four-wheel walker with a seat to rest as needed.'],
 ];
 
 const relatedArticles = [
@@ -55,6 +62,11 @@ function SubHeading({ children }) {
 
 function Paragraph({ children }) {
   return <p className="mt-3 font-manrope text-[12px] font-medium leading-[1.85] text-[#1f2930]">{children}</p>;
+}
+
+function BlogList({ children, ordered = false }) {
+  const Component = ordered ? 'ol' : 'ul';
+  return <Component className={`${ordered ? 'list-decimal' : 'list-disc'} mt-3 space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]`}>{children}</Component>;
 }
 
 function SocialDots() {
@@ -98,11 +110,11 @@ function WalkerWithWheelsDetail() {
 
           <section className="mt-5 rounded-[8px] bg-[#f3f3f3] p-5">
             <h2 className="text-[16px] font-black text-black">Key Summary</h2>
-            <Paragraph>A walker with wheels helps seniors move with less effort, but it must be adjusted correctly, used with proper posture, and controlled with brakes when needed.</Paragraph>
+            <Paragraph>A walker with wheels helps seniors and individuals with mobility challenges move safely and independently. Proper use involves adjusting the height correctly, stepping smoothly, and using the brake effectively. Choosing the right type, two-wheel, four-wheel, or heavy-duty, depends on individual needs and terrain. Accessories like seats and baskets enhance comfort and convenience.</Paragraph>
           </section>
 
-          <Paragraph>A walker with wheels makes movement smoother and reduces the need to lift the frame with every step. It is especially useful for seniors who need stability but still want easier mobility.</Paragraph>
-          <Paragraph>Safe use starts with proper height adjustment, correct body position, and awareness of surfaces, turns, and obstacles.</Paragraph>
+          <Paragraph>As we age or recover from injuries, maintaining balance and mobility becomes critical for independence. A walker with wheels, also known as a rolling walker, is designed to provide support while allowing smoother movement than a standard walker. Unlike a traditional walker that requires lifting with each step, a wheeled walker glides forward with minimal effort, thereby reducing strain on the arms and wrists.</Paragraph>
+          <Paragraph>Walkers with wheels are ideal for seniors, individuals recovering from surgery, or anyone with limited strength or mobility. They promote safer walking, improve confidence, and can prevent falls, a leading cause of injury among older adults.</Paragraph>
 
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
             <h2 className="bg-[#ffc400] px-5 py-3 text-[17px] font-black leading-none text-black">Table of Contents</h2>
@@ -113,15 +125,16 @@ function WalkerWithWheelsDetail() {
 
           <SectionHeading id="section-1">Benefits of Using a Walker with Wheels</SectionHeading>
           <Paragraph>Using a walker with wheels offers several advantages:</Paragraph>
-          <ol className="mt-3 list-decimal space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">
-            <li>Enhanced mobility: wheels allow smoother movement.</li>
-            <li>Reduced effort: users do not need to lift the walker each step.</li>
-            <li>Improved safety: walkers with brakes improve control.</li>
-            <li>Comfort: many walkers include seats, storage, or ergonomic handles.</li>
-          </ol>
+          <BlogList ordered>
+            <li><strong>Enhanced Mobility:</strong> Wheels allow smooth gliding across floors, reducing effort and fatigue.</li>
+            <li><strong>Stability:</strong> Most wheel walkers have brakes and wide bases for balance support.</li>
+            <li><strong>Independence:</strong> Users can move more freely without constant assistance.</li>
+            <li><strong>Versatility:</strong> Suitable for both indoor and outdoor use with various wheel sizes.</li>
+            <li><strong>Comfort:</strong> Many walkers include padded seats for resting, storage baskets, and adjustable handles.</li>
+          </BlogList>
           <div className="mt-5 overflow-hidden border border-black font-manrope text-[11px] text-[#1f2930]">
             <div className="grid grid-cols-3 bg-[#ffc400] font-black">
-              <div className="border-r border-black px-3 py-3">Feature</div>
+              <div className="border-r border-black px-3 py-3">Featured</div>
               <div className="border-r border-black px-3 py-3">Standard Walker</div>
               <div className="px-3 py-3">Walker with Wheels</div>
             </div>
@@ -136,71 +149,87 @@ function WalkerWithWheelsDetail() {
           <img className="mx-auto mt-7 h-auto w-full max-w-[360px] rounded-[8px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa-36-2-1.webp`} alt="Traditional walker versus wheeled walker" />
 
           <SectionHeading id="section-2">Types of Walkers with Wheels</SectionHeading>
-          <Paragraph>Walkers with wheels come in different styles:</Paragraph>
-          <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">
-            <li>Two-wheel walkers: front wheels with rear legs for extra stability.</li>
-            <li>Four-wheel walkers or rollators: easier to push and often include brakes and seats.</li>
-            <li>Heavy-duty walkers: wider frames and stronger support for larger users.</li>
-          </ul>
+          <Paragraph>Walkers with wheels come in different configurations to meet varied needs:</Paragraph>
+          <BlogList ordered>
+            <li><strong>Two-Wheel Walkers:</strong> Front wheels glide forward; rear legs have rubber tips for stability. Ideal for indoor use.</li>
+            <li><strong>Four-Wheel Walkers (Rollators):</strong> Include brakes, seats, and baskets for maximum comfort. Suitable for longer distances.</li>
+            <li><strong>Heavy-Duty Walkers:</strong> Designed for bariatric users or those needing extra stability, often with larger wheels for outdoor use.</li>
+          </BlogList>
+          <Paragraph>Each type has unique advantages, and the choice depends on mobility level, weight, and intended use.</Paragraph>
 
           <SectionHeading id="section-3">Step-by-Step Guide</SectionHeading>
+          <Paragraph>Proper use of a wheeled walker ensures safety and efficiency. Follow these steps:</Paragraph>
           <SubHeading>1. Adjust the Height</SubHeading>
-          <Paragraph>Ensure the walker handles are at wrist level when standing upright. Your elbows should bend slightly when holding the grips.</Paragraph>
+          <BlogList>
+            <li>Ensure the walker’s handles are at wrist level when standing straight.</li>
+            <li>Proper height reduces strain on the shoulders and back.</li>
+          </BlogList>
           <SubHeading>2. Position the Walker</SubHeading>
-          <Paragraph>Stand inside the walker, close enough that your shoulders stay relaxed and your back remains straight.</Paragraph>
+          <BlogList>
+            <li>Stand inside the walker, feet shoulder-width apart.</li>
+            <li>Keep your back straight and shoulders relaxed.</li>
+          </BlogList>
           <SubHeading>3. Move the Walker Forward</SubHeading>
-          <Paragraph>Push the walker gently ahead about one small step. Avoid pushing it too far forward.</Paragraph>
+          <BlogList>
+            <li>Push the walker gently ahead 12–18 inches.</li>
+            <li>Ensure all four wheels are on the ground for stability.</li>
+          </BlogList>
           <SubHeading>4. Step Forward</SubHeading>
-          <Paragraph>Step into the walker space with your weaker leg first, then your stronger leg.</Paragraph>
-          <SubHeading>5. Use Brakes Properly</SubHeading>
-          <Paragraph>If your walker has brakes, lock them before sitting or standing and release them only when ready to move.</Paragraph>
+          <BlogList>
+            <li>Step forward with your <strong>weaker leg first</strong>, followed by the stronger leg.</li>
+            <li>Keep a comfortable pace; avoid rushing.</li>
+          </BlogList>
+          <SubHeading>5. Use Brakes Properly (if present)</SubHeading>
+          <BlogList>
+            <li>If stopping, gently squeeze the hand brakes to stabilize the walker.</li>
+            <li>Some walkers have a <strong>brake-lock system</strong>; engage it before sitting.</li>
+          </BlogList>
           <SubHeading>6. Sitting and Standing</SubHeading>
-          <Paragraph>Back up until you feel the chair behind your legs, lock the brakes, reach back for the chair, and lower yourself slowly.</Paragraph>
+          <BlogList>
+            <li>When using a walker with a seat, make sure the brakes are engaged.</li>
+            <li>Sit slowly, and use the walker’s handles for support while standing.</li>
+          </BlogList>
 
           <SectionHeading id="section-4">Common Mistakes to Avoid</SectionHeading>
-          <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">
-            <li>Overreaching or pushing the walker too far ahead.</li>
-            <li>Leaning heavily on the walker instead of standing upright.</li>
-            <li>Forgetting to lock brakes before sitting.</li>
-            <li>Using the walker on unsafe surfaces without caution.</li>
-          </ul>
+          <BlogList>
+            <li><strong>Overreaching:</strong> Stretching too far can cause imbalance.</li>
+            <li><strong>Incorrect handle height:</strong> Leads to poor posture and discomfort.</li>
+            <li><strong>Rushing:</strong> Moving too quickly increases fall risk.</li>
+            <li><strong>Not using brakes:</strong> Forgetting brakes can lead to slips on slopes or uneven surfaces.</li>
+          </BlogList>
 
           <SectionHeading id="section-5">Safety Tips for Using a Walker with Wheels</SectionHeading>
-          <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">
-            <li>Wear non-slip shoes for better traction.</li>
-            <li>Keep pathways clear of rugs, cords, and clutter.</li>
-            <li>Use slow turns instead of twisting suddenly.</li>
-            <li>Check brakes, wheels, and hand grips regularly.</li>
-            <li>Ask a physical therapist to confirm fit and technique.</li>
-          </ul>
+          <BlogList ordered>
+            <li>Wear non-slip shoes to reduce the risk of falls.</li>
+            <li>Avoid uneven or slippery surfaces whenever possible.</li>
+            <li>Keep the home well-lit and free of clutter.</li>
+            <li>Regularly check wheels and brakes for wear and tear.</li>
+            <li>Always use the walker as instructed by a healthcare professional.</li>
+          </BlogList>
 
           <SectionHeading id="section-6">Additional Accessories for Wheel Walkers</SectionHeading>
-          <Paragraph>Common accessories can improve daily use:</Paragraph>
-          <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">
-            <li>Storage baskets or pouches</li>
-            <li>Cup holders and tray attachments</li>
-            <li>Seat cushions for rollators with seats</li>
-            <li>LED lights for visibility in low-light areas</li>
-          </ul>
+          <Paragraph>Enhance convenience and safety with:</Paragraph>
+          <BlogList>
+            <li><strong>Storage baskets or pouches:</strong> Carry personal items hands-free.</li>
+            <li><strong>Cup holders:</strong> Keep water or beverages within reach.</li>
+            <li><strong>Cane holders:</strong> Combine walker use with other mobility aids.</li>
+            <li><strong>LED lights:</strong> Improve visibility in low-light areas.</li>
+          </BlogList>
 
           <SectionHeading id="section-7">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
-            {[
-              'Can I use a walker without wheels?',
-              'How do I prevent falls while using a walker with wheels?',
-              'How often should I adjust my walker?',
-              'Can I use a walker on uneven surfaces?',
-            ].map((question) => (
+            {faqs.map(([question, answer]) => (
               <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
                 <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary>
-                <p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">Use the walker with proper height, short controlled steps, clear pathways, and locked brakes when sitting or standing.</p>
+                <p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">{answer}</p>
               </details>
             ))}
           </div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-8">
             <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
-            <Paragraph>Using a walker with wheels properly can dramatically improve mobility, independence, and quality of life. The safest results come from correct adjustment, steady pacing, brake control, and regular maintenance.</Paragraph>
+            <Paragraph>Using a walker with wheels properly can dramatically improve safety, independence, and quality of life for seniors and individuals with mobility challenges. By following proper techniques, using accessories wisely, and practicing safety tips, you can maximize the benefits of your wheeled walker.</Paragraph>
+            <Paragraph>If you are considering a walker, consult with a healthcare professional to choose the best type for your needs, whether it’s for indoor comfort, outdoor mobility, or heavy-duty support.</Paragraph>
           </section>
 
           <SocialDots />
