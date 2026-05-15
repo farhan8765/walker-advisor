@@ -78,9 +78,14 @@ function Navbar() {
     return () => window.removeEventListener('keydown', onKey);
   }, [menuOpen]);
 
+  const linkTypographyClass =
+    'text-center font-manrope text-[18px] font-medium leading-[28px] tracking-[0.005em] no-underline transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]';
+
+  const linkBaseClass = `inline-flex items-center justify-center whitespace-nowrap rounded-full ${linkTypographyClass}`;
+
   const desktopNav = (
     <nav
-      className="flex min-h-[52px] max-w-[1200px] shrink-0 items-center gap-0 rounded-full bg-white px-0.5 py-0.5 shadow-[0_14px_32px_rgba(235,198,120,0.18)]"
+      className="flex min-h-[52px] max-w-[1200px] shrink-0 items-center gap-2 rounded-full bg-white px-0.5 py-0.5 shadow-[0_14px_32px_rgba(235,198,120,0.18)]"
       aria-label="Primary navigation"
     >
       {navItems.map((item) => {
@@ -91,10 +96,10 @@ function Navbar() {
 
         return (
           <a
-            className={`whitespace-nowrap rounded-full px-2.5 py-2.5 text-sm font-normal leading-none no-underline transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] lg:px-3 lg:py-2.5 lg:text-[18px] ${
+            className={`${linkBaseClass} ${
               isActive
-                ? 'bg-[#ffc400] text-black'
-                : 'text-[#5f6870] hover:text-black'
+                ? 'h-12 min-w-[98px] bg-[#ffc400] px-6 py-0 text-black'
+                : 'px-3 py-2 text-[#5f6870] hover:text-black'
             }`}
             href={item.href}
             key={item.label}
@@ -107,7 +112,7 @@ function Navbar() {
   );
 
   return (
-    <header className="sticky top-0 z-50 w-full max-w-full overflow-x-hidden bg-[#fbf6e6] px-4 pt-4 pb-3 shadow-[0_8px_28px_rgba(95,104,112,0.08)] md:px-[114px] lg:min-h-[126px] lg:pt-5 lg:pb-5">
+    <header className="sticky top-0 z-50 w-full max-w-full overflow-x-hidden bg-transparent px-4 pt-4 pb-3 md:px-[114px] lg:min-h-[126px] lg:pt-5 lg:pb-5">
       {/* Mobile: logo + menu */}
       <div className="grid w-full grid-cols-[1fr_auto] items-center gap-3 lg:hidden">
         <a
@@ -172,10 +177,10 @@ function Navbar() {
 
           return (
             <a
-              className={`block rounded-xl px-4 py-2.5 text-sm font-medium leading-snug no-underline transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] ${
+              className={`rounded-xl ${linkTypographyClass} ${
                 isActive
-                  ? 'bg-[#ffc400] text-black'
-                  : 'text-[#5f6870] hover:bg-[#fbf6e6] hover:text-black'
+                  ? 'inline-flex h-12 min-w-[98px] items-center justify-center bg-[#ffc400] px-6 py-0 text-black'
+                  : 'block px-4 py-2.5 text-[#5f6870] hover:bg-[#fbf6e6] hover:text-black'
               }`}
               href={item.href}
               key={item.label}

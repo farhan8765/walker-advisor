@@ -68,7 +68,7 @@ function Home() {
   }, []);
 
   return (
-  <div className="w-full min-w-0 max-w-full overflow-x-hidden">
+    <div className="w-full min-w-0 max-w-full overflow-x-hidden">
       <Navbar />
       <HomeHero />
       <HomeFeatures />
