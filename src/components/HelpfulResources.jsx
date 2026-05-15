@@ -24,11 +24,11 @@ function ResourceIcon() {
 
 function HelpfulResources() {
   return (
-    <section className="w-full bg-[#fbf6e6] px-4 py-16 md:px-8 lg:px-14 lg:py-20">
-      <div className="mx-auto max-w-[1280px]">
-        <div className="mx-auto max-w-[850px] text-center">
+    <section className="w-full overflow-x-hidden bg-[#fbf6e6] px-4 py-16 md:px-8 lg:px-14 lg:py-20">
+      <div className="mx-auto w-full max-w-[1280px]">
+        <div className="mx-auto w-full max-w-[850px] text-center">
           <h2
-            className="mx-auto h-[60px] w-[840px] text-center text-[60px] font-normal uppercase leading-[100%] tracking-[0%] text-black"
+            className="mx-auto h-auto w-full text-center text-[36px] font-normal uppercase leading-[100%] tracking-[0%] text-black md:text-[48px] lg:h-[60px] lg:w-[840px] lg:text-[60px]"
             style={{ fontFamily: 'Anton, sans-serif' }}
           >
             Helpful Resources To Guide You

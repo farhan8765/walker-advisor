@@ -53,7 +53,7 @@ function SocialIcon({ label, children }) {
 
 function Footer() {
   return (
-    <footer className="w-full px-4 py-12 md:px-8 lg:px-20">
+    <footer className="w-full overflow-x-hidden px-4 py-12 md:px-8 lg:px-20">
       <div className="mx-auto flex min-h-[430px] max-w-[1280px] flex-col rounded-lg bg-[#111111] px-7 py-10 md:px-12">
         <div className="grid gap-8 md:grid-cols-[1.15fr_0.8fr_1fr_0.8fr]">
           <div>

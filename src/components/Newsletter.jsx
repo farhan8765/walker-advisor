@@ -1,6 +1,6 @@
 function Newsletter() {
   return (
-    <section className="w-full overflow-hidden pt-0">
+    <section className="w-full overflow-x-hidden pt-0">
       <div className="relative w-full pt-20 md:pt-[84px]">
         <div className="w-full bg-[#fbf6e6]">
           <div className="mx-auto w-full max-w-[1280px] px-4 md:px-8 lg:px-14">
@@ -12,7 +12,7 @@ function Newsletter() {
               />
 
               <div className="relative z-10 w-full max-w-none lg:ml-0">
-                <h2 className="w-full font-heading text-[60px] font-normal uppercase leading-[100%] tracking-normal text-black">
+                <h2 className="w-full break-words font-heading text-[32px] font-normal uppercase leading-[100%] tracking-normal text-black sm:text-[40px] md:text-[48px] lg:text-[60px]">
                   Welcome to The Walker Advisor Newsletter!
                 </h2>
                 <p className="mt-4 w-full font-['Manrope',sans-serif] text-[18px] font-medium leading-7 tracking-[0.5%] text-[#5A666E] md:mt-6">
@@ -22,7 +22,7 @@ function Newsletter() {
                 </p>
 
                 <form
-                  className="mt-12 flex w-full max-w-[520px] items-center rounded-full border-2 border-[#303830] bg-transparent p-1"
+                  className="mt-12 flex w-full max-w-full items-center rounded-full border-2 border-[#303830] bg-transparent p-1 sm:max-w-[520px]"
                   action="#"
                 >
                   <label className="sr-only" htmlFor="newsletter-email">

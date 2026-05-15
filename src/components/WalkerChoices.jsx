@@ -41,11 +41,11 @@ function CardIcon({ highlighted = false }) {
 
 function WalkerChoices() {
   return (
-    <section className="w-full bg-[#fbf6e6] px-4 py-16 md:px-8 lg:px-14 lg:py-24">
-      <div className="mx-auto grid max-w-[1280px] items-center gap-12 lg:grid-cols-[minmax(0,_590px)_minmax(0,_608px)] lg:gap-16">
+    <section className="w-full overflow-x-hidden bg-[#fbf6e6] px-4 py-16 md:px-8 lg:px-14 lg:py-24">
+      <div className="mx-auto grid w-full max-w-[1280px] min-w-0 items-center gap-12 lg:grid-cols-[minmax(0,_590px)_minmax(0,_608px)] lg:gap-16">
         <div>
           <h2
-            className="h-[120px] w-[592px] text-[60px] font-normal uppercase leading-[100%] tracking-[0%] text-black"
+            className="h-auto w-full text-[36px] font-normal uppercase leading-[100%] tracking-[0%] text-black md:text-[48px] lg:h-[120px] lg:w-[592px] lg:text-[60px]"
             style={{ fontFamily: 'Anton, sans-serif' }}
           >
             Struggling with walker choices?
@@ -73,7 +73,7 @@ function WalkerChoices() {
               >
                 <CardIcon highlighted={card.highlighted} />
                 <h3
-                  className="mt-6 h-[58px] w-[248px] text-[24px] font-bold leading-[120%] tracking-[0.5%]"
+                  className="mt-6 h-auto w-full text-[20px] font-bold leading-[120%] tracking-[0.5%] lg:h-[58px] lg:w-[248px] lg:text-[24px]"
                   style={{ fontFamily: 'Mulish, sans-serif' }}
                 >
                   {card.title}
@@ -93,7 +93,7 @@ function WalkerChoices() {
               >
                 <CardIcon />
                 <h3
-                  className="mt-6 h-[58px] w-[248px] text-[24px] font-bold leading-[120%] tracking-[0.5%]"
+                  className="mt-6 h-auto w-full text-[20px] font-bold leading-[120%] tracking-[0.5%] lg:h-[58px] lg:w-[248px] lg:text-[24px]"
                   style={{ fontFamily: 'Mulish, sans-serif' }}
                 >
                   {card.title}

@@ -1,10 +1,10 @@
 function WalkerInsightsPromo() {
   return (
-    <section className="w-full  px-4 py-16 md:px-8 lg:px-14">
-      <div className="mx-auto grid max-w-[1280px] overflow-hidden rounded-lg lg:grid-cols-2">
+    <section className="w-full overflow-x-hidden px-4 py-16 md:px-8 lg:px-14">
+      <div className="mx-auto grid w-full max-w-[1280px] min-w-0 overflow-hidden rounded-lg lg:grid-cols-2">
         <div className="flex min-h-[360px] flex-col justify-between bg-[#fff0ad] px-7 py-9 md:px-10 lg:min-h-[468px] lg:px-10">
           <h2
-            className="h-[120px] w-[560px] text-[60px] font-normal uppercase leading-[100%] tracking-[0%] text-black"
+            className="h-auto w-full text-[36px] font-normal uppercase leading-[100%] tracking-[0%] text-black md:text-[48px] lg:h-[120px] lg:w-[560px] lg:text-[60px]"
             style={{ fontFamily: 'Anton, sans-serif' }}
           >
             Walker Reviews & Mobility Insights

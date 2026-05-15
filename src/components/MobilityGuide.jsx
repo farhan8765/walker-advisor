@@ -2,17 +2,17 @@ const imagePath = `${process.env.PUBLIC_URL}/images`;
 
 function MobilityGuide() {
   return (
-    <section className="w-full px-4 py-16 md:px-8 lg:px-14 lg:py-20">
-      <div className="mx-auto grid max-w-[1280px] items-center gap-10 lg:grid-cols-[minmax(360px,_478px)_minmax(0,_1fr)] lg:gap-36">
+    <section className="w-full overflow-x-hidden px-4 py-16 md:px-8 lg:px-14 lg:py-20">
+      <div className="mx-auto grid w-full max-w-[1280px] min-w-0 items-center gap-10 lg:grid-cols-[minmax(360px,_478px)_minmax(0,_1fr)] lg:gap-36">
         <img
-          className="h-[420px] w-full rounded-lg object-cover object-center md:h-[560px] lg:h-[740px]"
+          className="h-auto max-h-[420px] w-full rounded-lg object-cover object-center md:h-[560px] md:max-h-none lg:h-[740px]"
           src={`${imagePath}/image-9-1.webp`}
           alt="Senior woman walking outdoors with a rollator walker"
         />
 
         <div className="flex flex-col items-start lg:pt-20">
           <h2
-            className="h-[120px] w-[618px] text-[60px] font-normal uppercase leading-[100%] tracking-[0%] text-black"
+            className="h-auto w-full text-[36px] font-normal uppercase leading-[100%] tracking-[0%] text-black md:text-[48px] lg:h-[120px] lg:w-[618px] lg:text-[60px]"
             style={{ fontFamily: 'Anton, sans-serif' }}
           >
             Struggling with walker choices?
@@ -32,7 +32,7 @@ function MobilityGuide() {
           </div>
 
           <h3
-            className="mt-8 h-[38px] w-[618px] text-[32px] font-medium leading-[120%] tracking-[0%] text-[#171717]"
+            className="mt-8 h-auto w-full text-[24px] font-medium leading-[120%] tracking-[0%] text-[#171717] lg:h-[38px] lg:w-[618px] lg:text-[32px]"
             style={{ fontFamily: 'Helvetica Neue, Arial, sans-serif' }}
           >
             We&apos;re Here to Make it Easy!

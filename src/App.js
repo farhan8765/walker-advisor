@@ -68,7 +68,7 @@ function Home() {
   }, []);
 
   return (
-    <>
+  <div className="w-full min-w-0 max-w-full overflow-x-hidden">
       <Navbar />
       <HomeHero />
       <HomeFeatures />
@@ -82,7 +82,7 @@ function Home() {
       <PerformanceHighlight />
       <Newsletter />
       <Footer />
-    </>
+  </div>
   );
 }
 

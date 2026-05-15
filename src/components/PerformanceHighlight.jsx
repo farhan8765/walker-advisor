@@ -59,8 +59,8 @@ function PerformanceHighlight() {
   const translatePct = (activeIndex * 100) / slideCount;
 
   return (
-    <section className="w-full  px-4 py-16 md:px-8 lg:px-14 lg:py-24">
-      <div className="mx-auto max-w-[1280px]">
+    <section className="w-full overflow-x-hidden px-4 py-16 md:px-8 lg:px-14 lg:py-24">
+      <div className="mx-auto w-full max-w-[1280px]">
         <h2
           className="text-center font-heading text-[40px] font-normal uppercase leading-[100%] tracking-normal text-black md:text-[48px]"
           style={{ fontFamily: 'Anton, sans-serif' }}
@@ -71,15 +71,15 @@ function PerformanceHighlight() {
           Tools designed to boost your performance and comfort.
         </p>
 
-        <div className="mt-20 rounded-lg bg-[#ffc400] px-8 py-8 md:px-10 lg:px-8">
-          <div className="overflow-hidden">
+        <div className="mt-20 min-w-0 max-w-full rounded-lg bg-[#ffc400] px-4 py-8 sm:px-8 md:px-10 lg:px-8">
+          <div className="min-w-0 max-w-full overflow-hidden">
             <div
               className="flex w-[300%] transition-transform duration-500 ease-out"
               style={{ transform: `translateX(-${translatePct}%)` }}
             >
               {authorSlides.map((slide) => (
-                <div className="w-1/3 shrink-0" key={slide.id}>
-                  <div className="grid items-center gap-10 pr-0 lg:grid-cols-[466px_minmax(0,_1fr)] lg:gap-24">
+                <div className="w-1/3 min-w-0 shrink-0" key={slide.id}>
+                  <div className="grid min-w-0 items-center gap-8 pr-0 lg:grid-cols-[466px_minmax(0,_1fr)] lg:gap-24">
                     <div className="w-full max-w-[466px] shrink-0 overflow-hidden rounded-md lg:w-[466px]">
                       <div className="h-[260px] w-full md:h-[314px]">
                         <img
@@ -91,7 +91,7 @@ function PerformanceHighlight() {
                     </div>
 
                     <div className="min-w-0">
-                      <h3 className="font-manrope text-[40px] font-black leading-tight text-[#172129] md:text-[48px]">
+                      <h3 className="font-manrope text-[28px] font-black leading-tight text-[#172129] md:text-[36px] lg:text-[40px]">
                         {slide.name}
                       </h3>
                       <p className="mt-5 max-w-[650px] font-manrope text-base font-medium leading-7 text-black md:text-lg">

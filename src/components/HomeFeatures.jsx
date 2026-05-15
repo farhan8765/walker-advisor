@@ -26,19 +26,19 @@ function HomeFeatures() {
   const supportingArticles = filteredArticles.slice(1, 4);
 
   return (
-    <section className="w-full bg-white px-4 py-16 md:px-8 lg:px-14 lg:py-24">
-      <div className="mx-auto max-w-[1280px]">
-        <div className="mx-auto max-w-[840px] text-center">
+    <section className="w-full overflow-x-hidden bg-white px-4 py-16 md:px-8 lg:px-14 lg:py-24">
+      <div className="mx-auto w-full max-w-[1280px]">
+        <div className="mx-auto w-full max-w-[840px] text-center">
           <h2
-            className="mx-auto h-[120px] w-[840px] text-center text-[60px] font-normal uppercase leading-[100%] tracking-[0%] text-black"
+            className="mx-auto h-auto w-full text-center text-[36px] font-normal uppercase leading-[100%] tracking-[0%] text-black md:text-[48px] lg:h-[120px] lg:w-[840px] lg:text-[60px]"
             style={{ fontFamily: 'Anton, sans-serif' }}
           >
-          Stay on top of your
+          Top Pick Seniors 
           <br />
-          cycling progress
+          Actually Love
           </h2>
           <p
-            className="mx-auto mt-6 flex h-[28px] w-[840px] items-center justify-center text-center text-[18px] font-normal leading-[28px] tracking-[0.5%] text-[#5A666E]"
+            className="mx-auto mt-6 flex w-full items-center justify-center text-center text-[15px] font-normal leading-[28px] tracking-[0.5%] text-[#5A666E] lg:h-[28px] lg:w-[840px] lg:text-[18px]"
             style={{ fontFamily: 'Manrope, sans-serif' }}
           >
           Track your growth with smart insights from every ride.
@@ -48,13 +48,13 @@ function HomeFeatures() {
         <div className="mt-14 flex flex-col gap-8 lg:mt-16">
           <div className="flex flex-col gap-6 lg:flex-row lg:flex-nowrap lg:items-center lg:justify-between">
             <h3
-              className="h-[40px] w-[683px] shrink-0 text-[40px] font-normal uppercase leading-[100%] tracking-[0%] text-[#172129]"
+              className="h-auto w-full shrink-0 text-[28px] font-normal uppercase leading-[100%] tracking-[0%] text-[#172129] md:text-[32px] lg:h-[40px] lg:w-[683px] lg:text-[40px]"
               style={{ fontFamily: 'Anton, sans-serif' }}
             >
               Top Categories
             </h3>
 
-            <div className="flex flex-nowrap items-center gap-2 md:gap-4">
+            <div className="flex flex-wrap items-center gap-2 md:gap-4">
               {categoryFilters.map((category) => (
                 <button
                   className={`h-12 whitespace-nowrap rounded-full px-4 font-manrope text-base font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] md:text-[17px] ${
@@ -72,7 +72,7 @@ function HomeFeatures() {
             </div>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-[292px_minmax(0,_1fr)]">
+          <div className="grid min-w-0 gap-6 lg:grid-cols-[292px_minmax(0,_1fr)]">
             <aside className="rounded-lg bg-[#132027] px-5 py-6 text-[#fff3b9] lg:min-h-[735px]">
               <p className="font-manrope text-lg font-medium leading-7">
                 Best of the

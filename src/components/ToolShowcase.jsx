@@ -150,13 +150,13 @@ const CAROUSEL_TAB_IDS = new Set(['All', 'Elenker']);
 function ToolShowCard({ card, className = '', style }) {
   return (
     <article
-      className={`rounded-lg bg-[#ffc400] px-7 pb-7 pt-8 md:px-8 md:pb-9 md:pt-9 lg:px-9 lg:pb-10 ${className}`}
+      className={`min-w-0 rounded-lg bg-[#ffc400] px-5 pb-7 pt-8 md:px-8 md:pb-9 md:pt-9 lg:px-9 lg:pb-10 ${className}`}
       style={style}
     >
-      <h3 className="text-[42px] font-black leading-none text-[#4b2500] md:text-[48px]">
+      <h3 className="break-words text-[28px] font-black leading-tight text-[#4b2500] md:text-[42px] lg:text-[48px]">
         {card.title}
       </h3>
-      <p className="mt-8 font-manrope text-[24px] font-medium leading-[1.25] text-[#4b2500] md:text-[26px] lg:text-[28px]">
+      <p className="mt-6 break-words font-manrope text-base font-medium leading-snug text-[#4b2500] md:mt-8 md:text-[24px] md:leading-[1.25] lg:text-[28px]">
         {card.description}
       </p>
 
@@ -249,11 +249,11 @@ function ToolShowcase() {
   }, [useCarouselLayout, carouselMaxSlide]);
 
   return (
-    <section className="w-full bg-[#fbf6e6] px-4 py-16 md:px-8 lg:px-14 lg:py-24">
-      <div className="mx-auto max-w-[1280px]">
-        <div className="mx-auto max-w-[840px] text-center">
+    <section className="w-full overflow-x-hidden bg-[#fbf6e6] px-4 py-16 md:px-8 lg:px-14 lg:py-24">
+      <div className="mx-auto w-full min-w-0 max-w-[1280px]">
+        <div className="mx-auto w-full max-w-[840px] text-center">
           <h2
-            className="mx-auto h-[60px] w-[840px] text-center text-[60px] font-normal uppercase leading-[100%] tracking-[0%] text-black"
+            className="mx-auto h-auto w-full text-center text-[36px] font-normal uppercase leading-[100%] tracking-[0%] text-black md:text-[48px] lg:h-[60px] lg:w-[840px] lg:text-[60px]"
             style={{ fontFamily: 'Anton, sans-serif' }}
           >
             Test it, choose it
@@ -263,7 +263,7 @@ function ToolShowcase() {
           </p>
         </div>
 
-        <div className="mx-auto mt-12 flex w-full max-w-[800px] flex-nowrap items-center justify-evenly gap-3 overflow-x-auto pb-2 md:mt-16 md:gap-6">
+        <div className="mx-auto mt-12 flex min-w-0 max-w-full flex-wrap items-center justify-center gap-2 pb-2 md:mt-16 md:max-w-[800px] md:flex-nowrap md:justify-evenly md:gap-6 md:overflow-x-auto">
           {toolTabs.map((tab) => (
             <button
               className={`h-12 rounded-full px-6 font-manrope text-base font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] md:text-lg ${
@@ -282,15 +282,17 @@ function ToolShowcase() {
 
         {useCarouselLayout ? (
           <>
-            <div className="mt-24 md:hidden overflow-x-auto pb-4">
-              <div className="flex w-max gap-6 pr-2">
-                {carouselItems.map((card) => (
-                  <ToolShowCard
-                    key={card.id}
-                    card={card}
-                    className="w-[min(280px,calc(100vw-3rem))] shrink-0"
-                  />
-                ))}
+            <div className="mt-24 min-w-0 max-w-full md:hidden">
+              <div className="-mx-4 overflow-x-auto px-4 pb-4 [scrollbar-width:thin]">
+                <div className="flex w-max gap-4">
+                  {carouselItems.map((card) => (
+                    <ToolShowCard
+                      key={card.id}
+                      card={card}
+                      className="w-[260px] shrink-0 sm:w-[280px]"
+                    />
+                  ))}
+                </div>
               </div>
             </div>
 

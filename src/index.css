@@ -5,8 +5,13 @@
 @tailwind utilities;
 
 @layer base {
+  html,
   body {
-    @apply font-sans;
+    @apply overflow-x-hidden font-sans;
+  }
+
+  #root {
+    @apply w-full max-w-full overflow-x-hidden;
   }
 
   h1,

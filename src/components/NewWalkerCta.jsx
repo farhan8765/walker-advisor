@@ -1,11 +1,11 @@
 function NewWalkerCta() {
   return (
-    <section className="w-full overflow-hidden  px-4 py-16 md:px-8 lg:px-14 lg:py-24">
-      <div className="relative mx-auto max-w-[1280px] pt-44 md:pt-56 lg:pt-44">
+    <section className="w-full overflow-x-hidden px-4 py-16 md:px-8 lg:px-14 lg:py-24">
+      <div className="relative mx-auto w-full min-w-0 max-w-[1280px] overflow-hidden pt-28 md:pt-56 lg:pt-44">
         <div className="rounded-lg bg-[#132027] px-7 py-10 md:px-14 lg:px-28 lg:py-9">
           <div className="max-w-[654.75px]">
             <h2
-              className="h-[48px] w-[654.75px] text-[48px] font-normal leading-[100%] tracking-[0.5%] text-[#ffc400]"
+              className="h-auto w-full text-[32px] font-normal leading-[100%] tracking-[0.5%] text-[#ffc400] md:text-[40px] lg:h-[48px] lg:w-[654.75px] lg:text-[48px]"
               style={{ fontFamily: 'Anton, sans-serif' }}
             >
               Looking For New Walker?
@@ -23,7 +23,7 @@ function NewWalkerCta() {
         </div>
 
         <img
-          className="absolute right-2 top-[-20px] h-[300px] w-auto max-w-none object-contain md:right-8 md:h-[420px] lg:right-8 lg:h-[530px]"
+          className="pointer-events-none absolute right-0 top-[-20px] h-[120px] w-auto max-w-[40%] object-contain object-right sm:h-[140px] sm:max-w-[45%] md:right-8 md:h-[420px] md:max-w-none lg:right-8 lg:h-[530px]"
           src={`${process.env.PUBLIC_URL}/images/unsplash_KsFxqyZCJDA.png`}
           alt="Caregiver helping a person use a walker"
         />
