@@ -118,7 +118,7 @@ function LargeWheelWalkerTipsDetail() {
         <article className="blog-detail-article w-full">
           <header className="pt-8 text-center">
             <h1 className="mx-auto max-w-[520px] text-[19px] font-black leading-tight text-black md:text-[21px]">Got a Walker with Large Wheels? Try These Game-Changing Tips for Seniors</h1>
-            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">Explore useful tips for seniors on using a new walker with larger wheels. These expert suggestions will enhance safety, stability, and mobility.</p>
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">Large-wheel walkers can make mobility smoother, if you know how to use them right. These expert tips will help seniors move safely and confidently.</p>
             <img className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[7px] object-contain" src={`${process.env.PUBLIC_URL}/images/twa-blog7-1-1024x684.webp`} alt="Older man using a large wheel walker on a porch with caregiver support" />
           </header>
 
