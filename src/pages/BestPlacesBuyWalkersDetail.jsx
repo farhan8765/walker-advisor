@@ -51,23 +51,6 @@ function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
 }
 
-function DiamondIcon() {
-  return (
-    <svg className="h-9 w-9 shrink-0 text-[#ffc400]" viewBox="0 0 32 32" aria-hidden="true">
-      <path d="M7 6h18l5 7-14 15L2 13 7 6Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" />
-      <path d="M7 6l4 7 5-7 5 7 4-7M2 13h28M11 13l5 15 5-15" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.4" />
-    </svg>
-  );
-}
-
-function GlobeIcon() {
-  return (
-    <svg className="h-9 w-9 shrink-0 text-[#ffc400]" viewBox="0 0 32 32" aria-hidden="true">
-      <circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" strokeWidth="3" />
-      <path d="M5 14h7l2-5h5l2 5h6M8 22h6l2-4 3 2 1 6" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.4" />
-    </svg>
-  );
-}
 
 function SocialDots() {
   return (
@@ -230,19 +213,13 @@ function BestPlacesBuyWalkersDetail() {
           </div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-5">
-            <div className="flex items-center gap-3">
-              <DiamondIcon />
-              <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
-            </div>
+            <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Finding the right walker can greatly enhance a senior’s independence, confidence, and quality of life. Whether purchasing from a local medical store, online retailer, or second-hand option, it’s important to prioritize comfort, safety, and usability.</Paragraph>
             <Paragraph>Take the time to research and test different models, and don’t hesitate to consult with professionals for guidance. Investing in the right walker ensures long-term benefits and peace of mind.</Paragraph>
           </section>
 
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-6">
-            <div className="flex items-center gap-3">
-              <GlobeIcon />
-              <ArticleIconHeading type="references">References</ArticleIconHeading>
-            </div>
+            <ArticleIconHeading type="references">References</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
               <li><a className="text-[#0b61a4] no-underline hover:underline" href="https://www.researchgate.net/journal/Journal-of-Aging-Research-2090-2212">Journal of Aging Research.</a></li>
             </ol>
