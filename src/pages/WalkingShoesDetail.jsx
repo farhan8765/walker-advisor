@@ -7,14 +7,14 @@ import Newsletter from '../components/Newsletter';
 
 
 const tableOfContents = [
-  'Why Choosing the Right Walking Shoes Matters',
-  'Consider Shoe Width & Support',
-  'Choose Shoes with Arch Support',
-  'Check Cushioning, Sole and Balance Features',
+  'Look for a Wide and Stable Base',
+  'Choose Firm Arch Support',
+  'Check Cushioning (But Avoid Excessive Softness)',
   'Look for a Firm Heel Counter',
-  'Prepare Fit & Daily Walking',
-  'Choose the Right Sole',
+  'Proper Fit is Everything',
+  'Choose Non-Slip Soles',
   'Consider Lightweight Design',
+  'Replace Shoes on Time',
   'Frequently Asked Questions',
   'Final Thoughts',
   'References',
@@ -44,12 +44,24 @@ function SectionHeading({ children, id }) {
   return <h2 className="mt-9 text-[18px] font-black leading-tight text-black" id={id}>{children}</h2>;
 }
 
+function ArticleLink({ children, href }) {
+  return (
+    <a className="font-black text-[#0b61a4] no-underline hover:underline" href={href} target="_blank" rel="noopener noreferrer">
+      {children}
+    </a>
+  );
+}
+
 function SubHeading({ children }) {
   return <h3 className="mt-5 text-[14px] font-black text-black">{children}</h3>;
 }
 
 function Paragraph({ children }) {
   return <p className="mt-3 font-manrope text-[12px] font-medium leading-[1.85] text-[#1f2930]">{children}</p>;
+}
+
+function BlogList({ children }) {
+  return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">{children}</ul>;
 }
 
 function BlogImage({ src, alt }) {
@@ -86,19 +98,18 @@ function WalkingShoesDetail() {
         <article className="blog-detail-article w-full">
           <header className="pt-9 text-center">
             <h1 className="mx-auto max-w-[540px] text-[25px] font-black leading-tight text-black md:text-[28px]">How to Choose Walking Shoes for Balance and Stability</h1>
-            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">The right shoes can improve comfort, confidence, and everyday stability. Learn what to look for before your next walk.</p>
+            <p className="mx-auto mt-10 max-w-[min(100%,56rem)] text-[#1f2930]">Most people wear the wrong walking shoes, and it quietly affects their balance every day. Discover the 8 stability features experts say you should never ignore before buying your next pair.</p>
             <img className="mx-auto mt-5 h-auto w-full max-w-[700px] rounded-[8px] object-contain" src={`${process.env.PUBLIC_URL}/images/image.webp`} alt="How to choose walking shoes for balance and stability" />
           </header>
 
           <div className="mt-6 flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffc400] font-manrope text-[10px] font-black text-black">AA</div>
-            <p className="font-manrope text-[12px] font-black text-black">Amir Abbasi</p>
+            <img className="h-8 w-8 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/robin-dolan_avatar-154x216.webp`} alt="Robin Dolan" />
+            <p className="font-manrope text-[12px] font-black text-black">Robin Dolan</p>
           </div>
 
           <div className="mt-5">
-            <Paragraph>Choosing walking shoes is about more than style. For seniors and anyone with balance concerns, shoes affect posture, traction, comfort, and confidence with every step.</Paragraph>
-            <Paragraph>The wrong shoe can increase slipping, fatigue, foot pain, and instability. The right shoe supports natural alignment, absorbs shock, and gives the foot enough room to move safely.</Paragraph>
-            <Paragraph>This guide explains what to check before buying walking shoes for balance and stability.</Paragraph>
+            <Paragraph>Choosing the right walking shoes is not just about comfort; it directly affects your posture, joint health, and fall prevention. Poor footwear can lead to foot fatigue, ankle instability, knee pain, and even long-term alignment issues. For seniors, individuals with weak ankles, or anyone recovering from injury, stable footwear becomes even more critical. If you want a deeper understanding of age-related balance challenges, you can explore <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/why-seniors-need-proper-walking-shoes/">Why Seniors Need Proper Walking Shoes</ArticleLink> to see how the right footwear reduces fall risk and improves mobility.</Paragraph>
+            <Paragraph>Whether you walk daily for fitness, spend long hours standing at work, or simply want safer movement, understanding shoe structure will help you make an informed choice.</Paragraph>
           </div>
 
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
@@ -108,86 +119,162 @@ function WalkingShoesDetail() {
             </ol>
           </nav>
 
-          <SectionHeading id="section-1">Why Choosing the Right Walking Shoes Matters</SectionHeading>
-          <Paragraph>A stable walking shoe helps the body stay aligned from the ground up. Proper shoes can reduce wobbling, improve step confidence, and make daily walking safer.</Paragraph>
-          <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">
-            <li>Better grip on indoor and outdoor surfaces</li>
-            <li>Improved shock absorption</li>
-            <li>Less foot fatigue during longer walks</li>
-            <li>More reliable heel and arch support</li>
-          </ul>
-
-          <SectionHeading id="section-2">Consider Shoe Width & Support</SectionHeading>
-          <Paragraph>Wide-base walking shoes usually offer a broader platform and more stability. Narrow shoes may feel sleek but can reduce the support area under the foot.</Paragraph>
+          <SectionHeading id="section-1">Look for a Wide and Stable Base</SectionHeading>
+          <Paragraph>A stable walking shoe begins at the foundation the outsole. A good balance-focused walking shoe should have:</Paragraph>
+          <BlogList>
+            <li>A wide outsole (bottom platform of the shoe)</li>
+            <li>A low heel-to-toe drop</li>
+            <li>A strong rubber grip</li>
+            <li>Minimal lateral wobbling</li>
+          </BlogList>
+          <Paragraph>A wider base increases ground contact area, improving stability during heel strike and toe-off phases of walking. Shoes that are too narrow can create instability, especially on uneven surfaces. A lower heel-to-toe drop keeps your body's center of gravity more aligned, reducing forward tilt and balance disruption.</Paragraph>
+          <SubHeading>Avoid:</SubHeading>
+          <BlogList>
+            <li>Narrow silhouettes</li>
+            <li>High-heeled walking shoes</li>
+            <li>Highly curved rocker bottoms (unless medically prescribed)</li>
+          </BlogList>
           <BlogImage src="image-1.webp" alt="Wide-base walking shoe compared with narrow walking shoe" />
 
-          <SectionHeading id="section-3">Choose Shoes with Arch Support</SectionHeading>
-          <Paragraph>Your arch type affects how your foot absorbs impact. Flat arches, neutral arches, and high arches need different levels of support and cushioning.</Paragraph>
+          <SectionHeading id="section-2">Choose Firm Arch Support</SectionHeading>
+          <Paragraph>Arch support plays a biomechanical role in maintaining proper foot alignment. Without adequate support, overpronation (foot rolling inward) or supination (rolling outward) can occur - both of which compromise balance.</Paragraph>
+          <SubHeading>Identify Your Arch Type:</SubHeading>
+          <BlogList>
+            <li><strong>Flat feet</strong> - Stability or motion-control shoes</li>
+            <li><strong>High arches</strong> - Cushioned shoes with structured arch support</li>
+            <li><strong>Neutral arches</strong> - Standard stability walking shoes</li>
+          </BlogList>
+          <Paragraph>Arch support distributes body weight evenly across the foot, reducing stress on ankles, knees, and hips. If built-in support is insufficient, consider:</Paragraph>
+          <BlogList>
+            <li>Orthotic insoles</li>
+            <li>Custom inserts prescribed by a podiatrist</li>
+          </BlogList>
           <BlogImage src="image-2.webp" alt="Flat arch, neutral arch, and high arch foot types" />
-          <SubHeading>Match Shoes to Your Feet</SubHeading>
-          <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">
-            <li>Flat feet often need stability or motion-control support.</li>
-            <li>Neutral arches usually work well with balanced cushioning.</li>
-            <li>High arches often need extra cushioning and shock absorption.</li>
-          </ul>
 
-          <SectionHeading id="section-4">Check Cushioning, Sole and Balance Features</SectionHeading>
-          <Paragraph>A good walking shoe should combine cushioning with structure. Too much softness can feel unstable, while too little cushioning can increase impact stress.</Paragraph>
+          <SectionHeading id="section-3">Check Cushioning (But Avoid Excessive Softness)</SectionHeading>
+          <Paragraph>Cushioning absorbs impact forces during walking. However, overly soft midsoles can create instability by allowing excessive foot movement inside the shoe.</Paragraph>
+          <Paragraph>For optimal balance:</Paragraph>
+          <BlogList>
+            <li>Choose moderate cushioning</li>
+            <li>Ensure the midsole feels responsive, not spongy</li>
+            <li>Press the heel area; it should feel firm</li>
+            <li>Twist the shoe gently, it should resist excessive bending</li>
+          </BlogList>
+          <Paragraph>Balanced cushioning protects joints while maintaining ground feedback, which is essential for proprioception (your body's awareness of position).</Paragraph>
           <BlogImage src="image-3.webp" alt="Walking shoe cushioning outsole and traction comparison" />
 
-          <SectionHeading id="section-5">Look for a Firm Heel Counter</SectionHeading>
-          <Paragraph>The heel counter is the back part of the shoe that cups the heel. A firm heel counter keeps the foot centered and limits side-to-side movement.</Paragraph>
+          <SectionHeading id="section-4">Look for a Firm Heel Counter</SectionHeading>
+          <Paragraph>The heel counter is the structured back portion of the shoe that holds your heel securely in place. It prevents excessive rearfoot movement and reduces ankle rolling.</Paragraph>
+          <SubHeading>How to Test:</SubHeading>
+          <BlogList>
+            <li>Press the back of the shoe.</li>
+            <li>It should feel firm and resistant.</li>
+            <li>It should not collapse easily.</li>
+          </BlogList>
+          <Paragraph>A rigid heel counter improves rearfoot alignment and enhances balance during the stance phase of walking.</Paragraph>
+          <Paragraph>Weak heel counters often cause:</Paragraph>
+          <BlogList>
+            <li>Heel slippage</li>
+            <li>Ankle instability</li>
+          </BlogList>
+          <Paragraph>Increased risk of missteps</Paragraph>
           <BlogImage src="image-4.webp" alt="Testing heel counter firmness on walking shoe" />
 
-          <SectionHeading id="section-6">Prepare Fit & Daily Walking</SectionHeading>
-          <Paragraph>Proper fit matters as much as shoe design. Shoes should leave toe room, hold the heel securely, and avoid pressure points that cause pain during walks.</Paragraph>
+          <SectionHeading id="section-5">Proper Fit is Everything</SectionHeading>
+          <Paragraph>Even the most technically advanced shoe fails if it does not fit correctly.</Paragraph>
+          <SubHeading>Fitting Checklist:</SubHeading>
+          <BlogList>
+            <li>Leave about half an inch of space at the front</li>
+            <li>Ensure the shoe is snug but not tight</li>
+            <li>Walk around before purchasing</li>
+            <li>Try shoes in the evening (feet swell slightly)</li>
+            <li>Wear the socks you typically walk in</li>
+          </BlogList>
+          <Paragraph>Your toes should move freely, and your heel should remain locked without slipping. Poor fit causes friction, blisters, and imbalance.</Paragraph>
           <BlogImage src="image-5.webp" alt="Guide to correct shoe fit toe spacing and heel alignment" />
-          <SubHeading>Choose the Right Size</SubHeading>
-          <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">
-            <li>Try shoes later in the day when feet are slightly larger.</li>
-            <li>Leave about half an inch of space near the toes.</li>
-            <li>Walk on a hard surface before deciding.</li>
-            <li>Wear the socks you normally use for walking.</li>
-          </ul>
 
-          <SectionHeading id="section-7">Choose the Right Sole</SectionHeading>
-          <Paragraph>The outsole should provide traction without being overly heavy. Deep tread can help outdoors, while smoother non-slip soles may work better indoors.</Paragraph>
+          <SectionHeading id="section-6">Choose Non-Slip Soles</SectionHeading>
+          <Paragraph>Traction is crucial, especially if you walk on:</Paragraph>
+          <BlogList>
+            <li>Tile floors</li>
+            <li>Wet surfaces</li>
+            <li>Outdoor sidewalks</li>
+            <li>Sloped paths</li>
+          </BlogList>
+          <Paragraph>Look for:</Paragraph>
+          <BlogList>
+            <li>Deep tread patterns</li>
+            <li>Durable rubber outsoles</li>
+            <li>Multi-directional grip design</li>
+          </BlogList>
+          <Paragraph>Non-slip soles enhance stability when the surface changes unexpectedly.</Paragraph>
           <BlogImage src="image-6.webp" alt="Walking shoe tread and outsole grip" />
 
-          <SectionHeading id="section-8">Consider Lightweight Design</SectionHeading>
-          <Paragraph>Heavy shoes can make walking tiring and may increase the chance of dragging the feet. Lightweight walking shoes support better stride rhythm and easier movement.</Paragraph>
+          <SectionHeading id="section-7">Consider Lightweight Design</SectionHeading>
+          <Paragraph>Heavy shoes increase muscular fatigue and can subtly affect walking mechanics. Lightweight walking shoes reduce energy expenditure and improve stride efficiency.</Paragraph>
+          <Paragraph>However, avoid ultra-minimal shoes lacking structural support. The goal is lightweight with stability features. Materials to look for:</Paragraph>
+          <BlogList>
+            <li>Engineered mesh uppers</li>
+            <li>EVA foam midsoles</li>
+            <li>Reinforced heel and midfoot zones</li>
+          </BlogList>
+          <Paragraph>If you're unsure which models actually combine lightweight comfort with strong stability, check out <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-walking-shoes-for-seniors-2026/">Best Walking Shoes for Seniors in 2026</ArticleLink> for expert-reviewed options that meet these criteria.</Paragraph>
           <BlogImage src="image-7.webp" alt="Woman walking outdoors in stable walking shoes" />
+
+          <SectionHeading id="section-8">Replace Shoes on Time</SectionHeading>
+          <Paragraph>Walking shoes lose shock absorption and structural integrity over time.</Paragraph>
+          <Paragraph>General replacement guideline:</Paragraph>
+          <BlogList>
+            <li>Every <strong>300-500 miles</strong></li>
+            <li>When tread patterns wear down</li>
+            <li>When cushioning feels compressed</li>
+            <li>If you notice uneven sole wear</li>
+          </BlogList>
+          <Paragraph>Worn-out shoes compromise stability and increase fall risk.</Paragraph>
           <BlogImage src="image-8.webp" alt="New outsole compared with worn-out outsole" />
 
           <SectionHeading id="section-9">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
             {[
-              'What type of shoe is best for balance?',
-              'Are running shoes good for walking stability?',
-              'How often should walking shoes be replaced?',
-              'Can shoes improve fall prevention?',
-            ].map((question) => (
+              ['What type of walking shoes are best for balance?', 'Shoes with a wide base, firm heel counter, moderate cushioning, structured arch support, and non-slip rubber soles are best for stability.'],
+              ['Are soft cushioned shoes good for stability?', 'Extremely soft shoes may feel comfortable but can reduce balance. Moderate cushioning with firm support is preferable.'],
+              ['How do I know if a walking shoe fits properly?', 'You should have half an inch of toe space, no heel slippage, and comfortable toe movement.'],
+              ['Do arch supports improve balance?', 'Yes. Proper arch support keeps the foot aligned and distributes body weight evenly.'],
+              ['How often should walking shoes be replaced?', 'Typically, after 300-500 miles or when cushioning and tread begin to wear.'],
+              ['Are lightweight shoes better?', 'They reduce fatigue but must still offer strong structural support.'],
+            ].map(([question, answer]) => (
               <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
                 <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary>
-                <p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">Choose shoes with a stable sole, firm heel counter, good traction, and enough room for natural toe movement.</p>
+                <p className="mt-2 font-manrope text-[11px] font-semibold leading-5 text-[#303a42]">{answer}</p>
               </details>
             ))}
           </div>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-10">
             <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
-            <Paragraph>Walking shoes are one of the simplest tools for improving daily balance and stability. Prioritize fit, grip, support, and comfort before style.</Paragraph>
-            <Paragraph>If your current shoes are worn down, slippery, too narrow, or uncomfortable, replacing them may make walking safer and easier.</Paragraph>
+            <Paragraph>Selecting walking shoes for balance and stability requires attention to biomechanics, not just style. Focus on:</Paragraph>
+            <BlogList>
+              <li>Wide, stable base</li>
+              <li>Firm heel counter</li>
+              <li>Structured arch support</li>
+              <li>Moderate cushioning</li>
+              <li>Non-slip outsole</li>
+              <li>Proper fit</li>
+            </BlogList>
+            <Paragraph>The right pair will feel secure from the first step and support your natural gait without instability. Investing in quality walking shoes improves posture, reduces joint strain, and most importantly, helps you move confidently and safely every day.</Paragraph>
           </section>
 
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-11">
             <ArticleIconHeading type="references">References</ArticleIconHeading>
-            <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
-              <li>American Podiatric Medical Association. Walking Shoes and Foot Health.</li>
-              <li>National Institute on Aging. Falls and Older Adults.</li>
-              <li>CDC. Preventing Falls: Footwear and Home Safety.</li>
-              <li>Mayo Clinic. Footwear, Balance, and Joint Support.</li>
-            </ol>
+            <div className="mt-4 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
+              <p>7 Best Stability Walking Shoes in 2025 https://runrepeat.com/guides/best-stability-walking-shoes</p>
+              <p className="mt-2">The importance of Arch support: What you need to know for healthy feet</p>
+              <p>https://batemansfootwear.ie/blogs/news/the-importance-of-arch-support-what-you-need-to-know-for-healthy-feet</p>
+              <p className="mt-2">How Firm Heel Counters Alleviate Foot Pain</p>
+              <p>https://thefitville.com/blogs/blog/how-firm-heel-counters-alleviate-foot-pain</p>
+              <p className="mt-2">Best Walking Shoes for Drop Foot and Weak Ankles: Stability Features You Shouldn't Miss</p>
+              <p>https://cadense.com/blogs/cadense-cares/best-walking-shoes-for-drop-foot-and-weak-ankles-stability-features-you-shouldn-t-miss</p>
+            </div>
           </section>
 
           <SocialDots />
