@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+﻿import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
@@ -63,6 +63,23 @@ function BlogImage({ src, alt, narrow = false }) {
   return <img className={`mx-auto mt-7 h-auto w-full rounded-[8px] object-cover ${narrow ? 'max-w-[320px]' : 'max-w-[500px]'}`} src={`${process.env.PUBLIC_URL}/images/${src}`} alt={alt} />;
 }
 
+const relatedArticles = [
+  {
+    image: 'twa-blog11-1024x683.webp',
+    title: 'Social Activities for Older Adults: The Best Ways to Stay Connected, Active, and Happy',
+    description: 'A stronger social routine can support confidence, movement, and daily independence.',
+  },
+  {
+    image: 'image-2-1.webp',
+    title: 'Can Heart Issues Increase Fall Risk in Seniors?',
+    description: 'Your heart, blood flow, and medications can quietly affect balance and fall risk.',
+  },
+  {
+    image: 'blogg.webp',
+    title: '3 Foods for Seniors to Avoid',
+    description: 'The wrong food choices can affect energy, inflammation, and mobility comfort.',
+  },
+];
 function MobilityDevicesDetail() {
   useEffect(() => {
     const previousTitle = document.title;
@@ -188,6 +205,21 @@ function MobilityDevicesDetail() {
             <Paragraph>Mobility devices play a critical role in helping seniors maintain independence, dignity, and safety. Selecting the right mobility aid can significantly improve daily life, reduce fall risks, and promote long-term well-being. By understanding the different types of mobility devices available and matching them to individual needs, seniors and caregivers can make informed, confident decisions that support active and secure aging.</Paragraph>
           </section>
         </article>
+
+        <section className="mx-auto mt-16 w-full">
+          <h2 className="font-manrope text-[13px] font-black text-black">Related Articles</h2>
+          <div className="mt-5 grid gap-8 md:grid-cols-3">
+            {relatedArticles.map((article) => (
+              <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
+                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
+                  <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
       </main>
       <Newsletter />
       <Footer />
