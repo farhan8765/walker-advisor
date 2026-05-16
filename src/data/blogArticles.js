@@ -432,7 +432,7 @@ export const articles = [
     id: 45,
     category: 'Comparison',
     image: 'comparison-cards/upright-walkers.png',
-    href: 'https://darkcyan-lion-250828.hostingersite.com/best-upright-walker-for-balance-problems-top-rated-walkers-for-stability-support/',
+    href: '/5-best-upright-walkers-for-seniors-find-the-right-one',
     alt: 'Senior man seated indoors holding a walking cane',
     title: 'Rise Up! 5 Upright Walkers Seniors Love , Find Yours Today',
     description:

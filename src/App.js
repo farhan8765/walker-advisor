@@ -34,6 +34,7 @@ import WalmartWalkerGripsDetail from "./pages/WalmartWalkerGripsDetail";
 import Tools from "./pages/Tools";
 import TravelWithWalkerDetail from "./pages/TravelWithWalkerDetail";
 import UprightWalkersDetail from "./pages/UprightWalkersDetail";
+import UprightWalkersComparisonDetail from "./pages/UprightWalkersComparisonDetail";
 import ValentinesDetail from "./pages/ValentinesDetail";
 import WalkerRollatorTypesDetail from "./pages/WalkerRollatorTypesDetail";
 import WalkerSafetyFeaturesDetail from "./pages/WalkerSafetyFeaturesDetail";
@@ -119,6 +120,7 @@ const routes = {
   "/the-best-holiday-gifts-for-seniors-who-have-everything": HolidayGiftsSeniorsDetail,
   "/best-walking-shoes-for-seniors-in-2026": BestWalkingShoesSeniorsDetail,
   "/best-upright-walkers-for-outdoor-use-top-5-picks-from-amazon-2026-edition": BestUprightWalkersOutdoorDetail,
+  "/5-best-upright-walkers-for-seniors-find-the-right-one": UprightWalkersComparisonDetail,
   "/best-heavy-duty-walkers-for-obese-seniors-top-5-picks-for-2026": HeavyDutyObeseWalkersDetail,
   "/heavy-duty-walkers-for-tall-people-top-picks": HeavyDutyTallWalkersDetail,
   "/compact-walkers-for-seniors-a-comprehensive-guide": CompactWalkersDetail,
