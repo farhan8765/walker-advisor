@@ -420,6 +420,66 @@ export const articles = [
   },
   {
     id: 44,
+    category: 'Comparison',
+    image: 'comparison-cards/safest-walkers.png',
+    href: 'https://darkcyan-lion-250828.hostingersite.com/safest-walkers-for-seniors',
+    alt: 'Senior woman walking outdoors with a rollator and two children',
+    title: 'Lock in Stability! Top 5 Safest Walkers for Seniors',
+    description:
+      'Feeling unsteady? These 5 walkers are built tough to keep seniors safe from slips, falls, and wobbling. Find your rock-solid match and step with confidence',
+  },
+  {
+    id: 45,
+    category: 'Comparison',
+    image: 'comparison-cards/upright-walkers.png',
+    href: 'https://darkcyan-lion-250828.hostingersite.com/best-upright-walker-for-balance-problems-top-rated-walkers-for-stability-support/',
+    alt: 'Senior man seated indoors holding a walking cane',
+    title: 'Rise Up! 5 Upright Walkers Seniors Love , Find Yours Today',
+    description:
+      'Want better posture, more comfort, and less strain? We’ve reviewed the top 5 upright walkers for seniors to help you stand taller and move easier.',
+  },
+  {
+    id: 46,
+    category: 'Comparison',
+    image: 'comparison-cards/small-walkers.png',
+    href: '/best-small-walkers-for-seniors-top-4-options',
+    alt: 'Senior using a small walker with a caregiver nearby',
+    title: 'Top 4 Small Walkers for Seniors: Options to Suit Your Needs',
+    description:
+      'Need a lightweight, compact walker? These small but sturdy picks are perfect for seniors who want easy handling and storage.',
+  },
+  {
+    id: 47,
+    category: 'Comparison',
+    image: 'comparison-cards/christmas-gifts.png',
+    href: 'https://darkcyan-lion-250828.hostingersite.com/16-best-christmas-gifts-for-seniors-amazon-2025/',
+    alt: 'Woman giving a Christmas present to a senior woman',
+    title: '16 Best Christmas gifts for Seniors – Amazon 2026',
+    description:
+      'Looking for the perfect Christmas gift for your loved ones? These 16 Amazon picks for seniors will melt hearts in 2026!',
+  },
+  {
+    id: 48,
+    category: 'Comparison',
+    image: 'comparison-cards/travel-walkers.png',
+    href: 'https://darkcyan-lion-250828.hostingersite.com/best-travel-walkers-for-seniors-2025/',
+    alt: 'Doctor assisting a senior man using a walker indoors',
+    title: 'Best Travel Walkers for Seniors in 2026',
+    description:
+      'Looking for the perfect travel walker? Discover the 2026 models seniors are calling a game-changer for comfort and mobility!',
+  },
+  {
+    id: 49,
+    category: 'Comparison',
+    image: 'comparison-cards/walkers-with-seats.png',
+    href: 'https://thewalkeradvisor.com/top-4-walkers-with-seats-for-seniors-find-your-perfect-fit/',
+    alt: 'Senior couple walking outdoors with walkers',
+    title: 'Top 4 Walkers With Seats for Seniors: Find Your Perfect Fit',
+    description:
+      'Tired of getting worn out while walking? These walkers with seats let you rest anytime, making mobility effortless and stress-free.',
+  },
+  {
+    id: 50,
     category: "Caregiver's Corner",
     image: 'blog.webp',
     href: '/social-activities-for-older-adults-the-best-ways-to-stay-connected-active-and-happy',

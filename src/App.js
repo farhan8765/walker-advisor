@@ -66,6 +66,7 @@ import Newsletter from "./components/Newsletter";
 import PerformanceHighlight from "./components/PerformanceHighlight";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import SmallHomeWalkerDetail from "./pages/SmallHomeWalkerDetail";
+import SmallWalkersDetail from "./pages/SmallWalkersDetail";
 // import ToolShowcase from "./components/ToolShowcase";
 import SocialActivitiesOlderAdultsDetail from "./pages/SocialActivitiesOlderAdultsDetail";
 import WalkerChoices from "./components/WalkerChoices";
@@ -149,6 +150,7 @@ const routes = {
   "/most-people-use-walkers-wrong-are-you-making-these-mistakes": WalkerMistakesDetail,
   "/the-7-best-places-to-buy-walkers-for-seniors": BestPlacesBuyWalkersDetail,
   "/struggling-with-a-walker-in-a-small-home-try-these-space-saving-hacks": SmallHomeWalkerDetail,
+  "/best-small-walkers-for-seniors-top-4-options": SmallWalkersDetail,
   "/caregivers-corner": CaregiversCorner,
   "/contact": Contact,
   "/cookies-policy": Cookies,

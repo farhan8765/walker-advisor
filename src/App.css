@@ -1,0 +1,3 @@
+.review-carousel-track {
+  transform: translateX(calc(var(--review-index) * -100%));
+}
