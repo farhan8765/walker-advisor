@@ -1,5 +1,9 @@
 /** Pages where live WordPress returns wrong/home SEO — use app-aligned meta. */
 export const ROUTE_SEO_OVERRIDES = {
+  '/articles': {
+    title: 'Articles - The Walker Advisor',
+    description: '',
+  },
   '/amir-abbasi': {
     title: 'Amir Abbasi – About the Author | The Walker Advisor',
     description:

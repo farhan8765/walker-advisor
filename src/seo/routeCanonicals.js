@@ -65,7 +65,10 @@ export const ROUTE_CANONICALS = {
   "/will-medicare-really-pay-for-your-walker-the-truth-every-senior-should-know": "https://thewalkeradvisor.com/does-medicare-pay-for-walkers-for-seniors/",
 };
 
+const SITE_ORIGIN = 'https://thewalkeradvisor.com';
+
+/** Canonical = same URL as the React route (self-referencing). */
 export function getCanonicalForRoute(pathname) {
   const path = (pathname || '/').replace(/\/+$/, '') || '/';
-  return ROUTE_CANONICALS[path] ?? null;
+  return path === '/' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${path}/`;
 }

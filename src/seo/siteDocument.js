@@ -1,4 +1,3 @@
-import { getCanonicalForRoute } from './routeCanonicals';
 import { getSeoForRoute, HOME_ROUTE_SEO } from './routeSeo';
 
 /** Production site origin — used for canonical and Open Graph URLs. */
@@ -17,6 +16,12 @@ export const HOME_TITLE = HOME_ROUTE_SEO.title;
 export const HOME_DESCRIPTION = HOME_ROUTE_SEO.description;
 
 const HOME_CANONICAL = `${SITE_ORIGIN}/`;
+
+/** Canonical matches the page URL the app serves (self-referencing). */
+export function getCanonicalUrlForPath(pathname) {
+  const pathPart = (pathname || '/').replace(/\/+$/, '') || '/';
+  return pathPart === '/' ? HOME_CANONICAL : `${SITE_ORIGIN}${pathPart}/`;
+}
 
 function upsertMetaByName(name, content) {
   let el = document.querySelector(`meta[name="${name}"]`);
@@ -48,6 +53,14 @@ function upsertLinkRel(rel, href) {
   el.setAttribute('href', href);
 }
 
+function removeMetaByName(name) {
+  document.querySelector(`meta[name="${name}"]`)?.remove();
+}
+
+function removeMetaProperty(property) {
+  document.querySelector(`meta[property="${property}"]`)?.remove();
+}
+
 /**
  * Applies homepage SEO to document.head (title, description, robots, Open Graph, Twitter).
  * Canonical is set globally in App via setCanonicalToCurrentPath().
@@ -68,13 +81,9 @@ export function applyHomePageDocumentSeo() {
   upsertMetaByName('twitter:description', HOME_DESCRIPTION);
 }
 
-/** Canonical from live WordPress mapping, or production URL for the current path. */
+/** Canonical = current page URL on thewalkeradvisor.com */
 export function setCanonicalToCurrentPath() {
-  const path = window.location.pathname || '/';
-  const pathPart = path === '/' ? '/' : path.replace(/\/+$/, '') || '/';
-  const href =
-    getCanonicalForRoute(pathPart) ||
-    (pathPart === '/' ? HOME_CANONICAL : `${SITE_ORIGIN}${pathPart}/`);
+  const href = getCanonicalUrlForPath(window.location.pathname);
   upsertLinkRel('canonical', href);
   upsertMetaProperty('og:url', href);
   return href;
@@ -82,18 +91,25 @@ export function setCanonicalToCurrentPath() {
 
 function applyDocumentSeo(title, description, canonicalUrl) {
   document.title = title;
-  upsertMetaByName('description', description);
   upsertMetaByName('robots', 'index, follow');
 
   upsertMetaProperty('og:type', 'website');
   upsertMetaProperty('og:site_name', 'The Walker Advisor');
   upsertMetaProperty('og:title', title);
-  upsertMetaProperty('og:description', description);
   upsertMetaProperty('og:url', canonicalUrl);
 
   upsertMetaByName('twitter:card', 'summary_large_image');
   upsertMetaByName('twitter:title', title);
-  upsertMetaByName('twitter:description', description);
+
+  if (description) {
+    upsertMetaByName('description', description);
+    upsertMetaProperty('og:description', description);
+    upsertMetaByName('twitter:description', description);
+  } else {
+    removeMetaByName('description');
+    removeMetaProperty('og:description');
+    removeMetaByName('twitter:description');
+  }
 }
 
 /** Title + meta description from live WordPress for the current React route. */
@@ -106,8 +122,7 @@ export function applyRouteDocumentSeo(pathname) {
   }
 
   const seo = getSeoForRoute(pathPart);
-  const canonicalUrl =
-    getCanonicalForRoute(pathPart) || `${SITE_ORIGIN}${pathPart}/`;
+  const canonicalUrl = getCanonicalUrlForPath(pathPart);
 
   if (seo?.title) {
     applyDocumentSeo(seo.title, seo.description || '', canonicalUrl);
