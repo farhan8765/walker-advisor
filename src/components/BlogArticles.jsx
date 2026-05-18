@@ -21,17 +21,17 @@ function BlogArticles() {
   return (
     <section
       id="articles"
-      className="w-full overflow-x-hidden bg-white px-4 pb-20 pt-14 md:px-8 md:pt-16 lg:px-0 lg:pb-24 lg:pt-20"
+      className="w-full overflow-x-hidden bg-white px-4 pb-16 pt-8 md:px-8 md:pb-20 md:pt-16 lg:px-0 lg:pb-24 lg:pt-20"
     >
       <div className="mx-auto w-full max-w-[1120px]">
         <div className="mx-auto w-full max-w-[840px] text-center">
           <h1
-            className="break-words text-center text-[60px] font-normal uppercase leading-[100%] tracking-[0] text-[#172129]"
+            className="break-words text-center text-[42px] font-normal uppercase leading-[0.98] tracking-[0] text-[#172129] sm:text-[52px] md:text-[60px]"
             style={{ fontFamily: 'Anton, sans-serif' }}
           >
             Guide to helpful resources
           </h1>
-          <p className="mt-4 font-manrope text-base font-medium leading-7 text-[#66737c] md:mt-6 md:text-lg">
+          <p className="mx-auto mt-4 max-w-[34ch] font-manrope text-base font-medium leading-7 text-[#66737c] md:mt-6 md:max-w-none md:text-lg">
             Discover valuable insights with The Walker Advisor&apos;s expert guides and
             genuine reviews, designed to support you in finding the perfect mobility aid
             for your lifestyle.
@@ -39,7 +39,7 @@ function BlogArticles() {
         </div>
 
         <div
-          className="mx-auto mt-16 flex w-fit max-w-full flex-wrap items-center justify-center gap-1 rounded-full border border-[#d8dde2] bg-white p-1 shadow-[0_10px_26px_rgba(255,255,255,0.12)]"
+          className="mx-auto mt-8 flex w-full max-w-[380px] flex-wrap items-center justify-center gap-1 rounded-[28px] border border-[#d8dde2] bg-white p-1 shadow-[0_10px_26px_rgba(255,255,255,0.12)] sm:mt-12 sm:w-fit sm:max-w-full sm:rounded-full md:mt-16"
           aria-label="Article categories"
         >
           {categories.map((category) => {
@@ -65,7 +65,7 @@ function BlogArticles() {
           })}
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:mt-16 md:grid-cols-3 md:gap-8">
           {visibleArticles.map((article) => (
             <ExpertChoiceBlogCard
               key={article.id}

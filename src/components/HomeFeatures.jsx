@@ -60,18 +60,18 @@ function HomeFeatures() {
         </div>
 
         <div className="mt-14 flex flex-col gap-8 lg:mt-16">
-          <div className="flex flex-col gap-4 sm:flex-row sm:flex-nowrap sm:items-center sm:gap-6 lg:gap-8">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-8">
             <h3
-              className="w-fit shrink-0 whitespace-nowrap text-[28px] font-normal uppercase leading-[100%] tracking-[0%] text-[#172129] md:text-[32px] lg:text-[40px]"
+              className="w-fit shrink-0 text-[28px] font-normal uppercase leading-[100%] tracking-[0%] text-[#172129] md:text-[32px] lg:whitespace-nowrap lg:text-[40px]"
               style={{ fontFamily: 'Anton, sans-serif' }}
             >
               Top Categories
             </h3>
 
-            <div className="flex min-w-0 flex-1 flex-nowrap items-center justify-end gap-2 overflow-x-auto md:gap-3 lg:gap-4">
+            <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2 md:gap-3 lg:flex-nowrap lg:justify-end lg:gap-4">
               {categoryFilters.map((category) => (
                 <button
-                  className={`h-12 whitespace-nowrap rounded-full px-4 font-manrope text-base font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] md:text-[17px] ${
+                  className={`min-h-12 whitespace-nowrap rounded-full px-4 py-3 font-manrope text-sm font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] sm:text-base md:text-[17px] ${
                     category === activeCategory
                       ? 'border border-[#172129] bg-white text-[#172129]'
                       : 'border border-transparent bg-white text-black hover:text-[#a87900]'

@@ -90,7 +90,34 @@ function PerformanceHighlight() {
             </div>
           </div>
 
-          <div className="min-w-0 max-w-full overflow-hidden lg:col-start-2 lg:row-start-1 lg:min-h-[340px]">
+          <div className="min-w-0 max-w-full lg:hidden">
+            <div className="w-full max-w-[466px] shrink-0 overflow-hidden rounded-md">
+              <div className="h-[260px] w-full md:h-[300px]">
+                <img
+                  className="h-full w-full object-cover object-center"
+                  src={`${base}/${activeSlide.image}`}
+                  alt={activeSlide.name}
+                />
+              </div>
+            </div>
+
+            <div className="mt-1 flex min-w-0 flex-col gap-5">
+              <h3 className="font-manrope text-[28px] font-black leading-tight text-[#172129] md:text-[36px]">
+                {activeSlide.name}
+              </h3>
+              <p className="font-manrope text-base font-medium leading-7 text-black md:text-lg">
+                {activeSlide.bio}
+              </p>
+              <a
+                className="inline-flex h-10 w-fit items-center justify-center gap-3 rounded-full bg-[#17262d] px-5 font-manrope text-base font-medium text-white no-underline transition-colors hover:bg-[#223841] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#172129]"
+                href={activeSlide.href}
+              >
+                Learn More <span aria-hidden="true">-&gt;</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="hidden min-w-0 max-w-full overflow-hidden lg:col-start-2 lg:row-start-1 lg:block lg:min-h-[340px]">
             <div
               className="flex h-full w-[300%] transition-transform duration-500 ease-out lg:min-h-[340px]"
               style={{ transform: `translateX(-${translatePct}%)` }}
@@ -98,16 +125,6 @@ function PerformanceHighlight() {
               {authorSlides.map((slide) => (
                 <div className="w-1/3 min-w-0 shrink-0 lg:h-full" key={slide.id}>
                   <div className="min-w-0 lg:h-full">
-                    <div className="w-full max-w-[466px] shrink-0 overflow-hidden rounded-md lg:hidden">
-                      <div className="h-[260px] w-full md:h-[300px]">
-                        <img
-                          className="h-full w-full object-cover object-center"
-                          src={`${base}/${slide.image}`}
-                          alt={slide.name}
-                        />
-                      </div>
-                    </div>
-
                     <div className="flex min-w-0 flex-col gap-5 lg:h-full lg:justify-evenly lg:gap-0">
                       <h3 className="font-manrope text-[28px] font-black leading-tight text-[#172129] md:text-[36px] lg:text-[40px]">
                         {slide.name}
