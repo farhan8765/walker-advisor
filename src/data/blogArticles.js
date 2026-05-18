@@ -544,7 +544,7 @@ export const articles = [
     id: 63,
     category: 'Comparison',
     image: 'twablog13-1.webp',
-    href: 'https://thewalkeradvisor.com/elenker-vs-nova-upright-walkers-2025/',
+    href: '/elenker-vs-nova-upright-walkers-2026.html',
     alt: 'Two senior women using upright walkers outdoors',
     title: 'Elenker vs. Nova Upright Walkers: Which Should You Choose in 2026?',
     description:
