@@ -13,8 +13,8 @@ const navItems = [
 function MenuIcon() {
   return (
     <svg
-      width="24"
-      height="24"
+      width="22"
+      height="22"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -33,8 +33,8 @@ function MenuIcon() {
 function CloseIcon() {
   return (
     <svg
-      width="24"
-      height="24"
+      width="22"
+      height="22"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@ function Navbar() {
   );
 
   return (
-    <header className="sticky top-0 z-50 w-full max-w-full overflow-x-hidden bg-transparent px-4 pt-4 pb-3 md:px-[114px] lg:min-h-[126px] lg:pt-5 lg:pb-5">
+    <header className="sticky top-0 z-50 w-full max-w-full overflow-visible bg-transparent px-4 pt-4 pb-3 md:px-[114px] lg:min-h-[126px] lg:pt-5 lg:pb-5">
       {/* Mobile: logo + menu */}
       <div className="grid w-full grid-cols-[1fr_auto] items-center gap-3 lg:hidden">
         <a
@@ -130,7 +130,7 @@ function Navbar() {
 
         <button
           type="button"
-          className="inline-flex shrink-0 items-center justify-center rounded-full border border-black/10 bg-white p-3 text-[#1c2730] shadow-[0_14px_32px_rgba(235,198,120,0.12)] transition-colors hover:bg-[#fafafa] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"
+          className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-black/10 bg-white p-0 text-[#1c2730] shadow-[0_14px_32px_rgba(235,198,120,0.12)] transition-colors hover:bg-[#fafafa] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"
           aria-expanded={menuOpen}
           aria-controls="mobile-nav-panel"
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
