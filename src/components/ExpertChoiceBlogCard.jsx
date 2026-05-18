@@ -2,7 +2,10 @@ function ExpertChoiceBlogCard({ image, alt, title, description, href }) {
   const imageSrc = `${process.env.PUBLIC_URL}/images/${image}`;
 
   return (
-    <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope">
+    <a
+      className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope no-underline transition-shadow hover:shadow-[0_18px_40px_rgba(23,33,41,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"
+      href={href}
+    >
       <img
         className="block h-[260px] w-full object-cover"
         src={imageSrc}
@@ -20,14 +23,11 @@ function ExpertChoiceBlogCard({ image, alt, title, description, href }) {
           {description}
         </p>
 
-        <a
-          className="mt-auto pt-6 inline-flex items-center gap-2 text-base font-semibold text-[#3f351d] no-underline transition-colors hover:text-black"
-          href={href}
-        >
+        <span className="mt-auto inline-flex items-center gap-2 pt-6 text-base font-semibold text-[#3f351d]">
           Learn More <span aria-hidden="true">&#8594;</span>
-        </a>
+        </span>
       </div>
-    </article>
+    </a>
   );
 }
 

@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { articles } from '../data/blogArticles';
+import { articles, sortArticlesForDisplay } from '../data/blogArticles';
 
 const sideLinks = [
   {
@@ -34,7 +34,7 @@ function HomeFeatures() {
       activeCategory === 'All'
         ? articles
         : articles.filter((article) => article.category === activeCategory);
-    return [...list].sort((a, b) => b.id - a.id);
+    return sortArticlesForDisplay(list);
   }, [activeCategory]);
 
   const featuredArticle = filteredArticles[0];

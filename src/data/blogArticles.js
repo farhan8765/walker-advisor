@@ -479,6 +479,16 @@ export const articles = [
       'Tired of getting worn out while walking? These walkers with seats let you rest anytime, making mobility effortless and stress-free.',
   },
   {
+    id: 63,
+    category: 'Comparison',
+    image: 'twablog13-1.webp',
+    href: '/elenker-vs-nova-upright-walkers-2025/',
+    alt: 'Two senior women using upright walkers outdoors',
+    title: 'Elenker vs. Nova Upright Walkers: Which Should You Choose in 2026?',
+    description:
+      'Compare Elenker and Nova’s latest upright walkers to discover which brand fits your mobility needs, lifestyle, and budget in 2026.',
+  },
+  {
     id: 56,
     category: 'Comparison',
     image: 'twa-blog9.webp',
@@ -539,16 +549,6 @@ export const articles = [
     title: 'Best Rollator for Balance Problems: Top 5 Reliable Options',
     description:
       'Looking for a walker that feels like a best friend? These rollators provide extra balance, smooth rides, and all-day confidence.',
-  },
-  {
-    id: 63,
-    category: 'Comparison',
-    image: 'twablog13-1.webp',
-    href: '/elenker-vs-nova-upright-walkers-2025/',
-    alt: 'Two senior women using upright walkers outdoors',
-    title: 'Elenker vs. Nova Upright Walkers: Which Should You Choose in 2026?',
-    description:
-      'Compare Elenker and Nova’s latest upright walkers to discover which brand fits your mobility needs, lifestyle, and budget in 2026.',
   },
   {
     id: 62,
@@ -632,6 +632,19 @@ export const articles = [
   },
 ];
 
+export function sortArticlesForDisplay(list) {
+  return [...list].sort((a, b) => {
+    const aUnavailable = a.href === '/503';
+    const bUnavailable = b.href === '/503';
+
+    if (aUnavailable !== bUnavailable) {
+      return aUnavailable ? 1 : -1;
+    }
+
+    return b.id - a.id;
+  });
+}
+
 export function getLatestBlogArticles(count = 3) {
-  return [...articles].sort((a, b) => b.id - a.id).slice(0, count);
+  return sortArticlesForDisplay(articles).slice(0, count);
 }

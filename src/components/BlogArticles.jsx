@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { articles } from '../data/blogArticles';
+import { articles, sortArticlesForDisplay } from '../data/blogArticles';
 import ExpertChoiceBlogCard from './ExpertChoiceBlogCard';
 
 const categories = ['All', 'Informational', 'Comparison', "Caregiver's Corner"];
@@ -13,7 +13,7 @@ function BlogArticles() {
       activeCategory === 'All'
         ? articles
         : articles.filter((article) => article.category === activeCategory);
-    return [...list].sort((a, b) => b.id - a.id);
+    return sortArticlesForDisplay(list);
   }, [activeCategory]);
   const visibleArticles = filteredArticles.slice(0, visibleCount);
   const hasMoreArticles = visibleCount < filteredArticles.length;
