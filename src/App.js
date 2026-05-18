@@ -24,6 +24,7 @@ import ReplacementWalkerHandGripsDetail from "./pages/ReplacementWalkerHandGrips
 import AdjustWalkerHeightDetail from "./pages/AdjustWalkerHeightDetail";
 import CaregiversGuideWalkerDetail from "./pages/CaregiversGuideWalkerDetail";
 import EmergencyPreparednessDetail from "./pages/EmergencyPreparednessDetail";
+import ElenkerVsNovaLegacyDetail from "./pages/ElenkerVsNovaLegacyDetail";
 import FittingWalkerDetail from "./pages/FittingWalkerDetail";
 import FoodsSeniorsAvoidDetail from "./pages/FoodsSeniorsAvoidDetail";
 import GiftsForSeniorsUnder20Detail from "./pages/GiftsForSeniorsUnder20Detail";
@@ -124,6 +125,7 @@ const routes = {
   "/best-heavy-duty-walkers-for-obese-seniors-top-5-picks-for-2026": HeavyDutyObeseWalkersDetail,
   "/heavy-duty-walkers-for-tall-people-top-picks": HeavyDutyTallWalkersDetail,
   "/compact-walkers-for-seniors-a-comprehensive-guide": CompactWalkersDetail,
+  "/elenker-vs-nova-upright-walkers-2026": ElenkerVsNovaLegacyDetail,
   "/christmas-gift-ideas-for-elderly-ladies-this-december-2026": ChristmasGiftsElderlyLadiesDetail,
   "/16-best-christmas-gifts-for-seniors-amazon-2026": ChristmasGiftsSeniorsAmazonDetail,
   "/20-thoughtful-inexpensive-christmas-gift-ideas-for-senior-citizens-under-20": GiftsForSeniorsUnder20Detail,
