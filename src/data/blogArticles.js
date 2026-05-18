@@ -452,7 +452,7 @@ export const articles = [
     id: 47,
     category: 'Comparison',
     image: 'comparison-cards/christmas-gifts.png',
-    href: 'https://darkcyan-lion-250828.hostingersite.com/16-best-christmas-gifts-for-seniors-amazon-2025/',
+    href: '/16-best-christmas-gifts-for-seniors-amazon-2026',
     alt: 'Woman giving a Christmas present to a senior woman',
     title: '16 Best Christmas gifts for Seniors – Amazon 2026',
     description:
@@ -462,7 +462,7 @@ export const articles = [
     id: 48,
     category: 'Comparison',
     image: 'comparison-cards/travel-walkers.png',
-    href: 'https://darkcyan-lion-250828.hostingersite.com/best-travel-walkers-for-seniors-2025/',
+    href: '/best-travel-walkers-for-seniors-2025',
     alt: 'Doctor assisting a senior man using a walker indoors',
     title: 'Best Travel Walkers for Seniors in 2026',
     description:
@@ -472,7 +472,7 @@ export const articles = [
     id: 49,
     category: 'Comparison',
     image: 'comparison-cards/walkers-with-seats.png',
-    href: 'https://thewalkeradvisor.com/top-4-walkers-with-seats-for-seniors-find-your-perfect-fit/',
+    href: '/top-4-walkers-with-seats-for-seniors-find-your-perfect-fit',
     alt: 'Senior couple walking outdoors with walkers',
     title: 'Top 4 Walkers With Seats for Seniors: Find Your Perfect Fit',
     description:
