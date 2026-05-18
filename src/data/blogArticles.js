@@ -482,7 +482,7 @@ export const articles = [
     id: 56,
     category: 'Comparison',
     image: 'twa-blog9.webp',
-    href: 'https://thewalkeradvisor.com/best-3-wheel-walkers-for-seniors-top-5-picks/',
+    href: '/503',
     alt: 'Senior using a 3-wheel walker indoors',
     title: 'Best 3-Wheel Walkers for Seniors: Top 5 Picks for Stability & Mobility',
     description:
@@ -492,7 +492,7 @@ export const articles = [
     id: 55,
     category: 'Comparison',
     image: 'twa-blo10.webp',
-    href: 'https://thewalkeradvisor.com/best-all-terrain-walkers-for-seniors/',
+    href: '/503',
     alt: 'Senior woman using an all-terrain walker outdoors',
     title: 'The Ultimate All-Terrain Walkers for Seniors Go Anywhere With Ease!',
     description:
@@ -502,7 +502,7 @@ export const articles = [
     id: 54,
     category: 'Comparison',
     image: 'twa-blog11-1.webp',
-    href: 'https://thewalkeradvisor.com/winlove-vs-drive-medical-comparison/',
+    href: '/503',
     alt: 'Senior woman using a walker outdoors',
     title: 'Winlove vs Drive Medical: Comparing Features, Price & Durability',
     description:
@@ -513,7 +513,7 @@ export const articles = [
     category: 'Comparison',
     image:
       'senior-woman-walker-nurse-outdoor-park-with-healthcare-elderly-exercise-walking-healthcare-professional-female-person-with-peace-physical-therapy-public-garden-with-carer-2048x1080.webp',
-    href: 'https://thewalkeradvisor.com/highest-rated-walkers-for-seniors-expert-picks/',
+    href: '/503',
     alt: 'Caregiver assisting a senior woman using a walker outdoors',
     title: 'Highest-Rated Walkers for Seniors: Expert-Recommended Choices',
     description:
@@ -523,7 +523,7 @@ export const articles = [
     id: 52,
     category: 'Comparison',
     image: 'twa-blog5-1.webp',
-    href: 'https://thewalkeradvisor.com/best-upright-walker-for-balance-problems-top-rated-walkers-for-stability-support/',
+    href: '/503',
     alt: 'Senior using an upright walker on a park path',
     title:
       'Best Upright Walker for Balance Problems: Top-Rated Walkers for Stability & Support',
@@ -534,7 +534,7 @@ export const articles = [
     id: 51,
     category: 'Comparison',
     image: 'twa-blog4-1.webp',
-    href: 'https://thewalkeradvisor.com/best-rollator-for-balance-problems-top-5-reliable-options/',
+    href: '/503',
     alt: 'Man standing indoors with a rollator walker',
     title: 'Best Rollator for Balance Problems: Top 5 Reliable Options',
     description:
@@ -554,7 +554,7 @@ export const articles = [
     id: 62,
     category: 'Comparison',
     image: 'twa-blog17-1-1.webp',
-    href: 'https://thewalkeradvisor.com/best-heavy-duty-walkers-for-seniors/',
+    href: '/best-heavy-duty-walkers-for-seniors',
     alt: 'Senior seated on a heavy duty walker outdoors',
     title: 'Strong, Stable & Reliable: Top Heavy-Duty Walkers Seniors Trust in 2026',
     description:
@@ -564,7 +564,7 @@ export const articles = [
     id: 61,
     category: 'Comparison',
     image: 'twa-blog18-1.-1.webp',
-    href: '/best-stand-up-walkers-for-seniors/',
+    href: '/503',
     alt: 'Woman using a stand-up walker outdoors',
     title: 'Stand Tall in 2026: The 4 Best Stand-Up Walkers Experts Don’t Want You to Miss',
     description:
@@ -574,7 +574,7 @@ export const articles = [
     id: 60,
     category: 'Comparison',
     image: 'twa-.webp',
-    href: '/best-stair-walkers-for-seniors/',
+    href: '/503',
     alt: 'Person using a stair walker on carpeted stairs',
     title: 'Best Stair Walkers for Seniors: A Comprehensive Comparison for 2026',
     description:
@@ -584,7 +584,7 @@ export const articles = [
     id: 59,
     category: 'Comparison',
     image: 'twa-blog1-1-1.webp',
-    href: 'https://thewalkeradvisor.com/best-walkers-for-seniors-with-balance-problems-top-5/',
+    href: '/503',
     alt: 'Senior using a walker outdoors',
     title: 'Discover the 5 Best Walkers for Seniors with Balance Problems',
     description:
@@ -594,7 +594,7 @@ export const articles = [
     id: 58,
     category: 'Comparison',
     image: 'twa-blog12-1.webp',
-    href: 'https://thewalkeradvisor.com/nova-vs-carex-walkers-value-for-seniors/',
+    href: '/503',
     alt: 'Caregiver standing with a senior woman using a walker outdoors',
     title: 'Nova vs. Carex Walkers: Which Offers Better Value for Seniors?',
     description:
@@ -604,7 +604,7 @@ export const articles = [
     id: 57,
     category: 'Comparison',
     image: 'twa-blog14-1-1.webp',
-    href: 'https://thewalkeradvisor.com/helavo/',
+    href: '/503',
     alt: 'Senior man using a walker beside a child outdoors',
     title: 'Helavo vs. Elenker Walkers: Best for All-Terrain Use?',
     description:

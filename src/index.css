@@ -342,6 +342,132 @@
     border: none !important;
   }
 
+  main > article.blog-detail-article.legacy-html-article {
+    color: #1f2930;
+  }
+
+  main > article.blog-detail-article.legacy-html-article .legacy-hero {
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  main > article.blog-detail-article.legacy-html-article .legacy-hero h1 {
+    max-width: min(100%, 56rem);
+    margin: 0 auto;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    line-height: 40px !important;
+    letter-spacing: 0.005em !important;
+  }
+
+  main > article.blog-detail-article.legacy-html-article .legacy-hero .elementor-widget-theme-post-excerpt {
+    max-width: min(100%, 56rem);
+    margin: 2.5rem auto 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  main > article.blog-detail-article.legacy-html-article .legacy-hero img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 700px !important;
+    height: auto !important;
+    margin: 1.25rem auto 0 !important;
+    border-radius: 8px !important;
+    object-fit: contain !important;
+  }
+
+  main > article.blog-detail-article.legacy-html-article .legacy-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  main > article.blog-detail-article.legacy-html-article .legacy-author img {
+    width: 2rem !important;
+    height: 2rem !important;
+    border-radius: 9999px !important;
+    object-fit: cover !important;
+  }
+
+  main > article.blog-detail-article.legacy-html-article .legacy-toc {
+    margin-top: 1.75rem;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f3f3f3;
+  }
+
+  main > article.blog-detail-article.legacy-html-article .legacy-toc .elementor-toc__header {
+    background: #ffc400;
+    padding: 0.75rem 1.25rem;
+  }
+
+  main > article.blog-detail-article.legacy-html-article .legacy-toc h2 {
+    padding-top: 0 !important;
+    font-size: 17px !important;
+    line-height: 1 !important;
+  }
+
+  main > article.blog-detail-article.legacy-html-article .legacy-buy-button {
+    display: inline-flex !important;
+    border-radius: 9999px !important;
+    background: #07364f !important;
+    padding: 0.75rem 1.5rem !important;
+    color: #fff !important;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+  }
+
+  main > article.blog-detail-article.legacy-html-article .legacy-review-card {
+    min-height: 190px;
+    margin-top: 1rem;
+    border: 1px solid #d8dde2;
+    border-radius: 10px;
+    background: #fff;
+    padding: 1.25rem;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.05);
+  }
+
+  main > article.blog-detail-article.legacy-html-article .legacy-faq-item {
+    margin-top: 0.5rem;
+    border-radius: 7px;
+    background: #f3f3f3;
+    padding: 0.75rem 1.25rem;
+  }
+
+  main > article.blog-detail-article.legacy-html-article .legacy-comments {
+    margin-top: 2rem;
+    border-radius: 10px;
+    background: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.05);
+  }
+
+  main > article.blog-detail-article.legacy-html-article .legacy-comments input:not([type='checkbox']),
+  main > article.blog-detail-article.legacy-html-article .legacy-comments textarea {
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+  }
+
+  main > article.blog-detail-article.legacy-html-article .legacy-related-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    main > article.blog-detail-article.legacy-html-article .legacy-related-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
   main > article p,
   main > article li,
   main > article summary {

@@ -51,6 +51,7 @@ import HolidaySafetySeniorsDetail from "./pages/HolidaySafetySeniorsDetail";
 import HolidayWalkerSafetyDetail from "./pages/HolidayWalkerSafetyDetail";
 import HolidayGiftsSeniorsDetail from "./pages/HolidayGiftsSeniorsDetail";
 import HeavyDutyObeseWalkersDetail from "./pages/HeavyDutyObeseWalkersDetail";
+import HeavyDutyWalkersDetail from "./pages/HeavyDutyWalkersDetail";
 import HeavyDutyTallWalkersDetail from "./pages/HeavyDutyTallWalkersDetail";
 import CompactWalkersDetail from "./pages/CompactWalkersDetail";
 import ChristmasGiftsElderlyLadiesDetail from "./pages/ChristmasGiftsElderlyLadiesDetail";
@@ -71,6 +72,7 @@ import PerformanceHighlight from "./components/PerformanceHighlight";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import SmallHomeWalkerDetail from "./pages/SmallHomeWalkerDetail";
 import SmallWalkersDetail from "./pages/SmallWalkersDetail";
+import ServiceUnavailable from "./pages/ServiceUnavailable";
 // import ToolShowcase from "./components/ToolShowcase";
 import SocialActivitiesOlderAdultsDetail from "./pages/SocialActivitiesOlderAdultsDetail";
 import WalkerChoices from "./components/WalkerChoices";
@@ -132,6 +134,7 @@ const routes = {
   "/3-foods-seniors-should-avoid": FoodsSeniorsAvoidDetail,
   "/social-activities-for-older-adults": SocialActivitiesOlderAdultsDetail,
   "/valentines-day-gift-ideas-for-seniors": ValentinesGiftIdeasDetail,
+  "/best-heavy-duty-walkers-for-seniors": HeavyDutyWalkersDetail,
   "/the-side-effects-of-using-a-cane": CaneSideEffectsDetail,
   "/senior-safety-how-to-use-a-walker-on-stairs": WalkerStairsSafetyDetail,
   "/understanding-upright-walkers-senior-posture": UprightWalkersDetail,
@@ -156,6 +159,7 @@ const routes = {
   "/tips-using-walker-small-homes": SmallHomeWalkerDetail,
   "/best-small-walkers-for-seniors-top-4-options": SmallWalkersDetail,
   "/best-4-wheel-walkers-with-seats": WalkersWithSeatsComparisonDetail,
+  "/503": ServiceUnavailable,
   "/caregivers-corner": CaregiversCorner,
   "/contact-us": Contact,
   "/cookies": Cookies,
