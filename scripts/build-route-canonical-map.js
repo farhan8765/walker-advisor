@@ -118,9 +118,12 @@ ${Object.entries(map)
   .join('\n')}
 };
 
+const SITE_ORIGIN = '${PRODUCTION}';
+
+/** Live WordPress canonical for this React route (domain = thewalkeradvisor.com). */
 export function getCanonicalForRoute(pathname) {
   const path = (pathname || '/').replace(/\\/+$/, '') || '/';
-  return ROUTE_CANONICALS[path] ?? null;
+  return ROUTE_CANONICALS[path] ?? (path === '/' ? \`\${SITE_ORIGIN}/\` : \`\${SITE_ORIGIN}\${path}/\`);
 }
 `;
 

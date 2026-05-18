@@ -1,3 +1,4 @@
+import { getCanonicalForRoute } from './routeCanonicals';
 import { getSeoForRoute, HOME_ROUTE_SEO } from './routeSeo';
 
 /** Production site origin — used for canonical and Open Graph URLs. */
@@ -16,12 +17,6 @@ export const HOME_TITLE = HOME_ROUTE_SEO.title;
 export const HOME_DESCRIPTION = HOME_ROUTE_SEO.description;
 
 const HOME_CANONICAL = `${SITE_ORIGIN}/`;
-
-/** Canonical matches the page URL the app serves (self-referencing). */
-export function getCanonicalUrlForPath(pathname) {
-  const pathPart = (pathname || '/').replace(/\/+$/, '') || '/';
-  return pathPart === '/' ? HOME_CANONICAL : `${SITE_ORIGIN}${pathPart}/`;
-}
 
 function upsertMetaByName(name, content) {
   let el = document.querySelector(`meta[name="${name}"]`);
@@ -81,9 +76,10 @@ export function applyHomePageDocumentSeo() {
   upsertMetaByName('twitter:description', HOME_DESCRIPTION);
 }
 
-/** Canonical = current page URL on thewalkeradvisor.com */
+/** Canonical from live WordPress mapping (thewalkeradvisor.com). */
 export function setCanonicalToCurrentPath() {
-  const href = getCanonicalUrlForPath(window.location.pathname);
+  const pathPart = (window.location.pathname || '/').replace(/\/+$/, '') || '/';
+  const href = getCanonicalForRoute(pathPart);
   upsertLinkRel('canonical', href);
   upsertMetaProperty('og:url', href);
   return href;
@@ -122,7 +118,7 @@ export function applyRouteDocumentSeo(pathname) {
   }
 
   const seo = getSeoForRoute(pathPart);
-  const canonicalUrl = getCanonicalUrlForPath(pathPart);
+  const canonicalUrl = getCanonicalForRoute(pathPart);
 
   if (seo?.title) {
     applyDocumentSeo(seo.title, seo.description || '', canonicalUrl);

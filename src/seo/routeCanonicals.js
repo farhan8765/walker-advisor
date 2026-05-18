@@ -24,6 +24,7 @@ export const ROUTE_CANONICALS = {
   "/contact": "https://thewalkeradvisor.com/contact-us/",
   "/cookies-policy": "https://thewalkeradvisor.com/cookies/",
   "/disclaimer": "https://thewalkeradvisor.com/disclaimer/",
+  "/elenker-vs-nova-upright-walkers-2026": "https://thewalkeradvisor.com/elenker-vs-nova-upright-walkers-2026/",
   "/emergency-preparedness-for-walker-users-top-medical-alert-devices-smart-tech": "https://thewalkeradvisor.com/emergency-preparedness-for-walker-users/",
   "/every-way-to-return-amazon-orders-for-free": "https://thewalkeradvisor.com/free-amazon-returns-guide/",
   "/got-a-walker-with-large-wheels-try-these-game-changing-tips-for-seniors": "https://thewalkeradvisor.com/best-wheel-size-for-walkers/",
@@ -67,8 +68,8 @@ export const ROUTE_CANONICALS = {
 
 const SITE_ORIGIN = 'https://thewalkeradvisor.com';
 
-/** Canonical = same URL as the React route (self-referencing). */
+/** Live WordPress canonical for this React route (domain = thewalkeradvisor.com). */
 export function getCanonicalForRoute(pathname) {
   const path = (pathname || '/').replace(/\/+$/, '') || '/';
-  return path === '/' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${path}/`;
+  return ROUTE_CANONICALS[path] ?? (path === '/' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${path}/`);
 }
