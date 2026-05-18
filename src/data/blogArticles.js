@@ -554,7 +554,7 @@ export const articles = [
     id: 62,
     category: 'Comparison',
     image: 'twa-blog17-1-1.webp',
-    href: '/best-heavy-duty-walkers-for-seniors',
+    href: '/503',
     alt: 'Senior seated on a heavy duty walker outdoors',
     title: 'Strong, Stable & Reliable: Top Heavy-Duty Walkers Seniors Trust in 2026',
     description:
