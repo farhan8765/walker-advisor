@@ -54,7 +54,7 @@ function AboutUsContent() {
               our{' '}
               <a
                 className="text-inherit underline decoration-solid underline-offset-0 decoration-auto decoration-skip-ink-auto"
-                href="/disclaimer"
+                href="/disclaimer/"
               >
                 Disclaimer
               </a>

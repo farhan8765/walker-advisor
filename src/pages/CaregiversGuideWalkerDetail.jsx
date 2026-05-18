@@ -27,19 +27,19 @@ const walkerRows = [
 const relatedArticles = [
   {
     image: 'twa-blog11-1024x683.webp',
-    href: '/social-activities-for-older-adults',
+    href: '/social-activities-for-older-adults/',
     title: 'Social Activities for Older Adults: The Best Ways to Stay Connected, Active, and Happy',
     description: 'Loneliness in seniors is not just sad, it is as dangerous to health as smoking 15 cigarettes a day. Here are the best ways older adults can stay connected.',
   },
   {
     image: 'image-2-1.webp',
-    href: '/can-heart-issues-increase-fall-risk-in-seniors',
+    href: '/can-heart-issues-increase-fall-risk-in-seniors/',
     title: 'Can Heart Issues Increase Fall Risk in Seniors?',
     description: 'You might think falls are just about balance, but what if your heart is the real culprit? Discover the hidden connection between heart issues and falls.',
   },
   {
     image: 'blogg.webp',
-    href: '/3-foods-seniors-should-avoid',
+    href: '/3-foods-seniors-should-avoid/',
     title: '3 Foods for Seniors to Avoid',
     description: 'Your body after 60 is a different machine entirely. Metabolism slows. The immune system becomes more reactive. Kidneys filter less efficiently, and the gut microbiome changes.',
   },

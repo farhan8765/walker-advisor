@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
+import { stripTrailingSlash } from '../seo/pathUtils';
 
 const navItems = [
   { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about-us' },
-  { label: 'Articles', href: '/articles' },
-  { label: "Caregiver's Corner", href: '/caregivers-corner' },
-  { label: 'Tools', href: '/tools' },
-  { label: 'Contact Us', href: '/contact' },
+  { label: 'About Us', href: '/about-us/' },
+  { label: 'Articles', href: '/articles/' },
+  { label: "Caregiver's Corner", href: '/caregivers-corner/' },
+  { label: 'Tools', href: '/best-tools/' },
+  { label: 'Contact Us', href: '/contact-us/' },
 ];
 
 function MenuIcon() {
@@ -51,7 +52,7 @@ function CloseIcon() {
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const currentPath = window.location.pathname;
+  const currentPath = stripTrailingSlash(window.location.pathname);
 
   useEffect(() => {
     const mq = window.matchMedia('(min-width: 1024px)');
@@ -92,7 +93,7 @@ function Navbar() {
         const isActive =
           item.href === '/'
             ? currentPath === '/'
-            : currentPath === item.href;
+            : currentPath === stripTrailingSlash(item.href);
 
         return (
           <a
@@ -173,7 +174,7 @@ function Navbar() {
           const isActive =
             item.href === '/'
               ? currentPath === '/'
-              : currentPath === item.href;
+              : currentPath === stripTrailingSlash(item.href);
 
           return (
             <a

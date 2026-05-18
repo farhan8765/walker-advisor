@@ -82,7 +82,7 @@ export const PAGE_CANONICALS = {
   "/time-to-switch-cane-to-walker": "https://thewalkeradvisor.com/time-to-switch-cane-to-walker/",
   "/tips-for-choosing-and-using-walkers-a-comprehensive-guide": "https://thewalkeradvisor.com/tips-for-choosing-and-using-walkers-a-comprehensive-guide/",
   "/tips-using-walker-small-homes": "https://thewalkeradvisor.com/tips-using-walker-small-homes/",
-  "/top-4-walkers-with-seats-for-seniors-find-your-perfect-fit": "https://thewalkeradvisor.com/top-4-walkers-with-seats-for-seniors-find-your-perfect-fit/",
+  "/best-4-wheel-walkers-with-seats": "https://thewalkeradvisor.com/best-4-wheel-walkers-with-seats/",
   "/transition-cane-to-walker-guide": "https://thewalkeradvisor.com/transition-cane-to-walker-guide/",
   "/types-of-medical-walkers-and-rollators-a-comprehensive-guide": "https://thewalkeradvisor.com/types-of-medical-walkers-and-rollators-a-comprehensive-guide/",
   "/understanding-upright-walkers-senior-posture": "https://thewalkeradvisor.com/understanding-upright-walkers-senior-posture/",

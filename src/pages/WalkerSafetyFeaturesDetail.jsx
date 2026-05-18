@@ -143,7 +143,7 @@ function WalkerSafetyFeaturesDetail() {
             <strong>Pro Tip:</strong> Promotes better posture and comfort. As highlighted by{' '}
             <a className="text-[#0b61a4] no-underline hover:underline" href="https://www.healthline.com/health/best-walkers-for-seniors" target="_blank" rel="noopener noreferrer">Healthline</a>
             , adjustability is key to a good fit for users of different heights. The{' '}
-            <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/top-4-walkers-with-seats-for-seniors-find-your-perfect-fit/" target="_blank" rel="noopener noreferrer">Top 4 Walkers With Seats for Seniors</a>
+            <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/best-4-wheel-walkers-with-seats/" target="_blank" rel="noopener noreferrer">Top 4 Walkers With Seats for Seniors</a>
             {' '}include options with height-adjustable features for maximum comfort.
           </p>
 

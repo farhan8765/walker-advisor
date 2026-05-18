@@ -232,7 +232,7 @@ function BestWalkingShoesSeniorsDetail() {
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-5">
             <ArticleIconHeading type="final">Final Thoughts</ArticleIconHeading>
             <Paragraph>Choosing the best walking shoes for seniors depends on individual needs, whether it’s maximum cushioning like the Hoka Bondi 9, robust stability from the Brooks Addiction Walker 2, or easy slip-on convenience with the Skechers GO Walk 6.</Paragraph>
-            <Paragraph>All these options prioritize comfort and safety, helping you stay active without pain. We recommend getting fitted at a store if possible, or using <a className="font-black text-[#0b61a4]" href="/every-way-to-return-amazon-orders-for-free">Amazon’s return policy</a> to try them out.</Paragraph>
+            <Paragraph>All these options prioritize comfort and safety, helping you stay active without pain. We recommend getting fitted at a store if possible, or using <a className="font-black text-[#0b61a4]" href="/free-amazon-returns-guide/">Amazon’s return policy</a> to try them out.</Paragraph>
           </section>
 
           <section className="mt-9 rounded-[10px] bg-[#f3f3f3] p-6" id="section-6">

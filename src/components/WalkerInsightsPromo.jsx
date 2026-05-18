@@ -18,7 +18,7 @@ function WalkerInsightsPromo() {
             </p>
             <a
               className="mt-5 inline-flex h-10 items-center justify-center gap-3 rounded-full bg-[#303830] px-5 font-manrope text-base font-medium text-white no-underline transition-colors hover:bg-[#202820] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#303830]"
-              href="/tools"
+              href="/best-tools/"
             >
               Find The Best Walker <span aria-hidden="true">-&gt;</span>
             </a>

@@ -5,9 +5,9 @@ const footerColumns = [
   {
     title: 'Authors',
     links: [
-      { label: 'Amir Abbasi', href: `${process.env.PUBLIC_URL}/amir-abbasi` },
-      { label: 'Robin Dolan', href: `${process.env.PUBLIC_URL}/robin-dolan` },
-      { label: 'Syed Ali', href: `${process.env.PUBLIC_URL}/syed-ali` },
+      { label: 'Amir Abbasi', href: `${process.env.PUBLIC_URL}/author-amir-abbasi/` },
+      { label: 'Robin Dolan', href: `${process.env.PUBLIC_URL}/author-robin-dolan/` },
+      { label: 'Syed Ali', href: `${process.env.PUBLIC_URL}/author-syed-ali/` },
     ],
   },
   {
@@ -21,11 +21,11 @@ const footerColumns = [
 ];
 
 const footerLinks = [
-  { label: 'Contact Us', href: `${process.env.PUBLIC_URL}/contact` },
-  { label: 'Disclaimer', href: `${process.env.PUBLIC_URL}/disclaimer` },
-  { label: 'Terms & Conditions', href: `${process.env.PUBLIC_URL}/terms-and-conditions` },
-  { label: 'Privacy Policy', href: `${process.env.PUBLIC_URL}/privacy-policy` },
-  { label: 'Cookies Policy', href: `${process.env.PUBLIC_URL}/cookies-policy` },
+  { label: 'Contact Us', href: `${process.env.PUBLIC_URL}/contact-us/` },
+  { label: 'Disclaimer', href: `${process.env.PUBLIC_URL}/disclaimer/` },
+  { label: 'Terms & Conditions', href: `${process.env.PUBLIC_URL}/terms-and-conditions/` },
+  { label: 'Privacy Policy', href: `${process.env.PUBLIC_URL}/privacy-policy/` },
+  { label: 'Cookies Policy', href: `${process.env.PUBLIC_URL}/cookies/` },
 ];
 
 function SocialIcon({ label, children }) {

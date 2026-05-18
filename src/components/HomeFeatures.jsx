@@ -4,23 +4,23 @@ import { articles } from '../data/blogArticles';
 const sideLinks = [
   {
     label: 'Best Rollator Walkers for Seniors',
-    href: '/the-complete-guide-to-walker-and-rollator-types-which-one-fits-you-best',
+    href: '/types-of-medical-walkers-and-rollators-a-comprehensive-guide/',
   },
   {
     label: 'How to Choose a Walker for Stability',
-    href: '/stop-the-struggle-the-ultimate-easy-guide-to-fitting-a-walker-for-seniors',
+    href: '/an-easy-guide-on-how-to-fit-a-walker-for-seniors/',
   },
   {
     label: 'Walker Safety Tips for Daily Use',
-    href: '/the-must-have-walker-safety-features-every-senior-should-know-about',
+    href: '/important-safety-features-walkers-for-seniors/',
   },
   {
     label: 'Mobility Aids That Support Independence',
-    href: '/best-mobility-devices-for-seniors',
+    href: '/best-mobility-devices-for-seniors/',
   },
   {
     label: 'Caregiver Tips for Fall Prevention',
-    href: '/holiday-safety-tips-for-seniors-prevent-falls-fires-seasonal-risks',
+    href: '/holiday-safety-tips-for-seniors/',
   },
 ];
 
@@ -178,7 +178,7 @@ function HomeFeatures() {
                   </p>
                   <a
                     className="mt-6 inline-flex items-center gap-3 font-manrope text-base font-semibold text-[#3f351d] no-underline hover:text-black"
-                    href="/articles"
+                    href="/articles/"
                   >
                     View all articles <span aria-hidden="true">-&gt;</span>
                   </a>

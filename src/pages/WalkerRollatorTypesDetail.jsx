@@ -165,7 +165,7 @@ function WalkerRollatorTypesDetail() {
             <li>Built-in seat for rest</li>
             <li>Basic storage basket or pouch</li>
           </BlogList>
-          <p className="mt-3 font-manrope text-[10px] font-medium leading-[1.9] text-[#1f2930]">If you're looking for walkers with built-in seating, rollators are an excellent choice. Check out our article on the <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/top-4-walkers-with-seats-for-seniors-find-your-perfect-fit/#elementor-toc__heading-anchor-0" target="_blank" rel="noopener noreferrer">Top 4 Walkers With Seats for Seniors</a>: Find Your Perfect Fit for more details on the best options available.</p>
+          <p className="mt-3 font-manrope text-[10px] font-medium leading-[1.9] text-[#1f2930]">If you're looking for walkers with built-in seating, rollators are an excellent choice. Check out our article on the <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/best-4-wheel-walkers-with-seats/#elementor-toc__heading-anchor-0" target="_blank" rel="noopener noreferrer">Top 4 Walkers With Seats for Seniors</a>: Find Your Perfect Fit for more details on the best options available.</p>
 
           <SubHeading>2. Heavy-Duty Rollators</SubHeading>
           <Paragraph>Heavy-duty rollators are designed for larger individuals or those with more significant mobility needs. They offer stronger frames, wider seats, and higher weight capacities, ensuring greater comfort and stability.</Paragraph>
@@ -231,7 +231,7 @@ function WalkerRollatorTypesDetail() {
                 <div>
                   <p className="font-manrope text-[12px] font-black text-[#1f2930]">Ali Chishti</p>
                   <p className="mt-2 font-manrope text-[10px] font-semibold leading-5 text-[#6d7982]">November 9, 2025</p>
-                  <p className="mt-3 font-manrope text-[12px] font-semibold leading-5 text-[#1f2930]">I was unhappy with the walker they gave my father at the hospital and upgraded the walker twice. I started with the regular rollator and as my father was still quite active and walked on multiple surfaces it was not sufficient. I upgraded subsequently to a better walker that had larger wheels and was more sturdy like one of these https://thewalkeradvisor.com/top-4-walkers-with-seats-for-seniors-find-your-perfect-fit/</p>
+                  <p className="mt-3 font-manrope text-[12px] font-semibold leading-5 text-[#1f2930]">I was unhappy with the walker they gave my father at the hospital and upgraded the walker twice. I started with the regular rollator and as my father was still quite active and walked on multiple surfaces it was not sufficient. I upgraded subsequently to a better walker that had larger wheels and was more sturdy like one of these https://thewalkeradvisor.com/best-4-wheel-walkers-with-seats/</p>
                   <button className="mt-4 rounded-full bg-[#07364f] px-5 py-2 font-manrope text-[10px] font-black text-white">Reply</button>
                 </div>
               </div>

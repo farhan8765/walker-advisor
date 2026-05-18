@@ -9,7 +9,7 @@ function AmirAbbasi() {
     const title = 'Amir Abbasi – About the Author | The Walker Advisor';
     const description =
       'Meet Amir Abbasi, contributing author at The Walker Advisor—caregiving experience and thoughtful guidance on walkers and mobility.';
-    const canonicalUrl = 'https://thewalkeradvisor.com/amir-abbasi/';
+    const canonicalUrl = 'https://thewalkeradvisor.com/author-amir-abbasi/';
 
     const previousTitle = document.title;
     const previousValues = [];
@@ -139,7 +139,7 @@ function AmirAbbasi() {
               </p>
               <a
                 className="mt-6 inline-flex h-12 min-w-[160px] shrink-0 items-center justify-center rounded-full bg-black px-10 font-manrope text-base font-bold text-white no-underline transition-colors hover:bg-[#1a1a1a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black md:mt-6 md:h-14 md:px-12"
-                href={`${process.env.PUBLIC_URL}/tools`}
+                href={`${process.env.PUBLIC_URL}/tools/`}
               >
                 Explore Now
               </a>

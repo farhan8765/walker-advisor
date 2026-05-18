@@ -114,7 +114,7 @@ function BlogList({ children }) {
 }
 
 function ProductTable({ product }) {
-  return <BlogProsConsBuy pros={product.pros} cons={product.cons} buyHref="/tools" />;
+  return <BlogProsConsBuy pros={product.pros} cons={product.cons} buyHref="/best-tools/" />;
 }
 
 function SocialDots() {

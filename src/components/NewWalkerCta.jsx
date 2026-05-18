@@ -15,7 +15,7 @@ function NewWalkerCta() {
             </p>
             <a
               className="mt-5 inline-flex h-10 items-center justify-center gap-3 rounded-full bg-[#ffc400] px-5 font-manrope text-base font-medium text-black no-underline transition-colors hover:bg-[#f0b800] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400]"
-              href="/tools"
+              href="/best-tools/"
             >
               Learn More <span aria-hidden="true">-&gt;</span>
             </a>

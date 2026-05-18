@@ -140,7 +140,7 @@ function BestPlacesBuyWalkersDetail() {
             <li>Convenient return policies.</li>
             <li>Best For: Online shoppers who want variety and convenience.</li>
           </BlogList>
-          <Paragraph>Before making a purchase, it’s helpful to understand <a className="text-[#0b61a4] no-underline hover:underline" href="/how-to-adjust-a-walker-to-the-correct-height-a-safety-checklist">how to choose the right walker</a> based on stability, weight capacity, and comfort. Read more about choosing and using walkers.</Paragraph>
+          <Paragraph>Before making a purchase, it’s helpful to understand <a className="text-[#0b61a4] no-underline hover:underline" href="/how-to-adjust-a-walker-to-the-correct-height/">how to choose the right walker</a> based on stability, weight capacity, and comfort. Read more about choosing and using walkers.</Paragraph>
           <SubHeading>2. Walmart</SubHeading>
           <Paragraph>Why Buy Here?<br />Walmart provides affordable mobility aids while maintaining quality assurance.</Paragraph>
           <BlogList>
@@ -182,7 +182,7 @@ function BestPlacesBuyWalkersDetail() {
             <li>Best For: Buyers looking for expert advice and customization.</li>
           </BlogList>
           <Paragraph>It is also worth exploring second-hand options through platforms like Facebook Marketplace, eBay, or local senior community groups, especially for those on a tight budget. Many gently used walkers are sold at a fraction of the retail price, and with a thorough inspection and basic cleaning, they can serve just as effectively as new models. However, buyers should carefully check for structural damage, worn brakes, and unstable joints before committing to a used walker. If any part shows signs of significant wear, it is safer to invest in a new model or at least replace the worn components before regular use begins.</Paragraph>
-          <Paragraph>When considering the cost of walkers, many seniors wonder if <a className="text-[#0b61a4] no-underline hover:underline" href="/will-medicare-really-pay-for-your-walker-the-truth-every-senior-should-know">Medicare covers mobility aids</a>. Learn more about Medicare coverage for walkers.</Paragraph>
+          <Paragraph>When considering the cost of walkers, many seniors wonder if <a className="text-[#0b61a4] no-underline hover:underline" href="/does-medicare-pay-for-walkers-for-seniors/">Medicare covers mobility aids</a>. Learn more about Medicare coverage for walkers.</Paragraph>
 
           <SectionHeading id="section-3">Factors to Consider When Buying a Walker</SectionHeading>
           <ol className="mt-6 list-decimal space-y-1 pl-6 font-manrope text-[18px] font-normal leading-7 text-[#303030]">

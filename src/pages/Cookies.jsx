@@ -8,7 +8,7 @@ function Cookies() {
     const title = 'Cookies Policy | The Walker Advisor';
     const description =
       'Learn how The Walker Advisor uses cookies and similar technologies, including how to manage preferences and your privacy rights.';
-    const canonicalUrl = 'https://thewalkeradvisor.com/cookies-policy/';
+    const canonicalUrl = 'https://thewalkeradvisor.com/cookies/';
 
     const previousTitle = document.title;
     const previousValues = [];

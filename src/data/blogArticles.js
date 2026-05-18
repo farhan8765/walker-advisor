@@ -3,7 +3,7 @@ export const articles = [
     id: 1,
     category: 'Informational',
     image: 'image-2-1.webp',
-    href: '/can-heart-issues-increase-fall-risk-in-seniors',
+    href: '/can-heart-issues-increase-fall-risk-in-seniors/',
     alt: 'Caregiver supporting an older man with chest discomfort',
     title: 'Can Heart Issues Increase Fall Risk in Seniors?',
     description:
@@ -13,7 +13,7 @@ export const articles = [
     id: 2,
     category: 'Informational',
     image: 'image-9-1.webp',
-    href: '/understanding-upright-walkers-how-they-improve-senior-posture',
+    href: '/understanding-upright-walkers-senior-posture/',
     alt: 'Senior woman walking outdoors with an upright walker',
     title: 'Understanding Upright Walkers: How They Improve Senior Posture',
     description:
@@ -23,7 +23,7 @@ export const articles = [
     id: 3,
     category: 'Informational',
     image: 'image.webp',
-    href: '/how-to-choose-walking-shoes-for-balance-and-stability',
+    href: '/how-to-choose-walking-shoes-for-balance-and-stability/',
     alt: 'Walking shoes for balance and stability',
     title: 'How to Choose Walking Shoes for Balance and Stability',
     description:
@@ -33,7 +33,7 @@ export const articles = [
     id: 4,
     category: 'Informational',
     image: 'info-blog-twa-38.webp',
-    href: '/why-seniors-need-proper-walking-shoes',
+    href: '/why-seniors-need-proper-walking-shoes/',
     alt: 'Illustration explaining why seniors need proper walking shoes',
     title: 'Why Seniors Need Proper Walking Shoes',
     description:
@@ -43,7 +43,7 @@ export const articles = [
     id: 5,
     category: 'Informational',
     image: 'info-twa-38.webp',
-    href: '/mental-health-in-old-age-a-complete-guide-for-seniors-caregivers',
+    href: '/mental-health-in-old-age/',
     alt: 'Caregiver smiling with an older adult using a walker',
     title: 'Mental Health in Old Age: A Complete Guide for Seniors & Caregivers',
     description:
@@ -53,7 +53,7 @@ export const articles = [
     id: 6,
     category: 'Informational',
     image: 'valentines.webp',
-    href: '/valentines-day-ideas-what-seniors-can-give-each-other',
+    href: '/valentines-day-ideas/',
     alt: "Valentine's Day ideas for seniors",
     title: "Valentine's Day Ideas: What Seniors Can Give Each Other",
     description:
@@ -63,7 +63,7 @@ export const articles = [
     id: 7,
     category: 'Informational',
     image: 'twa-36-1-3.webp',
-    href: '/how-to-use-a-walker-with-wheels',
+    href: '/how-to-use-a-walker-with-wheels/',
     alt: 'Person using a wheeled walker at home',
     title: 'How To Use A Walker With Wheels: A Complete Guide for Safe Mobility',
     description:
@@ -73,7 +73,7 @@ export const articles = [
     id: 8,
     category: 'Informational',
     image: 'blog35-1-1.webp',
-    href: '/best-mobility-devices-for-seniors',
+    href: '/best-mobility-devices-for-seniors/',
     alt: 'Mobility devices for seniors including wheelchair, scooter, cane, and walker',
     title: 'Best Mobility Devices for Seniors: A Complete Guide to Safe & Independent Living',
     description:
@@ -83,7 +83,7 @@ export const articles = [
     id: 9,
     category: 'Informational',
     image: 'twaa-1.webp',
-    href: '/can-osteoarthritis-lead-to-more-falls-in-seniors',
+    href: '/can-osteoarthritis-lead-to-more-falls-in-seniors/',
     alt: 'Senior woman sitting beside a walker with knee pain',
     title: 'Can Osteoarthritis Lead to More Falls in Seniors?',
     description:
@@ -93,7 +93,7 @@ export const articles = [
     id: 10,
     category: 'Informational',
     image: 'twa33-1.webp',
-    href: '/holiday-safety-tips-for-seniors-prevent-falls-fires-seasonal-risks',
+    href: '/holiday-safety-tips-for-seniors/',
     alt: 'Holiday safety tips for seniors',
     title: 'Holiday Safety Tips for Seniors: Prevent Falls, Fires & Seasonal Risks',
     description:
@@ -103,7 +103,7 @@ export const articles = [
     id: 11,
     category: 'Informational',
     image: 'twa33.webp',
-    href: '/holiday-safety-tips-for-seniors-using-walkers',
+    href: '/holiday-safety-tips-seniors-using-walkers/',
     alt: 'Senior woman holding holiday walker decorations',
     title: 'Holiday Safety Tips for Seniors Using Walkers: Stay Confident & Independent This Season',
     description:
@@ -113,7 +113,7 @@ export const articles = [
     id: 12,
     category: 'Informational',
     image: 'Using-a-walker-on-stairs-or-steps-1536x864.webp',
-    href: '/senior-safety-how-to-use-a-walker-on-stairs',
+    href: '/senior-safety-how-to-use-a-walker-on-stairs/',
     alt: 'Using a walker on stairs or steps',
     title: 'Senior Safety: How to Use a Walker on Stairs (And Why You Usually Shouldn’t)',
     description:
@@ -123,7 +123,7 @@ export const articles = [
     id: 13,
     category: 'Informational',
     image: 'twainfo-1.webp',
-    href: '/every-way-to-return-amazon-orders-for-free',
+    href: '/free-amazon-returns-guide/',
     alt: 'Amazon packages stacked near a front door',
     title: 'Every Way to Return Amazon Orders for Free: Your Complete Guide to Hassle-Free Returns',
     description:
@@ -133,7 +133,7 @@ export const articles = [
     id: 14,
     category: 'Informational',
     image: 'twa-1-1.webp',
-    href: '/the-secret-amazon-shopping-hack-to-get-a-deal-on-just-about-anything',
+    href: '/the-secret-amazon-shopping-hack-to-get-a-deal-on-just-about-anything/',
     alt: 'Hands holding Amazon delivery boxes',
     title: 'The Secret Amazon Shopping Hack to Get a Deal on Just About Anything',
     description:
@@ -143,7 +143,7 @@ export const articles = [
     id: 15,
     category: 'Informational',
     image: 'twa-1-1-e1761912917887.webp',
-    href: '/how-to-travel-with-a-walker-tips-for-seniors',
+    href: '/how-to-travel-with-a-walker/',
     alt: 'Senior traveling safely with a walker',
     title: 'Travel Safely with a Walker: Senior Tips',
     description:
@@ -153,7 +153,7 @@ export const articles = [
     id: 16,
     category: 'Informational',
     image: 'twa28-1.webp',
-    href: '/the-side-effects-of-using-a-cane',
+    href: '/the-side-effects-of-using-a-cane/',
     alt: 'Senior holding a cane',
     title: 'The Side Effects Of Using A Cane',
     description:
@@ -163,7 +163,7 @@ export const articles = [
     id: 17,
     category: 'Informational',
     image: 'twa-fi.webp',
-    href: '/replacement-walker-hand-grips-for-all-kinds-of-walkers',
+    href: '/replacement-walker-hand-grips-for-all-kinds-of-walkers/',
     alt: 'Group of people holding canes and walkers outdoors',
     title: 'Replacement Walker Hand Grips for All Kinds of Walkers',
     description:
@@ -173,7 +173,7 @@ export const articles = [
     id: 18,
     category: 'Informational',
     image: 'twa-blog26-1-1.webp',
-    href: '/stop-the-struggle-the-ultimate-easy-guide-to-fitting-a-walker-for-seniors',
+    href: '/an-easy-guide-on-how-to-fit-a-walker-for-seniors/',
     alt: 'Seniors fitting upright walkers',
     title: 'Stop the Struggle: The Ultimate Easy Guide to Fitting a Walker for Seniors Safely',
     description:
@@ -183,7 +183,7 @@ export const articles = [
     id: 20,
     category: 'Informational',
     image: 'blog-27-1.webp',
-    href: '/must-have-walker-accessories-to-make-life-easier-and-safer',
+    href: '/must-have-walker-accessories-to-make-life-easier-and-safer/',
     alt: 'Senior woman in pink walking on a path with a rollator giving a thumbs up',
     title: 'Must-Have Walker Accessories to Make Life Easier and Safer',
     description:
@@ -193,7 +193,7 @@ export const articles = [
     id: 21,
     category: 'Informational',
     image: 'TWA-26-1.webp',
-    href: '/emergency-preparedness-for-walker-users-top-medical-alert-devices-smart-tech',
+    href: '/emergency-preparedness-for-walker-users/',
     alt: 'Person pressing a medical alert smartwatch with heart rate indicator',
     title: 'Emergency Preparedness for Walker Users: Top Medical Alert Devices & Smart Tech',
     description:
@@ -203,7 +203,7 @@ export const articles = [
     id: 22,
     category: 'Informational',
     image: 'twa-featured-image.webp',
-    href: '/how-to-adjust-a-walker-to-the-correct-height-a-safety-checklist',
+    href: '/how-to-adjust-a-walker-to-the-correct-height/',
     alt: 'Caregiver helping elderly man use a walker in a care facility',
     title: 'How to Adjust a Walker to the Correct Height: A Safety Checklist',
     description:
@@ -213,7 +213,7 @@ export const articles = [
     id: 23,
     category: 'Informational',
     image: 'walker-6491828_1280-e1762320268423.webp',
-    href: '/how-to-transition-from-a-walker-to-walking-independently',
+    href: '/how-to-transition-from-a-walker-to-walking-independently/',
     alt: 'Senior person resting near steps with a rollator parked beside them',
     title: 'How to Transition From a Walker to Walking Independently: A Step-by-Step Guide',
     description:
@@ -223,7 +223,7 @@ export const articles = [
     id: 24,
     category: 'Informational',
     image: 'twa-blog11-1024x683.webp',
-    href: '/caregivers-guide-to-helping-seniors-pick-and-use-the-perfect-walker',
+    href: '/caregivers-guide-to-senior-walker-selection-and-usage/',
     alt: 'Caregiver assisting senior woman with walking support in a home environment',
     title: "Caregivers' Guide to Helping Seniors Pick and Use the Perfect Walker",
     description:
@@ -233,7 +233,7 @@ export const articles = [
     id: 25,
     category: 'Informational',
     image: 'twa-blog6-640x427.webp',
-    href: '/how-do-supportive-grips-on-walkers-help-seniors-with-mobility',
+    href: '/how-do-supportive-grips-on-walkers-help-seniors-with-mobility/',
     alt: 'Elderly hands gripping a walking stick handle with both hands',
     title: 'How do supportive grips on walkers help seniors with mobility?',
     description:
@@ -243,7 +243,7 @@ export const articles = [
     id: 26,
     category: 'Informational',
     image: 'twa-blog12.webp',
-    href: '/rain-snow-or-shine-how-to-stay-safe-with-your-walker',
+    href: '/walker-safety-tips-for-all-weather-conditions/',
     alt: 'Snow-covered road lined with trees in winter',
     title: 'Rain, Snow, or Shine. How to Stay Safe with Your Walker',
     description:
@@ -253,7 +253,7 @@ export const articles = [
     id: 27,
     category: 'Informational',
     image: 'twa-blog4.webp',
-    href: '/buying-a-walker-dont-make-a-move-until-you-read-this',
+    href: '/tips-for-choosing-and-using-walkers-a-comprehensive-guide/',
     alt: 'Senior woman using a walker outdoors on a paved path',
     title: "Buying a Walker? Don't Make a Move Until You Read This!",
     description:
@@ -263,7 +263,7 @@ export const articles = [
     id: 28,
     category: 'Informational',
     image: 'twa-blog5.webp',
-    href: '/the-complete-guide-to-walker-and-rollator-types-which-one-fits-you-best',
+    href: '/types-of-medical-walkers-and-rollators-a-comprehensive-guide/',
     alt: 'Clinician helping a senior compare walker and rollator options',
     title: 'The Complete Guide to Walker & Rollator Types, Which One Fits You Best?',
     description:
@@ -273,7 +273,7 @@ export const articles = [
     id: 29,
     category: 'Informational',
     image: 'doctor-talking-senior-man-indoors.webp',
-    href: '/will-medicare-really-pay-for-your-walker-the-truth-every-senior-should-know',
+    href: '/does-medicare-pay-for-walkers-for-seniors/',
     alt: 'Doctor speaking with a senior man using a walker',
     title: 'Will Medicare Really Pay for Your Walker? The Truth Every Senior Should Know',
     description:
@@ -283,7 +283,7 @@ export const articles = [
     id: 30,
     category: 'Informational',
     image: 'twa-blog7-1-1024x684.webp',
-    href: '/got-a-walker-with-large-wheels-try-these-game-changing-tips-for-seniors',
+    href: '/how-to-use-walker-large-wheels-seniors-safely/',
     alt: 'Older man using a large wheel walker on a porch with caregiver support',
     title: 'Got a Walker with Large Wheels? Try These Game-Changing Tips for Seniors',
     description:
@@ -293,7 +293,7 @@ export const articles = [
     id: 31,
     category: 'Informational',
     image: 'TWA-BLOG8-1024x682.webp',
-    href: '/the-must-have-walker-safety-features-every-senior-should-know-about',
+    href: '/important-safety-features-walkers-for-seniors/',
     alt: 'Caregiver helping a senior hold a walker handle safely',
     title: 'The Must-Have Walker Safety Features Every Senior Should Know About',
     description:
@@ -303,7 +303,7 @@ export const articles = [
     id: 32,
     category: 'Informational',
     image: 'twa-blogg.webp',
-    href: '/struggling-with-a-walker-in-a-small-home-try-these-space-saving-hacks',
+    href: '/tips-using-walker-small-homes/',
     alt: 'Senior woman holding a walker in a small home',
     title: 'Struggling with a Walker in a Small Home? Try These Space-Saving Hacks',
     description:
@@ -313,7 +313,7 @@ export const articles = [
     id: 33,
     category: 'Informational',
     image: 'improving-mobility-impairment-one-step-time-shot-nurse-helping-senior-man-with-walker.webp',
-    href: '/the-7-best-places-to-buy-walkers-for-seniors',
+    href: '/where-to-buy-walkers-for-seniors-top-brands-reviews/',
     alt: 'Physical therapist helping a senior man use a rollator walker',
     title: 'The 7 Best Places to Buy Walkers for Seniors',
     description:
@@ -323,7 +323,7 @@ export const articles = [
     id: 34,
     category: 'Informational',
     image: 'injured-man-doing-physiotherapy-exercises-walking-1-scaled.webp',
-    href: '/most-people-use-walkers-wrong-are-you-making-these-mistakes',
+    href: '/what-is-the-proper-way-to-use-a-walker/',
     alt: 'Person using a walker in a rehabilitation room',
     title: 'Most People Use Walkers Wrong. Are You Making These Mistakes?',
     description:
@@ -333,7 +333,7 @@ export const articles = [
     id: 35,
     category: 'Comparison',
     image: 'TWA-Blog-imgs.webp',
-    href: '/best-walking-shoes-for-seniors-in-2026',
+    href: '/best-walking-shoes-for-seniors-2026/',
     alt: 'Best walking shoes for seniors in 2026',
     title: 'Best Walking Shoes for Seniors in 2026',
     description:
@@ -343,7 +343,7 @@ export const articles = [
     id: 36,
     category: 'Comparison',
     image: 'TWA-Blog-imgs (1).webp',
-    href: '/valentines-day-gift-ideas-for-seniors-to-give-to-each-other',
+    href: '/valentines-day-gift-ideas-for-seniors/',
     alt: "Valentine's Day gift ideas for seniors",
     title: 'Valentine’s Day Gift Ideas for Seniors to Give to Each Other',
     description:
@@ -353,7 +353,7 @@ export const articles = [
     id: 37,
     category: 'Comparison',
     image: 'WhatsApp-Image-2026-01-20-at-12.44.47-PM.webp',
-    href: '/compact-walkers-for-seniors-a-comprehensive-guide',
+    href: '/compact-walkers-for-seniors/',
     alt: 'Caregiver helping a senior use a compact walker',
     title: 'Compact Walkers for Seniors: A Comprehensive Guide',
     description:
@@ -363,7 +363,7 @@ export const articles = [
     id: 38,
     category: 'Comparison',
     image: 'WhatsApp-Image-2026-01-08-at-2.57.24-PM.webp',
-    href: '/heavy-duty-walkers-for-tall-people-top-picks',
+    href: '/heavy-duty-walkers-for-tall-people/',
     alt: 'Tall man using a heavy duty walker outdoors',
     title: 'Heavy Duty Walkers for Tall People: Top Picks',
     description:
@@ -373,7 +373,7 @@ export const articles = [
     id: 39,
     category: 'Comparison',
     image: 'image_141703db.webp',
-    href: '/best-heavy-duty-walkers-for-obese-seniors-top-5-picks-for-2026',
+    href: '/best-heavy-duty-walkers-for-obese-seniors/',
     alt: 'Heavy duty walker for obese seniors',
     title: 'Best Heavy-Duty Walkers for Obese Seniors: Top 5 Picks for 2026',
     description:
@@ -383,7 +383,7 @@ export const articles = [
     id: 40,
     category: 'Comparison',
     image: 'twa-1-3.webp',
-    href: '/the-best-holiday-gifts-for-seniors-who-have-everything',
+    href: '/best-holiday-gifts-for-seniors-who-have-everything/',
     alt: 'Holiday gift ideas for seniors who have everything',
     title: 'The Best Holiday Gifts for Seniors Who Have Everything',
     description: 'Thoughtful Ideas That Go Beyond Material Possessions',
@@ -392,7 +392,7 @@ export const articles = [
     id: 41,
     category: 'Comparison',
     image: 'twa-22-1.webp',
-    href: '/best-upright-walkers-for-outdoor-use-top-5-picks-from-amazon-2026-edition',
+    href: '/best-upright-walkers-for-outdoor-use-2025/',
     alt: 'Senior woman using an upright walker outdoors',
     title: 'Best Upright Walkers for Outdoor Use: Top 5 Picks from Amazon (2026 Edition)',
     description:
@@ -402,7 +402,7 @@ export const articles = [
     id: 42,
     category: 'Comparison',
     image: 'twa-1-2.webp',
-    href: '/20-thoughtful-inexpensive-christmas-gift-ideas-for-senior-citizens-under-20',
+    href: '/inexpensive-christmas-gift-ideas-for-senior-citizens/',
     alt: 'Christmas gifts arranged in a festive row',
     title: '20 Thoughtful & Inexpensive Christmas Gift Ideas for Senior Citizens Under $20',
     description:
@@ -412,7 +412,7 @@ export const articles = [
     id: 43,
     category: 'Comparison',
     image: 'twa-00.webp',
-    href: '/christmas-gift-ideas-for-elderly-ladies-this-december-2026',
+    href: '/christmas-gift-ideas-for-elderly-ladies-december-2025/',
     alt: 'Elderly woman receiving a Christmas gift',
     title: 'Christmas Gift Ideas for Elderly Ladies this December 2026',
     description:
@@ -422,7 +422,7 @@ export const articles = [
     id: 44,
     category: 'Comparison',
     image: 'comparison-cards/safest-walkers.png',
-    href: '/safest-walkers-for-seniors-top-5-choices',
+    href: '/safest-walkers-for-seniors-top-5-choices/',
     alt: 'Senior woman walking outdoors with a rollator and two children',
     title: 'Lock in Stability! Top 5 Safest Walkers for Seniors',
     description:
@@ -432,7 +432,7 @@ export const articles = [
     id: 45,
     category: 'Comparison',
     image: 'comparison-cards/upright-walkers.png',
-    href: '/5-best-upright-walkers-for-seniors-find-the-right-one',
+    href: '/5-best-upright-walkers-for-seniors-find-the-right-one/',
     alt: 'Senior man seated indoors holding a walking cane',
     title: 'Rise Up! 5 Upright Walkers Seniors Love , Find Yours Today',
     description:
@@ -442,7 +442,7 @@ export const articles = [
     id: 46,
     category: 'Comparison',
     image: 'comparison-cards/small-walkers.png',
-    href: '/best-small-walkers-for-seniors-top-4-options',
+    href: '/best-small-walkers-for-seniors-top-4-options/',
     alt: 'Senior using a small walker with a caregiver nearby',
     title: 'Top 4 Small Walkers for Seniors: Options to Suit Your Needs',
     description:
@@ -452,7 +452,7 @@ export const articles = [
     id: 47,
     category: 'Comparison',
     image: 'comparison-cards/christmas-gifts.png',
-    href: '/16-best-christmas-gifts-for-seniors-amazon-2026',
+    href: '/16-best-christmas-gifts-for-seniors-amazon-2025/',
     alt: 'Woman giving a Christmas present to a senior woman',
     title: '16 Best Christmas gifts for Seniors – Amazon 2026',
     description:
@@ -462,7 +462,7 @@ export const articles = [
     id: 48,
     category: 'Comparison',
     image: 'comparison-cards/travel-walkers.png',
-    href: '/best-travel-walkers-for-seniors-2025',
+    href: '/best-travel-walkers-for-seniors-2025/',
     alt: 'Doctor assisting a senior man using a walker indoors',
     title: 'Best Travel Walkers for Seniors in 2026',
     description:
@@ -472,7 +472,7 @@ export const articles = [
     id: 49,
     category: 'Comparison',
     image: 'comparison-cards/walkers-with-seats.png',
-    href: '/top-4-walkers-with-seats-for-seniors-find-your-perfect-fit',
+    href: '/best-4-wheel-walkers-with-seats/',
     alt: 'Senior couple walking outdoors with walkers',
     title: 'Top 4 Walkers With Seats for Seniors: Find Your Perfect Fit',
     description:
@@ -544,7 +544,7 @@ export const articles = [
     id: 63,
     category: 'Comparison',
     image: 'twablog13-1.webp',
-    href: '/elenker-vs-nova-upright-walkers-2026',
+    href: '/elenker-vs-nova-upright-walkers-2025/',
     alt: 'Two senior women using upright walkers outdoors',
     title: 'Elenker vs. Nova Upright Walkers: Which Should You Choose in 2026?',
     description:
@@ -564,7 +564,7 @@ export const articles = [
     id: 61,
     category: 'Comparison',
     image: 'twa-blog18-1.-1.webp',
-    href: '/best-stand-up-walkers-for-seniors',
+    href: '/best-stand-up-walkers-for-seniors/',
     alt: 'Woman using a stand-up walker outdoors',
     title: 'Stand Tall in 2026: The 4 Best Stand-Up Walkers Experts Don’t Want You to Miss',
     description:
@@ -574,7 +574,7 @@ export const articles = [
     id: 60,
     category: 'Comparison',
     image: 'twa-.webp',
-    href: '/best-stair-walkers-for-seniors',
+    href: '/best-stair-walkers-for-seniors/',
     alt: 'Person using a stair walker on carpeted stairs',
     title: 'Best Stair Walkers for Seniors: A Comprehensive Comparison for 2026',
     description:
@@ -614,7 +614,7 @@ export const articles = [
     id: 50,
     category: "Caregiver's Corner",
     image: 'blog.webp',
-    href: '/social-activities-for-older-adults-the-best-ways-to-stay-connected-active-and-happy',
+    href: '/social-activities-for-older-adults/',
     alt: 'Older adults enjoying a social activity together',
     title: 'Social Activities for Older Adults: The Best Ways to Stay Connected, Active, and Happy',
     description:
@@ -624,7 +624,7 @@ export const articles = [
     id: 45,
     category: "Caregiver's Corner",
     image: 'blog2.webp',
-    href: '/3-foods-for-seniors-to-avoid',
+    href: '/3-foods-seniors-should-avoid/',
     alt: 'Three foods for seniors to avoid',
     title: '3 Foods for Seniors to Avoid',
     description:

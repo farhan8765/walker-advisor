@@ -31,7 +31,6 @@ import GiftsForSeniorsUnder20Detail from "./pages/GiftsForSeniorsUnder20Detail";
 import MustHaveWalkerAccessoriesDetail from "./pages/MustHaveWalkerAccessoriesDetail";
 import SupportiveGripsDetail from "./pages/SupportiveGripsDetail";
 import TransitionWalkerIndependentDetail from "./pages/TransitionWalkerIndependentDetail";
-import WalmartWalkerGripsDetail from "./pages/WalmartWalkerGripsDetail";
 import Tools from "./pages/Tools";
 import TravelWithWalkerDetail from "./pages/TravelWithWalkerDetail";
 import TravelWalkersComparisonDetail from "./pages/TravelWalkersComparisonDetail";
@@ -77,6 +76,7 @@ import SocialActivitiesOlderAdultsDetail from "./pages/SocialActivitiesOlderAdul
 import WalkerChoices from "./components/WalkerChoices";
 import WalkerInsightsPromo from "./components/WalkerInsightsPromo";
 import { applyRouteDocumentSeo } from "./seo/siteDocument";
+import { normalizeRoutePath, toBrowserPath } from "./seo/pathUtils";
 import WalkerMistakesDetail from "./pages/WalkerMistakesDetail";
 
 function Home() {
@@ -102,76 +102,83 @@ function Home() {
 const routes = {
   "/": Home,
   "/about-us": AboutUs,
-  "/amir-abbasi": AmirAbbasi,
-  "/robin-dolan": Robin,
-  "/syed-ali": Ali,
-  "/every-way-to-return-amazon-orders-for-free": AmazonReturnsDetail,
+  "/author-amir-abbasi": AmirAbbasi,
+  "/author-robin-dolan": Robin,
+  "/author-syed-ali": Ali,
+  "/free-amazon-returns-guide": AmazonReturnsDetail,
   "/the-secret-amazon-shopping-hack-to-get-a-deal-on-just-about-anything": AmazonShoppingHackDetail,
-  "/how-to-travel-with-a-walker-tips-for-seniors": TravelWithWalkerDetail,
+  "/how-to-travel-with-a-walker": TravelWithWalkerDetail,
   "/best-travel-walkers-for-seniors-2025": TravelWalkersComparisonDetail,
   "/articles": Articles,
   "/can-heart-issues-increase-fall-risk-in-seniors": BlogDetail,
   "/how-to-choose-walking-shoes-for-balance-and-stability": WalkingShoesDetail,
   "/how-to-use-a-walker-with-wheels": WalkerWithWheelsDetail,
-  "/mental-health-in-old-age-a-complete-guide-for-seniors-caregivers": MentalHealthDetail,
+  "/mental-health-in-old-age": MentalHealthDetail,
   "/best-mobility-devices-for-seniors": MobilityDevicesDetail,
   "/can-osteoarthritis-lead-to-more-falls-in-seniors": OsteoarthritisFallsDetail,
-  "/holiday-safety-tips-for-seniors-prevent-falls-fires-seasonal-risks": HolidaySafetySeniorsDetail,
-  "/holiday-safety-tips-for-seniors-using-walkers": HolidayWalkerSafetyDetail,
-  "/the-best-holiday-gifts-for-seniors-who-have-everything": HolidayGiftsSeniorsDetail,
-  "/best-walking-shoes-for-seniors-in-2026": BestWalkingShoesSeniorsDetail,
-  "/best-upright-walkers-for-outdoor-use-top-5-picks-from-amazon-2026-edition": BestUprightWalkersOutdoorDetail,
+  "/holiday-safety-tips-for-seniors": HolidaySafetySeniorsDetail,
+  "/holiday-safety-tips-seniors-using-walkers": HolidayWalkerSafetyDetail,
+  "/best-holiday-gifts-for-seniors-who-have-everything": HolidayGiftsSeniorsDetail,
+  "/best-walking-shoes-for-seniors-2026": BestWalkingShoesSeniorsDetail,
+  "/best-upright-walkers-for-outdoor-use-2025": BestUprightWalkersOutdoorDetail,
   "/5-best-upright-walkers-for-seniors-find-the-right-one": UprightWalkersComparisonDetail,
-  "/best-heavy-duty-walkers-for-obese-seniors-top-5-picks-for-2026": HeavyDutyObeseWalkersDetail,
-  "/heavy-duty-walkers-for-tall-people-top-picks": HeavyDutyTallWalkersDetail,
-  "/compact-walkers-for-seniors-a-comprehensive-guide": CompactWalkersDetail,
-  "/elenker-vs-nova-upright-walkers-2026": ElenkerVsNovaLegacyDetail,
-  "/christmas-gift-ideas-for-elderly-ladies-this-december-2026": ChristmasGiftsElderlyLadiesDetail,
-  "/16-best-christmas-gifts-for-seniors-amazon-2026": ChristmasGiftsSeniorsAmazonDetail,
-  "/20-thoughtful-inexpensive-christmas-gift-ideas-for-senior-citizens-under-20": GiftsForSeniorsUnder20Detail,
-  "/3-foods-for-seniors-to-avoid": FoodsSeniorsAvoidDetail,
-  "/social-activities-for-older-adults-the-best-ways-to-stay-connected-active-and-happy": SocialActivitiesOlderAdultsDetail,
-  "/valentines-day-gift-ideas-for-seniors-to-give-to-each-other": ValentinesGiftIdeasDetail,
+  "/best-heavy-duty-walkers-for-obese-seniors": HeavyDutyObeseWalkersDetail,
+  "/heavy-duty-walkers-for-tall-people": HeavyDutyTallWalkersDetail,
+  "/compact-walkers-for-seniors": CompactWalkersDetail,
+  "/elenker-vs-nova-upright-walkers-2025": ElenkerVsNovaLegacyDetail,
+  "/christmas-gift-ideas-for-elderly-ladies-december-2025": ChristmasGiftsElderlyLadiesDetail,
+  "/16-best-christmas-gifts-for-seniors-amazon-2025": ChristmasGiftsSeniorsAmazonDetail,
+  "/inexpensive-christmas-gift-ideas-for-senior-citizens": GiftsForSeniorsUnder20Detail,
+  "/3-foods-seniors-should-avoid": FoodsSeniorsAvoidDetail,
+  "/social-activities-for-older-adults": SocialActivitiesOlderAdultsDetail,
+  "/valentines-day-gift-ideas-for-seniors": ValentinesGiftIdeasDetail,
   "/the-side-effects-of-using-a-cane": CaneSideEffectsDetail,
   "/senior-safety-how-to-use-a-walker-on-stairs": WalkerStairsSafetyDetail,
-  "/understanding-upright-walkers-how-they-improve-senior-posture": UprightWalkersDetail,
-  "/valentines-day-ideas-what-seniors-can-give-each-other": ValentinesDetail,
+  "/understanding-upright-walkers-senior-posture": UprightWalkersDetail,
+  "/valentines-day-ideas": ValentinesDetail,
   "/why-seniors-need-proper-walking-shoes": ProperWalkingShoesDetail,
   "/replacement-walker-hand-grips-for-all-kinds-of-walkers": ReplacementWalkerHandGripsDetail,
-  "/replacement-walker-hand-grips-for-all-sizes-at-walmart": WalmartWalkerGripsDetail,
-  "/stop-the-struggle-the-ultimate-easy-guide-to-fitting-a-walker-for-seniors": FittingWalkerDetail,
+  "/an-easy-guide-on-how-to-fit-a-walker-for-seniors": FittingWalkerDetail,
   "/must-have-walker-accessories-to-make-life-easier-and-safer": MustHaveWalkerAccessoriesDetail,
-  "/emergency-preparedness-for-walker-users-top-medical-alert-devices-smart-tech": EmergencyPreparednessDetail,
-  "/how-to-adjust-a-walker-to-the-correct-height-a-safety-checklist": AdjustWalkerHeightDetail,
+  "/emergency-preparedness-for-walker-users": EmergencyPreparednessDetail,
+  "/how-to-adjust-a-walker-to-the-correct-height": AdjustWalkerHeightDetail,
   "/how-to-transition-from-a-walker-to-walking-independently": TransitionWalkerIndependentDetail,
-  "/caregivers-guide-to-helping-seniors-pick-and-use-the-perfect-walker": CaregiversGuideWalkerDetail,
+  "/caregivers-guide-to-senior-walker-selection-and-usage": CaregiversGuideWalkerDetail,
   "/how-do-supportive-grips-on-walkers-help-seniors-with-mobility": SupportiveGripsDetail,
-  "/the-complete-guide-to-walker-and-rollator-types-which-one-fits-you-best": WalkerRollatorTypesDetail,
-  "/buying-a-walker-dont-make-a-move-until-you-read-this": BuyingWalkerDetail,
-  "/rain-snow-or-shine-how-to-stay-safe-with-your-walker": WalkerWeatherSafetyDetail,
-  "/the-must-have-walker-safety-features-every-senior-should-know-about": WalkerSafetyFeaturesDetail,
-  "/got-a-walker-with-large-wheels-try-these-game-changing-tips-for-seniors": LargeWheelWalkerTipsDetail,
-  "/will-medicare-really-pay-for-your-walker-the-truth-every-senior-should-know": MedicareWalkerCoverageDetail,
-  "/most-people-use-walkers-wrong-are-you-making-these-mistakes": WalkerMistakesDetail,
-  "/the-7-best-places-to-buy-walkers-for-seniors": BestPlacesBuyWalkersDetail,
-  "/struggling-with-a-walker-in-a-small-home-try-these-space-saving-hacks": SmallHomeWalkerDetail,
+  "/types-of-medical-walkers-and-rollators-a-comprehensive-guide": WalkerRollatorTypesDetail,
+  "/tips-for-choosing-and-using-walkers-a-comprehensive-guide": BuyingWalkerDetail,
+  "/walker-safety-tips-for-all-weather-conditions": WalkerWeatherSafetyDetail,
+  "/important-safety-features-walkers-for-seniors": WalkerSafetyFeaturesDetail,
+  "/how-to-use-walker-large-wheels-seniors-safely": LargeWheelWalkerTipsDetail,
+  "/does-medicare-pay-for-walkers-for-seniors": MedicareWalkerCoverageDetail,
+  "/what-is-the-proper-way-to-use-a-walker": WalkerMistakesDetail,
+  "/where-to-buy-walkers-for-seniors-top-brands-reviews": BestPlacesBuyWalkersDetail,
+  "/tips-using-walker-small-homes": SmallHomeWalkerDetail,
   "/best-small-walkers-for-seniors-top-4-options": SmallWalkersDetail,
-  "/top-4-walkers-with-seats-for-seniors-find-your-perfect-fit": WalkersWithSeatsComparisonDetail,
+  "/best-4-wheel-walkers-with-seats": WalkersWithSeatsComparisonDetail,
   "/caregivers-corner": CaregiversCorner,
-  "/contact": Contact,
-  "/cookies-policy": Cookies,
+  "/contact-us": Contact,
+  "/cookies": Cookies,
   "/disclaimer": Disclaimer,
   "/privacy-policy": PrivacyPolicy,
   "/terms-and-conditions": TermsConditions,
-  "/tools": Tools,
+  "/best-tools": Tools,
 };
 
 function App() {
   useEffect(() => {
-    applyRouteDocumentSeo(window.location.pathname);
+    const browserPath = toBrowserPath(window.location.pathname);
+    const suffix = window.location.search + window.location.hash;
+    if (window.location.pathname !== browserPath) {
+      window.history.replaceState(null, '', browserPath + suffix);
+    }
+    const path = normalizeRoutePath(window.location.pathname);
+    applyRouteDocumentSeo(path);
+    const timer = setTimeout(() => applyRouteDocumentSeo(path), 0);
+    return () => clearTimeout(timer);
   }, []);
 
-  const Page = routes[window.location.pathname] || Home;
+  const Page = routes[normalizeRoutePath(window.location.pathname)] || Home;
 
   return (
     <>

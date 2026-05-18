@@ -123,7 +123,7 @@ function WalkerMistakesDetail() {
             <li>Those needing extra stability for walking.</li>
           </BlogList>
           <Paragraph>A study published in the <a className="text-[#0b61a4] no-underline hover:underline" href="https://journals.humankinetics.com/view/journals/japa/japa-overview.xml">Journal of Aging and Physical Activity</a> shows that seniors who use walkers correctly experience a 40% reduction in fall risk.</Paragraph>
-          <Paragraph>For a detailed guide on different walker options, check out our article: <a className="text-[#0b61a4] no-underline hover:underline" href="/the-complete-guide-to-walker-and-rollator-types-which-one-fits-you-best">Types of Medical Walkers and Rollators: A Comprehensive Guide.</a></Paragraph>
+          <Paragraph>For a detailed guide on different walker options, check out our article: <a className="text-[#0b61a4] no-underline hover:underline" href="/types-of-medical-walkers-and-rollators-a-comprehensive-guide/">Types of Medical Walkers and Rollators: A Comprehensive Guide.</a></Paragraph>
 
           <SectionHeading id="section-2">Walker Buying Guide – Features to Look For</SectionHeading>
           <HeadingDescription className="mt-3">Choosing the best walker for seniors depends on specific needs. Here’s what to consider:</HeadingDescription>
@@ -135,7 +135,7 @@ function WalkerMistakesDetail() {
             <li><strong>Storage Options:</strong> Look for built-in baskets or pouches for added convenience.</li>
             <li><strong>Comfort Features:</strong> Cushioned seats and backrests make longer walks easier.</li>
           </ol>
-          <TipBox>Looking to buy a walker? Check out our guide on <a className="text-[#0b61a4] no-underline hover:underline" href="/the-7-best-places-to-buy-walkers-for-seniors">Where to Buy Walkers for Seniors: A Comprehensive Guide to Mobility Aids.</a></TipBox>
+          <TipBox>Looking to buy a walker? Check out our guide on <a className="text-[#0b61a4] no-underline hover:underline" href="/where-to-buy-walkers-for-seniors-top-brands-reviews/">Where to Buy Walkers for Seniors: A Comprehensive Guide to Mobility Aids.</a></TipBox>
 
           <SectionHeading id="section-3">How to Properly Use a Walker: Safety Tips and Techniques</SectionHeading>
           <SubHeading>Step 1: Adjust the Height for Comfort and Safety</SubHeading>
