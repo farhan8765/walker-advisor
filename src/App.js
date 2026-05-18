@@ -33,6 +33,7 @@ import TransitionWalkerIndependentDetail from "./pages/TransitionWalkerIndepende
 import WalmartWalkerGripsDetail from "./pages/WalmartWalkerGripsDetail";
 import Tools from "./pages/Tools";
 import TravelWithWalkerDetail from "./pages/TravelWithWalkerDetail";
+import TravelWalkersComparisonDetail from "./pages/TravelWalkersComparisonDetail";
 import UprightWalkersDetail from "./pages/UprightWalkersDetail";
 import UprightWalkersComparisonDetail from "./pages/UprightWalkersComparisonDetail";
 import ValentinesDetail from "./pages/ValentinesDetail";
@@ -41,6 +42,7 @@ import WalkerSafetyFeaturesDetail from "./pages/WalkerSafetyFeaturesDetail";
 import WalkerStairsSafetyDetail from "./pages/WalkerStairsSafetyDetail";
 import WalkerWeatherSafetyDetail from "./pages/WalkerWeatherSafetyDetail";
 import WalkerWithWheelsDetail from "./pages/WalkerWithWheelsDetail";
+import WalkersWithSeatsComparisonDetail from "./pages/WalkersWithSeatsComparisonDetail";
 import WalkingShoesDetail from "./pages/WalkingShoesDetail";
 import ExpertsChoice from "./components/ExpertsChoice";
 import Footer from "./components/Footer";
@@ -52,6 +54,7 @@ import HeavyDutyObeseWalkersDetail from "./pages/HeavyDutyObeseWalkersDetail";
 import HeavyDutyTallWalkersDetail from "./pages/HeavyDutyTallWalkersDetail";
 import CompactWalkersDetail from "./pages/CompactWalkersDetail";
 import ChristmasGiftsElderlyLadiesDetail from "./pages/ChristmasGiftsElderlyLadiesDetail";
+import ChristmasGiftsSeniorsAmazonDetail from "./pages/ChristmasGiftsSeniorsAmazonDetail";
 import ValentinesGiftIdeasDetail from "./pages/ValentinesGiftIdeasDetail";
 import HomeFeatures from "./components/HomeFeatures";
 import HomeHero from "./components/HomeHero";
@@ -108,6 +111,7 @@ const routes = {
   "/every-way-to-return-amazon-orders-for-free": AmazonReturnsDetail,
   "/the-secret-amazon-shopping-hack-to-get-a-deal-on-just-about-anything": AmazonShoppingHackDetail,
   "/how-to-travel-with-a-walker-tips-for-seniors": TravelWithWalkerDetail,
+  "/best-travel-walkers-for-seniors-2025": TravelWalkersComparisonDetail,
   "/articles": Articles,
   "/can-heart-issues-increase-fall-risk-in-seniors": BlogDetail,
   "/how-to-choose-walking-shoes-for-balance-and-stability": WalkingShoesDetail,
@@ -125,6 +129,7 @@ const routes = {
   "/heavy-duty-walkers-for-tall-people-top-picks": HeavyDutyTallWalkersDetail,
   "/compact-walkers-for-seniors-a-comprehensive-guide": CompactWalkersDetail,
   "/christmas-gift-ideas-for-elderly-ladies-this-december-2026": ChristmasGiftsElderlyLadiesDetail,
+  "/16-best-christmas-gifts-for-seniors-amazon-2026": ChristmasGiftsSeniorsAmazonDetail,
   "/20-thoughtful-inexpensive-christmas-gift-ideas-for-senior-citizens-under-20": GiftsForSeniorsUnder20Detail,
   "/3-foods-for-seniors-to-avoid": FoodsSeniorsAvoidDetail,
   "/social-activities-for-older-adults-the-best-ways-to-stay-connected-active-and-happy": SocialActivitiesOlderAdultsDetail,
@@ -153,6 +158,7 @@ const routes = {
   "/the-7-best-places-to-buy-walkers-for-seniors": BestPlacesBuyWalkersDetail,
   "/struggling-with-a-walker-in-a-small-home-try-these-space-saving-hacks": SmallHomeWalkerDetail,
   "/best-small-walkers-for-seniors-top-4-options": SmallWalkersDetail,
+  "/top-4-walkers-with-seats-for-seniors-find-your-perfect-fit": WalkersWithSeatsComparisonDetail,
   "/caregivers-corner": CaregiversCorner,
   "/contact": Contact,
   "/cookies-policy": Cookies,
