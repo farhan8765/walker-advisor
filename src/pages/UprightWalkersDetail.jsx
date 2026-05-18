@@ -163,7 +163,7 @@ function UprightWalkersDetail() {
           </Paragraph>
 
           <SectionHeading id="section-3">Benefits of Upright Walkers Beyond Posture</SectionHeading>
-          <div className="mt-5 overflow-hidden border border-black font-manrope text-[11px] text-[#1f2930]">
+          <div className="blog-table-wrap mt-5 overflow-x-auto font-manrope text-[11px] text-[#1f2930]">
             <div className="grid grid-cols-3 bg-[#ffc400] font-black">
               <div className="border-r border-black px-3 py-3">Benefit</div>
               <div className="border-r border-black px-3 py-3">Explanation</div>
@@ -196,7 +196,7 @@ function UprightWalkersDetail() {
             <li><strong>Ignoring Footwear:</strong> Proper supportive shoes enhance walker effectiveness.</li>
           </ol>
 
-          <img className="mx-auto mt-8 h-auto w-full max-w-[520px] rounded-[10px] bg-[#f3f3f3] p-3" src={`${process.env.PUBLIC_URL}/images/image-10-768x419.webp`} alt="Proper walker height and posture alignment" />
+          <img className="blog-content-image" src={`${process.env.PUBLIC_URL}/images/image-10-768x419.webp`} alt="Proper walker height and posture alignment" />
 
           <SectionHeading id="section-6">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
@@ -249,7 +249,7 @@ function UprightWalkersDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

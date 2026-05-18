@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import { BlogGridTable } from '../components/BlogTable';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -191,18 +192,9 @@ function MentalHealthDetail() {
           <Paragraph>Early treatment significantly improves outcomes.</Paragraph>
 
           <SectionHeading id="section-6">Myths About Mental Health in Old Age</SectionHeading>
-          <div className="mt-5 grid grid-cols-2 border-y border-[#d8dde2] font-manrope text-[11px] text-[#1f2930]">
-            <div className="bg-[#ffc400] px-8 py-4 font-black">Myth</div>
-            <div className="border-l border-[#d8dde2] bg-[#ffc400] px-8 py-4 font-black">Reality</div>
-            {myths.map(([myth, reality]) => (
-              <div className="contents" key={myth}>
-                <div className="px-8 py-5 font-medium">{myth}</div>
-                <div className="border-l border-[#d8dde2] px-8 py-5 font-medium">{reality}</div>
-              </div>
-            ))}
-          </div>
+          <BlogGridTable className="mt-5" headers={['Myth', 'Reality']} rows={myths} />
 
-          <SectionHeading id="section-7">Frequently Asked Questions</SectionHeading>
+                    <SectionHeading id="section-7">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
             <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3">
               <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">What are the most common mental health problems in old age?</summary>
@@ -280,7 +272,7 @@ function MentalHealthDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import { BlogGridTable } from '../components/BlogTable';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -58,24 +59,7 @@ function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
 }
 
-function ComparisonTable() {
-  return (
-    <div className="mt-5 overflow-hidden border border-black font-manrope">
-      <div className="grid grid-cols-[0.9fr_1.15fr_1.15fr] bg-[#ffc400] text-base font-black leading-4 text-black">
-        <div className="border-r border-black px-3 py-2">Factor</div>
-        <div className="border-r border-black px-3 py-2">Walker</div>
-        <div className="px-3 py-2">Rollator</div>
-      </div>
-      {comparisonRows.map(([factor, walker, rollator]) => (
-        <div className="grid grid-cols-[0.9fr_1.15fr_1.15fr] text-base font-semibold leading-4 text-[#1f2930]" key={factor}>
-          <div className="border-r border-t border-black px-3 py-2">{factor}</div>
-          <div className="border-r border-t border-black px-3 py-2">{walker}</div>
-          <div className="border-t border-black px-3 py-2">{rollator}</div>
-        </div>
-      ))}
-    </div>
-  );
-}
+
 
 function SocialDots() {
   return (
@@ -210,7 +194,7 @@ function WalkerRollatorTypesDetail() {
           </BlogList>
 
           <SectionHeading id="section-4">Choosing the Right Mobility Aid: Walker vs. Rollator</SectionHeading>
-          <ComparisonTable />
+          <BlogGridTable className="mt-5" columnTemplate="0.9fr 1.15fr 1.15fr" headers={['Factor', 'Walker', 'Rollator']} rows={comparisonRows} />
 
           <SectionHeading id="section-5">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
@@ -276,7 +260,7 @@ function WalkerRollatorTypesDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

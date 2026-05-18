@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import BlogImage from '../components/BlogImage';
+import { BlogGridTable } from '../components/BlogTable';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -70,41 +72,14 @@ function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
 }
 
-function AccessoryUseTable() {
-  const headers = ['Accessory Type', 'Ideal For', 'Best Placement', 'Indoor/Outdoor Use'];
 
-  return (
-    <div className="mt-4 overflow-x-auto">
-      <div className="min-w-[620px] overflow-hidden rounded-[8px] border border-[#d8dde2] font-manrope text-[#1f2930]">
-        <div className="grid grid-cols-4 bg-[#ffc400]">
-          {headers.map((header, index) => (
-            <div className={`px-3 py-2 text-base font-black text-black${index > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={header}>{header}</div>
-          ))}
-        </div>
-        {accessoryUseRows.map((row, rowIndex) => (
-          <div className={`grid grid-cols-4${rowIndex % 2 === 0 ? ' bg-white' : ' bg-[#f9f9f9]'}`} key={row[0]}>
-            {row.map((cell, cellIndex) => (
-              <div className={`border-t border-[#d8dde2] px-3 py-2 text-base font-medium${cellIndex > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={`${row[0]}-${cell}`}>{cell}</div>
-            ))}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 function ProductGrid({ products }) {
   return (
     <div className="mt-4 grid grid-cols-3 gap-2">
       {products.map((item) => (
         <div className="flex flex-col overflow-hidden rounded-[6px] border border-[#d8dde2] bg-white" key={item.title}>
-          <div className="bg-[#f3f3f3]">
-            <img
-              className="mx-auto h-[80px] w-full object-contain p-2"
-              src={`${process.env.PUBLIC_URL}/images/${item.image}`}
-              alt={item.alt}
-            />
-          </div>
+          <img className="blog-product-thumb mx-auto h-[80px] w-full object-contain" src={`${process.env.PUBLIC_URL}/images/${item.image}`} alt={item.alt} />
           <div className="flex flex-1 flex-col p-2">
             <a
               className="mt-auto inline-block rounded-full bg-[#ffc400] px-2 py-1 text-center font-manrope text-[6px] font-black text-black no-underline"
@@ -224,13 +199,7 @@ function MustHaveWalkerAccessoriesDetail() {
             <li><strong>Motion-Activated Lights:</strong> These lights automatically turn on in low-light conditions, providing hands-free operation.</li>
             <li><strong>Reflective Strips:</strong> Useful for outdoor use, especially during early mornings or dusk.</li>
           </BlogList>
-          <div className="mt-3 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
-            <img
-              className="mx-auto h-[240px] w-full object-contain p-3"
-              src={`${process.env.PUBLIC_URL}/images/blog-27-6-683x1024.webp`}
-              alt="Clip-on walker light attachment for better visibility"
-            />
-          </div>
+          <BlogImage src="blog-27-6-683x1024.webp" alt="Clip-on walker light attachment for better visibility" />
 
           {/* ── Section 2 ── */}
           <SectionHeading id="section-2">Non-Slip Tips and Walker Glides</SectionHeading>
@@ -251,13 +220,7 @@ function MustHaveWalkerAccessoriesDetail() {
             <li><strong>Backrests:</strong> Adjustable backrests give added lumbar support while seated.</li>
           </BlogList>
           <Paragraph>This is particularly important when using all-terrain or heavy-duty walkers. Check our guide on <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-all-terrain-walkers-for-seniors-ultimate-guide/">Best All-Terrain Walkers for Seniors</ArticleLink> to see how comfort accessories pair with rugged models.</Paragraph>
-          <div className="mt-3 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
-            <img
-              className="mx-auto h-[240px] w-full object-contain p-3"
-              src={`${process.env.PUBLIC_URL}/images/blog-27-8-683x1024.webp`}
-              alt="Walker comfort upgrade accessory"
-            />
-          </div>
+          <BlogImage src="blog-27-8-683x1024.webp" alt="Walker comfort upgrade accessory" />
 
           {/* ── Section 4 ── */}
           <SectionHeading id="section-4">Customizing Your Walker for Daily Use</SectionHeading>
@@ -272,7 +235,7 @@ function MustHaveWalkerAccessoriesDetail() {
 
           {/* ── Section 5 ── */}
           <SectionHeading id="section-5">Accessories and Their Uses</SectionHeading>
-          <AccessoryUseTable />
+          <BlogGridTable className="mt-4" minWidth="620px" headers={['Accessory Type', 'Ideal For', 'Best Placement', 'Indoor/Outdoor Use']} rows={accessoryUseRows} />
 
           {/* ── Section 6: FAQ ── */}
           <SectionHeading id="section-6">Frequently Asked Questions</SectionHeading>
@@ -316,7 +279,7 @@ function MustHaveWalkerAccessoriesDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import { BlogTwoColumnContent } from '../components/BlogTable';
+import BlogImage from '../components/BlogImage';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -45,14 +47,6 @@ function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
 }
 
-function BlogImage({ src, alt, narrow = false }) {
-  return (
-    <div className="mt-5 overflow-hidden rounded-[8px] bg-[#f3f3f3] p-4">
-      <img className={`mx-auto h-auto w-full rounded-[7px] object-cover ${narrow ? 'max-w-[520px]' : ''}`} src={`${process.env.PUBLIC_URL}/images/${src}`} alt={alt} />
-    </div>
-  );
-}
-
 const relatedArticles = [
   {
     image: 'twa-blog11-1024x683.webp',
@@ -73,26 +67,30 @@ const relatedArticles = [
 
 function ExerciseBox() {
   return (
-    <div className="mt-4 overflow-hidden rounded-[10px] border-2 border-[#aaa4a1] font-manrope text-[#35373a] sm:grid sm:grid-cols-2">
-      <div className="px-5 py-5 sm:border-r sm:border-[#e2e2e2] sm:px-7">
-        <h4 className="text-[13px] font-black leading-6">💪 Leg Strengthening Exercises:</h4>
-        <p className="mt-1 text-[12px] font-medium leading-6">
-          ✔️ <strong>Seated Marches</strong> - Lift your knees while sitting to improve mobility.
-        </p>
-        <p className="text-[12px] font-medium leading-6">
-          ✔️ <strong>Heel-to-Toe Walks</strong> - Helps with balance and coordination.
-        </p>
-      </div>
-      <div className="border-t border-[#e2e2e2] px-5 py-5 sm:border-t-0 sm:px-7">
-        <h4 className="text-[13px] font-black leading-6">💪 Arm &amp; Grip Strengthening:</h4>
-        <p className="mt-1 text-[12px] font-medium leading-6">
-          ✔️ <strong>Hand Squeeze Exercises</strong> - Improves walker grip strength.
-        </p>
-        <p className="text-[12px] font-medium leading-6">
-          ✔️ <strong>Wall Push-Ups</strong> strengthen arms for better support.
-        </p>
-      </div>
-    </div>
+    <BlogTwoColumnContent
+      leftTitle="Leg Strengthening Exercises"
+      rightTitle="Arm & Grip Strengthening"
+      left={
+        <>
+          <p className="mt-1 text-[12px] font-medium leading-6">
+            ✔️ <strong>Seated Marches</strong> - Lift your knees while sitting to improve mobility.
+          </p>
+          <p className="text-[12px] font-medium leading-6">
+            ✔️ <strong>Heel-to-Toe Walks</strong> - Helps with balance and coordination.
+          </p>
+        </>
+      }
+      right={
+        <>
+          <p className="mt-1 text-[12px] font-medium leading-6">
+            ✔️ <strong>Hand Squeeze Exercises</strong> - Improves walker grip strength.
+          </p>
+          <p className="text-[12px] font-medium leading-6">
+            ✔️ <strong>Wall Push-Ups</strong> strengthen arms for better support.
+          </p>
+        </>
+      }
+    />
   );
 }
 
@@ -292,7 +290,7 @@ function LargeWheelWalkerTipsDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

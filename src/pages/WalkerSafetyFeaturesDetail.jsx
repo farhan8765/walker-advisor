@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import { BlogGridTable } from '../components/BlogTable';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -65,25 +66,6 @@ function SubHeading({ children }) {
 
 function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
-}
-
-function SimpleTable({ headers, rows }) {
-  return (
-    <div className="mt-5 overflow-hidden border border-black font-manrope">
-      <div className="grid grid-cols-3 bg-[#ffc400] text-base font-black leading-4 text-black">
-        {headers.map((header, index) => (
-          <div className={`${index < headers.length - 1 ? 'border-r' : ''} border-black px-3 py-2`} key={header}>{header}</div>
-        ))}
-      </div>
-      {rows.map((row) => (
-        <div className="grid grid-cols-3 text-base font-semibold leading-4 text-[#1f2930]" key={row[0]}>
-          {row.map((cell, index) => (
-            <div className={`${index < row.length - 1 ? 'border-r' : ''} border-t border-black px-3 py-2`} key={cell}>{cell}</div>
-          ))}
-        </div>
-      ))}
-    </div>
-  );
 }
 
 function SocialDots() {
@@ -232,7 +214,7 @@ function WalkerSafetyFeaturesDetail() {
           </p>
 
           <SectionHeading id="section-2">Comparison Table: Standard Walker vs. Rollator</SectionHeading>
-          <SimpleTable headers={['Feature', 'Standard Walker', 'Rollator']} rows={comparisonRows} />
+          <BlogGridTable className="mt-5" headers={['Feature', 'Standard Walker', 'Rollator']} rows={comparisonRows} />
 
           <SectionHeading id="section-3">How to Choose the Right Walker?</SectionHeading>
           <div className="mt-5 grid grid-cols-2 gap-3">
@@ -308,7 +290,7 @@ function WalkerSafetyFeaturesDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

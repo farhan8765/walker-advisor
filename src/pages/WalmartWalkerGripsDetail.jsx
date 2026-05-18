@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import BlogImage from '../components/BlogImage';
+import { BlogProsConsBuy } from '../components/BlogTable';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -112,26 +114,7 @@ function BlogList({ children }) {
 }
 
 function ProductTable({ product }) {
-  return (
-    <div className="mt-3 overflow-hidden border border-black">
-      <div className="grid grid-cols-[1fr_1fr_74px] bg-[#ffc400] font-manrope text-base font-black text-black">
-        <div className="border-r border-black px-2 py-2">Pros</div>
-        <div className="border-r border-black px-2 py-2">Cons</div>
-        <div className="px-2 py-2 text-center">Buy</div>
-      </div>
-      <div className="grid grid-cols-[1fr_1fr_74px] font-manrope text-base font-semibold leading-4 text-[#1f2930]">
-        <ul className="list-disc space-y-1 border-r border-black px-4 py-3">
-          {product.pros.map((item) => <li key={item}>{item}</li>)}
-        </ul>
-        <ul className="list-disc space-y-1 border-r border-black px-4 py-3">
-          {product.cons.map((item) => <li key={item}>{item}</li>)}
-        </ul>
-        <div className="flex items-center justify-center px-2 py-3">
-          <a className="rounded-full bg-[#ffc400] px-3 py-2 text-center text-[8px] font-black text-black no-underline" href="/tools">Check Price</a>
-        </div>
-      </div>
-    </div>
-  );
+  return <BlogProsConsBuy pros={product.pros} cons={product.cons} buyHref="/tools" />;
 }
 
 function SocialDots() {
@@ -212,13 +195,7 @@ function WalmartWalkerGripsDetail() {
           {gripTypes.map((item) => (
             <section className="mt-5" key={item.title}>
               <h3 className="text-[13px] font-black text-black">{item.title}</h3>
-              <div className="mt-3 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
-                <img
-                  className="mx-auto h-[200px] w-full object-contain p-4"
-                  src={`${process.env.PUBLIC_URL}/images/${item.image}`}
-                  alt={item.alt}
-                />
-              </div>
+              <BlogImage src={item.image} alt={item.alt} />
               <Paragraph>{item.text}</Paragraph>
             </section>
           ))}
@@ -227,13 +204,7 @@ function WalmartWalkerGripsDetail() {
           {products.map((product) => (
             <section className="mt-6" key={product.title}>
               <h3 className="text-[13px] font-black text-black">{product.title}</h3>
-              <div className="mt-3 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
-                <img
-                  className="mx-auto h-[200px] w-full object-contain p-4"
-                  src={`${process.env.PUBLIC_URL}/images/${product.image}`}
-                  alt={product.alt}
-                />
-              </div>
+              <BlogImage src={product.image} alt={product.alt} />
               <Paragraph>{product.bestFor}</Paragraph>
               <ProductTable product={product} />
             </section>
@@ -323,7 +294,7 @@ function WalmartWalkerGripsDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

@@ -132,7 +132,7 @@ function WalkerWithWheelsDetail() {
             <li><strong>Versatility:</strong> Suitable for both indoor and outdoor use with various wheel sizes.</li>
             <li><strong>Comfort:</strong> Many walkers include padded seats for resting, storage baskets, and adjustable handles.</li>
           </BlogList>
-          <div className="mt-5 overflow-hidden border border-black font-manrope text-[11px] text-[#1f2930]">
+          <div className="blog-table-wrap mt-5 overflow-x-auto font-manrope text-[11px] text-[#1f2930]">
             <div className="grid grid-cols-3 bg-[#ffc400] font-black">
               <div className="border-r border-black px-3 py-3">Featured</div>
               <div className="border-r border-black px-3 py-3">Standard Walker</div>
@@ -255,7 +255,7 @@ function WalkerWithWheelsDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

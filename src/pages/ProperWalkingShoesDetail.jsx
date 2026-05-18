@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import { BlogGridTable } from '../components/BlogTable';
+import BlogImage from '../components/BlogImage';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -72,10 +74,6 @@ function SubHeading({ children }) {
 
 function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">{children}</ul>;
-}
-
-function BlogImage({ src, alt }) {
-  return <img className="mx-auto mt-7 h-auto w-full max-w-[500px] rounded-[8px] object-cover" src={`${process.env.PUBLIC_URL}/images/${src}`} alt={alt} />;
 }
 
 function SocialDots() {
@@ -251,18 +249,9 @@ function ProperWalkingShoesDetail() {
           <BlogImage src="img-38-3.webp" alt="Key features seniors should look for when choosing walking shoes" />
 
           <SectionHeading id="section-7">Walking Shoes vs. Regular Sneakers</SectionHeading>
-          <div className="mt-5 grid grid-cols-2 border-y border-[#d8dde2] font-manrope text-[11px] text-[#1f2930]">
-            <div className="px-8 py-4 font-black">Walking Shoes</div>
-            <div className="border-l border-[#d8dde2] px-8 py-4 font-black">Regular Sneakers</div>
-            {shoeComparison.map(([walking, regular]) => (
-              <div className="contents" key={walking}>
-                <div className="px-8 py-5 font-medium">{walking}</div>
-                <div className="border-l border-[#d8dde2] px-8 py-5 font-medium">{regular}</div>
-              </div>
-            ))}
-          </div>
+          <BlogGridTable className="mt-5" headers={['Walking Shoes', 'Regular Sneakers']} rows={shoeComparison} />
 
-          <SectionHeading id="section-8">Frequently Asked Questions</SectionHeading>
+                    <SectionHeading id="section-8">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
             {[
               ['Do seniors really need special walking shoes?', 'Yes. Aging feet and joints require enhanced support, cushioning, and stability that regular sneakers often don\'t provide.'],
@@ -314,7 +303,7 @@ function ProperWalkingShoesDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

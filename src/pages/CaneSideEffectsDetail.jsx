@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import BlogImage from '../components/BlogImage';
+import BlogTable from '../components/BlogTable';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -82,27 +84,6 @@ function Paragraph({ children }) {
 
 function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
-}
-
-function CompactTable({ headers, rows }) {
-  return (
-    <div className="mt-5 overflow-x-auto rounded-[8px] border border-[#d7dbe0]">
-      <table className="w-full border-collapse font-manrope">
-        <thead>
-          <tr className="bg-[#ffc400] text-left text-black">
-            {headers.map((header) => <th className="px-3 py-2 text-[10px] font-black" key={header}>{header}</th>)}
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row) => (
-            <tr className="border-t border-[#d7dbe0] odd:bg-white even:bg-[#f7f7f7]" key={row[0]}>
-              {row.map((cell) => <td className="px-3 py-2 text-[10px] align-top font-semibold leading-4 text-[#1f2930]" key={cell}>{cell}</td>)}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
 }
 
 const relatedArticles = [
@@ -201,7 +182,7 @@ function HolidayWalkerSafetyDetail() {
 
           <SectionHeading id="section-3">Comparison: Cane vs. Walker vs. Dual Sticks</SectionHeading>
           <Paragraph>Understanding trade-offs among mobility aids is key. Let’s compare:</Paragraph>
-          <CompactTable headers={['Device Type', 'Stability', 'Portability', 'Upper-body Load', 'Gait Freedom', 'Common Use Cases']} rows={comparisonRows} />
+          <BlogTable className="mt-5" headers={['Device Type', 'Stability', 'Portability', 'Upper-body Load', 'Gait Freedom', 'Common Use Cases']} rows={comparisonRows} />
           <BlogList>
             <li><strong>Canes</strong> offer mobility with minimal encumbrance but at the cost of lower stability and higher upper-body load (as discussed earlier).</li>
             <li><strong>Walkers</strong> (and rollators) provide more robust support because the load is shared across multiple contact points; they reduce upper-body strain and improve stability but sacrifice portability and natural gait freedom.</li>
@@ -220,9 +201,7 @@ function HolidayWalkerSafetyDetail() {
           </BlogList>
           <Paragraph>This aligns with the question <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/time-to-switch-cane-to-walker/">When should an elderly person upgrade from a cane to a walker?</ArticleLink>, often the answer is: when the risks and limitations of cane use start outweighing its benefits. For example, if a user is considering using two <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/should-seniors-use-walking-sticks/">walking sticks</ArticleLink>, but lacks coordination, the walker may still be superior.</Paragraph>
           <Paragraph>If these apply, upgrading to a more stable device such as a walker may be the best decision. In fact, exploring options among the <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/">best walkers for seniors</ArticleLink> can help you find models that enhance balance, posture, and comfort without overloading your arms</Paragraph>
-          <div className="mt-5 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
-            <img className="mx-auto h-auto w-full object-cover" src={`${process.env.PUBLIC_URL}/images/twa28-2-1-768x362.webp`} alt="Walking aid comparison" />
-          </div>
+          <BlogImage src="twa28-2-1-768x362.webp" alt="Walking aid comparison" />
 
           <SectionHeading id="section-5">How to Reduce Risks: Best Practices & Adjustments</SectionHeading>
           <Paragraph>You don’t necessarily have to ditch a cane if it’s still adequate, just use it wisely. Here are strategies to mitigate side effects:</Paragraph>
@@ -272,7 +251,7 @@ function HolidayWalkerSafetyDetail() {
           </div>
 
           <SectionHeading id="section-7">Side Effects & Mitigation Strategies</SectionHeading>
-          <CompactTable headers={['Side Effect', 'Underlying Cause', 'Mitigation Strategy']} rows={mitigationRows} />
+          <BlogTable className="mt-5" headers={['Side Effect', 'Underlying Cause', 'Mitigation Strategy']} rows={mitigationRows} />
 
           <SectionHeading id="section-8">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
@@ -311,7 +290,7 @@ function HolidayWalkerSafetyDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

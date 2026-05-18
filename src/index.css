@@ -91,6 +91,21 @@
     padding-top: 0 !important;
   }
 
+  main > article.blog-detail-article .blog-detail-icon-heading img,
+  main > article.blog-detail-article img.blog-section-icon {
+    display: block !important;
+    width: 2rem !important;
+    height: 2rem !important;
+    max-width: 2rem !important;
+    max-height: 2rem !important;
+    margin: 0 !important;
+    margin-top: 0 !important;
+    object-fit: contain !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
   /* Blog detail: H3 typography */
   main > article.blog-detail-article h3 {
     font-family: 'Manrope', sans-serif !important;
@@ -101,25 +116,179 @@
     letter-spacing: 0.005em !important;
   }
 
-  /* Blog detail: table cell text (Text Regular / Roboto 400, 150% leading) */
+  /* Blog detail: unified data tables (Small Home Walker reference design) */
+  main > article.blog-detail-article .blog-table-wrap,
+  main > article.blog-detail-article > div:has(> table),
+  main > article.blog-detail-article section > div:has(> table) {
+    margin-top: 1rem;
+    overflow: hidden;
+    overflow-x: auto;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  main > article.blog-detail-article table,
+  main > article.blog-detail-article table.blog-data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  main > article.blog-detail-article table thead,
+  main > article.blog-detail-article table thead th {
+    background-color: #ffc400 !important;
+    color: #000 !important;
+  }
+
   main > article.blog-detail-article table th,
-  main > article.blog-detail-article table td {
-    font-family: 'Roboto', sans-serif !important;
+  main > article.blog-detail-article table td,
+  main > article.blog-detail-article .blog-table-th,
+  main > article.blog-detail-article .blog-table-td {
+    font-family: 'Manrope', sans-serif !important;
     font-size: 16px !important;
     font-weight: 400 !important;
     font-style: normal !important;
     line-height: 1.5 !important;
     letter-spacing: 0 !important;
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    padding: 0.5rem 0.75rem !important;
+    text-align: left !important;
+    vertical-align: top;
+  }
+
+  main > article.blog-detail-article table thead th,
+  main > article.blog-detail-article .blog-table-th {
+    font-weight: 700 !important;
+    background-color: #ffc400 !important;
+    color: #000 !important;
+  }
+
+  main > article.blog-detail-article table tbody tr:nth-child(odd) {
+    background-color: #ffffff !important;
+  }
+
+  main > article.blog-detail-article table tbody tr:nth-child(even) {
+    background-color: #f7f7f7 !important;
+  }
+
+  main > article.blog-detail-article .blog-data-grid > .grid:nth-child(n + 2):nth-child(even) {
+    background-color: #ffffff !important;
+  }
+
+  main > article.blog-detail-article .blog-data-grid > .grid:nth-child(n + 2):nth-child(odd) {
+    background-color: #f7f7f7 !important;
+  }
+
+  main > article.blog-detail-article .blog-data-grid > .grid:first-child {
+    background-color: #ffc400 !important;
+    color: #000 !important;
+  }
+
+  main > article.blog-detail-article .blog-data-grid > .grid:first-child > * {
+    font-weight: 700 !important;
+    background-color: #ffc400 !important;
+    color: #000 !important;
+  }
+
+  /* Grid tables placed directly inside .blog-table-wrap */
+  main > article.blog-detail-article .blog-table-wrap > .grid:first-child {
+    background-color: #ffc400 !important;
+    color: #000 !important;
+  }
+
+  main > article.blog-detail-article .blog-table-wrap > .grid:first-child > * {
+    font-weight: 700 !important;
+    background-color: #ffc400 !important;
+    color: #000 !important;
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    padding: 0.5rem 0.75rem !important;
+    text-align: left !important;
+  }
+
+  main > article.blog-detail-article .blog-table-wrap > .grid:not(:first-child) > * {
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    padding: 0.5rem 0.75rem !important;
+    text-align: left !important;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  main > article.blog-detail-article .blog-table-wrap > .grid:nth-child(n + 2):nth-child(even) {
+    background-color: #ffffff !important;
+  }
+
+  main > article.blog-detail-article .blog-table-wrap > .grid:nth-child(n + 2):nth-child(odd) {
+    background-color: #f7f7f7 !important;
+  }
+
+  main > article.blog-detail-article .blog-pros-cons .blog-table-td ul {
+    margin: 0;
+  }
+
+  main > article.blog-detail-article .blog-pros-cons .blog-table-td li {
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
   }
 
   main > article.blog-detail-article table p {
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Manrope', sans-serif !important;
     font-size: 16px !important;
     font-weight: 400 !important;
     font-style: normal !important;
     line-height: 1.5 !important;
     letter-spacing: 0 !important;
     text-align: left !important;
+  }
+
+  /* Blog content images (exclude hero in header, avatars, related-article cards) */
+  main > article.blog-detail-article .blog-content-image,
+  main > article.blog-detail-article img.blog-content-image {
+    display: block !important;
+    margin-top: 1.75rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 500px !important;
+    max-height: 420px !important;
+    border-radius: 8px !important;
+    object-fit: contain !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+  }
+
+  main > article.blog-detail-article .blog-content-image--narrow {
+    max-width: 320px !important;
+  }
+
+  main > article.blog-detail-article .blog-product-thumb {
+    display: block !important;
+    margin-top: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    padding: 0 !important;
+  }
+
+  main > article.blog-detail-article img:not(header img):not(.rounded-full):not(.blog-related-thumb):not(.blog-product-thumb):not(.blog-section-icon) {
+    display: block !important;
+    margin-top: 1.75rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 500px !important;
+    max-height: 420px !important;
+    border-radius: 8px !important;
+    object-fit: contain !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
   }
 
   main > article p,

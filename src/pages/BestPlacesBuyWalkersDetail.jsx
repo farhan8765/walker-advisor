@@ -102,14 +102,14 @@ function BestPlacesBuyWalkersDetail() {
           </nav>
 
           <SectionHeading id="section-1">Types of Walkers for Seniors</SectionHeading>
-          <div className="mt-4 overflow-x-auto rounded-[10px] border border-black">
-            <table className="w-full min-w-[680px] border-collapse font-manrope text-[18px]">
-              <thead className="bg-[#ffc400] text-black">
+          <div className="blog-table-wrap mt-4 overflow-x-auto">
+            <table className="blog-data-table w-full min-w-[680px] border-collapse font-manrope text-[18px]">
+              <thead>
                 <tr>
-                  <th className="border-b border-black px-5 py-4 text-left font-bold">#</th>
-                  <th className="border-b border-black px-5 py-4 text-left font-bold">Walker Type</th>
-                  <th className="border-b border-black px-5 py-4 text-left font-bold">Best for</th>
-                  <th className="border-b border-black px-5 py-4 text-left font-bold">Key features</th>
+                  <th>#</th>
+                  <th>Walker Type</th>
+                  <th>Best for</th>
+                  <th>Key features</th>
                 </tr>
               </thead>
               <tbody>
@@ -120,7 +120,7 @@ function BestPlacesBuyWalkersDetail() {
                   ['4', 'Three-wheel walker', 'tight spaces and lightweight design', 'Compact, maneuverable, and ideal for indoor use'],
                   ['5', 'Knee walker', 'foot or ankle injuries', 'Knee platform and rolling wheels for easy mobility'],
                 ].map((row) => (
-                  <tr className="odd:bg-white even:bg-[#f3f3f3]" key={row[0]}>
+                  <tr>
                     {row.map((cell) => <td className="border-b border-black px-5 py-4 align-top font-normal leading-7" key={cell}>{cell}</td>)}
                   </tr>
                 ))}
@@ -244,7 +244,7 @@ function BestPlacesBuyWalkersDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

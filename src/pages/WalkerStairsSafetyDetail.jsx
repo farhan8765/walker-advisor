@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import BlogImage from '../components/BlogImage';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -111,9 +112,7 @@ function WalkerStairsSafetyDetail() {
 
           <SectionHeading id="section-2">The Only Truly Safe Methods for Stairs</SectionHeading>
           <SubHeading>Method 1 – Park the Walker & Use the Handrail (Gold standard for 95 % of users)</SubHeading>
-          <div className="mt-4 rounded-[8px] bg-[#f3f3f3] p-5 text-center">
-            <img className="mx-auto max-h-[260px] rounded-[8px] object-contain" src={`${process.env.PUBLIC_URL}/images/twa-info32.webp`} alt="Safe walker stair method using a handrail" />
-          </div>
+          <BlogImage src="twa-info32.webp" alt="Safe walker stair method using a handrail" />
           <BlogList>
             <li>Leave the walker at the top or bottom.</li>
             <li>Grip the handrail firmly with one or both hands.</li>
@@ -129,9 +128,7 @@ function WalkerStairsSafetyDetail() {
           <SubHeading>Method 3 – Trained Caregiver Assist with Gait Belt</SubHeading>
           <Paragraph>Only for very short flights. The caregiver stands one step below, secures a gait belt around your waist, and moves in sync while you hold the rail. Walker is carried separately.</Paragraph>
           <Paragraph>Never let anyone “spot” you from behind while you push the walker on the stairs; physics guarantees a backward fall.</Paragraph>
-          <div className="mt-4 rounded-[8px] bg-[#f3f3f3] p-5 text-center">
-            <img className="mx-auto max-h-[220px] rounded-[8px] object-contain" src={`${process.env.PUBLIC_URL}/images/twa-info3.webp`} alt="Caregiver assisting with gait belt near stairs" />
-          </div>
+          <BlogImage src="twa-info3.webp" alt="Caregiver assisting with gait belt near stairs" />
 
           <SectionHeading id="section-3">Danger Signs – Never Attempt Stairs If…</SectionHeading>
           <BlogList>
@@ -186,7 +183,7 @@ function WalkerStairsSafetyDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

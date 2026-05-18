@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import BlogImage from '../components/BlogImage';
+import { BlogGridTable } from '../components/BlogTable';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -130,27 +132,7 @@ function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
 }
 
-function FitScenarioTable() {
-  const headers = ['Type of Walker', 'Best For', 'Key Benefit'];
-  return (
-    <div className="mt-5 overflow-x-auto">
-      <div className="min-w-[620px] overflow-hidden rounded-[8px] border border-[#d8dde2] font-manrope text-[#1f2930]">
-        <div className="grid grid-cols-3 bg-[#ffc400]">
-          {headers.map((header, index) => (
-            <div className={`px-3 py-2 text-base font-black text-black${index > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={header}>{header}</div>
-          ))}
-        </div>
-        {fitRows.map((row, rowIndex) => (
-          <div className={`grid grid-cols-3${rowIndex % 2 === 0 ? ' bg-white' : ' bg-[#f9f9f9]'}`} key={row[0]}>
-            {row.map((cell, cellIndex) => (
-              <div className={`border-t border-[#d8dde2] px-3 py-2 text-base font-medium${cellIndex > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={`${row[0]}-${cell}`}>{cell}</div>
-            ))}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+
 
 
 
@@ -232,13 +214,7 @@ function FittingWalkerDetail() {
           <Paragraph>In the world of mobility aids, there is no “one size fits all.” Seniors vary greatly in height, strength, and stability, making proper walker fitting crucial for safety and comfort. The <ArticleLink href="https://www.cdc.gov/falls/data-research/index.html">Centers for Disease Control and Prevention (CDC)</ArticleLink> reports millions of emergency visits each year from falls among older adults, and improper adjustment of walkers is a key contributing factor. A walker that doesn’t fit well can create instability, strain muscles, and reduce confidence in mobility.</Paragraph>
           <Paragraph>Proper fitting also directly affects posture alignment. Seniors using a well-fitted walker can maintain an upright stance, distribute weight evenly, and walk without adding stress to the spine or shoulders. For seniors with <ArticleLink href="https://orthoinfo.aaos.org/en/recovery/how-to-use-crutches-canes-and-walkers/">chronic conditions</ArticleLink> like arthritis, osteoporosis, or post-surgery recovery, these adjustments are not just helpful, they are essential for safe walking.</Paragraph>
           <Paragraph>Confidence is another important factor. Seniors who feel secure using their walker are more likely to engage in daily activities, attend social events, and maintain independence. Conversely, poorly fitted walkers can discourage consistent use, limiting mobility and reducing quality of life.</Paragraph>
-          <div className="mt-3 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
-            <img
-              className="mx-auto h-[240px] w-full object-contain p-3"
-              src={`${process.env.PUBLIC_URL}/images/twa-blog26-2-683x1024.webp`}
-              alt="Walker height fitting guide"
-            />
-          </div>
+          <BlogImage src="twa-blog26-2-683x1024.webp" alt="Walker height fitting guide" />
 
           {/* Section 2 */}
           <SectionHeading id="section-2">Types of Walkers for Seniors</SectionHeading>
@@ -246,13 +222,7 @@ function FittingWalkerDetail() {
           {walkerTypes.map((item) => (
             <section className="mt-5" key={item.title}>
               <h3 className="text-[13px] font-black text-black">{item.title}</h3>
-              <div className="mt-3 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
-                <img
-                  className="mx-auto h-[200px] w-full object-contain p-3"
-                  src={`${process.env.PUBLIC_URL}/images/${item.image}`}
-                  alt={item.alt}
-                />
-              </div>
+              <BlogImage src={item.image} alt={item.alt} />
               <Paragraph>{item.text} {item.link ? <ArticleLink href={item.link[1]}>{item.link[0]}</ArticleLink> : null}</Paragraph>
             </section>
           ))}
@@ -279,16 +249,7 @@ function FittingWalkerDetail() {
           {/* Section 4 */}
           <SectionHeading id="section-4">Common Mistakes to Avoid</SectionHeading>
           <Paragraph>Even minor fitting errors can create hazards:</Paragraph>
-          <div className="mt-5 grid grid-cols-2 border-y border-[#d8dde2] font-manrope text-[#1f2930]">
-            <div className="px-3 py-3 text-base font-black">Mistake</div>
-            <div className="border-l border-[#d8dde2] px-3 py-3 text-base font-black">Why It Matters</div>
-            {mistakes.map(([mistake, reason]) => (
-              <div className="contents" key={mistake}>
-                <div className="px-3 py-3 text-base font-medium">{mistake}</div>
-                <div className="border-l border-[#d8dde2] px-3 py-3 text-base font-medium">{reason}</div>
-              </div>
-            ))}
-          </div>
+          <BlogGridTable className="mt-5" headers={['Mistake', 'Why It Matters']} rows={mistakes} />
           <Paragraph>By avoiding these mistakes, seniors can confidently use their walkers every day.</Paragraph>
 
           {/* Section 5 */}
@@ -306,7 +267,7 @@ function FittingWalkerDetail() {
 
           {/* Section 6 */}
           <SectionHeading id="section-6">Walker Types vs. Best Fit Scenarios</SectionHeading>
-          <FitScenarioTable />
+          <BlogGridTable className="mt-5" minWidth="620px" headers={['Type of Walker', 'Best For', 'Key Benefit']} rows={fitRows} />
 
           {/* Section 7 - FAQ */}
           <SectionHeading id="section-7">Frequently Asked Questions</SectionHeading>
@@ -350,7 +311,7 @@ function FittingWalkerDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

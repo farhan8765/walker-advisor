@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import { BlogGridTable } from '../components/BlogTable';
+import BlogImage from '../components/BlogImage';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -133,9 +135,7 @@ function AdjustWalkerHeightDetail() {
           <h3 className="mt-4 text-[12px] font-black text-black">Step 5: Take a Walk to Check the Fit</h3>
           <Paragraph>Go for a quick stroll on level terrain. The user shouldn't pull the walker toward themselves or lean forward; instead, they should feel balanced. Readjust and try again if they feel like they're hunching over or their shoulders are lifting. Comfort and control while moving are crucial for people using more sophisticated models, such as rollators or senior <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/best-stand-up-walkers-for-seniors-2025/" target="_blank" rel="noopener noreferrer">stand-up walkers.</a></Paragraph>
           <Paragraph>You can learn more about how to handle different walker types in our blog on <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/tips-for-choosing-and-using-walkers-a-comprehensive-guide-2/" target="_blank" rel="noopener noreferrer">Tips for Choosing and Using Walkers: A Comprehensive Guide.</a></Paragraph>
-          <div className="mt-5 rounded-[8px] bg-[#f3f3f3] py-4">
-            <img className="mx-auto h-[230px] w-auto rounded-[4px] object-contain" src={`${process.env.PUBLIC_URL}/images/TWA-blog25-1-683x1024.webp`} alt="Correct walker height adjustment sequence" />
-          </div>
+          <BlogImage src="TWA-blog25-1-683x1024.webp" alt="Correct walker height adjustment sequence" />
 
           <SectionHeading id="section-2">Walker Height Adjustment Safety Checklist</SectionHeading>
           <Paragraph>For a safe experience, these are the few checkpoints to make sure the walker is correctly set up and ready to go:</Paragraph>
@@ -153,28 +153,15 @@ function AdjustWalkerHeightDetail() {
           <Paragraph>Unknowingly, a lot of users set their walker height based more on guesswork than on measurement. Setting the walker too high in the belief that it provides more support is a common mistake. In practice, this results in unsteady, uncomfortable walking patterns and shoulder fatigue. Similarly, lowering it too much makes one bend over, which raises the risk of falls and chronic back pain. Our blog post on how <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/what-is-the-proper-way-to-use-a-walker/" target="_blank" rel="noopener noreferrer">to use a Walker correctly</a> addresses these posture-related mistakes.</Paragraph>
           <Paragraph>Not adjusting the walker after switching to a new model is another error. For example, a completely different alignment strategy is needed when switching from a 4-wheel rollator to a bariatric heavy-duty walker. Users must constantly check the settings because different walker types have different handle heights, base widths, and centers of gravity.</Paragraph>
           <Paragraph>Furthermore, a lot of people fail to take environmental changes into consideration. Your walker should be reassessed if you start going outside more often or if you wear shoes with thicker soles. Last but not least, some users neglect to check for even leg adjustment, which can lead to imbalance or tipping on wooden or tiled floors. Examine the <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/safest-walkers-for-seniors-top-5-choices/" target="_blank" rel="noopener noreferrer">safest walkers for seniors</a> for a more secure and safe experience. These walkers typically have ergonomic handles and anti-tip features, but they still require the right height settings to function properly.</Paragraph>
-          <div className="mt-5 rounded-[8px] bg-[#f3f3f3] py-4">
-            <img className="mx-auto h-[210px] w-auto rounded-[4px] object-contain" src={`${process.env.PUBLIC_URL}/images/twa-blog25-2-683x1024.webp`} alt="Common walker height mistakes" />
-          </div>
+          <BlogImage src="twa-blog25-2-683x1024.webp" alt="Common walker height mistakes" />
 
           <SectionHeading id="section-4">When to Seek Expert Assistance</SectionHeading>
           <Paragraph>Walker height can be changed at home, but in some circumstances, a healthcare provider should be consulted. People who have arthritis, are recuperating from surgery, or have one-sided weakness may have special postural requirements that aren't apparent to the typical user. To find the safest setup for your particular requirements, a mobility assessment can be performed by a physical therapist or occupational therapist.</Paragraph>
           <Paragraph>Depending on your body mechanics, they might also advise switching from a standard walker to a more sophisticated or posture-supporting model, like a stand-up walker. Additionally, when utilizing mobility aids or adjusting them, people with dementia or cognitive impairment might need constant supervision. In these situations, carers ought to receive training on how to routinely check the walker settings. Seeing a professional once can help you avoid years of pain or injury, even if you are confident in your ability to adjust. Visit our blog to learn more about walker models that come with extra safety features: <a className="text-[#2361a1] underline" href="https://darkcyan-lion-250828.hostingersite.com/important-safety-features-walkers-for-seniors/" target="_blank" rel="noopener noreferrer">What Safety Features Are Common in Senior Walkers?</a></Paragraph>
 
           <SectionHeading id="section-5">Walker Height Adjustment Table</SectionHeading>
-          <div className="mt-4 overflow-hidden rounded-[6px] border border-[#d8dde2]">
-            <div className="grid grid-cols-2 bg-[#ffc400] font-manrope text-base font-black text-black">
-              <div className="border-r border-black/10 px-3 py-2">User Height (Feet)</div>
-              <div className="px-3 py-2">Recommended Walker Height (Inches)</div>
-            </div>
-            {heightRows.map(([height, handle]) => (
-              <div className="grid grid-cols-2 border-t border-[#d8dde2] font-manrope text-base font-medium leading-4 text-[#1f2930]" key={height}>
-                <div className="border-r border-[#d8dde2] px-3 py-2">{height}</div>
-                <div className="px-3 py-2">{handle}</div>
-              </div>
-            ))}
-          </div>
-          <Paragraph><strong>Note:</strong> These ranges are estimates. Always perform a physical test using wrist alignment to confirm the best fit.</Paragraph>
+          <BlogGridTable className="mt-4" headers={['User Height (Feet)', 'Recommended Walker Height (Inches)']} rows={heightRows} />
+                    <Paragraph><strong>Note:</strong> These ranges are estimates. Always perform a physical test using wrist alignment to confirm the best fit.</Paragraph>
 
           <SectionHeading id="section-6">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">

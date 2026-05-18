@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import { BlogProsCons } from '../components/BlogTable';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -121,10 +122,10 @@ function HeavyDutyTallWalkersDetail() {
           </nav>
 
           <SectionHeading id="section-1">Product Comparison Table</SectionHeading>
-          <div className="mt-4 overflow-x-auto rounded-[8px] border border-[#d8dde2]">
-            <table className="w-full min-w-[520px] border-collapse font-manrope text-[12px]">
-              <thead className="bg-[#f3f3f3] text-left font-black text-black"><tr><th className="p-3">Walker Name</th><th className="p-3">Price</th><th className="p-3">Link</th></tr></thead>
-              <tbody>{tableRows.map(([name, price, href]) => <tr className="border-t border-[#d8dde2]" key={name}><td className="p-3">{name}</td><td className="p-3">{price}</td><td className="p-3"><a className="font-black text-[#0b61a4]" href={href} target="_blank" rel="noopener noreferrer">Buy Now</a></td></tr>)}</tbody>
+          <div className="blog-table-wrap mt-4 overflow-x-auto">
+            <table className="blog-data-table w-full min-w-[520px] border-collapse font-manrope text-[12px]">
+              <thead><tr><th>Walker Name</th><th>Price</th><th>Link</th></tr></thead>
+              <tbody>{tableRows.map(([name, price, href]) => <tr><td>{name}</td><td>{price}</td><td><a className="font-black text-[#0b61a4]" href={href} target="_blank" rel="noopener noreferrer">Buy Now</a></td></tr>)}</tbody>
             </table>
           </div>
 
@@ -139,16 +140,13 @@ function HeavyDutyTallWalkersDetail() {
               <a className="mt-4 inline-flex rounded-full bg-[#002842] px-5 py-2 font-manrope text-[12px] font-black text-white no-underline hover:bg-black" href={product.href} target="_blank" rel="noopener noreferrer">Buy Now</a>
               <h4 className="mt-5 text-[14px] font-black text-black">Key Features</h4>
               <ul className="mt-2 list-disc pl-5 font-manrope text-[12px] leading-6 text-[#1f2930]">{product.features.map((item) => <li key={item}>{item}</li>)}</ul>
-              <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-[8px] bg-[#f3f3f3] p-4">
-                  <p className="font-manrope text-[12px] font-black text-black">Why It’s Best for Tall Persons</p>
-                  <ul className="mt-2 list-disc pl-5 font-manrope text-[12px] leading-6 text-[#1f2930]">{product.best.map((item) => <li key={item}>{item}</li>)}</ul>
-                </div>
-                <div className="rounded-[8px] bg-[#f3f3f3] p-4">
-                  <p className="font-manrope text-[12px] font-black text-black">Cons</p>
-                  <ul className="mt-2 list-disc pl-5 font-manrope text-[12px] leading-6 text-[#1f2930]">{product.cons.map((item) => <li key={item}>{item}</li>)}</ul>
-                </div>
-              </div>
+              <BlogProsCons
+                className="mt-4"
+                prosLabel="Why It’s Best for Tall Persons"
+                consLabel="Cons"
+                pros={product.best}
+                cons={product.cons}
+              />
             </section>
           ))}
 

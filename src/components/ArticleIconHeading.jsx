@@ -4,7 +4,7 @@ export default function ArticleIconHeading({ children, type }) {
   return (
     <div className="blog-detail-icon-heading flex items-center gap-4">
       <img
-        className="h-10 w-10 shrink-0 object-contain"
+        className="blog-section-icon h-8 w-8 shrink-0 object-contain"
         src={`${process.env.PUBLIC_URL}/images/${file}`}
         alt=""
         aria-hidden

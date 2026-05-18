@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import { BlogGridTable } from '../components/BlogTable';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -59,22 +60,7 @@ function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
 }
 
-function CoverageTable() {
-  return (
-    <div className="mt-5 overflow-hidden border border-black font-manrope">
-      <div className="grid grid-cols-[0.9fr_1.8fr] bg-[#ffc400] text-base font-black leading-4 text-black">
-        <div className="border-r border-black px-3 py-2">Aspect</div>
-        <div className="px-3 py-2">Details</div>
-      </div>
-      {coverageRows.map(([topic, details]) => (
-        <div className="grid grid-cols-[0.9fr_1.8fr] text-base font-semibold leading-4 text-[#1f2930]" key={topic}>
-          <div className="border-r border-t border-black px-3 py-2">{topic}</div>
-          <div className="border-t border-black px-3 py-2">{details}</div>
-        </div>
-      ))}
-    </div>
-  );
-}
+
 
 function SocialDots() {
   return (
@@ -127,7 +113,7 @@ function MedicareWalkerCoverageDetail() {
           </nav>
 
           <SectionHeading id="section-1">Understanding Medicare coverage for Walkers</SectionHeading>
-          <CoverageTable />
+          <BlogGridTable className="mt-5" columnTemplate="0.9fr 1.8fr" headers={['Aspect', 'Details']} rows={coverageRows} />
           <p className="mt-3 font-manrope text-[10px] font-medium leading-[1.9] text-[#1f2930]"><em>Looking for expert advice on Medicare-approved walkers? Contact <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/" target="_blank" rel="noopener noreferrer">Walker Advisor</a> today to find the right mobility solution for you.</em></p>
 
           <SectionHeading id="section-2">Eligibility for Medicare coverage</SectionHeading>
@@ -221,7 +207,7 @@ function MedicareWalkerCoverageDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

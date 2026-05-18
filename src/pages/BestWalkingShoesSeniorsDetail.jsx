@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import { BlogProsCons } from '../components/BlogTable';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -185,18 +186,18 @@ function BestWalkingShoesSeniorsDetail() {
           </Paragraph>
 
           <SectionHeading id="section-2">Comparison Table</SectionHeading>
-          <div className="mt-4 overflow-x-auto rounded-[8px] border border-[#d8dde2]">
-            <table className="w-full min-w-[620px] border-collapse font-manrope text-[12px]">
-              <thead className="bg-[#f3f3f3] text-left font-black text-black">
-                <tr><th className="p-3">Shoe Model</th><th className="p-3">Price Range</th><th className="p-3">Men&apos;s Version</th><th className="p-3">Women&apos;s Version</th></tr>
+          <div className="blog-table-wrap mt-4 overflow-x-auto">
+            <table className="blog-data-table w-full min-w-[620px] border-collapse font-manrope text-[12px]">
+              <thead>
+                <tr><th>Shoe Model</th><th>Price Range</th><th>Men&apos;s Version</th><th>Women&apos;s Version</th></tr>
               </thead>
               <tbody>
                 {comparisonRows.map(([name, price, mensHref, womensHref]) => (
-                  <tr className="border-t border-[#d8dde2]" key={name}>
-                    <td className="p-3">{name}</td>
-                    <td className="p-3">{price}</td>
-                    <td className="p-3">{mensHref ? <a className="font-black text-[#0b61a4]" href={mensHref} target="_blank" rel="noopener noreferrer">Buy Now</a> : 'None'}</td>
-                    <td className="p-3"><a className="font-black text-[#0b61a4]" href={womensHref} target="_blank" rel="noopener noreferrer">Buy Now</a></td>
+                  <tr>
+                    <td>{name}</td>
+                    <td>{price}</td>
+                    <td>{mensHref ? <a className="font-black text-[#0b61a4]" href={mensHref} target="_blank" rel="noopener noreferrer">Buy Now</a> : 'None'}</td>
+                    <td><a className="font-black text-[#0b61a4]" href={womensHref} target="_blank" rel="noopener noreferrer">Buy Now</a></td>
                   </tr>
                 ))}
               </tbody>
@@ -219,16 +220,7 @@ function BestWalkingShoesSeniorsDetail() {
                 ))}
               </div>
               {product.paragraphs.map((text) => <Paragraph key={text}>{text}</Paragraph>)}
-              <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-[8px] bg-[#f3f3f3] p-4">
-                  <p className="font-manrope text-[12px] font-black text-black">Pros</p>
-                  <ul className="mt-2 list-disc pl-5 font-manrope text-[12px] leading-6 text-[#1f2930]">{product.pros.map((item) => <li key={item}>{item}</li>)}</ul>
-                </div>
-                <div className="rounded-[8px] bg-[#f3f3f3] p-4">
-                  <p className="font-manrope text-[12px] font-black text-black">Cons</p>
-                  <ul className="mt-2 list-disc pl-5 font-manrope text-[12px] leading-6 text-[#1f2930]">{product.cons.map((item) => <li key={item}>{item}</li>)}</ul>
-                </div>
-              </div>
+              <BlogProsCons pros={product.pros} cons={product.cons} prosLabel="Pros" consLabel="Cons" />
             </section>
           ))}
 

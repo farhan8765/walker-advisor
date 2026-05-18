@@ -135,7 +135,7 @@ function CaregiversGuideWalkerDetail() {
 
           {/* Section 2 */}
           <SectionHeading id="section-2">Walker Varieties and How Caregivers Can Assist in Selection</SectionHeading>
-          <div className="mt-4 overflow-hidden rounded-[6px] border border-[#d8dde2]">
+          <div className="blog-table-wrap mt-4 overflow-x-auto">
             <div className="grid grid-cols-3 bg-[#ffc400] font-manrope text-base font-black text-black">
               {['Walker Type', 'Best for', "Caregiver's role in selection"].map((heading) => (
                 <div className="border-r border-black/10 px-2 py-2 last:border-r-0" key={heading}>{heading}</div>

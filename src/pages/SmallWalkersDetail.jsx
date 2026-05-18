@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import { BlogProsCons } from '../components/BlogTable';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -438,33 +439,33 @@ function SmallWalkersDetail() {
           <SectionHeading id="section-1">
             Small Walkers for Seniors: A Quick Comparison
           </SectionHeading>
-          <div className="mt-4 overflow-x-auto rounded-[8px] border border-[#d8dde2]">
-            <table className="w-full min-w-[860px] border-collapse font-manrope text-[12px]">
-              <thead className="bg-[#f3f3f3] text-left font-black text-black">
+          <div className="blog-table-wrap mt-4 overflow-x-auto">
+            <table className="blog-data-table w-full min-w-[860px] border-collapse font-manrope text-[12px]">
+              <thead>
                 <tr>
-                  <th className="p-3">Walker Name</th>
-                  <th className="p-3">Brand</th>
-                  <th className="p-3">Price</th>
-                  <th className="p-3">Rating</th>
-                  <th className="p-3">key features</th>
+                  <th>Walker Name</th>
+                  <th>Brand</th>
+                  <th>Price</th>
+                  <th>Rating</th>
+                  <th>key features</th>
                   <th className="p-3" />
                 </tr>
               </thead>
               <tbody>
                 {comparisonRows.map(([name, brand, price, rating, features, href]) => (
-                  <tr className="border-t border-[#d8dde2]" key={name}>
-                    <td className="p-3">{name}</td>
-                    <td className="p-3">{brand}</td>
-                    <td className="p-3">{price}</td>
-                    <td className="p-3">{rating}</td>
-                    <td className="p-3">
+                  <tr>
+                    <td>{name}</td>
+                    <td>{brand}</td>
+                    <td>{price}</td>
+                    <td>{rating}</td>
+                    <td>
                       <ul className="list-disc space-y-1 pl-4">
                         {features.map((feature) => (
                           <li key={feature}>{feature}</li>
                         ))}
                       </ul>
                     </td>
-                    <td className="p-3">
+                    <td>
                       <a
                         className="font-black text-[#0b61a4]"
                         href={href}
@@ -526,21 +527,13 @@ function SmallWalkersDetail() {
                 ))}
               </ul>
 
-              <div className="mt-6 overflow-hidden rounded-[10px] border border-[#d8dde2] md:grid md:grid-cols-2">
-                {product.detailColumns.map((column, index) => (
-                  <div
-                    className={`p-5 ${index > 0 ? 'border-t border-[#d8dde2] md:border-l md:border-t-0' : ''}`}
-                    key={column.title}
-                  >
-                    <h4 className="text-[14px] font-black text-black">{column.title}</h4>
-                    <ul className="mt-3 list-disc space-y-2 border-t border-[#e6e8ea] pt-3 pl-5 font-manrope text-[12px] leading-6 text-[#1f2930]">
-                      {column.items.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
+              <BlogProsCons
+                className="mt-6"
+                prosLabel={product.detailColumns[0].title}
+                consLabel={product.detailColumns[1].title}
+                pros={product.detailColumns[0].items}
+                cons={product.detailColumns[1].items}
+              />
 
               <h4 className="mt-7 text-[15px] font-black text-black">
                 Verified Customer Reviews

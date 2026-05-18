@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import { BlogGridTable } from '../components/BlogTable';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -69,27 +70,7 @@ function TipBox({ children }) {
   );
 }
 
-function ComparisonTable() {
-  const headers = ['Feature', 'Standard', 'Rollator', 'Bariatric', 'Folding'];
-  return (
-    <div className="mt-5 overflow-x-auto">
-      <div className="min-w-[520px] overflow-hidden rounded-[8px] border border-[#d8dde2] font-manrope text-[#1f2930]">
-        <div className="grid grid-cols-5 bg-[#ffc400]">
-          {headers.map((h, i) => (
-            <div className={`px-3 py-2 text-base font-black text-black${i > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={h}>{h}</div>
-          ))}
-        </div>
-        {comparisonRows.map((row, ri) => (
-          <div className={`grid grid-cols-5${ri % 2 === 0 ? ' bg-white' : ' bg-[#f9f9f9]'}`} key={row[0]}>
-            {row.map((cell, ci) => (
-              <div className={`px-3 py-2 text-base font-medium border-t border-[#d8dde2]${ci > 0 ? ' border-l border-[#d8dde2]' : ''}`} key={`${ri}-${ci}`}>{cell}</div>
-            ))}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+
 
 function SocialDots() {
   return (
@@ -203,7 +184,7 @@ function BuyingWalkerDetail() {
 
           {/* Section 2 */}
           <SectionHeading id="section-2">Walker Comparison Guide: Key Features to Look For</SectionHeading>
-          <ComparisonTable />
+          <BlogGridTable className="mt-5" minWidth="520px" headers={['Feature', 'Standard', 'Rollator', 'Bariatric', 'Folding']} rows={comparisonRows} />
           <Paragraph>When evaluating walkers, it's important to look at various factors, such as weight capacity, portability, and comfort-enhancing features like padded handles or built-in seats.</Paragraph>
           <p className="mt-3 font-manrope text-[10px] font-medium leading-[1.9] text-[#1f2930]">If you're wondering <a className="text-[#0b61a4] no-underline hover:underline" href="/the-7-best-places-to-buy-walkers-for-seniors">where to buy the best walker for your needs</a>, there are several reliable retailers offering a wide range of models. For additional guidance on where to find quality mobility aids, we've got you covered in another helpful resource.</p>
 
@@ -280,7 +261,7 @@ function BuyingWalkerDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

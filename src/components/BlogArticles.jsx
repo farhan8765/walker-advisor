@@ -21,7 +21,7 @@ function BlogArticles() {
   return (
     <section
       id="articles"
-      className="w-full overflow-x-hidden bg-[#fbf6e6] px-4 pb-20 pt-14 md:px-8 md:pt-16 lg:px-0 lg:pb-24 lg:pt-20"
+      className="w-full overflow-x-hidden bg-white px-4 pb-20 pt-14 md:px-8 md:pt-16 lg:px-0 lg:pb-24 lg:pt-20"
     >
       <div className="mx-auto w-full max-w-[1120px]">
         <div className="mx-auto w-full max-w-[840px] text-center">
@@ -50,7 +50,7 @@ function BlogArticles() {
                 type="button"
                 className={`rounded-full px-4 py-3 text-sm font-medium leading-none transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc400] sm:px-5 sm:text-base ${
                   isActive
-                    ? 'bg-[#5f6870] text-white'
+                    ? 'bg-[#182126] text-white'
                     : 'text-[#6d7982] hover:bg-[#f3f5f6] hover:text-[#172129]'
                 }`}
                 key={category}

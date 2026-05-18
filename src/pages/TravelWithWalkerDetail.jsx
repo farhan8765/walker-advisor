@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import BlogImage from '../components/BlogImage';
+import BlogTable from '../components/BlogTable';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -59,25 +61,6 @@ function Paragraph({ children }) {
 
 function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[12px] font-medium leading-6 text-[#1f2930]">{children}</ul>;
-}
-
-function CompactTable({ headers, rows }) {
-  return (
-    <div className="mt-4 overflow-hidden rounded-[8px] border border-[#d8dde2]">
-      <table className="w-full border-collapse font-manrope text-[11px] font-semibold text-[#1f2930]">
-        <thead className="bg-[#ffc400] text-black">
-          <tr>{headers.map((item) => <th className="px-3 py-3 text-left" key={item}>{item}</th>)}</tr>
-        </thead>
-        <tbody>
-          {rows.map((row) => (
-            <tr className="border-t border-[#d8dde2]" key={row[0]}>
-              {row.map((cell) => <td className="px-3 py-3 align-top" key={cell}>{cell}</td>)}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
 }
 
 const relatedArticles = [
@@ -162,9 +145,7 @@ function TravelWithWalkerDetail() {
           <Paragraph>Make sure your hotel or rental property has ramps, wide doorways, roll-in showers if necessary, elevators (no heavy stair use), and a room on a lower floor or close to an elevator by calling. These characteristics lower the risk of fatigue and falls.</Paragraph>
           <SubHeading>Destination terrain</SubHeading>
           <Paragraph>Research your destination’s walkability and accessibility: Are sidewalks smooth? Are there many slopes/steps? Is transport within town accessible to someone with a walker? For instance, the “Mobility-Friendly Travel Guide” from NCOA provides checklists for destinations and mobility device users. By doing this planning, you set the stage for a smooth travel experience, reducing surprises and stress.</Paragraph>
-          <div className="mt-5 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
-            <img className="mx-auto max-h-[420px] w-full object-contain p-4" src={`${process.env.PUBLIC_URL}/images/twa-1-2-683x1024.webp`} alt="" />
-          </div>
+          <BlogImage src="twa-1-2-683x1024.webp" alt="Senior traveler planning trip with walker" />
 
           <SectionHeading id="section-4">Packing Wisely: Equipment, Records, and Emergency Supplies</SectionHeading>
           <Paragraph>Packing is more than just clothes. When you travel with a walker, your list expands. Start with essentials: your walker, extra parts (small screws and wrench if applicable), an identification tag attached to the walker with your name/contact, and a sturdy bag attached to the walker for water, snacks, and meds. Important documents: keep a medication list (names, doses, times), doctor’s contact, insurance info, and emergency contact list. The Health in Ageing Foundation emphasizes having all prescriptions and medical documentation in writing when older adults travel. Pack smartly for the destination:</Paragraph>
@@ -195,9 +176,7 @@ function TravelWithWalkerDetail() {
             <li>Watch for changes in surface texture: curb cuts, cobblestones, gravel, and wet tiles. These can challenge walker stability.</li>
           </BlogList>
           <Paragraph>By being alert and taking advantage of assistance services, transit becomes a manageable part of your trip, not the stressful part.</Paragraph>
-          <div className="mt-5 overflow-hidden rounded-[8px] bg-[#f3f3f3]">
-            <img className="mx-auto max-h-[420px] w-full object-contain p-4" src={`${process.env.PUBLIC_URL}/images/twa-1-3-683x1024.webp`} alt="" />
-          </div>
+          <BlogImage src="twa-1-3-683x1024.webp" alt="Walker user navigating transit" />
 
           <SectionHeading id="section-6">At Your Destination: Navigating Floors, Terrain & Activities</SectionHeading>
           <Paragraph>Arriving at your destination is exciting, but also when real-world surfaces and mobility come into play.</Paragraph>
@@ -224,7 +203,7 @@ function TravelWithWalkerDetail() {
           <Paragraph>As noted, walkers are beneficial but must be suited to the user’s strength and terrain; a misfit walker can increase risk rather than reduce it. By staying attentive to your body, your device, your environment, and emergency planning, you ensure your travel remains an enriching experience.</Paragraph>
 
           <SectionHeading id="section-8">Quick Travel Prep Checklist</SectionHeading>
-          <CompactTable headers={['Category', 'Item', 'Action']} rows={checklistRows} />
+          <BlogTable headers={['Category', 'Item', 'Action']} rows={checklistRows} />
 
           <SectionHeading id="section-9">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">
@@ -256,7 +235,7 @@ function TravelWithWalkerDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

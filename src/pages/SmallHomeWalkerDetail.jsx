@@ -222,14 +222,14 @@ function SmallHomeWalkerDetail() {
 
           {/* Section 4 */}
           <SectionHeading id="section-4">Storage Solutions When Not in Use</SectionHeading>
-          <div className="mt-4 overflow-hidden rounded-[7px] border border-black/20">
-            <table className="w-full border-collapse font-manrope text-[10px]">
-              <thead className="bg-[#ffc400] text-black">
+          <div className="blog-table-wrap mt-4 overflow-x-auto">
+            <table className="blog-data-table w-full border-collapse font-manrope text-[10px]">
+              <thead>
                 <tr>
-                  <th className="border border-black/20 px-3 py-2 text-left">#</th>
-                  <th className="border border-black/20 px-3 py-2 text-left">Solution</th>
-                  <th className="border border-black/20 px-3 py-2 text-left">Best For</th>
-                  <th className="border border-black/20 px-3 py-2 text-left">Space Saved</th>
+                  <th>#</th>
+                  <th>Solution</th>
+                  <th>Best For</th>
+                  <th>Space Saved</th>
                 </tr>
               </thead>
               <tbody>
@@ -240,7 +240,7 @@ function SmallHomeWalkerDetail() {
                   ['4', 'Multi-function furniture', 'Small living rooms', 'Double as seating'],
                   ['5', 'Ceiling pulleys', 'Garages/utility rooms', 'Full vertical storage'],
                 ].map((row) => (
-                  <tr className="odd:bg-white even:bg-[#f7f7f7]" key={row[0]}>
+                  <tr>
                     {row.map((cell) => <td className="border border-black/20 px-3 py-2" key={cell}>{cell}</td>)}
                   </tr>
                 ))}
@@ -394,7 +394,7 @@ function SmallHomeWalkerDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

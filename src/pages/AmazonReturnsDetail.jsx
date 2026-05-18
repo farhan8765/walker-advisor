@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import BlogImage from '../components/BlogImage';
+import { BlogProsCons } from '../components/BlogTable';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -49,20 +51,9 @@ function ReturnMethod({ id, title, bestFor, children, pros, cons, image, imageAl
       <SectionHeading>{title}</SectionHeading>
       <SubHeading>Best for: {bestFor}</SubHeading>
       {children}
-      <div className="mt-4 grid gap-4 border-y border-[#d8dde2] py-4 md:grid-cols-2">
-        <div>
-          <h4 className="font-manrope text-[11px] font-black text-black">Pros:</h4>
-          <Paragraph>{pros}</Paragraph>
-        </div>
-        <div>
-          <h4 className="font-manrope text-[11px] font-black text-black">Cons:</h4>
-          <Paragraph>{cons}</Paragraph>
-        </div>
-      </div>
+      <BlogProsCons pros={pros} cons={cons} prosLabel="Pros:" consLabel="Cons:" />
       {image && (
-        <div className="mt-5 rounded-[8px] bg-[#f3f3f3] px-5 py-4">
-          <img className="mx-auto h-[240px] w-auto max-w-full rounded-[7px] object-cover" src={`${process.env.PUBLIC_URL}/images/${image}`} alt={imageAlt} />
-        </div>
+        <BlogImage src={image} alt={imageAlt} />
       )}
     </section>
   );
@@ -198,7 +189,7 @@ function AmazonReturnsDetail() {
           <div className="mt-5 grid gap-8 md:grid-cols-3">
             {relatedArticles.map((article) => (
               <article className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#d8dde2] bg-white font-manrope" key={article.title}>
-                <img className="block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
+                <img className="blog-related-thumb block h-[260px] w-full object-cover" src={`${process.env.PUBLIC_URL}/images/${article.image}`} alt="" />
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="line-clamp-2 text-[20px] font-bold leading-[28px] tracking-[0.5%] text-[#172129]" style={{ fontFamily: 'Manrope, sans-serif' }}>{article.title}</h3>
                   <p className="mt-3 line-clamp-3 text-base font-medium leading-6 text-[#66737c]">{article.description}</p>

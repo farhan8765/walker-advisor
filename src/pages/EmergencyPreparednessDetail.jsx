@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import BlogImage from '../components/BlogImage';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -132,9 +133,7 @@ function EmergencyPreparednessDetail() {
             <li><b>Cons:</b> Needs charging, and some seniors may find it complicated.</li>
           </BlogList>
           <Paragraph>According to <a className="text-[#2361a1]" href="https://www.thieme-connect.com/products/ejournals/pdf/10.3766/jaaa.19056.pdf" target="_blank" rel="noopener noreferrer">recent research</a>, smartwatch-based fall detection systems are accurate; in lab tests, some of these systems have a sensitivity of over 96%.</Paragraph>
-          <div className="mt-4 rounded-[8px] bg-[#f3f3f3] py-4">
-            <img className="mx-auto h-[170px] w-auto rounded-[4px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa-26-2.webp`} alt="Smartwatch worn by a walker user" />
-          </div>
+          <BlogImage src="twa-26-2.webp" alt="Smartwatch worn by a walker user" />
 
           <h3 className="mt-5 text-[12px] font-black text-black">2. Medical Alert Pendants</h3>
           <Paragraph>Classic yet powerful, pendants such as those from Medical Guardian or LifeFone offer a simple press-and-call system, and many models now include automatic fall detection.</Paragraph>
@@ -143,9 +142,7 @@ function EmergencyPreparednessDetail() {
             <li><b>Cons:</b> Less tech-savvy features, may require a base station</li>
           </BlogList>
           <Paragraph><a className="text-[#2361a1]" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4662041/" target="_blank" rel="noopener noreferrer">Wearable sensors</a> embedded in pendants have demonstrated up to 94% real-world fall recognition accuracy under clinical settings, though false alerts remain a challenge</Paragraph>
-          <div className="mt-4 rounded-[8px] bg-[#f3f3f3] py-4">
-            <img className="mx-auto h-[140px] w-auto rounded-[4px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa-26-3-768x403.webp`} alt="Medical alert button worn on the wrist" />
-          </div>
+          <BlogImage src="twa-26-3-768x403.webp" alt="Medical alert button worn on the wrist" />
 
           <h3 className="mt-5 text-[12px] font-black text-black">3. Wristband or Clip-On Devices</h3>
           <Paragraph>Devices that clip onto belts or walkers, such as the Bay Alarm Medical In-Home System, are small and easy to use. People with cognitive impairments also like wearing wristbands.</Paragraph>
@@ -154,9 +151,7 @@ function EmergencyPreparednessDetail() {
             <li><b>Cons:</b> Few intelligent features</li>
           </BlogList>
           <Paragraph>GPS-enabled <a className="text-[#2361a1]" href="https://www.alert-1.com/content/gps-medical-alert-systems/1346" target="_blank" rel="noopener noreferrer">mobile medical alert systems</a> improve assistance response by allowing emergency personnel and caregivers to locate a user even when they are outside.</Paragraph>
-          <div className="mt-4 rounded-[8px] bg-[#f3f3f3] py-4">
-            <img className="mx-auto h-[140px] w-auto rounded-[4px] object-cover" src={`${process.env.PUBLIC_URL}/images/twa-26-4.webp`} alt="Fitness style wristband with emergency features" />
-          </div>
+          <BlogImage src="twa-26-4.webp" alt="Fitness style wristband with emergency features" />
           <Paragraph>Many of these systems integrate seamlessly with daily walker use. For individuals relying on rollators for balance, like those featured in our post on <a className="text-[#2361a1]" href="https://darkcyan-lion-250828.hostingersite.com/best-rollator-for-balance-problems-top-5-reliable-options/" target="_blank" rel="noopener noreferrer">Best Rollator for Balance Problems,</a> lightweight and wrist-based devices can ensure the alert button is always accessible without interfering with mobility aid usage.</Paragraph>
 
           <SectionHeading id="section-2">How to Choose a Medical Alert System for Your Lifestyle</SectionHeading>
@@ -196,7 +191,7 @@ function EmergencyPreparednessDetail() {
           <Paragraph>For those who rely on walkers covered through Medicare, understanding the insurance coverage can also help in selecting appropriate emergency equipment. See: <a className="text-[#2361a1]" href="https://darkcyan-lion-250828.hostingersite.com/does-medicare-pay-for-walkers-for-seniors/" target="_blank" rel="noopener noreferrer">Does Medicare Pay for Walkers for Seniors?</a></Paragraph>
 
           <SectionHeading id="section-4">At-a-Glance Comparison of Top Medical Alert Devices</SectionHeading>
-          <div className="mt-4 overflow-hidden rounded-[6px] border border-[#d8dde2]">
+          <div className="blog-table-wrap mt-4 overflow-x-auto">
             <div className="grid grid-cols-[1.15fr_0.8fr_1.3fr_1fr] bg-[#ffc400] font-manrope text-base font-black text-black">
               {['Device Name', 'Type', 'Features', 'Best For'].map((heading) => (
                 <div className="border-r border-black/10 px-2 py-2 last:border-r-0" key={heading}>{heading}</div>

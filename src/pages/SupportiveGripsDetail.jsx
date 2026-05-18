@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import ArticleIconHeading from '../components/ArticleIconHeading';
+import { BlogGridTable } from '../components/BlogTable';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
@@ -66,26 +67,7 @@ function BlogList({ children }) {
   return <ul className="mt-3 list-disc space-y-1 pl-5 font-manrope text-[10px] font-medium leading-5 text-[#1f2930]">{children}</ul>;
 }
 
-function GripTypesTable() {
-  return (
-    <div className="mt-5 overflow-hidden border border-black font-manrope">
-      <div className="grid grid-cols-4 bg-[#ffc400] text-base font-black leading-4 text-black">
-        <div className="border-r border-black px-3 py-2">Type of grip</div>
-        <div className="border-r border-black px-3 py-2">Material</div>
-        <div className="border-r border-black px-3 py-2">Benefits</div>
-        <div className="px-3 py-2">ideal for</div>
-      </div>
-      {gripTypeRows.map(([type, material, benefits, idealFor]) => (
-        <div className="grid grid-cols-4 text-base font-semibold leading-4 text-[#1f2930]" key={type}>
-          <div className="border-r border-t border-black px-3 py-2">{type}</div>
-          <div className="border-r border-t border-black px-3 py-2">{material}</div>
-          <div className="border-r border-t border-black px-3 py-2">{benefits}</div>
-          <div className="border-t border-black px-3 py-2">{idealFor}</div>
-        </div>
-      ))}
-    </div>
-  );
-}
+
 
 function SocialDots() {
   return (
@@ -181,7 +163,7 @@ function SupportiveGripsDetail() {
           {/* Section 4 */}
           <SectionHeading id="section-4">Types of Supportive Grips</SectionHeading>
           <Paragraph>There are different types of supportive grips available on walkers, each designed to suit different preferences and needs. Let's take a closer look at the common types of grips:</Paragraph>
-          <GripTypesTable />
+          <BlogGridTable className="mt-5" headers={['Type of grip', 'Material', 'Benefits', 'ideal for']} rows={gripTypeRows} />
 
           {/* Section 5 */}
           <SectionHeading id="section-5">How Supportive Grips Improve Safety</SectionHeading>
