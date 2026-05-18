@@ -18,8 +18,8 @@ const products = [
     title: '1. Brooks Addiction Walker 2',
     price: '$130-140',
     images: [
-      ['https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/02/twa-1.png', "Men's: Buy on Amazon", 'https://amzn.to/4kOcoBp'],
-      ['https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/02/twa-2.png', "Women's: Buy on Amazon", 'https://amzn.to/4kNEMmX'],
+      ['https://thewalkeradvisor.com/wp-content/uploads/2026/02/twa-1.png', "Men's: Buy on Amazon", 'https://amzn.to/4kOcoBp'],
+      ['https://thewalkeradvisor.com/wp-content/uploads/2026/02/twa-2.png', "Women's: Buy on Amazon", 'https://amzn.to/4kNEMmX'],
     ],
     paragraphs: [
       'The Brooks Addiction Walker 2 is frequently hailed as the best walking shoe for seniors due to its exceptional stability and support. Designed for those who need motion control, it features Brooks’ GuideRails technology to keep your gait aligned and prevent excess movement.',
@@ -32,8 +32,8 @@ const products = [
     title: '2. Hoka Bondi 9',
     price: '$145-175',
     images: [
-      ['https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/02/hoka1.png', "Men's: Buy on Amazon", 'https://amzn.to/46e2rqS'],
-      ['https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/02/hoka2.png', "Women's: Buy on Amazon", 'https://amzn.to/4tLhUsh'],
+      ['https://thewalkeradvisor.com/wp-content/uploads/2026/02/hoka1.png', "Men's: Buy on Amazon", 'https://amzn.to/46e2rqS'],
+      ['https://thewalkeradvisor.com/wp-content/uploads/2026/02/hoka2.png', "Women's: Buy on Amazon", 'https://amzn.to/4tLhUsh'],
     ],
     paragraphs: [
       'If cushioning is your top priority, the Hoka Bondi 9 stands out with its ultra-thick EVA foam stack, up to 33mm in the heel, for cloud-like comfort. This shoe excels at absorbing shock, making it perfect for seniors with knee or hip pain. The Meta-Rocker sole promotes a smooth rolling motion, and the engineered mesh upper keeps feet cool. It’s lightweight despite the padding, and wide sizes are available.',
@@ -45,8 +45,8 @@ const products = [
     title: '3. Skechers GO Walk 6',
     price: '$60-80',
     images: [
-      ['https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/02/sneaker.png', "Men's: Buy on Amazon", 'https://amzn.to/4tMEUHm'],
-      ['https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/02/shoes.png', "Women's: Buy on Amazon", 'https://amzn.to/4u3Hut1'],
+      ['https://thewalkeradvisor.com/wp-content/uploads/2026/02/sneaker.png', "Men's: Buy on Amazon", 'https://amzn.to/4tMEUHm'],
+      ['https://thewalkeradvisor.com/wp-content/uploads/2026/02/shoes.png', "Women's: Buy on Amazon", 'https://amzn.to/4u3Hut1'],
     ],
     paragraphs: [
       'Skechers’ GO Walk 6 is a budget-friendly favorite for its slip-on convenience and lightweight design. The Ultra GO cushioning and Air-Cooled Goga Mat insole provide responsive comfort, while the stretch-fit knit upper molds to your foot like a sock. It’s great for casual walks or errands, with excellent breathability and machine-washable ease. Seniors appreciate the hands-free slip-in heel for quick on/off.',
@@ -58,8 +58,8 @@ const products = [
     title: '4. New Balance 928 v3',
     price: '$140-150',
     images: [
-      ['https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/02/4th-pic.png', "Men's: Buy on Amazon", 'https://amzn.to/4069YEJ'],
-      ['https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/02/4th-pi.png', "Women's: Buy on Amazon", 'https://amzn.to/4rSYT5E'],
+      ['https://thewalkeradvisor.com/wp-content/uploads/2026/02/4th-pic.png', "Men's: Buy on Amazon", 'https://amzn.to/4069YEJ'],
+      ['https://thewalkeradvisor.com/wp-content/uploads/2026/02/4th-pi.png', "Women's: Buy on Amazon", 'https://amzn.to/4rSYT5E'],
     ],
     paragraphs: [
       'The New Balance 928 v3 is a podiatrist-recommended staple for seniors needing serious motion control. Its ROLLBAR technology stabilizes the foot, while ABZORB cushioning absorbs impact. With the widest range of sizes (up to 6E), it’s ideal for those with wide feet or who use custom orthotics. The leather upper is durable and easy to clean, and it’s Medicare-approved for diabetic reimbursements.',
@@ -71,7 +71,7 @@ const products = [
     title: '5. Ryka Devotion XT',
     price: '$80-100',
     images: [
-      ['https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/02/ryka.png', 'Buy on Amazon', 'https://amzn.to/3OB4cbo'],
+      ['https://thewalkeradvisor.com/wp-content/uploads/2026/02/ryka.png', 'Buy on Amazon', 'https://amzn.to/3OB4cbo'],
     ],
     paragraphs: [
       'Designed exclusively for women, the Ryka Devotion XT caters to a woman’s unique foot shape with a narrower heel and roomier toe box. It features RE-ZORB cushioning for shock absorption and an anatomical insole for arch support. The breathable mesh upper and flexible outsole make it great for active seniors, with good traction for indoor classes or outdoor paths.',
@@ -126,7 +126,7 @@ function BestWalkingShoesSeniorsDetail() {
               controls
               preload="metadata"
               controlsList="nodownload"
-              src="https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/02/Video-2-1.mp4"
+              src="https://thewalkeradvisor.com/wp-content/uploads/2026/02/Video-2-1.mp4"
             />
           </div>
 
@@ -171,7 +171,7 @@ function BestWalkingShoesSeniorsDetail() {
           <h3 className="mt-5 text-[15px] font-black text-black">2. Stability & Motion Control</h3>
           <Paragraph>
             Features like medial posts, heel counters, and gait guidance systems prevent excessive pronation and lateral instability. Seniors who require additional support during incline walking may also benefit from mobility aids such as our guide on{' '}
-            <a className="font-black text-[#0b61a4]" href="https://darkcyan-lion-250828.hostingersite.com/best-stair-walkers-for-seniors/" target="_blank" rel="noopener noreferrer">Best Stair Walkers for Seniors,</a>
+            <a className="font-black text-[#0b61a4]" href="https://thewalkeradvisor.com/best-stair-walkers-for-seniors/" target="_blank" rel="noopener noreferrer">Best Stair Walkers for Seniors,</a>
             {' '}especially when navigating uneven elevation.
           </Paragraph>
           <h3 className="mt-5 text-[15px] font-black text-black">3. Width & Orthotic Compatibility</h3>
@@ -181,7 +181,7 @@ function BestWalkingShoesSeniorsDetail() {
           <h3 className="mt-5 text-[15px] font-black text-black">5. Ease of Wear</h3>
           <Paragraph>
             Seniors with limited dexterity from arthritis or Parkinsonian symptoms benefit from slip-on or hook-and-loop closures. Those needing posture reinforcement while walking upright may also explore our guide on{' '}
-            <a className="font-black text-[#0b61a4]" href="https://darkcyan-lion-250828.hostingersite.com/best-stand-up-walkers-for-seniors-2025/" target="_blank" rel="noopener noreferrer">Best Stand Up Walkers for Seniors</a>
+            <a className="font-black text-[#0b61a4]" href="https://thewalkeradvisor.com/best-stand-up-walkers-for-seniors-2025/" target="_blank" rel="noopener noreferrer">Best Stand Up Walkers for Seniors</a>
             {' '}for enhanced spinal alignment support.
           </Paragraph>
 

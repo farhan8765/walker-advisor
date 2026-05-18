@@ -422,7 +422,7 @@ export const articles = [
     id: 44,
     category: 'Comparison',
     image: 'comparison-cards/safest-walkers.png',
-    href: 'https://darkcyan-lion-250828.hostingersite.com/safest-walkers-for-seniors',
+    href: '/safest-walkers-for-seniors-top-5-choices',
     alt: 'Senior woman walking outdoors with a rollator and two children',
     title: 'Lock in Stability! Top 5 Safest Walkers for Seniors',
     description:

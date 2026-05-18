@@ -8,12 +8,12 @@ const activities = [
   {
     title: '1. Senior Community Centers',
     text: 'Most towns and cities have senior centers that offer a wide range of free or low-cost activities, including fitness classes, arts and crafts, cooking demos, movie screenings, and group outings. Senior centers are one of the best starting points for older adults looking to build a regular social routine outside the home.',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/04/unnamed-1.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2026/04/unnamed-1.png',
   },
   {
     title: '2. Group Exercise Classes',
     text: 'Exercise becomes even more beneficial when done in a social setting. Group fitness classes, such as chair yoga, water aerobics, tai chi, or low-impact aerobics, combine physical health with social connection.',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/04/unnamed-3.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2026/04/unnamed-3.png',
   },
   {
     title: '3. Volunteering',
@@ -22,7 +22,7 @@ const activities = [
   {
     title: '4. Book Clubs and Reading Groups',
     text: 'A book club offers regular, structured social interaction built around a shared interest. Many libraries offer senior-specific reading groups that meet weekly or monthly. This kind of intellectually stimulating activity is ideal for seniors who prefer quieter social environments',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/04/unnamed-4.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2026/04/unnamed-4.png',
   },
   {
     title: '5. Arts, Crafts, and Creative Classes',
@@ -31,7 +31,7 @@ const activities = [
   {
     title: '6. Religious and Spiritual Communities',
     text: 'For many older adults, their faith community is their primary social network. Regular attendance at religious services, prayer groups, and community events provides consistent human connection, a sense of belonging, and often practical support during difficult times.',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/04/unnamed-5.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2026/04/unnamed-5.png',
   },
   {
     title: '7. Technology and Virtual Socialization',
@@ -40,7 +40,7 @@ const activities = [
   {
     title: '8. Intergenerational Programs',
     text: 'Programs that connect seniors with younger generations, such as school mentorship programs, after-school volunteering, or grandparent reading programs, are among the most enriching social experiences available to older adults.',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/04/unnamed-6.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2026/04/unnamed-6.png',
   },
   {
     title: '9. Day Trips and Group Outings',
@@ -49,7 +49,7 @@ const activities = [
   {
     title: '10. Pet Ownership or Animal Therapy',
     text: 'Pets provide unconditional companionship and have been shown to reduce blood pressure, ease depression, and improve overall well-being. For seniors who cannot care for a pet full-time, animal therapy programs offer many of the same benefits.',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/04/unnamed-7.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2026/04/unnamed-7.png',
   },
 ];
 
@@ -101,7 +101,7 @@ function SocialActivitiesOlderAdultsDetail() {
           </div>
 
           <Paragraph>Staying socially connected is one of the most powerful things older adults can do for their health. Research consistently shows that social isolation increases the risk of cognitive decline, depression, cardiovascular disease, and even early death. Yet loneliness among seniors is more common than ever, and it is a serious health issue that deserves the same attention as physical conditions.</Paragraph>
-          <Paragraph>For seniors who use mobility aids, staying socially active often goes hand in hand with staying mobile. Our guide on <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-walkers-for-seniors-with-balance-problems">Best Walkers for Seniors with Balance Problems</ArticleLink> can help seniors stay independently mobile so they can participate fully in the activities covered in this blog.</Paragraph>
+          <Paragraph>For seniors who use mobility aids, staying socially active often goes hand in hand with staying mobile. Our guide on <ArticleLink href="https://thewalkeradvisor.com/best-walkers-for-seniors-with-balance-problems">Best Walkers for Seniors with Balance Problems</ArticleLink> can help seniors stay independently mobile so they can participate fully in the activities covered in this blog.</Paragraph>
 
           <nav className="mt-7 overflow-hidden rounded-[8px] bg-[#f3f3f3]" aria-label="Table of contents">
             <h2 className="bg-[#ffc400] px-5 py-3 text-[17px] font-black leading-none text-black">Table of Contents</h2>
@@ -124,7 +124,7 @@ function SocialActivitiesOlderAdultsDetail() {
             <li>Increase lifespan and overall quality of life</li>
             <li>Maintain a sense of purpose and belonging</li>
           </ul>
-          <img className="mt-5 h-auto w-full rounded-[8px] object-contain" src="https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/04/unnamed-2.png" alt="" />
+          <img className="mt-5 h-auto w-full rounded-[8px] object-contain" src="https://thewalkeradvisor.com/wp-content/uploads/2026/04/unnamed-2.png" alt="" />
 
           <SectionHeading id="section-2">The Best Social Activities for Older Adults</SectionHeading>
           {activities.map((activity) => (
@@ -132,10 +132,10 @@ function SocialActivitiesOlderAdultsDetail() {
               <h3 className="text-[15px] font-black text-black">{activity.title}</h3>
               <Paragraph>{activity.text}</Paragraph>
               {activity.title === '2. Group Exercise Classes' && (
-                <Paragraph>For seniors who need mobility support, explore our <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-upright-walkers-for-outdoor-use">Best Upright Walkers for Outdoor Use: Top 5 Picks from Amazon</ArticleLink> or <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-rollator-for-balance-problems">Best Rollator for Balance Problems: Top 5 Reliable Options</ArticleLink> guides.</Paragraph>
+                <Paragraph>For seniors who need mobility support, explore our <ArticleLink href="https://thewalkeradvisor.com/best-upright-walkers-for-outdoor-use">Best Upright Walkers for Outdoor Use: Top 5 Picks from Amazon</ArticleLink> or <ArticleLink href="https://thewalkeradvisor.com/best-rollator-for-balance-problems">Best Rollator for Balance Problems: Top 5 Reliable Options</ArticleLink> guides.</Paragraph>
               )}
               {activity.title === '9. Day Trips and Group Outings' && (
-                <Paragraph>Our <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-all-terrain-walkers-for-seniors">Best All-Terrain Walkers for Seniors – Ultimate Guide</ArticleLink> covers the most reliable options.</Paragraph>
+                <Paragraph>Our <ArticleLink href="https://thewalkeradvisor.com/best-all-terrain-walkers-for-seniors">Best All-Terrain Walkers for Seniors – Ultimate Guide</ArticleLink> covers the most reliable options.</Paragraph>
               )}
               {activity.image && <img className="mt-5 h-auto w-full rounded-[8px] object-contain" src={activity.image} alt="" />}
             </section>

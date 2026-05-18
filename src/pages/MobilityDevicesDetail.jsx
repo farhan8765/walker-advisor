@@ -127,7 +127,7 @@ function MobilityDevicesDetail() {
           <SubHeading id="section-3">2. Walkers</SubHeading>
           <Paragraph><strong>Best for:</strong> Moderate balance problems and leg weakness</Paragraph>
           <Paragraph>Walkers provide greater support than canes and are commonly recommended for seniors recovering from surgery or dealing with chronic instability.</Paragraph>
-          <Paragraph>Walkers provide greater support than canes and are commonly recommended for seniors recovering from surgery or dealing with chronic instability. Choosing the right walker type is essential, especially for individuals with specific needs like height or body support. For example, taller individuals can benefit from specialized options, learn more in <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/heavy-duty-walkers-for-tall-people/">heavy-duty walker for tall people</ArticleLink>, to ensure proper posture and stability.</Paragraph>
+          <Paragraph>Walkers provide greater support than canes and are commonly recommended for seniors recovering from surgery or dealing with chronic instability. Choosing the right walker type is essential, especially for individuals with specific needs like height or body support. For example, taller individuals can benefit from specialized options, learn more in <ArticleLink href="https://thewalkeradvisor.com/heavy-duty-walkers-for-tall-people/">heavy-duty walker for tall people</ArticleLink>, to ensure proper posture and stability.</Paragraph>
           <SubHeading>Common Types:</SubHeading>
           <BlogList>
             <li>Standard walkers</li>
@@ -141,7 +141,7 @@ function MobilityDevicesDetail() {
           <Paragraph><strong>Best for:</strong> Seniors who need support but want mobility freedom</Paragraph>
           <Paragraph>Rollators come with four wheels, hand brakes, a seat, and often a storage basket. They are ideal for active seniors who walk longer distances.</Paragraph>
           <ProsCons pros={['Built-in seat for resting', 'Easy maneuverability', 'Suitable for outdoor use']} cons={['Requires good hand control for the brakes']} />
-          <Paragraph>Using wheeled walkers correctly is crucial for safety. If you’re new to this type of mobility aid, check out <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/how-to-use-a-walker-with-wheels/">How To Use A Walker With Wheels for proper techniques and safety guidance</ArticleLink>.</Paragraph>
+          <Paragraph>Using wheeled walkers correctly is crucial for safety. If you’re new to this type of mobility aid, check out <ArticleLink href="https://thewalkeradvisor.com/how-to-use-a-walker-with-wheels/">How To Use A Walker With Wheels for proper techniques and safety guidance</ArticleLink>.</Paragraph>
           <BlogImage src="blog35-5.webp" alt="Four-wheel rollator walker" narrow />
 
           <SubHeading id="section-5">4. Wheelchairs</SubHeading>

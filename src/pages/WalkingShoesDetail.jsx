@@ -105,7 +105,7 @@ function WalkingShoesDetail() {
           </div>
 
           <div className="mt-5">
-            <Paragraph>Choosing the right walking shoes is not just about comfort; it directly affects your posture, joint health, and fall prevention. Poor footwear can lead to foot fatigue, ankle instability, knee pain, and even long-term alignment issues. For seniors, individuals with weak ankles, or anyone recovering from injury, stable footwear becomes even more critical. If you want a deeper understanding of age-related balance challenges, you can explore <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/why-seniors-need-proper-walking-shoes/">Why Seniors Need Proper Walking Shoes</ArticleLink> to see how the right footwear reduces fall risk and improves mobility.</Paragraph>
+            <Paragraph>Choosing the right walking shoes is not just about comfort; it directly affects your posture, joint health, and fall prevention. Poor footwear can lead to foot fatigue, ankle instability, knee pain, and even long-term alignment issues. For seniors, individuals with weak ankles, or anyone recovering from injury, stable footwear becomes even more critical. If you want a deeper understanding of age-related balance challenges, you can explore <ArticleLink href="https://thewalkeradvisor.com/why-seniors-need-proper-walking-shoes/">Why Seniors Need Proper Walking Shoes</ArticleLink> to see how the right footwear reduces fall risk and improves mobility.</Paragraph>
             <Paragraph>Whether you walk daily for fitness, spend long hours standing at work, or simply want safer movement, understanding shoe structure will help you make an informed choice.</Paragraph>
           </div>
 
@@ -215,7 +215,7 @@ function WalkingShoesDetail() {
             <li>EVA foam midsoles</li>
             <li>Reinforced heel and midfoot zones</li>
           </BlogList>
-          <Paragraph>If you're unsure which models actually combine lightweight comfort with strong stability, check out <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-walking-shoes-for-seniors-2026/">Best Walking Shoes for Seniors in 2026</ArticleLink> for expert-reviewed options that meet these criteria.</Paragraph>
+          <Paragraph>If you're unsure which models actually combine lightweight comfort with strong stability, check out <ArticleLink href="https://thewalkeradvisor.com/best-walking-shoes-for-seniors-2026/">Best Walking Shoes for Seniors in 2026</ArticleLink> for expert-reviewed options that meet these criteria.</Paragraph>
           <BlogImage src="image-7.webp" alt="Woman walking outdoors in stable walking shoes" />
 
           <SectionHeading id="section-8">Replace Shoes on Time</SectionHeading>

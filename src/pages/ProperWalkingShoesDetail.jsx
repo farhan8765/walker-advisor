@@ -174,7 +174,7 @@ function ProperWalkingShoesDetail() {
             <li>Inflammation</li>
             <li>Long-term wear on cartilage</li>
           </BlogList>
-          <Paragraph>If you've explored options in the <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-walking-shoes-for-seniors-2026/">best walking shoes for seniors</ArticleLink> category, you'll notice that top-rated pairs emphasize cushioning, arch support, and midsole technology specifically designed to reduce joint strain.</Paragraph>
+          <Paragraph>If you've explored options in the <ArticleLink href="https://thewalkeradvisor.com/best-walking-shoes-for-seniors-2026/">best walking shoes for seniors</ArticleLink> category, you'll notice that top-rated pairs emphasize cushioning, arch support, and midsole technology specifically designed to reduce joint strain.</Paragraph>
 
           <SectionHeading id="section-3">Fall Prevention Starts From the Ground Up</SectionHeading>
           <Paragraph>According to global health data, falls are among the most common causes of injury-related hospitalizations in older adults. Many of these falls are preventable.</Paragraph>

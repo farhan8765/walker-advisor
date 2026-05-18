@@ -135,7 +135,7 @@ function BlogDetail() {
             </Paragraph>
             <p className="mt-3 font-manrope text-[12px] font-medium leading-[1.85] text-[#1f2930]">
               Having the right mobility support in place is one of the most practical steps a senior with heart issues can take. Our guide on{' '}
-              <a className="text-[#0b61a4] no-underline hover:underline" href="https://darkcyan-lion-250828.hostingersite.com/best-walkers-for-seniors-with-balance-problems" target="_blank" rel="noopener noreferrer">Best Walkers for Seniors with Balance Problems</a>
+              <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/best-walkers-for-seniors-with-balance-problems" target="_blank" rel="noopener noreferrer">Best Walkers for Seniors with Balance Problems</a>
               {' '}is a great place to start when looking for the right stability aid.
             </p>
             <Paragraph>
@@ -195,7 +195,7 @@ function BlogDetail() {
           </Paragraph>
           <p className="mt-3 font-manrope text-[12px] font-medium leading-[1.85] text-[#1f2930]">
             A sturdy walker can provide critical support in these moments. See our{' '}
-            <a className="text-[#0b61a4] no-underline hover:underline" href="https://darkcyan-lion-250828.hostingersite.com/safest-walkers-for-seniors" target="_blank" rel="noopener noreferrer">Safest Walkers for Seniors: Top 5 Secure and Sturdy Choices</a>
+            <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/safest-walkers-for-seniors" target="_blank" rel="noopener noreferrer">Safest Walkers for Seniors: Top 5 Secure and Sturdy Choices</a>
             {' '}for reliable options.
           </p>
 
@@ -218,7 +218,7 @@ function BlogDetail() {
           </Paragraph>
           <p className="mt-3 font-manrope text-[12px] font-medium leading-[1.85] text-[#1f2930]">
             Proper footwear also plays a role in reducing fall risk. Read our guide on{' '}
-              <a className="text-[#0b61a4] no-underline hover:underline" href="https://darkcyan-lion-250828.hostingersite.com/why-seniors-need-proper-walking-shoes" target="_blank" rel="noopener noreferrer">Why Seniors Need Proper Walking Shoes</a>
+              <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/why-seniors-need-proper-walking-shoes" target="_blank" rel="noopener noreferrer">Why Seniors Need Proper Walking Shoes</a>
             {' '}for practical recommendations.
           </p>
 
@@ -239,7 +239,7 @@ function BlogDetail() {
             </ul>
             <p className="mt-3 font-manrope text-[11px] font-semibold leading-6 text-[#1f2930]">
               These symptoms should always be reported to a doctor immediately. In the meantime, having a reliable mobility aid on hand can provide critical support. Our guide on{' '}
-              <a className="text-[#0b61a4] no-underline hover:underline" href="https://darkcyan-lion-250828.hostingersite.com/best-mobility-devices-for-seniors" target="_blank" rel="noopener noreferrer">Best Mobility Devices for Seniors</a>
+              <a className="text-[#0b61a4] no-underline hover:underline" href="https://thewalkeradvisor.com/best-mobility-devices-for-seniors" target="_blank" rel="noopener noreferrer">Best Mobility Devices for Seniors</a>
               {' '}covers a wide range of options to suit different needs.
             </p>
           </div>

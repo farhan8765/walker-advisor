@@ -158,7 +158,7 @@ function MentalHealthDetail() {
 
           <SectionHeading id="section-3">Major Causes of Mental Health Challenges in Old Age</SectionHeading>
           <SubHeading>1. Physical Health Problems</SubHeading>
-          <Paragraph>Chronic pain conditions such as arthritis, not only affect mobility but also increase emotional stress. In fact, research shows that joint instability and reduced balance significantly raise fall risk, something we explore in detail in our guide on <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/can-osteoarthritis-lead-to-more-falls-in-seniors/">Can Osteoarthritis Lead to More Falls in Seniors?</ArticleLink></Paragraph>
+          <Paragraph>Chronic pain conditions such as arthritis, not only affect mobility but also increase emotional stress. In fact, research shows that joint instability and reduced balance significantly raise fall risk, something we explore in detail in our guide on <ArticleLink href="https://thewalkeradvisor.com/can-osteoarthritis-lead-to-more-falls-in-seniors/">Can Osteoarthritis Lead to More Falls in Seniors?</ArticleLink></Paragraph>
           <SubHeading>2. Reduced Mobility</SubHeading>
           <Paragraph>Fear of falling or actual falls reduces confidence, leading to withdrawal.</Paragraph>
           <SubHeading>3. Loss and Grief</SubHeading>

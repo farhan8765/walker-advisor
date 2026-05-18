@@ -17,7 +17,7 @@ const products = [
   {
     title: '1. Helavo Bariatric All-Terrain Walker',
     price: '$219.90',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/12/twa24-1-1024x1012.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2025/12/twa24-1-1024x1012.png',
     alt: 'Helavo Bariatric All-Terrain Walker',
     href: 'https://amzn.to/4j10h2T',
     help: 'The strong 500-lb frame never wobbles, even with heavier weights. Big wheels go easily over grass, gravel, and sidewalks smoothly, so no fear of tipping. The wide seat gives a safe place to rest without feeling squeezed. Lightweight makes it easy to lift into a car.',
@@ -27,7 +27,7 @@ const products = [
   {
     title: '2. ELENKER Heavy Duty Upright Walker',
     price: '$149.99',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/12/twa24-2-713x1024.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2025/12/twa24-2-713x1024.png',
     alt: 'ELENKER heavy duty walker',
     href: 'https://amzn.to/3XUU5zG',
     help: 'Upright design lets you stand straight instead of bending, so less back and shoulder pain. Extra-wide seat feels roomy and safe when sitting. Strong brakes stop quickly, even on slopes.',
@@ -37,7 +37,7 @@ const products = [
   {
     title: '3. ELENKER All-Terrain Heavy Duty Rollator Walker',
     price: '$159.99',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/12/twa-24-2-915x1024.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2025/12/twa-24-2-915x1024.png',
     alt: 'ELENKER All-Terrain Heavy Duty walker',
     href: 'https://amzn.to/3Mu2BTZ',
     help: 'Big 10-inch wheels roll over cracks, grass, and gravel without getting stuck. Very strong frame feels safe at higher weights. The wide padded seat is perfect for resting legs.',
@@ -47,7 +47,7 @@ const products = [
   {
     title: '4. NOVA Star Heavy Duty Bariatric Rollator Walker',
     price: '$244.95',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/12/twa24-3-885x1024.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2025/12/twa24-3-885x1024.png',
     alt: 'NOVA Star Heavy Duty walker',
     href: 'https://amzn.to/4j0PEgu',
     help: 'Super strong steel frame gives rock-solid support. Easy one-button folding and a very good price. The seat and backrest are padded, so resting feels comfortable.',
@@ -57,7 +57,7 @@ const products = [
   {
     title: '5. Akoasm Heavy Duty Walker for Seniors',
     price: '$199.99',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/12/twa24-4-870x1024.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2025/12/twa24-4-870x1024.png',
     alt: 'Akoasm Heavy Duty Walker',
     href: 'https://amzn.to/48FrSTP',
     help: 'Helps you walk upright so your back stays straight and pain stays away. Reflective strips keep you visible at night. Wide seat and strong brakes give confidence and safety.',

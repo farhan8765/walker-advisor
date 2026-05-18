@@ -77,7 +77,7 @@ const products = [
     title: '1. Medline Lightweight Two-Button Folding Walker',
     price: '$27.99',
     image:
-      'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/07/twa-blo7-1-724x1024.png',
+      'https://thewalkeradvisor.com/wp-content/uploads/2025/07/twa-blo7-1-724x1024.png',
     features: [
       'Made from high-quality aluminum, strong yet lightweight, supporting up to 300 lbs',
       'Weighs only 6 pounds, making it easy to carry, transport, and store',
@@ -117,7 +117,7 @@ const products = [
     title: '2. Drive Medical Deluxe 2-Button Folding Walker',
     price: '$34.58',
     image:
-      'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/07/twa-blo7-2-753x1024.png',
+      'https://thewalkeradvisor.com/wp-content/uploads/2025/07/twa-blo7-2-753x1024.png',
     features: [
       'Sturdy aluminum construction – strong yet lightweight',
       'Supports up to 350 lbs – ensures durability for most users',
@@ -159,7 +159,7 @@ const products = [
     title: '3. Vive Mobility Ultra Lightweight Rollator Walker',
     price: '$84.99',
     image:
-      'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/07/twa-blo7-3-976x1024.png',
+      'https://thewalkeradvisor.com/wp-content/uploads/2025/07/twa-blo7-3-976x1024.png',
     features: [
       'Weighs only 14 lbs, making it easy to carry and move around.',
       'The strong aluminum frame supports up to 300 lbs.',
@@ -202,7 +202,7 @@ const products = [
     title: '4. Medline Lightweight Aluminum Rollator Walker',
     price: '$73.17',
     image:
-      'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/07/twa-blo7-4-887x1024.png',
+      'https://thewalkeradvisor.com/wp-content/uploads/2025/07/twa-blo7-4-887x1024.png',
     features: [
       'Made of lightweight aluminum, weighing only 14 pounds for easy movement and transport',
       'Supports up to 300 pounds, ensuring stability and reliability',

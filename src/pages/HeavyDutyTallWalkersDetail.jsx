@@ -17,7 +17,7 @@ const products = [
   {
     title: '1. ELENKER Heavy Duty Upright Rollator Walker',
     price: '$179.99',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/01/twablog25-2-738x1024.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2026/01/twablog25-2-738x1024.png',
     href: 'https://amzn.to/3Nhf11G',
     features: ['High weight capacity with reinforced aluminum frame.', 'Extra-wide padded seat and backrest for comfort.', 'Large front wheels for smooth indoor and outdoor use.', 'Fully adjustable frame for height and armrests.', 'Includes under-seat basket, cane holder, and cup holder.'],
     best: ['Adjustable for taller users to promote upright posture.', 'A wide frame reduces tripping and back strain.', 'A high seat allows easy sitting and standing.'],
@@ -26,7 +26,7 @@ const products = [
   {
     title: '2. Helavo All Terrain Upright Walker',
     price: '$249.99',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/01/twablog25-3-900x1024.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2026/01/twablog25-3-900x1024.png',
     href: 'https://amzn.to/4bnDoEU',
     features: ['Puncture-proof rubber tires for all surfaces.', 'Lightweight aluminum frame with braking system.', 'Adjustable ergonomic handles and padded armrests.', 'Spacious seat with backrest, cup holder, and cane holder.', 'Easy assembly and extended warranty.'],
     best: ['Handles adjust high for good posture.', 'Upright design reduces strain on the back and shoulders', 'Stable for longer walks on varied terrain..'],
@@ -35,7 +35,7 @@ const products = [
   {
     title: '3. KMINA PRO Rollator Walker for Tall Men',
     price: '$429.99',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/01/twablog25-4-725x1024.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2026/01/twablog25-4-725x1024.png',
     href: 'https://amzn.to/3LCoC2H',
     features: ['Sturdy aluminum frame with large front wheels.', 'Height-adjustable handles for a custom fit.', 'Foldable design for storage and transport.', 'Adjustable brake system for safety.', 'High seat with backrest and storage bag.'],
     best: ['Fits taller users with a high seat.', 'Allows upright walking without bending.', 'Smooth on uneven surfaces for comfort.'],
@@ -44,7 +44,7 @@ const products = [
   {
     title: '4. Bsetain Heavy Duty Tall Adults Upright Walker',
     price: '$303.64',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/01/twablog25-6.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2026/01/twablog25-6.png',
     href: 'https://amzn.to/4pz4895',
     features: ['Multi-position height adjustment for various users.', 'Lightweight aluminum alloy frame.', 'Soft armrests for balance and support.', 'Swivel front casters and rear wheels with brakes.', 'Easy folding for storage.'],
     best: ['Adjustable for taller heights to maintain posture.', 'Sturdy build for heavy-duty use.', 'Simple design for everyday mobility.'],
@@ -53,7 +53,7 @@ const products = [
   {
     title: '5. Drive Medical Nitro Sprint Foldable Rollator Walker',
     price: '$199.00',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2026/01/twablog25-7-766x1024.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2026/01/twablog25-7-766x1024.png',
     href: 'https://amzn.to/3YYI90i',
     features: ['Adjustable handles for custom height.', 'Large front wheels for smooth rolling.', 'Lightweight aluminum frame.', 'Integrated braking system.', 'Foldable with a seat, backrest, and storage bag.'],
     best: ['Designed for taller users with high handles.', 'Promotes upright posture and balance', 'Stable on various surfaces.'],

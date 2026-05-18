@@ -275,6 +275,57 @@
     padding: 0 !important;
   }
 
+  /* Product sections: center impartial line + Buy Now (after product image) */
+  main > article.blog-detail-article section.mt-7 > img[class*='max-h-'] + p,
+  main > article.blog-detail-article section.mt-7 > img.mt-4 + p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 42rem;
+  }
+
+  main > article.blog-detail-article section.mt-7 > img[class*='max-h-'] + p + a[class*='rounded-full'],
+  main > article.blog-detail-article section.mt-7 > img.mt-4 + p + a[class*='rounded-full'] {
+    display: flex !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  main > article.blog-detail-article section.mt-7 > img[class*='max-h-'] + p + p:has(a[class*='rounded-full']),
+  main > article.blog-detail-article section.mt-7 > img.mt-4 + p + p:has(a[class*='rounded-full']) {
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  main > article.blog-detail-article section.mt-7 > img[class*='max-h-'] + p + div.mt-4,
+  main > article.blog-detail-article section.mt-7 > img.mt-4 + p + div.mt-4 {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  main > article.blog-detail-article section.mt-7 > img[class*='max-h-'] + a[class*='rounded-full'],
+  main > article.blog-detail-article section.mt-7 > img.mt-4 + a[class*='rounded-full'] {
+    display: flex !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  main > article.blog-detail-article section.mt-7 > div[class*='grid'] > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  main > article.blog-detail-article section.mt-7 > div[class*='grid'] > div > a[class*='rounded-full'] {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   main > article.blog-detail-article img:not(header img):not(.rounded-full):not(.blog-related-thumb):not(.blog-product-thumb):not(.blog-section-icon) {
     display: block !important;
     margin-top: 1.75rem !important;

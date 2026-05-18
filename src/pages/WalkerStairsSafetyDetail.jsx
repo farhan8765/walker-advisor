@@ -120,7 +120,7 @@ function WalkerStairsSafetyDetail() {
             <li>Going down → Lead with your weaker leg (“Bad goes down below”).</li>
             <li>Have someone carry the walker or keep a second one on each floor.</li>
           </BlogList>
-          <Paragraph>→ New to walkers? Master the basics first: <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/what-is-the-proper-way-to-use-a-walker/">What Is The Proper Way To Use A Walker?</ArticleLink></Paragraph>
+          <Paragraph>→ New to walkers? Master the basics first: <ArticleLink href="https://thewalkeradvisor.com/what-is-the-proper-way-to-use-a-walker/">What Is The Proper Way To Use A Walker?</ArticleLink></Paragraph>
 
           <SubHeading>Method 2 – Helper Carries the Walker</SubHeading>
           <Paragraph>Same handrail technique above, while a family member folds and carries your walker (even the best 3-wheel walkers for seniors fold easily for this).</Paragraph>
@@ -145,9 +145,9 @@ function WalkerStairsSafetyDetail() {
             <li>Install a stairlift (many pay for themselves by preventing one hospital visit)</li>
             <li>Relocate the bedroom and daily living to the main floor</li>
             <li>Strengthen legs with targeted physical therapy</li>
-            <li>Upgrade from a cane when balance starts failing → <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/time-to-switch-cane-to-walker/">How do you know it’s time to start using a walker instead of a cane?</ArticleLink></li>
-            <li>Choose the best walkers for seniors suited to your exact home layout → <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/tips-for-choosing-and-using-walkers-a-comprehensive-guide/">Tips for Choosing and Using Walkers</ArticleLink></li>
-            <li>Live in a small apartment? Learn space-saving tricks → <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/tips-using-walker-small-homes/">Tips for Using a Walker in Small Homes</ArticleLink></li>
+            <li>Upgrade from a cane when balance starts failing → <ArticleLink href="https://thewalkeradvisor.com/time-to-switch-cane-to-walker/">How do you know it’s time to start using a walker instead of a cane?</ArticleLink></li>
+            <li>Choose the best walkers for seniors suited to your exact home layout → <ArticleLink href="https://thewalkeradvisor.com/tips-for-choosing-and-using-walkers-a-comprehensive-guide/">Tips for Choosing and Using Walkers</ArticleLink></li>
+            <li>Live in a small apartment? Learn space-saving tricks → <ArticleLink href="https://thewalkeradvisor.com/tips-using-walker-small-homes/">Tips for Using a Walker in Small Homes</ArticleLink></li>
           </BlogList>
           <Paragraph>Struggle with stooped posture or back pain? An upright walker for balance problems can be life-changing on flat surfaces (but still not for stairs).</Paragraph>
 

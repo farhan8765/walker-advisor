@@ -17,7 +17,7 @@ const products = [
   {
     title: '1. Helavo All Terrain Upright Walker',
     price: '$249.99',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/07/twa-blog3-1-912x1024.jpg',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2025/07/twa-blog3-1-912x1024.jpg',
     features: [
       'Upright design with padded armrests for better posture and less strain.',
       '10-inch flat-free tires for smooth movement on outdoor surfaces.',
@@ -40,7 +40,7 @@ const products = [
   {
     title: '2. Journey UPWalker EZ Lite – The Original Upright Walker',
     price: '$545.00',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/07/twa-blog3-2-714x1024.jpg',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2025/07/twa-blog3-2-714x1024.jpg',
     features: ['Ultra-lightweight 16 lb frame.', 'Promotes upright posture and reduces hunching.', 'Adjustable padded armrests and seat.', '8-inch wheels for indoor and outdoor use.', 'Folds flat for travel and storage.', 'FDA-Registered and ISO certified.'],
     columns: [
       ['Why It’s a Good Choice', ['Very lightweight for an upright walker.', 'Compact folding design helps with travel.', 'Comfortable support for smaller users.']],
@@ -54,7 +54,7 @@ const products = [
   {
     title: '3. Drive Medical Elevate Upright Walker with Seat and Armrests',
     price: '$210.77',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/07/twa-blog3-3-739x1024.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2025/07/twa-blog3-3-739x1024.png',
     features: ['Ergonomic armrests encourage upright walking.', '10-inch wheels handle uneven surfaces.', 'Padded seat and adjustable support.', 'Fits users up to 6’5”.', 'One-hand folding design.', 'Loop-lock brakes for safety.'],
     columns: [
       ['Why It’s a Good Choice', ['Useful for taller users.', 'Large wheels help on varied ground.', 'One-hand folding makes storage easier.']],
@@ -68,7 +68,7 @@ const products = [
   {
     title: '4. Aliseniors Upright Walker, Foldable Walker with Seat for Seniors',
     price: '$189.99',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/07/twa-blog3-4-693x1024.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2025/07/twa-blog3-4-693x1024.png',
     features: ['20.3-inch wide seat for comfort.', 'Adjustable padded armrests.', '18.7 lb frame supports 300 lbs.', 'Anti-tip safety design.', '8-inch PVC wheels with locking brakes.', 'Detachable bag and cane holder included.'],
     columns: [
       ['Why It’s a Good Choice', ['Wide seat is more comfortable than many competitors.', 'Good accessory set is included.', 'Anti-tip design adds confidence.']],
@@ -82,7 +82,7 @@ const products = [
   {
     title: '5. ELENKER Heavy Duty Upright Walker (Amazon’s Choice)',
     price: '$149.99',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/07/twa-blog3-5-705x1024.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2025/07/twa-blog3-5-705x1024.png',
     features: ['Designed for users between 5′ and 6’4″.', 'Extra-wide padded seat and backrest.', 'Reinforced aluminum frame supports up to 500 lbs.', '10-inch anti-slip tread wheels with dual braking system.', 'Adjustable handlebars with armrest pads.', 'Cup holder, cane holder, and under-seat storage.'],
     columns: [
       ['Why it’s good', ['Weight capacity up to 500 lbs.', 'Extra-wide padded seat and backrest.', '10-inch anti-slip wheels for varied terrain.', 'Built-in storage, cup holder, and cane holder.']],
@@ -152,7 +152,7 @@ function UprightWalkersComparisonDetail() {
           </header>
           <div className="mt-6 flex items-center gap-3"><img className="h-8 w-8 rounded-full object-cover" src={`${process.env.PUBLIC_URL}/images/robin-dolan_avatar-154x216.webp`} alt="Robin Dolan" /><p className="font-manrope text-[12px] font-black text-black">Robin Dolan</p></div>
           <div className="mt-6 grid gap-5 md:grid-cols-2">
-            <video className="w-full rounded-[8px]" controls preload="metadata" src="https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/07/Video-3-2.mp4" />
+            <video className="w-full rounded-[8px]" controls preload="metadata" src="https://thewalkeradvisor.com/wp-content/uploads/2025/07/Video-3-2.mp4" />
             <section className="rounded-[8px] bg-[#f3f3f3] p-5"><h2 className="text-[16px] font-black text-black">Key Summary</h2><Paragraph>This blog reviews the top 5 upright walkers for seniors, highlighting key features, pros, and cons. While each walker offers unique benefits, we recommend the ELENKER Heavy Duty Upright Walker for its superior comfort, stability, and a 500 lbs weight capacity.</Paragraph><Paragraph>With large anti-slip wheels, built-in storage, and Amazon’s Choice status, it stands out for its durability and ease of use, making it our top pick for both indoor and outdoor mobility support.</Paragraph></section>
           </div>
           <SectionHeading id="section-1">Understanding Upright Walkers for Seniors</SectionHeading>

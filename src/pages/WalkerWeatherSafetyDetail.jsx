@@ -207,7 +207,7 @@ function WalkerWeatherSafetyDetail() {
             <li>Plan routes carefully—choose even, obstacle-free paths.</li>
             <li>Practice maneuvering in different environments for confidence.</li>
           </BlogList>
-          <Paragraph>For detailed guidance, see our article on <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/what-is-the-proper-way-to-use-a-walker/">What Is The Proper Way To Use A Walker</ArticleLink>?.</Paragraph>
+          <Paragraph>For detailed guidance, see our article on <ArticleLink href="https://thewalkeradvisor.com/what-is-the-proper-way-to-use-a-walker/">What Is The Proper Way To Use A Walker</ArticleLink>?.</Paragraph>
 
           {/* Section 3 - FAQ */}
           <SectionHeading id="section-3">Frequently Asked Questions</SectionHeading>

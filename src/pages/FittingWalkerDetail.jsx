@@ -38,7 +38,7 @@ const walkerTypes = [
     image: 'twablog26-5-683x1024.webp',
     alt: 'Blue rollator walker with seat, bag, and four wheels',
     text: 'Includes four wheels, brakes, and often a built-in seat. Best for active seniors who want to walk longer distances with rest options.',
-    link: ['What options should I consider when buying a 4-wheel walker with seats?', 'https://darkcyan-lion-250828.hostingersite.com/best-4-wheel-walkers-with-seats/'],
+    link: ['What options should I consider when buying a 4-wheel walker with seats?', 'https://thewalkeradvisor.com/best-4-wheel-walkers-with-seats/'],
   },
   {
     title: 'Heavy-Duty / Bariatric Walker',
@@ -51,7 +51,7 @@ const walkerTypes = [
     image: 'waaaaa-683x1024.webp',
     alt: 'Lightweight folding walker on light background',
     text: 'Portable and easy to store, perfect for seniors who travel or frequently move indoors and outdoors.',
-    link: ['What are the benefits of using a lightweight folding walker for seniors?', 'https://darkcyan-lion-250828.hostingersite.com/thewalkeradvisor-com-lightweight-folding-walker-benefits/'],
+    link: ['What are the benefits of using a lightweight folding walker for seniors?', 'https://thewalkeradvisor.com/thewalkeradvisor-com-lightweight-folding-walker-benefits/'],
   },
 ];
 
@@ -226,7 +226,7 @@ function FittingWalkerDetail() {
               <Paragraph>{item.text} {item.link ? <ArticleLink href={item.link[1]}>{item.link[0]}</ArticleLink> : null}</Paragraph>
             </section>
           ))}
-          <Paragraph>The WalkerAdvisor highlights that selecting the right walker type is just as important as fitting it correctly. Families should also consider reputable brands and read expert comparisons, such as <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/winlove-vs-drive-medical-comparison/">Winlove vs Drive Medical: Comparing Features, Price & Durability</ArticleLink>.</Paragraph>
+          <Paragraph>The WalkerAdvisor highlights that selecting the right walker type is just as important as fitting it correctly. Families should also consider reputable brands and read expert comparisons, such as <ArticleLink href="https://thewalkeradvisor.com/winlove-vs-drive-medical-comparison/">Winlove vs Drive Medical: Comparing Features, Price & Durability</ArticleLink>.</Paragraph>
 
           {/* Section 3 */}
           <SectionHeading id="section-3">Step-by-Step Guide to Fitting a Walker</SectionHeading>
@@ -244,7 +244,7 @@ function FittingWalkerDetail() {
               </div>
             ))}
           </div>
-          <Paragraph>Seniors with balance issues can also explore <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-walkers-for-seniors-with-balance-problems-top-5/">Best Walkers for Seniors with Balance Problems</ArticleLink> for models optimized for stability.</Paragraph>
+          <Paragraph>Seniors with balance issues can also explore <ArticleLink href="https://thewalkeradvisor.com/best-walkers-for-seniors-with-balance-problems-top-5/">Best Walkers for Seniors with Balance Problems</ArticleLink> for models optimized for stability.</Paragraph>
 
           {/* Section 4 */}
           <SectionHeading id="section-4">Common Mistakes to Avoid</SectionHeading>
@@ -263,7 +263,7 @@ function FittingWalkerDetail() {
             <li><strong>Replace Worn Parts:</strong> Grips, wheels, or brakes should be replaced promptly.</li>
             <li><strong>Store Safely:</strong> Keep indoors, dry, and away from moisture to prevent rust.</li>
           </BlogList>
-          <Paragraph><ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/">The Walker Advisor</ArticleLink> recommends monthly inspections for optimal performance and safety.</Paragraph>
+          <Paragraph><ArticleLink href="https://thewalkeradvisor.com/">The Walker Advisor</ArticleLink> recommends monthly inspections for optimal performance and safety.</Paragraph>
 
           {/* Section 6 */}
           <SectionHeading id="section-6">Walker Types vs. Best Fit Scenarios</SectionHeading>
@@ -278,7 +278,7 @@ function FittingWalkerDetail() {
               ['How do you properly size an elderly walker?', 'Stand inside the walker with arms relaxed; grips should line up with the inside wrist crease.'],
               ['How often should I check my walker’s fit?', 'Every 6-12 months, or sooner if posture or comfort changes.'],
               ['Is a rollator better than a standard walker?', 'It depends on needs, rollators for mobility and rest, standard walkers for maximum stability.'],
-              ['Where can I purchase reliable walkers?', <>Visit <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/where-to-buy-walkers-for-seniors-top-brands-reviews/">Where to Buy Walkers for Seniors</ArticleLink> and consult The Walker Advisor for trusted options.</>],
+              ['Where can I purchase reliable walkers?', <>Visit <ArticleLink href="https://thewalkeradvisor.com/where-to-buy-walkers-for-seniors-top-brands-reviews/">Where to Buy Walkers for Seniors</ArticleLink> and consult The Walker Advisor for trusted options.</>],
             ].map(([question, answer]) => (
               <details className="rounded-[7px] bg-[#f3f3f3] px-5 py-3" key={question}>
                 <summary className="cursor-pointer font-manrope text-[11px] font-black text-black">{question}</summary>

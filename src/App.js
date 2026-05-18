@@ -1,5 +1,5 @@
 import "./App.css";
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import AboutUs from "./pages/AboutUs";
 import AmirAbbasi from "./pages/AmirAbbasi";
 import Robin from "./pages/Robin";
@@ -75,14 +75,10 @@ import SmallWalkersDetail from "./pages/SmallWalkersDetail";
 import SocialActivitiesOlderAdultsDetail from "./pages/SocialActivitiesOlderAdultsDetail";
 import WalkerChoices from "./components/WalkerChoices";
 import WalkerInsightsPromo from "./components/WalkerInsightsPromo";
-import { applyHomePageDocumentSeo, setCanonicalToCurrentPath } from "./seo/siteDocument";
+import { applyRouteDocumentSeo } from "./seo/siteDocument";
 import WalkerMistakesDetail from "./pages/WalkerMistakesDetail";
 
 function Home() {
-  useLayoutEffect(() => {
-    applyHomePageDocumentSeo();
-  }, []);
-
   return (
     <div className="w-full min-w-0 max-w-full overflow-x-hidden">
       <Navbar />
@@ -169,8 +165,8 @@ const routes = {
 };
 
 function App() {
-  useLayoutEffect(() => {
-    setCanonicalToCurrentPath();
+  useEffect(() => {
+    applyRouteDocumentSeo(window.location.pathname);
   }, []);
 
   const Page = routes[window.location.pathname] || Home;

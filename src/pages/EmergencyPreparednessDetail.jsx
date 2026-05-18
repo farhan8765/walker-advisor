@@ -152,7 +152,7 @@ function EmergencyPreparednessDetail() {
           </BlogList>
           <Paragraph>GPS-enabled <a className="text-[#2361a1]" href="https://www.alert-1.com/content/gps-medical-alert-systems/1346" target="_blank" rel="noopener noreferrer">mobile medical alert systems</a> improve assistance response by allowing emergency personnel and caregivers to locate a user even when they are outside.</Paragraph>
           <BlogImage src="twa-26-4.webp" alt="Fitness style wristband with emergency features" />
-          <Paragraph>Many of these systems integrate seamlessly with daily walker use. For individuals relying on rollators for balance, like those featured in our post on <a className="text-[#2361a1]" href="https://darkcyan-lion-250828.hostingersite.com/best-rollator-for-balance-problems-top-5-reliable-options/" target="_blank" rel="noopener noreferrer">Best Rollator for Balance Problems,</a> lightweight and wrist-based devices can ensure the alert button is always accessible without interfering with mobility aid usage.</Paragraph>
+          <Paragraph>Many of these systems integrate seamlessly with daily walker use. For individuals relying on rollators for balance, like those featured in our post on <a className="text-[#2361a1]" href="https://thewalkeradvisor.com/best-rollator-for-balance-problems-top-5-reliable-options/" target="_blank" rel="noopener noreferrer">Best Rollator for Balance Problems,</a> lightweight and wrist-based devices can ensure the alert button is always accessible without interfering with mobility aid usage.</Paragraph>
 
           <SectionHeading id="section-2">How to Choose a Medical Alert System for Your Lifestyle</SectionHeading>
           <Paragraph>Selecting the right alert system depends on your mobility patterns, tech preferences, and emergency risk factors. Consider the following when choosing:</Paragraph>
@@ -164,7 +164,7 @@ function EmergencyPreparednessDetail() {
           <h3 className="mt-4 text-[12px] font-black text-black">2. Device Comfort and Accessibility</h3>
           <BlogList>
             <li>For those using upright walkers with limited hand freedom, wearable devices should be light and wrist-mounted or voice-activated.</li>
-            <li>See our guide on <a className="text-[#2361a1]" href="https://darkcyan-lion-250828.hostingersite.com/5-best-upright-walkers-for-seniors-find-the-right-one/" target="_blank" rel="noopener noreferrer">5 Best Upright Walkers for Seniors</a> for options compatible with alert devices.</li>
+            <li>See our guide on <a className="text-[#2361a1]" href="https://thewalkeradvisor.com/5-best-upright-walkers-for-seniors-find-the-right-one/" target="_blank" rel="noopener noreferrer">5 Best Upright Walkers for Seniors</a> for options compatible with alert devices.</li>
           </BlogList>
           <h3 className="mt-4 text-[12px] font-black text-black">3. Monitoring &amp; Subscription Fees</h3>
           <BlogList>
@@ -175,7 +175,7 @@ function EmergencyPreparednessDetail() {
           <BlogList>
             <li>If you&#8217;re a fall risk or have a chronic condition, ensure the system offers fall detection, heart rate monitoring, or medication reminders.</li>
           </BlogList>
-          <Paragraph>This is particularly important when selecting a walker, as explained in <a className="text-[#2361a1]" href="https://darkcyan-lion-250828.hostingersite.com/caregivers-guide-to-senior-walker-selection-and-usage/" target="_blank" rel="noopener noreferrer">How Caregivers Can Assist Seniors in Choosing and Using Walkers</a>. A smart medical device can enhance both the walker&#8217;s and the user&#8217;s effectiveness during daily mobility.</Paragraph>
+          <Paragraph>This is particularly important when selecting a walker, as explained in <a className="text-[#2361a1]" href="https://thewalkeradvisor.com/caregivers-guide-to-senior-walker-selection-and-usage/" target="_blank" rel="noopener noreferrer">How Caregivers Can Assist Seniors in Choosing and Using Walkers</a>. A smart medical device can enhance both the walker&#8217;s and the user&#8217;s effectiveness during daily mobility.</Paragraph>
 
           <SectionHeading id="section-3">Tips on Emergency Preparedness</SectionHeading>
           <Paragraph>Preparation goes beyond smart devices and includes consistent safety planning and lifestyle adjustments. Important advice for walker users and caregivers is as follows:</Paragraph>
@@ -186,9 +186,9 @@ function EmergencyPreparednessDetail() {
             <li>Practice &#8220;emergency drills&#8221; to make sure users are aware of what to do in case of an incident or fall.</li>
             <li>Update the emergency contact details on all smart devices and walkers.</li>
             <li>Keep the medical ID tag on the walker laminated.</li>
-            <li>Know how to switch to lighter walkers or quad canes if evacuation is needed, as described in <a className="text-[#2361a1]" href="https://darkcyan-lion-250828.hostingersite.com/types-of-medical-walkers-and-rollators-a-comprehensive-guide/" target="_blank" rel="noopener noreferrer">Types of Medical Walkers and Rollators</a></li>
+            <li>Know how to switch to lighter walkers or quad canes if evacuation is needed, as described in <a className="text-[#2361a1]" href="https://thewalkeradvisor.com/types-of-medical-walkers-and-rollators-a-comprehensive-guide/" target="_blank" rel="noopener noreferrer">Types of Medical Walkers and Rollators</a></li>
           </BlogList>
-          <Paragraph>For those who rely on walkers covered through Medicare, understanding the insurance coverage can also help in selecting appropriate emergency equipment. See: <a className="text-[#2361a1]" href="https://darkcyan-lion-250828.hostingersite.com/does-medicare-pay-for-walkers-for-seniors/" target="_blank" rel="noopener noreferrer">Does Medicare Pay for Walkers for Seniors?</a></Paragraph>
+          <Paragraph>For those who rely on walkers covered through Medicare, understanding the insurance coverage can also help in selecting appropriate emergency equipment. See: <a className="text-[#2361a1]" href="https://thewalkeradvisor.com/does-medicare-pay-for-walkers-for-seniors/" target="_blank" rel="noopener noreferrer">Does Medicare Pay for Walkers for Seniors?</a></Paragraph>
 
           <SectionHeading id="section-4">At-a-Glance Comparison of Top Medical Alert Devices</SectionHeading>
           <div className="blog-table-wrap mt-4 overflow-x-auto">

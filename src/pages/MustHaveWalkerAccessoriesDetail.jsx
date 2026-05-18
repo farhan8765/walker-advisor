@@ -209,7 +209,7 @@ function MustHaveWalkerAccessoriesDetail() {
             <li><strong>Tennis Ball Glides:</strong> A budget-friendly option for smoother movement on carpet or outdoor pavements.</li>
             <li><strong>Ski Glides:</strong> Designed to move smoothly on both indoor and outdoor surfaces while reducing drag.</li>
           </BlogList>
-          <Paragraph>If you’re wondering which walker wheels and glides work best together, check out <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-wheel-size-for-walkers/">What size wheels are best for a walker?</ArticleLink> for insights into compatibility with accessories.</Paragraph>
+          <Paragraph>If you’re wondering which walker wheels and glides work best together, check out <ArticleLink href="https://thewalkeradvisor.com/best-wheel-size-for-walkers/">What size wheels are best for a walker?</ArticleLink> for insights into compatibility with accessories.</Paragraph>
 
           {/* ── Section 3 ── */}
           <SectionHeading id="section-3">Comfort Upgrades: Hand Grips & Seat Cushions</SectionHeading>
@@ -219,7 +219,7 @@ function MustHaveWalkerAccessoriesDetail() {
             <li><strong>Padded Seat Cushions:</strong> Especially useful for walkers with built-in seats. They distribute weight evenly and reduce lower back and tailbone pressure.</li>
             <li><strong>Backrests:</strong> Adjustable backrests give added lumbar support while seated.</li>
           </BlogList>
-          <Paragraph>This is particularly important when using all-terrain or heavy-duty walkers. Check our guide on <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-all-terrain-walkers-for-seniors-ultimate-guide/">Best All-Terrain Walkers for Seniors</ArticleLink> to see how comfort accessories pair with rugged models.</Paragraph>
+          <Paragraph>This is particularly important when using all-terrain or heavy-duty walkers. Check our guide on <ArticleLink href="https://thewalkeradvisor.com/best-all-terrain-walkers-for-seniors-ultimate-guide/">Best All-Terrain Walkers for Seniors</ArticleLink> to see how comfort accessories pair with rugged models.</Paragraph>
           <BlogImage src="blog-27-8-683x1024.webp" alt="Walker comfort upgrade accessory" />
 
           {/* ── Section 4 ── */}
@@ -231,7 +231,7 @@ function MustHaveWalkerAccessoriesDetail() {
             <li>Invest in a walker tray and cup holder combo if you live alone and handle meals independently.</li>
             <li>Install light and phone mounts for outdoor walks.</li>
           </BlogList>
-          <Paragraph>Caregivers play a major role, too. As explained in <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/caregivers-guide-to-senior-walker-selection-and-usage/">How Caregivers Can Assist Seniors in Choosing and Using Walkers</ArticleLink>, the right customization can improve user confidence and reduce caregiver strain.</Paragraph>
+          <Paragraph>Caregivers play a major role, too. As explained in <ArticleLink href="https://thewalkeradvisor.com/caregivers-guide-to-senior-walker-selection-and-usage/">How Caregivers Can Assist Seniors in Choosing and Using Walkers</ArticleLink>, the right customization can improve user confidence and reduce caregiver strain.</Paragraph>
 
           {/* ── Section 5 ── */}
           <SectionHeading id="section-5">Accessories and Their Uses</SectionHeading>

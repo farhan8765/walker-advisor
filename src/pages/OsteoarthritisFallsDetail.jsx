@@ -144,14 +144,14 @@ function OsteoarthritisFallsDetail() {
             <li>Install grab bars in bathrooms and hallways</li>
             <li>Stand up slowly from sitting or lying positions</li>
           </BlogList>
-          <Paragraph>Using a walker correctly is just as important as having one. If you’re unsure about proper setup, read <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/an-easy-guide-on-how-to-fit-a-walker-for-seniors/">The Ultimate Easy Guide to Fitting a Walker for Seniors Safely</ArticleLink> to ensure maximum stability and comfort.</Paragraph>
+          <Paragraph>Using a walker correctly is just as important as having one. If you’re unsure about proper setup, read <ArticleLink href="https://thewalkeradvisor.com/an-easy-guide-on-how-to-fit-a-walker-for-seniors/">The Ultimate Easy Guide to Fitting a Walker for Seniors Safely</ArticleLink> to ensure maximum stability and comfort.</Paragraph>
           <SubHeading>Stay Active with Low-Impact Exercise</SubHeading>
           <Paragraph>Gentle activities like walking, stretching, chair exercises, or water aerobics help improve strength and flexibility without stressing the joints.</Paragraph>
           <SubHeading>Manage Pain Properly</SubHeading>
           <Paragraph>Effective pain management through medical guidance, physical therapy, or lifestyle changes helps seniors move with confidence and control.</Paragraph>
-          <Paragraph>Caregivers also play a vital role in fall prevention. If you’re supporting a loved one, explore <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/caregivers-guide-to-senior-walker-selection-and-usage/">How Caregivers Can Assist Seniors in Choosing and Using Walkers</ArticleLink> better to understand safe mobility practices and proper walker use.</Paragraph>
+          <Paragraph>Caregivers also play a vital role in fall prevention. If you’re supporting a loved one, explore <ArticleLink href="https://thewalkeradvisor.com/caregivers-guide-to-senior-walker-selection-and-usage/">How Caregivers Can Assist Seniors in Choosing and Using Walkers</ArticleLink> better to understand safe mobility practices and proper walker use.</Paragraph>
           <SubHeading>Prepare for Emergencies</SubHeading>
-          <Paragraph>Even with precautions, falls can still happen. Having the right safety systems in place can make a critical difference. Consider reading <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/emergency-preparedness-for-walker-users/">Emergency Preparedness for Walker Users</ArticleLink> to learn how technology can provide quick assistance during emergencies.</Paragraph>
+          <Paragraph>Even with precautions, falls can still happen. Having the right safety systems in place can make a critical difference. Consider reading <ArticleLink href="https://thewalkeradvisor.com/emergency-preparedness-for-walker-users/">Emergency Preparedness for Walker Users</ArticleLink> to learn how technology can provide quick assistance during emergencies.</Paragraph>
 
           <SectionHeading id="section-5">Frequently Asked Questions</SectionHeading>
           <div className="mt-4 space-y-2">

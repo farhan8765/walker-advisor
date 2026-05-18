@@ -123,7 +123,7 @@ function HolidaySafetySeniorsDetail() {
             <li>Remove loose rugs or secure them with non-slip backing</li>
             <li>Provide sturdy, easy-to-reach seating throughout the home</li>
           </BlogList>
-          <Paragraph>For seniors who rely on mobility aids, seasonal hazards can be even more challenging, which is why it’s important to review these <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/holiday-safety-tips-seniors-using-walkers/">Holiday Safety Tips for Seniors</ArticleLink> This Season to ensure proper support, balance, and confidence throughout holiday activities.</Paragraph>
+          <Paragraph>For seniors who rely on mobility aids, seasonal hazards can be even more challenging, which is why it’s important to review these <ArticleLink href="https://thewalkeradvisor.com/holiday-safety-tips-seniors-using-walkers/">Holiday Safety Tips for Seniors</ArticleLink> This Season to ensure proper support, balance, and confidence throughout holiday activities.</Paragraph>
           <SubHeading>Bright, Warm Lighting</SubHeading>
           <BlogList>
             <li>Add soft lighting near stairs, hallways, and doorways</li>
@@ -144,7 +144,7 @@ function HolidaySafetySeniorsDetail() {
             <li>Keep walkways clear of snow, ice, and leaves</li>
             <li>Ensure handrails are sturdy and easy to grip</li>
           </BlogList>
-          <Paragraph>If your home includes porch steps, split-level floors, or outdoor stairs, reviewing <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/senior-safety-how-to-use-a-walker-on-stairs/">How to Use a Walker on Stairs</ArticleLink> becomes especially important during winter months when surfaces may be slippery or uneven.</Paragraph>
+          <Paragraph>If your home includes porch steps, split-level floors, or outdoor stairs, reviewing <ArticleLink href="https://thewalkeradvisor.com/senior-safety-how-to-use-a-walker-on-stairs/">How to Use a Walker on Stairs</ArticleLink> becomes especially important during winter months when surfaces may be slippery or uneven.</Paragraph>
 
           <SectionHeading id="section-3">Fire Safety Essentials for Seniors During the Holidays</SectionHeading>
           <Paragraph>With more cooking, candles, and holiday lighting, fire risks naturally increase during the season. A few mindful habits can keep celebrations peaceful and secure.</Paragraph>

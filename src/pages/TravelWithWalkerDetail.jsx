@@ -223,9 +223,9 @@ function TravelWithWalkerDetail() {
           <section className="mt-8 rounded-[10px] bg-[#f3f3f3] p-6" id="section-11">
             <ArticleIconHeading type="references">Reference</ArticleIconHeading>
             <ol className="mt-4 list-decimal space-y-2 pl-5 font-manrope text-[11px] font-semibold leading-5 text-[#1f2930]">
-              <li>Best Travel Walkers for Seniors <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-travel-walkers-for-seniors-2025/">https://darkcyan-lion-250828.hostingersite.com/best-travel-walkers-for-seniors-2025/</ArticleLink></li>
-              <li>Best Stand-Up Walkers for seniors <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-stand-up-walkers-for-seniors-2025/">https://darkcyan-lion-250828.hostingersite.com/best-stand-up-walkers-for-seniors-2025/</ArticleLink></li>
-              <li>Highest-Rated Walkers for Seniors <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/highest-rated-walkers-for-seniors-expert-picks/">https://darkcyan-lion-250828.hostingersite.com/highest-rated-walkers-for-seniors-expert-picks/</ArticleLink></li>
+              <li>Best Travel Walkers for Seniors <ArticleLink href="https://thewalkeradvisor.com/best-travel-walkers-for-seniors-2025/">https://thewalkeradvisor.com/best-travel-walkers-for-seniors-2025/</ArticleLink></li>
+              <li>Best Stand-Up Walkers for seniors <ArticleLink href="https://thewalkeradvisor.com/best-stand-up-walkers-for-seniors-2025/">https://thewalkeradvisor.com/best-stand-up-walkers-for-seniors-2025/</ArticleLink></li>
+              <li>Highest-Rated Walkers for Seniors <ArticleLink href="https://thewalkeradvisor.com/highest-rated-walkers-for-seniors-expert-picks/">https://thewalkeradvisor.com/highest-rated-walkers-for-seniors-expert-picks/</ArticleLink></li>
             </ol>
           </section>
         </article>

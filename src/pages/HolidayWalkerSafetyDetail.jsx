@@ -119,7 +119,7 @@ function HolidayWalkerSafetyDetail() {
             <li>Swapping standard rubber tips for ice-gripper tips or small snow-cleat attachments whenever you step outside. Experts recommend such traction aids when walking on slippery surfaces</li>
             <li>Installing a cup holder for hot cocoa, tea, or water, avoiding spills on carpets or floors that could lead to slips.</li>
           </BlogList>
-          <Paragraph>If family or friends plan to give practical, mobility-friendly gifts this year, they may appreciate reviewing this guide, <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/christmas-gift-ideas-for-elderly-ladies-december-2025/">Christmas Gift Ideas for Elderly Ladies this December 2025</ArticleLink></Paragraph>
+          <Paragraph>If family or friends plan to give practical, mobility-friendly gifts this year, they may appreciate reviewing this guide, <ArticleLink href="https://thewalkeradvisor.com/christmas-gift-ideas-for-elderly-ladies-december-2025/">Christmas Gift Ideas for Elderly Ladies this December 2025</ArticleLink></Paragraph>
 
           <SectionHeading id="section-3">3. Navigate Crowded Rooms Like a Pro</SectionHeading>
           <Paragraph>Holiday gatherings often bring dozens of friends and family members under one roof — which can turn a walker-friendly living space into a tight obstacle course. To keep your footing (literally) and dignity intact, use these practical navigation strategies:</Paragraph>
@@ -130,7 +130,7 @@ function HolidayWalkerSafetyDetail() {
             <li>Teach children a simple rule: “If you can’t see Grandma’s shoes, you’re too close.” This helps them intuitively keep a safe distance from the walker.</li>
             <li>If the family plans to exchange gifts or lay out items, ask that everything be placed on a coffee table, ottoman, or tray at waist height, not on the floor. Bending or reaching down amid chaos increases fall risk significantly.</li>
           </BlogList>
-          <Paragraph>For gift ideas that support mobility and minimize clutter (especially helpful in busy homes), check out <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/best-holiday-gifts-for-seniors-who-have-everything/">The Best Holiday Gifts for Seniors Who Have Everything</ArticleLink>, a guide that includes practical, space-conscious items designed for seniors with mobility aids</Paragraph>
+          <Paragraph>For gift ideas that support mobility and minimize clutter (especially helpful in busy homes), check out <ArticleLink href="https://thewalkeradvisor.com/best-holiday-gifts-for-seniors-who-have-everything/">The Best Holiday Gifts for Seniors Who Have Everything</ArticleLink>, a guide that includes practical, space-conscious items designed for seniors with mobility aids</Paragraph>
 
           <SectionHeading id="section-4">4. Safe Gift Opening & Carrying</SectionHeading>
           <Paragraph>Gifts, a major holiday joy. But for seniors using walkers, the act of carrying, bending, or picking items from the floor can pose serious risks.</Paragraph>
@@ -141,7 +141,7 @@ function HolidayWalkerSafetyDetail() {
             <li>Use your walker’s basket or tray to carry gifts, food, or drinks, one item at a time, to reduce imbalance.</li>
             <li>Sit down before opening gifts; juggling multiple packages while standing increases the risk of slips or tipping.</li>
           </BlogList>
-          <Paragraph>If gift-givers are unsure what to buy, the following guide offers mobility-friendly, senior-appropriate options, <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/inexpensive-christmas-gift-ideas-for-senior-citizens/">20 Thoughtful & Inexpensive Christmas Gift Ideas for Senior Citizens Under $20</ArticleLink>, affordable, practical items perfect for stockings or small gifts.</Paragraph>
+          <Paragraph>If gift-givers are unsure what to buy, the following guide offers mobility-friendly, senior-appropriate options, <ArticleLink href="https://thewalkeradvisor.com/inexpensive-christmas-gift-ideas-for-senior-citizens/">20 Thoughtful & Inexpensive Christmas Gift Ideas for Senior Citizens Under $20</ArticleLink>, affordable, practical items perfect for stockings or small gifts.</Paragraph>
           <Paragraph>These choices encourage thoughtful, safe gifting that supports the senior’s mobility without adding clutter or hazard.</Paragraph>
 
           <SectionHeading id="section-5">5. Avoid Common Seasonal Traps</SectionHeading>
@@ -154,7 +154,7 @@ function HolidayWalkerSafetyDetail() {
             <li><strong>Overexertion and multitasking</strong><br />During holiday cooking, carrying dishes, and cleaning up, many seniors try to help. But assisting for too long while tired increases fall risk. It’s safer to rest, sit, or ask for help when needed.</li>
           </BlogList>
           <Paragraph>To further prevent falls, especially outdoors, experts recommend using footwear with good traction, ensuring handrails are in place, and avoiding rushed movements on icy surfaces.</Paragraph>
-          <Paragraph>If you want safer gift ideas, accessories, or products that help manage these seasonal hazards, the guide <ArticleLink href="https://darkcyan-lion-250828.hostingersite.com/16-best-christmas-gifts-for-seniors-amazon-2025/">16 Best Christmas Gifts for Seniors – Amazon 2025</ArticleLink> is worth sharing with family and friends.</Paragraph>
+          <Paragraph>If you want safer gift ideas, accessories, or products that help manage these seasonal hazards, the guide <ArticleLink href="https://thewalkeradvisor.com/16-best-christmas-gifts-for-seniors-amazon-2025/">16 Best Christmas Gifts for Seniors – Amazon 2025</ArticleLink> is worth sharing with family and friends.</Paragraph>
 
           <SectionHeading id="section-6">6. Quick Emergency Prep</SectionHeading>
           <Paragraph>Even with thorough planning, emergencies can happen. A little preparation can make all the difference:</Paragraph>

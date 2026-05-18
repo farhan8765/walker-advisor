@@ -17,7 +17,7 @@ const products = [
   {
     title: '1. Helavo All Terrain Upright Walker with Flat-Free Solid Rubber Tires',
     price: '$199.99',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/11/twa-22-2-900x1024.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2025/11/twa-22-2-900x1024.png',
     href: 'https://amzn.to/4a8Gs7c',
     description: 'If you’re serious about off-pavement exploration, the Helavo stands out with its 10-inch flat-free rubber front wheels that glide over grass, dirt, and cracks without popping.. The padded armrests and included seat make it ideal for longer outdoor sessions, and the built-in storage bag keeps essentials handy. Customers rave about its stability on uneven terrain, perfect for park walks or neighborhood jaunts. One reviewer noted, “It handles curbs and gravel like a champ without tipping.”',
     pros: ['Feels super stable even on bumpy paths, you won’t worry about tipping over', 'Padded armrests and a seat make longer walks really comfortable', 'Handy storage bag keeps your stuff close'],
@@ -26,7 +26,7 @@ const products = [
   {
     title: '2. UPWalker Premium Lite – The Original Upright Walker',
     price: '$695.00',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/11/twa-22-3-595x1024.webp',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2025/11/twa-22-3-595x1024.webp',
     href: 'https://amzn.to/4agQymu',
     description: 'The UPWalker Premium Lite is a classic upright walker that makes outdoor walking easier and more confident. It’s easy to fold for trips and has smooth wheels that glide over most surfaces, helping you keep your back straight while walking.',
     pros: ['Encourages good posture, so back pain feels less annoying', 'Easy to fold and carry for road trips or park visits', 'Extras like a cup holder and motion lights make it super convenient'],
@@ -35,7 +35,7 @@ const products = [
   {
     title: '3. ELENKER Upright Rollator Walker with Shock Absorber',
     price: '$160.00',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/11/twa-22-4-707x1024.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2025/11/twa-22-4-707x1024.png',
     href: 'https://amzn.to/4rjiD2C',
     description: 'The ELENKER walker is perfect if your joints are sensitive. Its shock-absorbing wheels make uneven paths feel smooth, and the sturdy frame supports heavier weights comfortably. The seat and armrests are cushy, and it folds up for easy storage.',
     pros: ['Shocks really soften every bump, a lifesaver for sore knees or hips', 'Super sturdy, you feel secure walking anywhere', 'Folding is simple, so storage is easy'],
@@ -44,7 +44,7 @@ const products = [
   {
     title: '4. Vive Mobility Upright Walker with Seat',
     price: '$179.99',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/11/twa-22-5-1024x1024.webp',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2025/11/twa-22-5-1024x1024.webp',
     href: 'https://amzn.to/44luhAh',
     description: 'The Vive walker balances affordability with outdoor capability. Its wheels handle city parks and light gravel well, and it has a nice wide seat for breaks. Loop brakes are easy to use, and it folds slim for taking along on trips.',
     pros: ['Wheels grip well, so you won’t slip on wet or uneven surfaces', 'Lightweight and easy to fold for travel', 'Adjustable pads make it fit just right for your arms'],
@@ -53,7 +53,7 @@ const products = [
   {
     title: '5. Drive Medical RTL10266 Nitro Euro-Style 4-Wheel Rollator Walker With Seat',
     price: '$244.50',
-    image: 'https://darkcyan-lion-250828.hostingersite.com/wp-content/uploads/2025/11/twa-22-6-778x1024.png',
+    image: 'https://thewalkeradvisor.com/wp-content/uploads/2025/11/twa-22-6-778x1024.png',
     href: 'https://amzn.to/4pt3M46',
     description: 'The Drive Medical Nitro is a sleek, high-performance rollator made for mixed outdoor terrain. Its big 10-inch front wheels tackle grass, gravel, and cracks with ease, while the loop-style brakes give you smooth, confident control on hills. Despite its sturdy build, it’s surprisingly light and folds compactly, making it great for traveling or running errands. The padded armrests support an upright stance, and the flip-up seat plus under-basket storage mean you’re ready for a break or a picnic.',
     pros: ['The large wheels make rolling over uneven surfaces feel really smooth and steady', 'Loop brakes are intuitive and give you great stopping power on slopes', 'Padded arms help you keep a natural, upright posture without getting tired', 'Flip-up seat is super handy when you want to pause and rest', 'The under-seat basket is spacious enough to carry things for a day out'],
